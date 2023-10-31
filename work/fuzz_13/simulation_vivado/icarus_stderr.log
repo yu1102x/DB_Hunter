@@ -1,0 +1,42 @@
+./syn_vivado.v:785: warning: Port 1 (CO) of CARRY4 expects 4 bits, got 2.
+./syn_vivado.v:785:        : Padding 2 high bits of the port.
+./syn_vivado.v:2236: warning: Port 1 (CO) of CARRY4 expects 4 bits, got 3.
+./syn_vivado.v:2236:        : Padding 1 high bits of the port.
+./syn_vivado.v:2236: warning: Port 2 (O) of CARRY4 expects 4 bits, got 2.
+./syn_vivado.v:2236:        : Padding 2 high bits of the port.
+./syn_vivado.v:2514: warning: Port 1 (CO) of CARRY4 expects 4 bits, got 3.
+./syn_vivado.v:2514:        : Padding 1 high bits of the port.
+./syn_vivado.v:3827: warning: Port 1 (CO) of CARRY4 expects 4 bits, got 2.
+./syn_vivado.v:3827:        : Padding 2 high bits of the port.
+./syn_vivado.v:3827: warning: Port 2 (O) of CARRY4 expects 4 bits, got 1.
+./syn_vivado.v:3827:        : Padding 3 high bits of the port.
+./syn_vivado.v:5065: warning: Port 1 (CO) of CARRY4 expects 4 bits, got 2.
+./syn_vivado.v:5065:        : Padding 2 high bits of the port.
+./syn_vivado.v:5384: warning: Port 1 (CO) of CARRY4 expects 4 bits, got 2.
+./syn_vivado.v:5384:        : Padding 2 high bits of the port.
+./syn_vivado.v:5384: warning: Port 2 (O) of CARRY4 expects 4 bits, got 3.
+./syn_vivado.v:5384:        : Padding 1 high bits of the port.
+./syn_vivado.v:5463: warning: Port 1 (CO) of CARRY4 expects 4 bits, got 3.
+./syn_vivado.v:5463:        : Padding 1 high bits of the port.
+./syn_vivado.v:5470: warning: Port 1 (CO) of CARRY4 expects 4 bits, got 1.
+./syn_vivado.v:5470:        : Padding 3 high bits of the port.
+./syn_vivado.v:5470: warning: Port 2 (O) of CARRY4 expects 4 bits, got 2.
+./syn_vivado.v:5470:        : Padding 2 high bits of the port.
+./syn_vivado.v:6321: warning: Port 1 (CO) of CARRY4 expects 4 bits, got 3.
+./syn_vivado.v:6321:        : Padding 1 high bits of the port.
+./syn_vivado.v:8964: warning: Port 1 (CO) of CARRY4 expects 4 bits, got 3.
+./syn_vivado.v:8964:        : Padding 1 high bits of the port.
+./syn_vivado.v:9027: warning: Port 1 (CO) of CARRY4 expects 4 bits, got 1.
+./syn_vivado.v:9027:        : Padding 3 high bits of the port.
+./syn_vivado.v:9687: warning: Port 1 (CO) of CARRY4 expects 4 bits, got 2.
+./syn_vivado.v:9687:        : Padding 2 high bits of the port.
+./syn_vivado.v:9687: warning: Port 2 (O) of CARRY4 expects 4 bits, got 1.
+./syn_vivado.v:9687:        : Padding 3 high bits of the port.
+./syn_vivado.v:9695: warning: Port 1 (CO) of CARRY4 expects 4 bits, got 3.
+./syn_vivado.v:9695:        : Padding 1 high bits of the port.
+./syn_vivado.v:9702: warning: Port 1 (CO) of CARRY4 expects 4 bits, got 2.
+./syn_vivado.v:9702:        : Padding 2 high bits of the port.
+./syn_vivado.v:9702: warning: Port 2 (O) of CARRY4 expects 4 bits, got 1.
+./syn_vivado.v:9702:        : Padding 3 high bits of the port.
+warning: Found both default and `timescale based delays. Use
+       : -Wtimescale to find the module(s) with no `timescale.

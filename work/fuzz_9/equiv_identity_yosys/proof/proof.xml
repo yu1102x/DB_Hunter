@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2023-07-21T20:36:33" hostname="tsmc-System-Product-Name" package="proof" id="0" name="default" tests="1" errors="1" failures="0" time="1" skipped="0">
+<properties>
+<property name="os" value="Linux"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="ERROR"/>
+</properties>
+<testcase classname="default" name="default" time="1">
+<error type="ERROR"/>
+</testcase>
+<system-out>SBY 20:36:32 [proof] Removing directory '/doc/wxy/2023_7_21/fuzz_9/equiv_identity_yosys/proof'.
+SBY 20:36:32 [proof] Copy '/root/.cabal/store/ghc-8.6.5/verismith-1.0.0.2-05803d1a9dd1b31fa5e685873f3f3eb6965857608706500c1d15ff488351d7bb/share/data/cells_cmos.v' to '/doc/wxy/2023_7_21/fuzz_9/equiv_identity_yosys/proof/src/cells_cmos.v'.
+SBY 20:36:32 [proof] Copy '/root/.cabal/store/ghc-8.6.5/verismith-1.0.0.2-05803d1a9dd1b31fa5e685873f3f3eb6965857608706500c1d15ff488351d7bb/share/data/cells_cyclone_v.v' to '/doc/wxy/2023_7_21/fuzz_9/equiv_identity_yosys/proof/src/cells_cyclone_v.v'.
+SBY 20:36:32 [proof] Copy '/root/.cabal/store/ghc-8.6.5/verismith-1.0.0.2-05803d1a9dd1b31fa5e685873f3f3eb6965857608706500c1d15ff488351d7bb/share/data/cells_verific.v' to '/doc/wxy/2023_7_21/fuzz_9/equiv_identity_yosys/proof/src/cells_verific.v'.
+SBY 20:36:32 [proof] Copy '/root/.cabal/store/ghc-8.6.5/verismith-1.0.0.2-05803d1a9dd1b31fa5e685873f3f3eb6965857608706500c1d15ff488351d7bb/share/data/cells_xilinx_7.v' to '/doc/wxy/2023_7_21/fuzz_9/equiv_identity_yosys/proof/src/cells_xilinx_7.v'.
+SBY 20:36:32 [proof] Copy '/root/.cabal/store/ghc-8.6.5/verismith-1.0.0.2-05803d1a9dd1b31fa5e685873f3f3eb6965857608706500c1d15ff488351d7bb/share/data/cells_yosys.v' to '/doc/wxy/2023_7_21/fuzz_9/equiv_identity_yosys/proof/src/cells_yosys.v'.
+SBY 20:36:32 [proof] Copy '/doc/wxy/2023_7_21/fuzz_9/equiv_identity_yosys/syn_yosys.v' to '/doc/wxy/2023_7_21/fuzz_9/equiv_identity_yosys/proof/src/syn_yosys.v'.
+SBY 20:36:32 [proof] Copy '/doc/wxy/2023_7_21/fuzz_9/equiv_identity_yosys/syn_identity.v' to '/doc/wxy/2023_7_21/fuzz_9/equiv_identity_yosys/proof/src/syn_identity.v'.
+SBY 20:36:32 [proof] Copy '/doc/wxy/2023_7_21/fuzz_9/equiv_identity_yosys/top.v' to '/doc/wxy/2023_7_21/fuzz_9/equiv_identity_yosys/proof/src/top.v'.
+SBY 20:36:32 [proof] engine_0: abc pdr
+SBY 20:36:32 [proof] base: starting process &quot;cd proof/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 20:36:32 [proof] base: Warning: Yosys has only limited support for tri-state logic at the moment. (cells_xilinx_7.v:18)
+SBY 20:36:32 [proof] base: Warning: Resizing cell port module6_1.modinst72.y from 5 bits to 282 bits.
+SBY 20:36:32 [proof] base: Warning: Resizing cell port module6_1.modinst72.wire42 from 22 bits to 18 bits.
+SBY 20:36:32 [proof] base: Warning: Resizing cell port module6_1.modinst72.wire41 from 14 bits to 8 bits.
+SBY 20:36:32 [proof] base: Warning: Resizing cell port module6_1.modinst72.wire40 from 21 bits to 12 bits.
+SBY 20:36:32 [proof] base: Warning: Resizing cell port module6_1.modinst72.wire38 from 18 bits to 6 bits.
+SBY 20:36:32 [proof] base: Warning: Resizing cell port module6_1.modinst36.wire22 from 21 bits to 14 bits.
+SBY 20:36:32 [proof] base: Warning: Resizing cell port module6_1.modinst36.wire19 from 20 bits to 5 bits.
+SBY 20:36:32 [proof] base: Warning: Resizing cell port module6_1.modinst36.wire18 from 17 bits to 10 bits.
+SBY 20:36:32 [proof] base: Warning: Resizing cell port module6_1.modinst36.wire20 from 22 bits to 3 bits.
+SBY 20:36:32 [proof] base: Warning: Resizing cell port module6_1.modinst36.y from 14 bits to 126 bits.
+SBY 20:36:32 [proof] base: Warning: Resizing cell port top_1.modinst78.y from 16 bits to 151 bits.
+SBY 20:36:32 [proof] base: Warning: Resizing cell port top.top_2.y from 91 bits to 81 bits.
+SBY 20:36:32 [proof] base: Warning: Resizing cell port top.top_1.y from 91 bits to 81 bits.
+SBY 20:36:33 [proof] base: ERROR: Command syntax error: Unknown option or option in arguments.
+SBY 20:36:33 [proof] base: &gt; hierarchy -smtcheck
+SBY 20:36:33 [proof] base: &gt;           ^
+SBY 20:36:33 [proof] base: finished (returncode=1)
+SBY 20:36:33 [proof] base: task failed. ERROR.
+SBY 20:36:33 [proof] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:01 (1)
+SBY 20:36:33 [proof] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:01 (1)
+SBY 20:36:33 [proof] summary: engine_0 (abc pdr) did not return a status
+SBY 20:36:33 [proof] summary: engine_0 did not produce any traces
+SBY 20:36:33 [proof] DONE (ERROR, rc=16)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

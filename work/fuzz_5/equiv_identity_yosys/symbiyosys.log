@@ -1,0 +1,32 @@
+SBY 20:33:15 [proof] Removing directory '/doc/wxy/2023_7_21/fuzz_5/equiv_identity_yosys/proof'.
+SBY 20:33:15 [proof] Copy '/root/.cabal/store/ghc-8.6.5/verismith-1.0.0.2-05803d1a9dd1b31fa5e685873f3f3eb6965857608706500c1d15ff488351d7bb/share/data/cells_cmos.v' to '/doc/wxy/2023_7_21/fuzz_5/equiv_identity_yosys/proof/src/cells_cmos.v'.
+SBY 20:33:15 [proof] Copy '/root/.cabal/store/ghc-8.6.5/verismith-1.0.0.2-05803d1a9dd1b31fa5e685873f3f3eb6965857608706500c1d15ff488351d7bb/share/data/cells_cyclone_v.v' to '/doc/wxy/2023_7_21/fuzz_5/equiv_identity_yosys/proof/src/cells_cyclone_v.v'.
+SBY 20:33:15 [proof] Copy '/root/.cabal/store/ghc-8.6.5/verismith-1.0.0.2-05803d1a9dd1b31fa5e685873f3f3eb6965857608706500c1d15ff488351d7bb/share/data/cells_verific.v' to '/doc/wxy/2023_7_21/fuzz_5/equiv_identity_yosys/proof/src/cells_verific.v'.
+SBY 20:33:15 [proof] Copy '/root/.cabal/store/ghc-8.6.5/verismith-1.0.0.2-05803d1a9dd1b31fa5e685873f3f3eb6965857608706500c1d15ff488351d7bb/share/data/cells_xilinx_7.v' to '/doc/wxy/2023_7_21/fuzz_5/equiv_identity_yosys/proof/src/cells_xilinx_7.v'.
+SBY 20:33:15 [proof] Copy '/root/.cabal/store/ghc-8.6.5/verismith-1.0.0.2-05803d1a9dd1b31fa5e685873f3f3eb6965857608706500c1d15ff488351d7bb/share/data/cells_yosys.v' to '/doc/wxy/2023_7_21/fuzz_5/equiv_identity_yosys/proof/src/cells_yosys.v'.
+SBY 20:33:15 [proof] Copy '/doc/wxy/2023_7_21/fuzz_5/equiv_identity_yosys/syn_yosys.v' to '/doc/wxy/2023_7_21/fuzz_5/equiv_identity_yosys/proof/src/syn_yosys.v'.
+SBY 20:33:15 [proof] Copy '/doc/wxy/2023_7_21/fuzz_5/equiv_identity_yosys/syn_identity.v' to '/doc/wxy/2023_7_21/fuzz_5/equiv_identity_yosys/proof/src/syn_identity.v'.
+SBY 20:33:15 [proof] Copy '/doc/wxy/2023_7_21/fuzz_5/equiv_identity_yosys/top.v' to '/doc/wxy/2023_7_21/fuzz_5/equiv_identity_yosys/proof/src/top.v'.
+SBY 20:33:15 [proof] engine_0: abc pdr
+SBY 20:33:15 [proof] base: starting process "cd proof/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 20:33:15 [proof] base: Warning: Yosys has only limited support for tri-state logic at the moment. (cells_xilinx_7.v:18)
+SBY 20:33:16 [proof] base: Warning: Resizing cell port top_1.modinst144.y from 4 bits to 88 bits.
+SBY 20:33:16 [proof] base: Warning: Resizing cell port top_1.modinst144.wire134 from 16 bits to 5 bits.
+SBY 20:33:16 [proof] base: Warning: Resizing cell port top_1.modinst144.wire131 from 17 bits to 6 bits.
+SBY 20:33:16 [proof] base: Warning: Resizing cell port top_1.modinst99.y from 14 bits to 212 bits.
+SBY 20:33:16 [proof] base: Warning: Resizing cell port top_1.modinst99.wire12 from 17 bits to 13 bits.
+SBY 20:33:16 [proof] base: Warning: Resizing cell port top_1.modinst99.wire8 from 17 bits to 16 bits.
+SBY 20:33:16 [proof] base: Warning: Resizing cell port top.top_2.y from 91 bits to 481 bits.
+SBY 20:33:16 [proof] base: Warning: Resizing cell port top.top_1.y from 91 bits to 481 bits.
+SBY 20:33:16 [proof] base: Warning: Resizing cell port module7_1.modinst83.y from 13 bits to 668 bits.
+SBY 20:33:16 [proof] base: Warning: Resizing cell port module7_1.modinst83.wire18 from 13 bits to 7 bits.
+SBY 20:33:19 [proof] base: ERROR: Command syntax error: Unknown option or option in arguments.
+SBY 20:33:19 [proof] base: > hierarchy -smtcheck
+SBY 20:33:19 [proof] base: >           ^
+SBY 20:33:19 [proof] base: finished (returncode=1)
+SBY 20:33:19 [proof] base: task failed. ERROR.
+SBY 20:33:19 [proof] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:04 (4)
+SBY 20:33:19 [proof] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:04 (4)
+SBY 20:33:19 [proof] summary: engine_0 (abc pdr) did not return a status
+SBY 20:33:19 [proof] summary: engine_0 did not produce any traces
+SBY 20:33:19 [proof] DONE (ERROR, rc=16)

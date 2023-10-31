@@ -1,0 +1,4 @@
+./syn_vivado.v:445: warning: Port 1 (CO) of CARRY4 expects 4 bits, got 3.
+./syn_vivado.v:445:        : Padding 1 high bits of the port.
+warning: Found both default and `timescale based delays. Use
+       : -Wtimescale to find the module(s) with no `timescale.

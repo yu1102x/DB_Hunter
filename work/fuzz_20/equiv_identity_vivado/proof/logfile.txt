@@ -1,0 +1,57 @@
+SBY 20:43:34 [proof] Removing directory '/doc/wxy/2023_7_21/fuzz_20/equiv_identity_vivado/proof'.
+SBY 20:43:34 [proof] Copy '/root/.cabal/store/ghc-8.6.5/verismith-1.0.0.2-05803d1a9dd1b31fa5e685873f3f3eb6965857608706500c1d15ff488351d7bb/share/data/cells_cmos.v' to '/doc/wxy/2023_7_21/fuzz_20/equiv_identity_vivado/proof/src/cells_cmos.v'.
+SBY 20:43:34 [proof] Copy '/root/.cabal/store/ghc-8.6.5/verismith-1.0.0.2-05803d1a9dd1b31fa5e685873f3f3eb6965857608706500c1d15ff488351d7bb/share/data/cells_cyclone_v.v' to '/doc/wxy/2023_7_21/fuzz_20/equiv_identity_vivado/proof/src/cells_cyclone_v.v'.
+SBY 20:43:34 [proof] Copy '/root/.cabal/store/ghc-8.6.5/verismith-1.0.0.2-05803d1a9dd1b31fa5e685873f3f3eb6965857608706500c1d15ff488351d7bb/share/data/cells_verific.v' to '/doc/wxy/2023_7_21/fuzz_20/equiv_identity_vivado/proof/src/cells_verific.v'.
+SBY 20:43:34 [proof] Copy '/root/.cabal/store/ghc-8.6.5/verismith-1.0.0.2-05803d1a9dd1b31fa5e685873f3f3eb6965857608706500c1d15ff488351d7bb/share/data/cells_xilinx_7.v' to '/doc/wxy/2023_7_21/fuzz_20/equiv_identity_vivado/proof/src/cells_xilinx_7.v'.
+SBY 20:43:34 [proof] Copy '/root/.cabal/store/ghc-8.6.5/verismith-1.0.0.2-05803d1a9dd1b31fa5e685873f3f3eb6965857608706500c1d15ff488351d7bb/share/data/cells_yosys.v' to '/doc/wxy/2023_7_21/fuzz_20/equiv_identity_vivado/proof/src/cells_yosys.v'.
+SBY 20:43:34 [proof] Copy '/doc/wxy/2023_7_21/fuzz_20/equiv_identity_vivado/syn_vivado.v' to '/doc/wxy/2023_7_21/fuzz_20/equiv_identity_vivado/proof/src/syn_vivado.v'.
+SBY 20:43:34 [proof] Copy '/doc/wxy/2023_7_21/fuzz_20/equiv_identity_vivado/syn_identity.v' to '/doc/wxy/2023_7_21/fuzz_20/equiv_identity_vivado/proof/src/syn_identity.v'.
+SBY 20:43:34 [proof] Copy '/doc/wxy/2023_7_21/fuzz_20/equiv_identity_vivado/top.v' to '/doc/wxy/2023_7_21/fuzz_20/equiv_identity_vivado/proof/src/top.v'.
+SBY 20:43:34 [proof] engine_0: abc pdr
+SBY 20:43:34 [proof] base: starting process "cd proof/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 20:43:34 [proof] base: Warning: Yosys has only limited support for tri-state logic at the moment. (cells_xilinx_7.v:18)
+SBY 20:43:35 [proof] base: Warning: Resizing cell port top.top_2.y from 91 bits to 695 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port top.top_1.y from 91 bits to 695 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port top_2.y_OBUF[652]_inst_i_1.CO from 1 bits to 4 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port top_2.reg37_reg[11]_i_1.O from 1 bits to 4 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port top_2.reg37_reg[11]_i_1.CO from 2 bits to 4 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port top_2.reg35_reg[0]_i_2.CO from 1 bits to 4 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port top_2.reg25_reg[0]_i_1.CO from 3 bits to 4 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port top_2.reg20_reg[9]_i_2.CO from 3 bits to 4 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port module40_1.modinst132.y from 8 bits to 130 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port module40_1.modinst132.wire116 from 13 bits to 11 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port module40_1.modinst107.y from 8 bits to 161 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port module40_1.modinst107.wire92 from 17 bits to 16 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port module40_1.modinst107.wire90 from 20 bits to 5 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port module40_1.modinst87.y from 17 bits to 414 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port module40_1.modinst87.wire51 from 22 bits to 3 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port module40_1.modinst87.wire50 from 13 bits to 8 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port module40_1.modinst87.wire49 from 13 bits to 11 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port module40_1.modinst87.wire48 from 21 bits to 17 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port module40_1.modinst87.wire47 from 20 bits to 11 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port top_1.modinst206.wire92 from 17 bits to 16 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port top_1.modinst206.y from 9 bits to 161 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port top_1.modinst206.wire91 from 21 bits to 13 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port top_1.modinst206.wire90 from 8 bits to 5 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port top_1.modinst206.wire89 from 20 bits to 13 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port top_1.modinst204.wire116 from 20 bits to 11 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port top_1.modinst204.wire117 from 19 bits to 10 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port top_1.modinst204.y from 18 bits to 130 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port top_1.modinst204.wire115 from 10 bits to 8 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port top_1.modinst199.wire49 from 18 bits to 11 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port top_1.modinst199.y from 10 bits to 414 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port top_1.modinst199.wire51 from 12 bits to 3 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port top_1.modinst199.wire50 from 11 bits to 8 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port top_1.modinst194.wire160 from 17 bits to 7 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port top_1.modinst194.y from 13 bits to 346 bits.
+SBY 20:43:35 [proof] base: Warning: Resizing cell port top_1.modinst156.y from 21 bits to 312 bits.
+SBY 20:43:35 [proof] base: ERROR: Command syntax error: Unknown option or option in arguments.
+SBY 20:43:35 [proof] base: > hierarchy -smtcheck
+SBY 20:43:35 [proof] base: >           ^
+SBY 20:43:35 [proof] base: finished (returncode=1)
+SBY 20:43:35 [proof] base: task failed. ERROR.
+SBY 20:43:35 [proof] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:01 (1)
+SBY 20:43:35 [proof] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:01 (1)
+SBY 20:43:35 [proof] summary: engine_0 (abc pdr) did not return a status
+SBY 20:43:35 [proof] summary: engine_0 did not produce any traces
+SBY 20:43:35 [proof] DONE (ERROR, rc=16)

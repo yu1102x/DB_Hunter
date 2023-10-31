@@ -1,0 +1,3083 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog rtl.v; synth; write_verilog -noattr syn_yosys.v' --
+
+1. Executing Verilog-2005 frontend: rtl.v
+Parsing Verilog input from `rtl.v' to AST representation.
+Generating RTLIL representation for module `\top'.
+Generating RTLIL representation for module `\module7'.
+Generating RTLIL representation for module `\module138'.
+Generating RTLIL representation for module `\module88'.
+Generating RTLIL representation for module `\module56'.
+Generating RTLIL representation for module `\module32'.
+Generating RTLIL representation for module `\module13'.
+Successfully finished Verilog frontend.
+
+2. Executing SYNTH pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+Mapping positional arguments of cell module7.modinst157 (module88).
+Mapping positional arguments of cell module7.modinst83 (module56).
+Mapping positional arguments of cell module7.modinst53 (module32).
+Mapping positional arguments of cell module7.modinst31 (module13).
+Warning: Resizing cell port module7.modinst157.y from 20 bits to 506 bits.
+Warning: Resizing cell port module7.modinst157.wire91 from 12 bits to 3 bits.
+Warning: Resizing cell port module7.modinst157.wire90 from 20 bits to 11 bits.
+Warning: Resizing cell port module7.modinst157.wire89 from 14 bits to 9 bits.
+Warning: Resizing cell port module7.modinst150.wire142 from 21 bits to 18 bits.
+Warning: Resizing cell port module7.modinst150.wire143 from 20 bits to 15 bits.
+Warning: Resizing cell port module7.modinst150.wire141 from 14 bits to 9 bits.
+Warning: Resizing cell port module7.modinst150.wire139 from 18 bits to 17 bits.
+Warning: Resizing cell port module7.modinst150.y from 8 bits to 53 bits.
+Warning: Resizing cell port module7.modinst137.wire92 from 21 bits to 12 bits.
+Warning: Resizing cell port module7.modinst137.wire91 from 18 bits to 3 bits.
+Warning: Resizing cell port module7.modinst137.wire89 from 21 bits to 9 bits.
+Warning: Resizing cell port module7.modinst137.y from 12 bits to 506 bits.
+Warning: Resizing cell port module7.modinst137.wire90 from 13 bits to 11 bits.
+Warning: Resizing cell port module7.modinst83.y from 8 bits to 152 bits.
+Warning: Resizing cell port module7.modinst83.wire61 from 20 bits to 19 bits.
+Warning: Resizing cell port module7.modinst83.wire60 from 22 bits to 15 bits.
+Warning: Resizing cell port module7.modinst83.wire57 from 21 bits to 10 bits.
+Warning: Resizing cell port module7.modinst53.y from 21 bits to 178 bits.
+Warning: Resizing cell port module7.modinst53.wire37 from 20 bits to 12 bits.
+Warning: Resizing cell port module7.modinst53.wire36 from 13 bits to 5 bits.
+Warning: Resizing cell port module7.modinst53.wire33 from 12 bits to 7 bits.
+Warning: Resizing cell port module7.modinst31.y from 11 bits to 119 bits.
+Warning: Resizing cell port module7.modinst31.wire14 from 20 bits to 4 bits.
+Warning: Resizing cell port top.modinst180.wire60 from 18 bits to 15 bits.
+Warning: Resizing cell port top.modinst180.wire61 from 22 bits to 19 bits.
+Warning: Resizing cell port top.modinst180.y from 15 bits to 152 bits.
+Warning: Resizing cell port top.modinst171.y from 19 bits to 394 bits.
+Warning: Resizing cell port top.modinst171.wire10 from 21 bits to 20 bits.
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$rtl.v:815$699 in module module13.
+Marked 3 switch rules as full_case in process $proc$rtl.v:706$575 in module module32.
+Marked 1 switch rules as full_case in process $proc$rtl.v:627$508 in module module56.
+Marked 4 switch rules as full_case in process $proc$rtl.v:449$348 in module module88.
+Marked 2 switch rules as full_case in process $proc$rtl.v:370$235 in module module88.
+Marked 3 switch rules as full_case in process $proc$rtl.v:181$94 in module module7.
+Removed a total of 0 dead cases.
+
+2.2.3. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\module13.$proc$rtl.v:789$762'.
+  Set init value: \reg24 = 4'0000
+Found init rule in `\module13.$proc$rtl.v:788$761'.
+  Set init value: \reg25 = 4'0000
+Found init rule in `\module13.$proc$rtl.v:787$760'.
+  Set init value: \reg26 = 16'0000000000000000
+Found init rule in `\module13.$proc$rtl.v:786$759'.
+  Set init value: \reg27 = 11'00000000000
+Found init rule in `\module13.$proc$rtl.v:785$758'.
+  Set init value: \reg28 = 4'0000
+Found init rule in `\module32.$proc$rtl.v:679$687'.
+  Set init value: \reg42 = 15'000000000000000
+Found init rule in `\module32.$proc$rtl.v:678$686'.
+  Set init value: \reg43 = 11'00000000000
+Found init rule in `\module32.$proc$rtl.v:677$685'.
+  Set init value: \reg44 = 9'000000000
+Found init rule in `\module32.$proc$rtl.v:676$684'.
+  Set init value: \reg45 = 16'0000000000000000
+Found init rule in `\module32.$proc$rtl.v:675$683'.
+  Set init value: \reg46 = 21'000000000000000000000
+Found init rule in `\module32.$proc$rtl.v:674$682'.
+  Set init value: \reg47 = 22'0000000000000000000000
+Found init rule in `\module32.$proc$rtl.v:673$681'.
+  Set init value: \reg48 = 15'000000000000000
+Found init rule in `\module32.$proc$rtl.v:672$680'.
+  Set init value: \reg49 = 9'000000000
+Found init rule in `\module32.$proc$rtl.v:671$679'.
+  Set init value: \reg50 = 15'000000000000000
+Found init rule in `\module32.$proc$rtl.v:670$678'.
+  Set init value: \reg51 = 22'0000000000000000000000
+Found init rule in `\module56.$proc$rtl.v:577$560'.
+  Set init value: \reg73 = 5'00000
+Found init rule in `\module56.$proc$rtl.v:576$559'.
+  Set init value: \reg74 = 13'0000000000000
+Found init rule in `\module56.$proc$rtl.v:575$558'.
+  Set init value: \reg75 = 16'0000000000000000
+Found init rule in `\module56.$proc$rtl.v:574$557'.
+  Set init value: \reg76 = 12'000000000000
+Found init rule in `\module56.$proc$rtl.v:573$556'.
+  Set init value: \reg77 = 3'000
+Found init rule in `\module56.$proc$rtl.v:572$555'.
+  Set init value: \reg78 = 17'00000000000000000
+Found init rule in `\module88.$proc$rtl.v:326$474'.
+  Set init value: \reg93 = 5'00000
+Found init rule in `\module88.$proc$rtl.v:325$473'.
+  Set init value: \reg94 = 20'00000000000000000000
+Found init rule in `\module88.$proc$rtl.v:324$472'.
+  Set init value: \reg95 = 13'0000000000000
+Found init rule in `\module88.$proc$rtl.v:323$471'.
+  Set init value: \reg96 = 6'000000
+Found init rule in `\module88.$proc$rtl.v:322$470'.
+  Set init value: \reg97 = 7'0000000
+Found init rule in `\module88.$proc$rtl.v:321$469'.
+  Set init value: \reg98 = 11'00000000000
+Found init rule in `\module88.$proc$rtl.v:320$468'.
+  Set init value: \reg99 = 9'000000000
+Found init rule in `\module88.$proc$rtl.v:306$467'.
+  Set init value: \reg113 = 11'00000000000
+Found init rule in `\module88.$proc$rtl.v:305$466'.
+  Set init value: \reg114 = 12'000000000000
+Found init rule in `\module88.$proc$rtl.v:304$465'.
+  Set init value: \reg115 = 21'000000000000000000000
+Found init rule in `\module88.$proc$rtl.v:303$464'.
+  Set init value: \reg116 = 21'000000000000000000000
+Found init rule in `\module88.$proc$rtl.v:300$463'.
+  Set init value: \reg119 = 12'000000000000
+Found init rule in `\module88.$proc$rtl.v:299$462'.
+  Set init value: \reg120 = 16'0000000000000000
+Found init rule in `\module88.$proc$rtl.v:298$461'.
+  Set init value: \reg121 = 18'000000000000000000
+Found init rule in `\module88.$proc$rtl.v:297$460'.
+  Set init value: \reg122 = 18'000000000000000000
+Found init rule in `\module88.$proc$rtl.v:296$459'.
+  Set init value: \reg123 = 3'000
+Found init rule in `\module88.$proc$rtl.v:295$458'.
+  Set init value: \reg124 = 18'000000000000000000
+Found init rule in `\module88.$proc$rtl.v:294$457'.
+  Set init value: \reg125 = 8'00000000
+Found init rule in `\module88.$proc$rtl.v:293$456'.
+  Set init value: \reg126 = 5'00000
+Found init rule in `\module88.$proc$rtl.v:292$455'.
+  Set init value: \reg127 = 11'00000000000
+Found init rule in `\module88.$proc$rtl.v:291$454'.
+  Set init value: \reg128 = 5'00000
+Found init rule in `\module88.$proc$rtl.v:285$448'.
+  Set init value: \reg134 = 4'0000
+Found init rule in `\module7.$proc$rtl.v:100$205'.
+  Set init value: \reg153 = 9'000000000
+Found init rule in `\module7.$proc$rtl.v:94$204'.
+  Set init value: \reg160 = 17'00000000000000000
+Found init rule in `\module7.$proc$rtl.v:93$203'.
+  Set init value: \reg161 = 6'000000
+Found init rule in `\module7.$proc$rtl.v:92$202'.
+  Set init value: \reg162 = 14'00000000000000
+Found init rule in `\module7.$proc$rtl.v:91$201'.
+  Set init value: \reg163 = 15'000000000000000
+Found init rule in `\module7.$proc$rtl.v:90$200'.
+  Set init value: \reg164 = 15'000000000000000
+Found init rule in `\module7.$proc$rtl.v:89$199'.
+  Set init value: \reg165 = 21'000000000000000000000
+Found init rule in `\module7.$proc$rtl.v:88$198'.
+  Set init value: \reg166 = 10'0000000000
+Found init rule in `\module7.$proc$rtl.v:87$197'.
+  Set init value: \reg167 = 22'0000000000000000000000
+Found init rule in `\top.$proc$rtl.v:22$43'.
+  Set init value: \reg176 = 10'0000000000
+Found init rule in `\top.$proc$rtl.v:20$42'.
+  Set init value: \reg174 = 11'00000000000
+Found init rule in `\top.$proc$rtl.v:19$41'.
+  Set init value: \reg173 = 9'000000000
+
+2.2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\module13.$proc$rtl.v:789$762'.
+     1/1: $1\reg24[3:0]
+Creating decoders for process `\module13.$proc$rtl.v:788$761'.
+     1/1: $1\reg25[3:0]
+Creating decoders for process `\module13.$proc$rtl.v:787$760'.
+     1/1: $1\reg26[15:0]
+Creating decoders for process `\module13.$proc$rtl.v:786$759'.
+     1/1: $1\reg27[10:0]
+Creating decoders for process `\module13.$proc$rtl.v:785$758'.
+     1/1: $1\reg28[3:0]
+Creating decoders for process `\module13.$proc$rtl.v:815$699'.
+     1/5: $0\reg28[3:0]
+     2/5: $0\reg25[3:0]
+     3/5: $0\reg24[3:0]
+     4/5: $0\reg26[15:0]
+     5/5: $0\reg27[10:0]
+Creating decoders for process `\module32.$proc$rtl.v:679$687'.
+     1/1: $1\reg42[14:0]
+Creating decoders for process `\module32.$proc$rtl.v:678$686'.
+     1/1: $1\reg43[10:0]
+Creating decoders for process `\module32.$proc$rtl.v:677$685'.
+     1/1: $1\reg44[8:0]
+Creating decoders for process `\module32.$proc$rtl.v:676$684'.
+     1/1: $1\reg45[15:0]
+Creating decoders for process `\module32.$proc$rtl.v:675$683'.
+     1/1: $1\reg46[20:0]
+Creating decoders for process `\module32.$proc$rtl.v:674$682'.
+     1/1: $1\reg47[21:0]
+Creating decoders for process `\module32.$proc$rtl.v:673$681'.
+     1/1: $1\reg48[14:0]
+Creating decoders for process `\module32.$proc$rtl.v:672$680'.
+     1/1: $1\reg49[8:0]
+Creating decoders for process `\module32.$proc$rtl.v:671$679'.
+     1/1: $1\reg50[14:0]
+Creating decoders for process `\module32.$proc$rtl.v:670$678'.
+     1/1: $1\reg51[21:0]
+Creating decoders for process `\module32.$proc$rtl.v:706$575'.
+     1/10: $0\reg51[21:0]
+     2/10: $0\reg50[14:0]
+     3/10: $0\reg42[14:0]
+     4/10: $0\reg43[10:0]
+     5/10: $0\reg44[8:0]
+     6/10: $0\reg45[15:0]
+     7/10: $0\reg46[20:0]
+     8/10: $0\reg47[21:0]
+     9/10: $0\reg48[14:0]
+    10/10: $0\reg49[8:0]
+Creating decoders for process `\module56.$proc$rtl.v:577$560'.
+     1/1: $1\reg73[4:0]
+Creating decoders for process `\module56.$proc$rtl.v:576$559'.
+     1/1: $1\reg74[12:0]
+Creating decoders for process `\module56.$proc$rtl.v:575$558'.
+     1/1: $1\reg75[15:0]
+Creating decoders for process `\module56.$proc$rtl.v:574$557'.
+     1/1: $1\reg76[11:0]
+Creating decoders for process `\module56.$proc$rtl.v:573$556'.
+     1/1: $1\reg77[2:0]
+Creating decoders for process `\module56.$proc$rtl.v:572$555'.
+     1/1: $1\reg78[16:0]
+Creating decoders for process `\module56.$proc$rtl.v:649$533'.
+     1/1: $0\reg78[16:0]
+Creating decoders for process `\module56.$proc$rtl.v:627$508'.
+     1/5: $0\reg77[2:0]
+     2/5: $0\reg76[11:0]
+     3/5: $0\reg73[4:0]
+     4/5: $0\reg74[12:0]
+     5/5: $0\reg75[15:0]
+Creating decoders for process `\module88.$proc$rtl.v:326$474'.
+     1/1: $1\reg93[4:0]
+Creating decoders for process `\module88.$proc$rtl.v:325$473'.
+     1/1: $1\reg94[19:0]
+Creating decoders for process `\module88.$proc$rtl.v:324$472'.
+     1/1: $1\reg95[12:0]
+Creating decoders for process `\module88.$proc$rtl.v:323$471'.
+     1/1: $1\reg96[5:0]
+Creating decoders for process `\module88.$proc$rtl.v:322$470'.
+     1/1: $1\reg97[6:0]
+Creating decoders for process `\module88.$proc$rtl.v:321$469'.
+     1/1: $1\reg98[10:0]
+Creating decoders for process `\module88.$proc$rtl.v:320$468'.
+     1/1: $1\reg99[8:0]
+Creating decoders for process `\module88.$proc$rtl.v:306$467'.
+     1/1: $1\reg113[10:0]
+Creating decoders for process `\module88.$proc$rtl.v:305$466'.
+     1/1: $1\reg114[11:0]
+Creating decoders for process `\module88.$proc$rtl.v:304$465'.
+     1/1: $1\reg115[20:0]
+Creating decoders for process `\module88.$proc$rtl.v:303$464'.
+     1/1: $1\reg116[20:0]
+Creating decoders for process `\module88.$proc$rtl.v:300$463'.
+     1/1: $1\reg119[11:0]
+Creating decoders for process `\module88.$proc$rtl.v:299$462'.
+     1/1: $1\reg120[15:0]
+Creating decoders for process `\module88.$proc$rtl.v:298$461'.
+     1/1: $1\reg121[17:0]
+Creating decoders for process `\module88.$proc$rtl.v:297$460'.
+     1/1: $1\reg122[17:0]
+Creating decoders for process `\module88.$proc$rtl.v:296$459'.
+     1/1: $1\reg123[2:0]
+Creating decoders for process `\module88.$proc$rtl.v:295$458'.
+     1/1: $1\reg124[17:0]
+Creating decoders for process `\module88.$proc$rtl.v:294$457'.
+     1/1: $1\reg125[7:0]
+Creating decoders for process `\module88.$proc$rtl.v:293$456'.
+     1/1: $1\reg126[4:0]
+Creating decoders for process `\module88.$proc$rtl.v:292$455'.
+     1/1: $1\reg127[10:0]
+Creating decoders for process `\module88.$proc$rtl.v:291$454'.
+     1/1: $1\reg128[4:0]
+Creating decoders for process `\module88.$proc$rtl.v:290$453'.
+     1/1: $0\reg129[8:0]
+Creating decoders for process `\module88.$proc$rtl.v:289$452'.
+     1/1: $0\reg130[13:0]
+Creating decoders for process `\module88.$proc$rtl.v:288$451'.
+     1/1: $0\reg131[14:0]
+Creating decoders for process `\module88.$proc$rtl.v:287$450'.
+     1/1: $0\reg132[4:0]
+Creating decoders for process `\module88.$proc$rtl.v:286$449'.
+     1/1: $0\reg133[21:0]
+Creating decoders for process `\module88.$proc$rtl.v:285$448'.
+     1/1: $1\reg134[3:0]
+Creating decoders for process `\module88.$proc$rtl.v:449$348'.
+     1/11: $0\reg134[3:0]
+     2/11: $0\reg125[7:0]
+     3/11: $0\reg119[11:0]
+     4/11: $0\reg120[15:0]
+     5/11: $0\reg121[17:0]
+     6/11: $0\reg122[17:0]
+     7/11: $0\reg123[2:0]
+     8/11: $0\reg124[17:0]
+     9/11: $0\reg126[4:0]
+    10/11: $0\reg127[10:0]
+    11/11: $0\reg128[4:0]
+Creating decoders for process `\module88.$proc$rtl.v:432$324'.
+     1/4: $0\reg116[20:0]
+     2/4: $0\reg115[20:0]
+     3/4: $0\reg114[11:0]
+     4/4: $0\reg113[10:0]
+Creating decoders for process `\module88.$proc$rtl.v:370$235'.
+     1/7: $0\reg99[8:0]
+     2/7: $0\reg93[4:0]
+     3/7: $0\reg94[19:0]
+     4/7: $0\reg95[12:0]
+     5/7: $0\reg96[5:0]
+     6/7: $0\reg97[6:0]
+     7/7: $0\reg98[10:0]
+Creating decoders for process `\module7.$proc$rtl.v:100$205'.
+     1/1: $1\reg153[8:0]
+Creating decoders for process `\module7.$proc$rtl.v:94$204'.
+     1/1: $1\reg160[16:0]
+Creating decoders for process `\module7.$proc$rtl.v:93$203'.
+     1/1: $1\reg161[5:0]
+Creating decoders for process `\module7.$proc$rtl.v:92$202'.
+     1/1: $1\reg162[13:0]
+Creating decoders for process `\module7.$proc$rtl.v:91$201'.
+     1/1: $1\reg163[14:0]
+Creating decoders for process `\module7.$proc$rtl.v:90$200'.
+     1/1: $1\reg164[14:0]
+Creating decoders for process `\module7.$proc$rtl.v:89$199'.
+     1/1: $1\reg165[20:0]
+Creating decoders for process `\module7.$proc$rtl.v:88$198'.
+     1/1: $1\reg166[9:0]
+Creating decoders for process `\module7.$proc$rtl.v:87$197'.
+     1/1: $1\reg167[21:0]
+Creating decoders for process `\module7.$proc$rtl.v:181$94'.
+     1/8: $0\reg160[16:0]
+     2/8: $0\reg165[20:0]
+     3/8: $0\reg167[21:0]
+     4/8: $0\reg162[13:0]
+     5/8: $0\reg163[14:0]
+     6/8: $0\reg164[14:0]
+     7/8: $0\reg161[5:0]
+     8/8: $0\reg166[9:0]
+Creating decoders for process `\module7.$proc$rtl.v:164$59'.
+     1/1: $0\reg153[8:0]
+Creating decoders for process `\top.$proc$rtl.v:22$43'.
+     1/1: $1\reg176[9:0]
+Creating decoders for process `\top.$proc$rtl.v:20$42'.
+     1/1: $1\reg174[10:0]
+Creating decoders for process `\top.$proc$rtl.v:19$41'.
+     1/1: $1\reg173[8:0]
+Creating decoders for process `\top.$proc$rtl.v:58$12'.
+     1/1: $0\reg176[9:0]
+Creating decoders for process `\top.$proc$rtl.v:53$11'.
+     1/1: $0\reg174[10:0]
+Creating decoders for process `\top.$proc$rtl.v:49$7'.
+     1/1: $0\reg173[8:0]
+
+2.2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\module88.\reg129' from process `\module88.$proc$rtl.v:290$453'.
+No latch inferred for signal `\module88.\reg130' from process `\module88.$proc$rtl.v:289$452'.
+No latch inferred for signal `\module88.\reg131' from process `\module88.$proc$rtl.v:288$451'.
+No latch inferred for signal `\module88.\reg132' from process `\module88.$proc$rtl.v:287$450'.
+No latch inferred for signal `\module88.\reg133' from process `\module88.$proc$rtl.v:286$449'.
+
+2.2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\module13.\reg28' using process `\module13.$proc$rtl.v:815$699'.
+  created $dff cell `$procdff$948' with positive edge clock.
+Creating register for signal `\module13.\reg27' using process `\module13.$proc$rtl.v:815$699'.
+  created $dff cell `$procdff$949' with positive edge clock.
+Creating register for signal `\module13.\reg26' using process `\module13.$proc$rtl.v:815$699'.
+  created $dff cell `$procdff$950' with positive edge clock.
+Creating register for signal `\module13.\reg25' using process `\module13.$proc$rtl.v:815$699'.
+  created $dff cell `$procdff$951' with positive edge clock.
+Creating register for signal `\module13.\reg24' using process `\module13.$proc$rtl.v:815$699'.
+  created $dff cell `$procdff$952' with positive edge clock.
+Creating register for signal `\module32.\reg51' using process `\module32.$proc$rtl.v:706$575'.
+  created $dff cell `$procdff$953' with positive edge clock.
+Creating register for signal `\module32.\reg50' using process `\module32.$proc$rtl.v:706$575'.
+  created $dff cell `$procdff$954' with positive edge clock.
+Creating register for signal `\module32.\reg49' using process `\module32.$proc$rtl.v:706$575'.
+  created $dff cell `$procdff$955' with positive edge clock.
+Creating register for signal `\module32.\reg48' using process `\module32.$proc$rtl.v:706$575'.
+  created $dff cell `$procdff$956' with positive edge clock.
+Creating register for signal `\module32.\reg47' using process `\module32.$proc$rtl.v:706$575'.
+  created $dff cell `$procdff$957' with positive edge clock.
+Creating register for signal `\module32.\reg46' using process `\module32.$proc$rtl.v:706$575'.
+  created $dff cell `$procdff$958' with positive edge clock.
+Creating register for signal `\module32.\reg45' using process `\module32.$proc$rtl.v:706$575'.
+  created $dff cell `$procdff$959' with positive edge clock.
+Creating register for signal `\module32.\reg44' using process `\module32.$proc$rtl.v:706$575'.
+  created $dff cell `$procdff$960' with positive edge clock.
+Creating register for signal `\module32.\reg43' using process `\module32.$proc$rtl.v:706$575'.
+  created $dff cell `$procdff$961' with positive edge clock.
+Creating register for signal `\module32.\reg42' using process `\module32.$proc$rtl.v:706$575'.
+  created $dff cell `$procdff$962' with positive edge clock.
+Creating register for signal `\module56.\reg78' using process `\module56.$proc$rtl.v:649$533'.
+  created $dff cell `$procdff$963' with positive edge clock.
+Creating register for signal `\module56.\reg77' using process `\module56.$proc$rtl.v:627$508'.
+  created $dff cell `$procdff$964' with positive edge clock.
+Creating register for signal `\module56.\reg76' using process `\module56.$proc$rtl.v:627$508'.
+  created $dff cell `$procdff$965' with positive edge clock.
+Creating register for signal `\module56.\reg75' using process `\module56.$proc$rtl.v:627$508'.
+  created $dff cell `$procdff$966' with positive edge clock.
+Creating register for signal `\module56.\reg74' using process `\module56.$proc$rtl.v:627$508'.
+  created $dff cell `$procdff$967' with positive edge clock.
+Creating register for signal `\module56.\reg73' using process `\module56.$proc$rtl.v:627$508'.
+  created $dff cell `$procdff$968' with positive edge clock.
+Creating register for signal `\module88.\reg128' using process `\module88.$proc$rtl.v:449$348'.
+  created $dff cell `$procdff$969' with positive edge clock.
+Creating register for signal `\module88.\reg127' using process `\module88.$proc$rtl.v:449$348'.
+  created $dff cell `$procdff$970' with positive edge clock.
+Creating register for signal `\module88.\reg126' using process `\module88.$proc$rtl.v:449$348'.
+  created $dff cell `$procdff$971' with positive edge clock.
+Creating register for signal `\module88.\reg134' using process `\module88.$proc$rtl.v:449$348'.
+  created $dff cell `$procdff$972' with positive edge clock.
+Creating register for signal `\module88.\reg125' using process `\module88.$proc$rtl.v:449$348'.
+  created $dff cell `$procdff$973' with positive edge clock.
+Creating register for signal `\module88.\reg124' using process `\module88.$proc$rtl.v:449$348'.
+  created $dff cell `$procdff$974' with positive edge clock.
+Creating register for signal `\module88.\reg123' using process `\module88.$proc$rtl.v:449$348'.
+  created $dff cell `$procdff$975' with positive edge clock.
+Creating register for signal `\module88.\reg122' using process `\module88.$proc$rtl.v:449$348'.
+  created $dff cell `$procdff$976' with positive edge clock.
+Creating register for signal `\module88.\reg121' using process `\module88.$proc$rtl.v:449$348'.
+  created $dff cell `$procdff$977' with positive edge clock.
+Creating register for signal `\module88.\reg120' using process `\module88.$proc$rtl.v:449$348'.
+  created $dff cell `$procdff$978' with positive edge clock.
+Creating register for signal `\module88.\reg119' using process `\module88.$proc$rtl.v:449$348'.
+  created $dff cell `$procdff$979' with positive edge clock.
+Creating register for signal `\module88.\reg116' using process `\module88.$proc$rtl.v:432$324'.
+  created $dff cell `$procdff$980' with positive edge clock.
+Creating register for signal `\module88.\reg115' using process `\module88.$proc$rtl.v:432$324'.
+  created $dff cell `$procdff$981' with positive edge clock.
+Creating register for signal `\module88.\reg114' using process `\module88.$proc$rtl.v:432$324'.
+  created $dff cell `$procdff$982' with positive edge clock.
+Creating register for signal `\module88.\reg113' using process `\module88.$proc$rtl.v:432$324'.
+  created $dff cell `$procdff$983' with positive edge clock.
+Creating register for signal `\module88.\reg99' using process `\module88.$proc$rtl.v:370$235'.
+  created $dff cell `$procdff$984' with positive edge clock.
+Creating register for signal `\module88.\reg98' using process `\module88.$proc$rtl.v:370$235'.
+  created $dff cell `$procdff$985' with positive edge clock.
+Creating register for signal `\module88.\reg97' using process `\module88.$proc$rtl.v:370$235'.
+  created $dff cell `$procdff$986' with positive edge clock.
+Creating register for signal `\module88.\reg96' using process `\module88.$proc$rtl.v:370$235'.
+  created $dff cell `$procdff$987' with positive edge clock.
+Creating register for signal `\module88.\reg95' using process `\module88.$proc$rtl.v:370$235'.
+  created $dff cell `$procdff$988' with positive edge clock.
+Creating register for signal `\module88.\reg94' using process `\module88.$proc$rtl.v:370$235'.
+  created $dff cell `$procdff$989' with positive edge clock.
+Creating register for signal `\module88.\reg93' using process `\module88.$proc$rtl.v:370$235'.
+  created $dff cell `$procdff$990' with positive edge clock.
+Creating register for signal `\module7.\reg166' using process `\module7.$proc$rtl.v:181$94'.
+  created $dff cell `$procdff$991' with positive edge clock.
+Creating register for signal `\module7.\reg161' using process `\module7.$proc$rtl.v:181$94'.
+  created $dff cell `$procdff$992' with positive edge clock.
+Creating register for signal `\module7.\reg164' using process `\module7.$proc$rtl.v:181$94'.
+  created $dff cell `$procdff$993' with positive edge clock.
+Creating register for signal `\module7.\reg163' using process `\module7.$proc$rtl.v:181$94'.
+  created $dff cell `$procdff$994' with positive edge clock.
+Creating register for signal `\module7.\reg162' using process `\module7.$proc$rtl.v:181$94'.
+  created $dff cell `$procdff$995' with positive edge clock.
+Creating register for signal `\module7.\reg160' using process `\module7.$proc$rtl.v:181$94'.
+  created $dff cell `$procdff$996' with positive edge clock.
+Creating register for signal `\module7.\reg167' using process `\module7.$proc$rtl.v:181$94'.
+  created $dff cell `$procdff$997' with positive edge clock.
+Creating register for signal `\module7.\reg165' using process `\module7.$proc$rtl.v:181$94'.
+  created $dff cell `$procdff$998' with positive edge clock.
+Creating register for signal `\module7.\reg153' using process `\module7.$proc$rtl.v:164$59'.
+  created $dff cell `$procdff$999' with positive edge clock.
+Creating register for signal `\top.\reg176' using process `\top.$proc$rtl.v:58$12'.
+  created $dff cell `$procdff$1000' with positive edge clock.
+Creating register for signal `\top.\reg174' using process `\top.$proc$rtl.v:53$11'.
+  created $dff cell `$procdff$1001' with positive edge clock.
+Creating register for signal `\top.\reg173' using process `\top.$proc$rtl.v:49$7'.
+  created $dff cell `$procdff$1002' with positive edge clock.
+
+2.2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `module13.$proc$rtl.v:789$762'.
+Removing empty process `module13.$proc$rtl.v:788$761'.
+Removing empty process `module13.$proc$rtl.v:787$760'.
+Removing empty process `module13.$proc$rtl.v:786$759'.
+Removing empty process `module13.$proc$rtl.v:785$758'.
+Found and cleaned up 1 empty switch in `\module13.$proc$rtl.v:815$699'.
+Removing empty process `module13.$proc$rtl.v:815$699'.
+Removing empty process `module32.$proc$rtl.v:679$687'.
+Removing empty process `module32.$proc$rtl.v:678$686'.
+Removing empty process `module32.$proc$rtl.v:677$685'.
+Removing empty process `module32.$proc$rtl.v:676$684'.
+Removing empty process `module32.$proc$rtl.v:675$683'.
+Removing empty process `module32.$proc$rtl.v:674$682'.
+Removing empty process `module32.$proc$rtl.v:673$681'.
+Removing empty process `module32.$proc$rtl.v:672$680'.
+Removing empty process `module32.$proc$rtl.v:671$679'.
+Removing empty process `module32.$proc$rtl.v:670$678'.
+Found and cleaned up 3 empty switches in `\module32.$proc$rtl.v:706$575'.
+Removing empty process `module32.$proc$rtl.v:706$575'.
+Removing empty process `module56.$proc$rtl.v:577$560'.
+Removing empty process `module56.$proc$rtl.v:576$559'.
+Removing empty process `module56.$proc$rtl.v:575$558'.
+Removing empty process `module56.$proc$rtl.v:574$557'.
+Removing empty process `module56.$proc$rtl.v:573$556'.
+Removing empty process `module56.$proc$rtl.v:572$555'.
+Removing empty process `module56.$proc$rtl.v:649$533'.
+Found and cleaned up 1 empty switch in `\module56.$proc$rtl.v:627$508'.
+Removing empty process `module56.$proc$rtl.v:627$508'.
+Removing empty process `module88.$proc$rtl.v:326$474'.
+Removing empty process `module88.$proc$rtl.v:325$473'.
+Removing empty process `module88.$proc$rtl.v:324$472'.
+Removing empty process `module88.$proc$rtl.v:323$471'.
+Removing empty process `module88.$proc$rtl.v:322$470'.
+Removing empty process `module88.$proc$rtl.v:321$469'.
+Removing empty process `module88.$proc$rtl.v:320$468'.
+Removing empty process `module88.$proc$rtl.v:306$467'.
+Removing empty process `module88.$proc$rtl.v:305$466'.
+Removing empty process `module88.$proc$rtl.v:304$465'.
+Removing empty process `module88.$proc$rtl.v:303$464'.
+Removing empty process `module88.$proc$rtl.v:300$463'.
+Removing empty process `module88.$proc$rtl.v:299$462'.
+Removing empty process `module88.$proc$rtl.v:298$461'.
+Removing empty process `module88.$proc$rtl.v:297$460'.
+Removing empty process `module88.$proc$rtl.v:296$459'.
+Removing empty process `module88.$proc$rtl.v:295$458'.
+Removing empty process `module88.$proc$rtl.v:294$457'.
+Removing empty process `module88.$proc$rtl.v:293$456'.
+Removing empty process `module88.$proc$rtl.v:292$455'.
+Removing empty process `module88.$proc$rtl.v:291$454'.
+Removing empty process `module88.$proc$rtl.v:290$453'.
+Removing empty process `module88.$proc$rtl.v:289$452'.
+Removing empty process `module88.$proc$rtl.v:288$451'.
+Removing empty process `module88.$proc$rtl.v:287$450'.
+Removing empty process `module88.$proc$rtl.v:286$449'.
+Removing empty process `module88.$proc$rtl.v:285$448'.
+Found and cleaned up 4 empty switches in `\module88.$proc$rtl.v:449$348'.
+Removing empty process `module88.$proc$rtl.v:449$348'.
+Removing empty process `module88.$proc$rtl.v:432$324'.
+Found and cleaned up 2 empty switches in `\module88.$proc$rtl.v:370$235'.
+Removing empty process `module88.$proc$rtl.v:370$235'.
+Removing empty process `module7.$proc$rtl.v:100$205'.
+Removing empty process `module7.$proc$rtl.v:94$204'.
+Removing empty process `module7.$proc$rtl.v:93$203'.
+Removing empty process `module7.$proc$rtl.v:92$202'.
+Removing empty process `module7.$proc$rtl.v:91$201'.
+Removing empty process `module7.$proc$rtl.v:90$200'.
+Removing empty process `module7.$proc$rtl.v:89$199'.
+Removing empty process `module7.$proc$rtl.v:88$198'.
+Removing empty process `module7.$proc$rtl.v:87$197'.
+Found and cleaned up 3 empty switches in `\module7.$proc$rtl.v:181$94'.
+Removing empty process `module7.$proc$rtl.v:181$94'.
+Removing empty process `module7.$proc$rtl.v:164$59'.
+Removing empty process `top.$proc$rtl.v:22$43'.
+Removing empty process `top.$proc$rtl.v:20$42'.
+Removing empty process `top.$proc$rtl.v:19$41'.
+Removing empty process `top.$proc$rtl.v:58$12'.
+Removing empty process `top.$proc$rtl.v:53$11'.
+Removing empty process `top.$proc$rtl.v:49$7'.
+Cleaned up 14 empty switches.
+
+2.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module module13.
+<suppressed ~7 debug messages>
+Optimizing module module32.
+<suppressed ~14 debug messages>
+Optimizing module module56.
+<suppressed ~15 debug messages>
+Optimizing module module88.
+<suppressed ~35 debug messages>
+Optimizing module module138.
+<suppressed ~9 debug messages>
+Optimizing module module7.
+<suppressed ~18 debug messages>
+Optimizing module top.
+<suppressed ~4 debug messages>
+
+2.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \module13..
+Finding unused cells or wires in module \module32..
+Finding unused cells or wires in module \module56..
+Finding unused cells or wires in module \module88..
+Finding unused cells or wires in module \module138..
+Finding unused cells or wires in module \module7..
+Finding unused cells or wires in module \top..
+Removed 50 unused cells and 418 unused wires.
+<suppressed ~141 debug messages>
+
+2.5. Executing CHECK pass (checking for obvious problems).
+checking module module13..
+checking module module138..
+checking module module32..
+checking module module56..
+checking module module7..
+checking module module88..
+checking module top..
+found and reported 0 problems.
+
+2.6. Executing OPT pass (performing simple optimizations).
+
+2.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module module13.
+Optimizing module module138.
+<suppressed ~1 debug messages>
+Optimizing module module32.
+Optimizing module module56.
+Optimizing module module7.
+Optimizing module module88.
+<suppressed ~1 debug messages>
+Optimizing module top.
+
+2.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\module13'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `\module138'.
+Finding identical cells in module `\module32'.
+<suppressed ~6 debug messages>
+Finding identical cells in module `\module56'.
+Finding identical cells in module `\module7'.
+<suppressed ~6 debug messages>
+Finding identical cells in module `\module88'.
+<suppressed ~12 debug messages>
+Finding identical cells in module `\top'.
+Removed a total of 9 cells.
+
+2.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \module13..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module138..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $ternary$rtl.v:273$229.
+Running muxtree optimizer on module \module32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+      Replacing known input bits on port A of cell $ternary$rtl.v:716$591: { 13'0000000000000 \wire36 [2:1] } -> { 13'0000000000000 \wire36 [2] 1'0 }
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module56..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module7..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module88..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 1 multiplexer ports.
+<suppressed ~104 debug messages>
+
+2.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \module13.
+    New input vector for $reduce_or cell $reduce_or$rtl.v:813$695: { \wire15 [0] \wire15 [1] \wire15 [2] \wire15 [3] \wire15 [4] \wire15 [5] \wire15 [6] \wire15 [7] \wire15 [8] \wire15 [9] \wire15 [10] \wire15 [11] }
+    New input vector for $reduce_or cell $reduce_or$rtl.v:811$691: { \wire18 [0] \wire18 [1] \wire18 [2] \wire18 [3] \wire18 [4] \wire18 [5] \wire18 [6] \wire18 [7] \wire18 [8] \wire18 [9] \wire18 [10] \wire18 [11] \wire18 [12] \wire18 [13] \wire18 [14] }
+    New input vector for $reduce_and cell $reduce_and$rtl.v:818$700: { \wire17 [0] \wire17 [1] \wire17 [2] \wire17 [3] \wire17 [4] \wire17 [5] \wire17 [6] \wire17 [7] \wire17 [8] \wire17 [9] \wire17 [10] \wire17 [11] \wire17 [12] \wire17 [13] \wire17 [14] \wire17 [15] \wire17 [16] \wire17 [17] \wire17 [18] \wire17 [19] \wire17 [20] }
+  Optimizing cells in module \module13.
+  Optimizing cells in module \module138.
+  Optimizing cells in module \module32.
+    New input vector for $reduce_or cell $reduce_or$rtl.v:766$674: { \wire37 [0] \wire37 [1] \wire37 [2] \wire37 [3] \wire37 [4] \wire37 [5] \wire37 [6] \wire37 [7] \wire37 [8] \wire37 [9] \wire37 [10] \wire37 [11] }
+    New input vector for $reduce_or cell $reduce_or$rtl.v:721$596: { \wire34 [0] \wire34 [1] \wire34 [2] \wire34 [3] \wire34 [4] \wire34 [5] \wire34 [6] \wire34 [7] \wire34 [8] \wire34 [9] \wire34 [10] }
+    New input vector for $reduce_and cell $reduce_and$rtl.v:755$654: { \wire35 [12] \wire35 [13] \wire35 [14] \wire35 [15] \wire35 [16] }
+    New input vector for $reduce_and cell $reduce_and$rtl.v:753$648: { $xnor$rtl.v:753$647_Y [0] $xnor$rtl.v:753$647_Y [1] $xnor$rtl.v:753$647_Y [2] $xnor$rtl.v:753$647_Y [3] $xnor$rtl.v:753$647_Y [4] $xnor$rtl.v:753$647_Y [5] $xnor$rtl.v:753$647_Y [6] $xnor$rtl.v:753$647_Y [7] }
+    New input vector for $reduce_and cell $reduce_and$rtl.v:753$645: { $xnor$rtl.v:753$644_Y [0] $xnor$rtl.v:753$644_Y [1] $xnor$rtl.v:753$644_Y [2] $xnor$rtl.v:753$644_Y [3] $xnor$rtl.v:753$644_Y [4] $xnor$rtl.v:753$644_Y [5] $xnor$rtl.v:753$644_Y [6] $xnor$rtl.v:753$644_Y [7] $xnor$rtl.v:753$644_Y [8] $xnor$rtl.v:753$644_Y [9] $xnor$rtl.v:753$644_Y [10] $xnor$rtl.v:753$644_Y [11] $xnor$rtl.v:753$644_Y [12] $xnor$rtl.v:753$644_Y [13] $xnor$rtl.v:753$644_Y [14] $xnor$rtl.v:753$644_Y [15] $xnor$rtl.v:753$644_Y [16] $xnor$rtl.v:753$644_Y [17] $xnor$rtl.v:753$644_Y [18] $xnor$rtl.v:753$644_Y [19] $xnor$rtl.v:753$644_Y [20] $xnor$rtl.v:753$644_Y [21] }
+    New input vector for $reduce_and cell $reduce_and$rtl.v:744$626: { \wire36 [0] \wire36 [1] \wire36 [2] \wire36 [3] \wire36 [4] }
+    New input vector for $reduce_and cell $reduce_and$rtl.v:732$607: { \wire35 [1] \wire35 [2] \wire35 [3] \wire35 [4] \wire35 [5] }
+    New input vector for $reduce_and cell $reduce_and$rtl.v:703$569: { \wire37 [0] \wire37 [1] \wire37 [2] \wire37 [3] \wire37 [4] \wire37 [5] \wire37 [6] \wire37 [7] \wire37 [8] \wire37 [9] \wire37 [10] \wire37 [11] }
+    New input vector for $reduce_and cell $reduce_and$rtl.v:701$563: { \wire34 [0] \wire34 [1] \wire34 [2] \wire34 [3] \wire34 [4] \wire34 [5] \wire34 [6] \wire34 [7] \wire34 [8] \wire34 [9] \wire34 [10] $logic_or$rtl.v:701$561_Y }
+  Optimizing cells in module \module32.
+  Optimizing cells in module \module56.
+    New input vector for $reduce_or cell $reduce_or$rtl.v:655$540: { \wire65 [0] \wire65 [1] \wire65 [2] \wire65 [3] \wire65 [4] \wire65 [5] }
+    New input vector for $reduce_or cell $reduce_or$rtl.v:652$535: { \wire58 [0] \wire58 [1] \wire58 [2] \wire58 [3] \wire58 [4] \wire58 [5] }
+    New input vector for $reduce_or cell $reduce_or$rtl.v:651$536: { \reg76 [0] \reg76 [1] \reg76 [2] \reg76 [3] \reg76 [4] \reg76 [5] \reg76 [6] \reg76 [7] \reg76 [8] \reg76 [9] \reg76 [10] \reg76 [11] }
+    New input vector for $reduce_and cell $reduce_and$rtl.v:658$547: { \wire61 [3] \wire61 [4] \wire61 [5] \wire61 [6] \wire61 [7] \wire61 [8] \wire61 [9] \wire61 [10] \wire61 [11] \wire61 [12] \wire61 [13] \wire61 [14] \wire61 [15] \wire61 [16] }
+  Optimizing cells in module \module56.
+  Optimizing cells in module \module7.
+    New input vector for $reduce_or cell $reduce_or$rtl.v:223$174: { $ternary$rtl.v:223$173_Y [0] $ternary$rtl.v:223$173_Y [1] $ternary$rtl.v:223$173_Y [2] $ternary$rtl.v:223$173_Y [3] $ternary$rtl.v:223$173_Y [4] $ternary$rtl.v:223$173_Y [5] $ternary$rtl.v:223$173_Y [6] $ternary$rtl.v:223$173_Y [7] $ternary$rtl.v:223$173_Y [8] $ternary$rtl.v:223$173_Y [9] $ternary$rtl.v:223$173_Y [10] $ternary$rtl.v:223$173_Y [11] }
+    New input vector for $reduce_or cell $reduce_or$rtl.v:223$170: { $ternary$rtl.v:223$169_Y [0] $ternary$rtl.v:223$169_Y [1] $ternary$rtl.v:223$169_Y [2] $ternary$rtl.v:223$169_Y [3] $ternary$rtl.v:223$169_Y [4] $ternary$rtl.v:223$169_Y [5] $ternary$rtl.v:223$169_Y [6] $ternary$rtl.v:223$169_Y [7] $ternary$rtl.v:223$169_Y [8] $ternary$rtl.v:223$169_Y [9] $ternary$rtl.v:223$169_Y [10] $ternary$rtl.v:223$169_Y [11] $ternary$rtl.v:223$169_Y [12] $ternary$rtl.v:223$169_Y [13] $ternary$rtl.v:223$169_Y [14] $ternary$rtl.v:223$169_Y [15] $ternary$rtl.v:223$169_Y [16] $ternary$rtl.v:223$169_Y [17] $ternary$rtl.v:223$169_Y [18] }
+    New input vector for $reduce_or cell $reduce_or$rtl.v:223$166: { \wire82 [0] \wire82 [1] \wire82 [2] \wire82 [3] \wire82 [4] \wire82 [5] \wire82 [6] \wire82 [7] }
+    New input vector for $reduce_or cell $reduce_or$rtl.v:190$102: { \wire30 [0] \wire30 [1] \wire30 [2] \wire30 [3] \wire30 [4] \wire30 [5] \wire30 [6] \wire30 [7] \wire30 [8] \wire30 [9] \wire30 [10] }
+    New input vector for $reduce_or cell $reduce_or$rtl.v:166$60: { \wire82 [0] \wire82 [1] \wire82 [2] \wire82 [3] \wire82 [4] \wire82 [5] \wire82 [6] \wire82 [7] \wire85 [0] \wire85 [1] \wire85 [2] \wire85 [3] \wire85 [4] \wire85 [5] \wire85 [6] \wire85 [7] \wire85 [8] \wire85 [9] \wire85 [10] \wire85 [11] \wire85 [12] }
+    New input vector for $reduce_and cell $reduce_and$rtl.v:177$86: { $ternary$rtl.v:177$85_Y [0] $ternary$rtl.v:177$85_Y [1] $ternary$rtl.v:177$85_Y [2] $ternary$rtl.v:177$85_Y [3] $ternary$rtl.v:177$85_Y [4] $ternary$rtl.v:177$85_Y [5] $ternary$rtl.v:177$85_Y [6] $ternary$rtl.v:177$85_Y [7] $ternary$rtl.v:177$85_Y [8] $ternary$rtl.v:177$85_Y [9] $ternary$rtl.v:177$85_Y [10] $ternary$rtl.v:177$85_Y [11] $ternary$rtl.v:177$85_Y [12] $ternary$rtl.v:177$85_Y [13] $ternary$rtl.v:177$85_Y [14] $ternary$rtl.v:177$85_Y [15] $ternary$rtl.v:177$85_Y [16] $ternary$rtl.v:177$85_Y [17] $ternary$rtl.v:177$85_Y [18] $ternary$rtl.v:177$85_Y [19] $ternary$rtl.v:177$85_Y [20] }
+  Optimizing cells in module \module7.
+  Optimizing cells in module \module88.
+    New input vector for $reduce_or cell $reduce_or$rtl.v:509$439: { $pos$rtl.v:509$438_Y [0] $pos$rtl.v:509$438_Y [1] $pos$rtl.v:509$438_Y [2] $pos$rtl.v:509$438_Y [3] $pos$rtl.v:509$438_Y [4] $pos$rtl.v:509$438_Y [5] $pos$rtl.v:509$438_Y [6] $pos$rtl.v:509$438_Y [7] $pos$rtl.v:509$438_Y [8] }
+    New input vector for $reduce_or cell $reduce_or$rtl.v:498$427: { $sshr$rtl.v:498$426_Y [0] $sshr$rtl.v:498$426_Y [1] $sshr$rtl.v:498$426_Y [2] }
+    New input vector for $reduce_or cell $reduce_or$rtl.v:427$314: { $xor$rtl.v:427$313_Y [0] $xor$rtl.v:427$313_Y [1] $xor$rtl.v:427$313_Y [2] $xor$rtl.v:427$313_Y [3] $xor$rtl.v:427$313_Y [4] $xor$rtl.v:427$313_Y [5] $xor$rtl.v:427$313_Y [6] $xor$rtl.v:427$313_Y [7] $xor$rtl.v:427$313_Y [8] $xor$rtl.v:427$313_Y [9] $xor$rtl.v:427$313_Y [10] $xor$rtl.v:427$313_Y [11] $xor$rtl.v:427$313_Y [12] $xor$rtl.v:427$313_Y [13] $xor$rtl.v:427$313_Y [14] $xor$rtl.v:427$313_Y [15] $xor$rtl.v:427$313_Y [16] $xor$rtl.v:427$313_Y [17] $xor$rtl.v:427$313_Y [18] $xor$rtl.v:427$313_Y [19] }
+    New input vector for $reduce_or cell $reduce_or$rtl.v:403$280: { \wire92 [0] \wire92 [1] \wire92 [2] \wire92 [3] \wire92 [4] \wire92 [5] \wire92 [6] \wire92 [7] \wire92 [8] \wire92 [9] \wire92 [10] \wire92 [11] \reg96 [0] }
+    New input vector for $reduce_and cell $reduce_and$rtl.v:468$384: { \reg120 [0] \reg120 [1] \reg120 [2] \reg120 [3] \reg120 [4] \reg120 [5] \reg120 [6] \reg120 [7] \reg120 [8] \reg120 [9] \reg120 [10] \reg120 [11] \reg120 [12] \reg120 [13] \reg120 [14] \reg120 [15] }
+    New input vector for $reduce_and cell $reduce_and$rtl.v:419$302: { $ternary$rtl.v:419$301_Y [0] $ternary$rtl.v:419$301_Y [1] $ternary$rtl.v:419$301_Y [2] $ternary$rtl.v:419$301_Y [3] $ternary$rtl.v:419$301_Y [4] $ternary$rtl.v:419$301_Y [5] $ternary$rtl.v:419$301_Y [6] $ternary$rtl.v:419$301_Y [7] }
+    New input vector for $reduce_and cell $reduce_and$rtl.v:397$275: { \reg93 [0] \reg93 [1] \reg93 [2] \reg93 [3] \reg93 [4] }
+    New input vector for $reduce_and cell $reduce_and$rtl.v:376$236: { \wire92 [0] \wire92 [1] \wire92 [2] \wire92 [3] \wire92 [4] \wire92 [5] \wire92 [6] \wire92 [7] \wire92 [8] \wire92 [9] \wire92 [10] \wire92 [11] }
+  Optimizing cells in module \module88.
+  Optimizing cells in module \top.
+    New input vector for $reduce_or cell $reduce_or$rtl.v:70$22: { \wire2 [0] \wire2 [1] \wire2 [2] \wire2 [3] \wire2 [4] \wire2 [5] \wire2 [6] \wire2 [7] \wire2 [8] \wire2 [9] \wire2 [10] \wire2 [11] \wire2 [12] \wire2 [13] \wire2 [14] \wire2 [15] \wire2 [16] \wire2 [17] }
+    New input vector for $reduce_or cell $reduce_or$rtl.v:61$14: { \wire1 [4] \wire1 [5] \wire1 [6] \wire1 [7] \wire1 [8] \wire1 [9] \wire1 [10] \wire1 [11] \wire1 [12] \wire1 [13] \wire1 [14] \wire1 [15] \wire1 [16] $and$rtl.v:60$13_Y [0] $and$rtl.v:60$13_Y [1] $and$rtl.v:60$13_Y [2] $and$rtl.v:60$13_Y [3] $and$rtl.v:60$13_Y [4] $and$rtl.v:60$13_Y [5] $and$rtl.v:60$13_Y [6] $and$rtl.v:60$13_Y [7] $and$rtl.v:60$13_Y [8] $and$rtl.v:60$13_Y [9] $and$rtl.v:60$13_Y [10] $and$rtl.v:60$13_Y [11] $and$rtl.v:60$13_Y [12] $and$rtl.v:60$13_Y [13] $and$rtl.v:60$13_Y [14] $and$rtl.v:60$13_Y [15] $and$rtl.v:60$13_Y [16] $and$rtl.v:60$13_Y [17] $and$rtl.v:60$13_Y [18] $and$rtl.v:60$13_Y [19] $and$rtl.v:60$13_Y [20] }
+    New input vector for $reduce_and cell $reduce_and$rtl.v:69$20: { \wire2 [0] \wire2 [1] \wire2 [2] \wire2 [3] \wire2 [4] \wire2 [5] \wire2 [6] \wire2 [7] \wire2 [8] \wire2 [9] \wire2 [10] \wire2 [11] \wire2 [12] \wire2 [13] \wire2 [14] \wire2 [15] \wire2 [16] \wire2 [17] }
+    New input vector for $reduce_and cell $reduce_and$rtl.v:51$9: { $sshl$rtl.v:51$8_Y [0] $sshl$rtl.v:51$8_Y [1] $sshl$rtl.v:51$8_Y [2] $sshl$rtl.v:51$8_Y [3] $sshl$rtl.v:51$8_Y [4] $sshl$rtl.v:51$8_Y [5] $sshl$rtl.v:51$8_Y [6] $sshl$rtl.v:51$8_Y [7] $sshl$rtl.v:51$8_Y [8] $sshl$rtl.v:51$8_Y [9] $sshl$rtl.v:51$8_Y [10] $sshl$rtl.v:51$8_Y [11] $sshl$rtl.v:51$8_Y [12] $sshl$rtl.v:51$8_Y [13] $sshl$rtl.v:51$8_Y [14] $sshl$rtl.v:51$8_Y [15] $sshl$rtl.v:51$8_Y [16] $sshl$rtl.v:51$8_Y [17] $sshl$rtl.v:51$8_Y [18] $sshl$rtl.v:51$8_Y [19] $sshl$rtl.v:51$8_Y [20] }
+    New input vector for $reduce_and cell $reduce_and$rtl.v:48$5: { \wire3 [10] \wire3 [11] \wire3 [12] \wire3 [13] \wire3 [14] \wire3 [15] \wire3 [16] }
+  Optimizing cells in module \top.
+Performed a total of 35 changes.
+
+2.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\module13'.
+Finding identical cells in module `\module138'.
+Finding identical cells in module `\module32'.
+Finding identical cells in module `\module56'.
+Finding identical cells in module `\module7'.
+Finding identical cells in module `\module88'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.6.6. Executing OPT_RMDFF pass (remove dff with constant values).
+Removing $procdff$952 ($dff) from module module13.
+Promoting init spec \reg28 = 4'0000 to constant driver in module module13.
+Promoting init spec \reg134 = 4'0000 to constant driver in module module88.
+Promoted 2 init specs to constant drivers.
+Replaced 1 DFF cells.
+
+2.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \module13..
+Finding unused cells or wires in module \module138..
+Finding unused cells or wires in module \module32..
+Finding unused cells or wires in module \module56..
+Finding unused cells or wires in module \module7..
+Finding unused cells or wires in module \module88..
+Finding unused cells or wires in module \top..
+Removed 1 unused cells and 13 unused wires.
+<suppressed ~6 debug messages>
+
+2.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module module13.
+<suppressed ~3 debug messages>
+Optimizing module module138.
+Optimizing module module32.
+Optimizing module module56.
+Optimizing module module7.
+Optimizing module module88.
+Optimizing module top.
+
+2.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \module13..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module138..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module56..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module7..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module88..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~102 debug messages>
+
+2.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \module13.
+  Optimizing cells in module \module138.
+  Optimizing cells in module \module32.
+  Optimizing cells in module \module56.
+  Optimizing cells in module \module7.
+  Optimizing cells in module \module88.
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\module13'.
+Finding identical cells in module `\module138'.
+Finding identical cells in module `\module32'.
+Finding identical cells in module `\module56'.
+Finding identical cells in module `\module7'.
+Finding identical cells in module `\module88'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.6.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \module13..
+Finding unused cells or wires in module \module138..
+Finding unused cells or wires in module \module32..
+Finding unused cells or wires in module \module56..
+Finding unused cells or wires in module \module7..
+Finding unused cells or wires in module \module88..
+Finding unused cells or wires in module \top..
+Removed 8 unused cells and 10 unused wires.
+<suppressed ~9 debug messages>
+
+2.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module module13.
+Optimizing module module138.
+Optimizing module module32.
+Optimizing module module56.
+Optimizing module module7.
+Optimizing module module88.
+Optimizing module top.
+
+2.6.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.6.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \module13..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module138..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module56..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module7..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module88..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~101 debug messages>
+
+2.6.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \module13.
+  Optimizing cells in module \module138.
+  Optimizing cells in module \module32.
+  Optimizing cells in module \module56.
+  Optimizing cells in module \module7.
+  Optimizing cells in module \module88.
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.6.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\module13'.
+Finding identical cells in module `\module138'.
+Finding identical cells in module `\module32'.
+Finding identical cells in module `\module56'.
+Finding identical cells in module `\module7'.
+Finding identical cells in module `\module88'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.6.20. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.6.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \module13..
+Finding unused cells or wires in module \module138..
+Finding unused cells or wires in module \module32..
+Finding unused cells or wires in module \module56..
+Finding unused cells or wires in module \module7..
+Finding unused cells or wires in module \module88..
+Finding unused cells or wires in module \top..
+
+2.6.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module module13.
+Optimizing module module138.
+Optimizing module module32.
+Optimizing module module56.
+Optimizing module module7.
+Optimizing module module88.
+Optimizing module top.
+
+2.6.23. Finished OPT passes. (There is nothing left to do.)
+
+2.7. Executing WREDUCE pass (reducing word size of cells).
+Removed top 2 bits (of 3) from port B of cell module13.$ne$rtl.v:808$690 ($ne).
+Removed top 7 bits (of 8) from port A of cell module13.$xor$rtl.v:814$694 ($xor).
+Removed top 14 bits (of 15) from mux cell module13.$ternary$rtl.v:818$703 ($mux).
+Removed top 20 bits (of 21) from port A of cell module13.$shl$rtl.v:822$712 ($shl).
+Removed top 1 bits (of 21) from mux cell module13.$ternary$rtl.v:824$719 ($mux).
+Removed top 13 bits (of 19) from port A of cell module13.$neg$rtl.v:832$735 ($neg).
+Removed top 18 bits (of 19) from mux cell module13.$ternary$rtl.v:834$740 ($mux).
+Removed top 3 bits (of 19) from port Y of cell module13.$sub$rtl.v:834$743 ($sub).
+Removed top 3 bits (of 19) from port A of cell module13.$sub$rtl.v:834$743 ($sub).
+Removed top 3 bits (of 19) from port B of cell module13.$sub$rtl.v:834$743 ($sub).
+Removed top 10 bits (of 11) from FF cell module13.$procdff$949 ($dff).
+Removed top 3 bits (of 4) from FF cell module13.$procdff$951 ($dff).
+Removed top 18 bits (of 19) from mux cell module13.$ternary$rtl.v:834$742 ($mux).
+Removed top 3 bits (of 19) from port Y of cell module13.$neg$rtl.v:832$735 ($neg).
+Removed top 3 bits (of 4) from wire module13.$0\reg25[3:0].
+Removed top 14 bits (of 15) from wire module13.$logic_not$rtl.v:818$701_Y.
+Removed top 3 bits (of 19) from wire module13.$neg$rtl.v:832$735_Y.
+Removed top 14 bits (of 15) from wire module13.$ternary$rtl.v:818$703_Y.
+Removed top 1 bits (of 21) from wire module13.$ternary$rtl.v:824$719_Y.
+Removed top 18 bits (of 19) from wire module13.$ternary$rtl.v:834$740_Y.
+Removed top 18 bits (of 19) from wire module13.$ternary$rtl.v:834$742_Y.
+Removed top 14 bits (of 15) from wire module13.wire18.
+Removed top 18 bits (of 19) from wire module13.wire22.
+Removed top 13 bits (of 22) from port B of cell module138.$le$rtl.v:263$212 ($le).
+Removed top 9 bits (of 15) from mux cell module138.$ternary$rtl.v:268$220 ($mux).
+Removed top 7 bits (of 8) from wire module138.wire147.
+Removed top 10 bits (of 11) from wire module138.wire148.
+Removed top 5 bits (of 12) from mux cell module32.$ternary$rtl.v:704$573 ($mux).
+Removed top 8 bits (of 9) from port A of cell module32.$neg$rtl.v:705$574 ($neg).
+Removed top 14 bits (of 15) from port A of cell module32.$sshr$rtl.v:716$589 ($sshr).
+Removed top 11 bits (of 22) from mux cell module32.$ternary$rtl.v:732$606 ($mux).
+Removed top 11 bits (of 22) from port A of cell module32.$sub$rtl.v:732$608 ($sub).
+Removed top 21 bits (of 22) from port B of cell module32.$sub$rtl.v:732$608 ($sub).
+Removed top 11 bits (of 22) from port Y of cell module32.$sshl$rtl.v:746$630 ($sshl).
+Removed top 12 bits (of 21) from port Y of cell module32.$shl$rtl.v:747$632 ($shl).
+Removed top 16 bits (of 17) from port A of cell module32.$xnor$rtl.v:749$636 ($xnor).
+Removed top 15 bits (of 16) from port A of cell module32.$neg$rtl.v:751$640 ($neg).
+Removed top 13 bits (of 22) from port A of cell module32.$xnor$rtl.v:753$644 ($xnor).
+Removed top 7 bits (of 8) from port B of cell module32.$xnor$rtl.v:753$647 ($xnor).
+Removed top 1 bits (of 16) from mux cell module32.$ternary$rtl.v:756$657 ($mux).
+Removed top 4 bits (of 20) from mux cell module32.$ternary$rtl.v:763$670 ($mux).
+Removed top 14 bits (of 15) from port B of cell module32.$gt$rtl.v:766$675 ($gt).
+Removed top 8 bits (of 9) from port A of cell module32.$xnor$rtl.v:766$676 ($xnor).
+Removed top 17 bits (of 21) from mux cell module32.$procmux$796 ($mux).
+Removed top 1 bits (of 16) from mux cell module32.$procmux$791 ($mux).
+Removed top 17 bits (of 22) from FF cell module32.$procdff$953 ($dff).
+Removed top 14 bits (of 15) from FF cell module32.$procdff$954 ($dff).
+Removed top 4 bits (of 20) from mux cell module32.$ternary$rtl.v:763$668 ($mux).
+Removed top 4 bits (of 20) from mux cell module32.$ternary$rtl.v:763$666 ($mux).
+Removed top 8 bits (of 9) from wire module32.$gt$rtl.v:766$675_Y.
+Removed top 15 bits (of 16) from wire module32.$logic_not$rtl.v:751$639_Y.
+Removed top 7 bits (of 8) from wire module32.$logic_not$rtl.v:753$646_Y.
+Removed top 20 bits (of 21) from wire module32.$logic_not$rtl.v:753$649_Y.
+Removed top 11 bits (of 12) from wire module32.$logic_or$rtl.v:704$571_Y.
+Removed top 14 bits (of 15) from wire module32.$lt$rtl.v:728$600_Y.
+Removed top 11 bits (of 22) from wire module32.$or$rtl.v:746$631_Y.
+Removed top 1 bits (of 16) from wire module32.$procmux$791_Y.
+Removed top 17 bits (of 21) from wire module32.$procmux$796_Y.
+Removed top 21 bits (of 22) from wire module32.$reduce_and$rtl.v:732$607_Y.
+Removed top 15 bits (of 16) from wire module32.$reduce_or$rtl.v:721$596_Y.
+Removed top 14 bits (of 15) from wire module32.$reduce_or$rtl.v:766$674_Y.
+Removed top 21 bits (of 22) from wire module32.$reduce_xnor$rtl.v:732$603_Y.
+Removed top 12 bits (of 21) from wire module32.$shl$rtl.v:747$632_Y.
+Removed top 11 bits (of 22) from wire module32.$ternary$rtl.v:732$606_Y.
+Removed top 1 bits (of 16) from wire module32.$ternary$rtl.v:756$657_Y.
+Removed top 4 bits (of 20) from wire module32.$ternary$rtl.v:763$666_Y.
+Removed top 4 bits (of 20) from wire module32.$ternary$rtl.v:763$668_Y.
+Removed top 4 bits (of 20) from wire module32.$ternary$rtl.v:763$670_Y.
+Removed top 9 bits (of 10) from port B of cell module56.$add$rtl.v:609$476 ($add).
+Removed top 5 bits (of 10) from port Y of cell module56.$add$rtl.v:609$476 ($add).
+Removed top 5 bits (of 10) from port A of cell module56.$add$rtl.v:609$476 ($add).
+Removed top 11 bits (of 21) from port A of cell module56.$xor$rtl.v:610$477 ($xor).
+Removed top 12 bits (of 21) from port Y of cell module56.$xor$rtl.v:610$477 ($xor).
+Removed top 1 bits (of 10) from port A of cell module56.$xor$rtl.v:610$477 ($xor).
+Removed top 12 bits (of 21) from port B of cell module56.$xor$rtl.v:610$477 ($xor).
+Removed top 15 bits (of 21) from port Y of cell module56.$neg$rtl.v:612$482 ($neg).
+Removed top 15 bits (of 21) from port A of cell module56.$neg$rtl.v:612$482 ($neg).
+Removed top 14 bits (of 21) from mux cell module56.$ternary$rtl.v:617$485 ($mux).
+Removed top 8 bits (of 19) from mux cell module56.$ternary$rtl.v:621$486 ($mux).
+Removed top 6 bits (of 7) from port A of cell module56.$add$rtl.v:624$498 ($add).
+Removed top 4 bits (of 7) from port Y of cell module56.$add$rtl.v:624$498 ($add).
+Removed top 4 bits (of 7) from port B of cell module56.$add$rtl.v:624$498 ($add).
+Removed top 18 bits (of 21) from port B of cell module56.$xnor$rtl.v:626$506 ($xnor).
+Removed top 20 bits (of 21) from port A of cell module56.$eq$rtl.v:626$507 ($eq).
+Removed top 9 bits (of 10) from port A of cell module56.$xnor$rtl.v:632$512 ($xnor).
+Removed top 4 bits (of 7) from port A of cell module56.$shr$rtl.v:629$509 ($shr).
+Removed top 2 bits (of 3) from port A of cell module56.$and$rtl.v:641$527 ($and).
+Removed top 2 bits (of 3) from port B of cell module56.$and$rtl.v:641$527 ($and).
+Removed top 2 bits (of 3) from port Y of cell module56.$and$rtl.v:641$527 ($and).
+Removed top 6 bits (of 11) from port B of cell module56.$add$rtl.v:645$531 ($add).
+Removed top 6 bits (of 13) from port A of cell module56.$add$rtl.v:647$532 ($add).
+Removed top 10 bits (of 13) from port Y of cell module56.$add$rtl.v:647$532 ($add).
+Removed top 4 bits (of 7) from port A of cell module56.$add$rtl.v:647$532 ($add).
+Removed top 10 bits (of 13) from port B of cell module56.$add$rtl.v:647$532 ($add).
+Removed top 15 bits (of 17) from port A of cell module56.$not$rtl.v:652$537 ($not).
+Removed top 3 bits (of 19) from mux cell module56.$ternary$rtl.v:657$545 ($mux).
+Removed top 3 bits (of 19) from port B of cell module56.$xor$rtl.v:657$546 ($xor).
+Removed top 2 bits (of 3) from mux cell module56.$ternary$rtl.v:659$552 ($mux).
+Removed top 1 bits (of 12) from FF cell module56.$procdff$965 ($dff).
+Removed top 15 bits (of 21) from mux cell module56.$ternary$rtl.v:612$481 ($mux).
+Removed top 2 bits (of 3) from mux cell module56.$ternary$rtl.v:659$550 ($mux).
+Removed top 15 bits (of 21) from port Y of cell module56.$mul$rtl.v:612$479 ($mul).
+Removed top 2 bits (of 3) from wire module56.$and$rtl.v:641$527_Y.
+Removed top 2 bits (of 3) from wire module56.$logic_not$rtl.v:641$526_Y.
+Removed top 15 bits (of 21) from wire module56.$mul$rtl.v:612$479_Y.
+Removed top 8 bits (of 21) from wire module56.$not$rtl.v:612$478_Y.
+Removed top 15 bits (of 21) from wire module56.$ternary$rtl.v:612$481_Y.
+Removed top 3 bits (of 19) from wire module56.$ternary$rtl.v:657$545_Y.
+Removed top 2 bits (of 3) from wire module56.$ternary$rtl.v:659$550_Y.
+Removed top 9 bits (of 10) from wire module56.wire67.
+Removed top 5 bits (of 6) from wire module56.wire72.
+Removed top 17 bits (of 18) from wire module56.wire79.
+Removed top 2 bits (of 22) from mux cell module7.$ternary$rtl.v:157$50 ($mux).
+Removed top 21 bits (of 22) from port A of cell module7.$and$rtl.v:158$56 ($and).
+Removed top 2 bits (of 22) from port B of cell module7.$and$rtl.v:158$56 ($and).
+Removed top 2 bits (of 22) from port Y of cell module7.$and$rtl.v:158$56 ($and).
+Removed top 6 bits (of 18) from port Y of cell module7.$xnor$rtl.v:172$72 ($xnor).
+Removed top 12 bits (of 20) from port Y of cell module7.$add$rtl.v:180$88 ($add).
+Removed top 12 bits (of 20) from port A of cell module7.$add$rtl.v:180$88 ($add).
+Removed top 12 bits (of 20) from port B of cell module7.$add$rtl.v:180$88 ($add).
+Removed top 1 bits (of 21) from port B of cell module7.$shr$rtl.v:187$98 ($shr).
+Removed top 2 bits (of 22) from mux cell module7.$ternary$rtl.v:186$115 ($mux).
+Removed top 2 bits (of 22) from port A of cell module7.$and$rtl.v:186$116 ($and).
+Removed top 2 bits (of 22) from port Y of cell module7.$and$rtl.v:186$116 ($and).
+Removed top 2 bits (of 22) from mux cell module7.$ternary$rtl.v:186$118 ($mux).
+Removed top 16 bits (of 17) from port A of cell module7.$add$rtl.v:198$120 ($add).
+Removed top 11 bits (of 17) from port Y of cell module7.$add$rtl.v:198$120 ($add).
+Removed top 1 bits (of 2) from port B of cell module7.$and$rtl.v:202$121 ($and).
+Removed top 5 bits (of 20) from port B of cell module7.$xor$rtl.v:202$122 ($xor).
+Removed top 17 bits (of 19) from port A of cell module7.$lt$rtl.v:206$129 ($lt).
+Removed top 16 bits (of 17) from port A of cell module7.$and$rtl.v:206$130 ($and).
+Removed top 16 bits (of 17) from port B of cell module7.$and$rtl.v:206$130 ($and).
+Removed top 16 bits (of 17) from port Y of cell module7.$and$rtl.v:206$130 ($and).
+Removed top 11 bits (of 17) from mux cell module7.$ternary$rtl.v:206$133 ($mux).
+Removed top 11 bits (of 17) from mux cell module7.$ternary$rtl.v:206$135 ($mux).
+Removed top 2 bits (of 17) from mux cell module7.$ternary$rtl.v:206$138 ($mux).
+Removed top 6 bits (of 20) from mux cell module7.$ternary$rtl.v:218$150 ($mux).
+Removed top 1 bits (of 20) from port A of cell module7.$xnor$rtl.v:219$159 ($xnor).
+Removed top 6 bits (of 20) from mux cell module7.$ternary$rtl.v:218$153 ($mux).
+Removed top 18 bits (of 19) from port A of cell module7.$or$rtl.v:219$154 ($or).
+Removed top 7 bits (of 19) from port Y of cell module7.$or$rtl.v:219$154 ($or).
+Removed top 18 bits (of 19) from mux cell module7.$ternary$rtl.v:223$169 ($mux).
+Removed top 4 bits (of 12) from port A of cell module7.$xor$rtl.v:231$178 ($xor).
+Removed top 15 bits (of 22) from mux cell module7.$ternary$rtl.v:236$182 ($mux).
+Removed top 15 bits (of 21) from mux cell module7.$procmux$905 ($mux).
+Removed top 8 bits (of 21) from mux cell module7.$procmux$901 ($mux).
+Removed top 8 bits (of 21) from mux cell module7.$procmux$907 ($mux).
+Removed top 14 bits (of 15) from mux cell module7.$procmux$928 ($mux).
+Removed cell module7.$procdff$996 ($dff).
+Removed top 8 bits (of 21) from FF cell module7.$procdff$998 ($dff).
+Removed top 8 bits (of 9) from FF cell module7.$procdff$999 ($dff).
+Removed top 3 bits (of 21) from mux cell module7.$ternary$rtl.v:205$125 ($mux).
+Removed top 16 bits (of 17) from port A of cell module7.$shl$rtl.v:206$136 ($shl).
+Removed top 2 bits (of 17) from port Y of cell module7.$shl$rtl.v:206$136 ($shl).
+Removed top 8 bits (of 21) from mux cell module7.$ternary$rtl.v:216$143 ($mux).
+Removed top 6 bits (of 20) from port Y of cell module7.$or$rtl.v:218$151 ($or).
+Removed top 6 bits (of 20) from port A of cell module7.$or$rtl.v:218$151 ($or).
+Removed top 8 bits (of 9) from wire module7.$0\reg153[8:0].
+Removed top 8 bits (of 21) from wire module7.$0\reg165[20:0].
+Removed top 11 bits (of 17) from wire module7.$add$rtl.v:198$120_Y.
+Removed top 2 bits (of 22) from wire module7.$and$rtl.v:186$116_Y.
+Removed top 16 bits (of 17) from wire module7.$and$rtl.v:206$130_Y.
+Removed top 21 bits (of 22) from wire module7.$logic_not$rtl.v:158$55_Y.
+Removed top 16 bits (of 17) from wire module7.$logic_not$rtl.v:206$128_Y.
+Removed top 18 bits (of 19) from wire module7.$logic_not$rtl.v:223$167_Y.
+Removed top 11 bits (of 12) from wire module7.$logic_not$rtl.v:223$171_Y.
+Removed top 6 bits (of 20) from wire module7.$or$rtl.v:218$151_Y.
+Removed top 8 bits (of 21) from wire module7.$procmux$901_Y.
+Removed top 15 bits (of 21) from wire module7.$procmux$905_Y.
+Removed top 14 bits (of 15) from wire module7.$procmux$928_Y.
+Removed top 21 bits (of 22) from wire module7.$reduce_xnor$rtl.v:157$48_Y.
+Removed top 12 bits (of 13) from wire module7.$reduce_xnor$rtl.v:157$51_Y.
+Removed top 16 bits (of 17) from wire module7.$reduce_xnor$rtl.v:205$127_Y.
+Removed top 2 bits (of 17) from wire module7.$shl$rtl.v:206$136_Y.
+Removed top 2 bits (of 22) from wire module7.$ternary$rtl.v:157$50_Y.
+Removed top 2 bits (of 22) from wire module7.$ternary$rtl.v:186$115_Y.
+Removed top 3 bits (of 21) from wire module7.$ternary$rtl.v:205$125_Y.
+Removed top 11 bits (of 17) from wire module7.$ternary$rtl.v:206$133_Y.
+Removed top 13 bits (of 17) from wire module7.$ternary$rtl.v:206$135_Y.
+Removed top 2 bits (of 17) from wire module7.$ternary$rtl.v:206$138_Y.
+Removed top 8 bits (of 21) from wire module7.$ternary$rtl.v:216$143_Y.
+Removed top 6 bits (of 20) from wire module7.$ternary$rtl.v:218$150_Y.
+Removed top 16 bits (of 17) from wire module7.wire152.
+Removed top 6 bits (of 7) from wire module7.wire158.
+Removed top 18 bits (of 19) from wire module7.wire87.
+Removed top 9 bits (of 12) from port A of cell module88.$le$rtl.v:377$239 ($le).
+Removed top 5 bits (of 12) from port B of cell module88.$le$rtl.v:377$239 ($le).
+Removed top 19 bits (of 20) from port A of cell module88.$not$rtl.v:385$251 ($not).
+Removed top 3 bits (of 12) from port B of cell module88.$xnor$rtl.v:387$255 ($xnor).
+Removed top 5 bits (of 6) from port B of cell module88.$xnor$rtl.v:390$262 ($xnor).
+Removed top 7 bits (of 20) from port B of cell module88.$ge$rtl.v:392$267 ($ge).
+Removed top 12 bits (of 13) from port A of cell module88.$shl$rtl.v:392$268 ($shl).
+Removed top 12 bits (of 13) from port A of cell module88.$xnor$rtl.v:393$274 ($xnor).
+Removed top 19 bits (of 20) from port A of cell module88.$le$rtl.v:407$285 ($le).
+Removed top 7 bits (of 8) from port A of cell module88.$ge$rtl.v:407$286 ($ge).
+Removed top 4 bits (of 11) from port B of cell module88.$xnor$rtl.v:414$290 ($xnor).
+Removed top 2 bits (of 11) from port Y of cell module88.$xnor$rtl.v:414$290 ($xnor).
+Removed top 28 bits (of 29) from port B of cell module88.$lt$rtl.v:425$308 ($lt).
+Removed top 4 bits (of 11) from port B of cell module88.$lt$rtl.v:426$309 ($lt).
+Removed top 14 bits (of 18) from mux cell module88.$ternary$rtl.v:426$311 ($mux).
+Removed top 14 bits (of 18) from port A of cell module88.$not$rtl.v:426$312 ($not).
+Removed top 2 bits (of 20) from port B of cell module88.$xor$rtl.v:427$313 ($xor).
+Removed top 12 bits (of 17) from mux cell module88.$ternary$rtl.v:431$319 ($mux).
+Removed top 15 bits (of 22) from mux cell module88.$ternary$rtl.v:438$336 ($mux).
+Removed top 12 bits (of 17) from port A of cell module88.$sshr$rtl.v:431$323 ($sshr).
+Removed top 10 bits (of 11) from port B of cell module88.$sshr$rtl.v:431$323 ($sshr).
+Removed top 16 bits (of 22) from mux cell module88.$ternary$rtl.v:437$331 ($mux).
+Removed top 10 bits (of 17) from mux cell module88.$ternary$rtl.v:438$334 ($mux).
+Removed top 13 bits (of 22) from mux cell module88.$ternary$rtl.v:445$340 ($mux).
+Removed top 5 bits (of 22) from mux cell module88.$ternary$rtl.v:445$343 ($mux).
+Removed top 5 bits (of 22) from port A of cell module88.$sshr$rtl.v:446$347 ($sshr).
+Removed top 7 bits (of 8) from port B of cell module88.$sshr$rtl.v:446$347 ($sshr).
+Removed top 15 bits (of 22) from port Y of cell module88.$sshr$rtl.v:446$347 ($sshr).
+Removed top 8 bits (of 11) from port B of cell module88.$le$rtl.v:452$352 ($le).
+Removed top 20 bits (of 22) from mux cell module88.$ternary$rtl.v:452$351 ($mux).
+Removed top 19 bits (of 22) from port A of cell module88.$ge$rtl.v:452$354 ($ge).
+Removed top 21 bits (of 22) from port B of cell module88.$ge$rtl.v:452$354 ($ge).
+Removed top 21 bits (of 22) from port A of cell module88.$ge$rtl.v:452$355 ($ge).
+Removed top 20 bits (of 22) from port B of cell module88.$ge$rtl.v:452$355 ($ge).
+Removed top 15 bits (of 17) from port B of cell module88.$xor$rtl.v:455$356 ($xor).
+Removed top 8 bits (of 19) from mux cell module88.$ternary$rtl.v:457$361 ($mux).
+Removed top 1 bits (of 19) from port A of cell module88.$xnor$rtl.v:457$362 ($xnor).
+Removed top 8 bits (of 19) from port B of cell module88.$xnor$rtl.v:457$362 ($xnor).
+Removed top 3 bits (of 11) from mux cell module88.$ternary$rtl.v:461$371 ($mux).
+Removed top 9 bits (of 21) from port A of cell module88.$or$rtl.v:458$363 ($or).
+Removed top 9 bits (of 21) from mux cell module88.$ternary$rtl.v:458$366 ($mux).
+Removed top 20 bits (of 22) from port B of cell module88.$and$rtl.v:459$367 ($and).
+Removed top 13 bits (of 22) from port Y of cell module88.$and$rtl.v:459$367 ($and).
+Removed top 13 bits (of 22) from port A of cell module88.$not$rtl.v:459$368 ($not).
+Removed top 3 bits (of 11) from mux cell module88.$ternary$rtl.v:461$373 ($mux).
+Removed top 10 bits (of 19) from port A of cell module88.$gt$rtl.v:467$383 ($gt).
+Removed top 9 bits (of 11) from port A of cell module88.$not$rtl.v:466$379 ($not).
+Removed top 8 bits (of 19) from mux cell module88.$ternary$rtl.v:467$382 ($mux).
+Removed top 17 bits (of 18) from port A of cell module88.$xnor$rtl.v:468$386 ($xnor).
+Removed top 17 bits (of 18) from port B of cell module88.$sub$rtl.v:470$394 ($sub).
+Removed top 11 bits (of 18) from port Y of cell module88.$mul$rtl.v:471$395 ($mul).
+Removed top 8 bits (of 11) from port A of cell module88.$shl$rtl.v:475$396 ($shl).
+Removed top 4 bits (of 6) from mux cell module88.$ternary$rtl.v:476$401 ($mux).
+Removed top 5 bits (of 6) from port A of cell module88.$and$rtl.v:476$402 ($and).
+Removed top 4 bits (of 6) from port B of cell module88.$and$rtl.v:476$402 ($and).
+Removed top 4 bits (of 6) from port Y of cell module88.$and$rtl.v:476$402 ($and).
+Removed top 6 bits (of 9) from mux cell module88.$ternary$rtl.v:479$407 ($mux).
+Removed top 11 bits (of 12) from port A of cell module88.$sshr$rtl.v:484$410 ($sshr).
+Removed top 10 bits (of 11) from port B of cell module88.$shl$rtl.v:488$411 ($shl).
+Removed top 20 bits (of 21) from port A of cell module88.$neg$rtl.v:488$414 ($neg).
+Removed top 3 bits (of 21) from port Y of cell module88.$not$rtl.v:488$418 ($not).
+Removed top 3 bits (of 21) from port A of cell module88.$not$rtl.v:488$418 ($not).
+Removed top 16 bits (of 18) from mux cell module88.$ternary$rtl.v:498$429 ($mux).
+Removed top 4 bits (of 9) from mux cell module88.$ternary$rtl.v:510$446 ($mux).
+Removed top 12 bits (of 16) from mux cell module88.$procmux$845 ($mux).
+Removed top 8 bits (of 16) from mux cell module88.$procmux$847 ($mux).
+Removed top 4 bits (of 5) from FF cell module88.$procdff$969 ($dff).
+Removed top 10 bits (of 11) from FF cell module88.$procdff$970 ($dff).
+Removed top 7 bits (of 8) from FF cell module88.$procdff$973 ($dff).
+Removed top 8 bits (of 16) from FF cell module88.$procdff$978 ($dff).
+Removed top 7 bits (of 21) from FF cell module88.$procdff$980 ($dff).
+Removed top 18 bits (of 21) from FF cell module88.$procdff$981 ($dff).
+Removed top 8 bits (of 11) from FF cell module88.$procdff$983 ($dff).
+Removed top 8 bits (of 9) from FF cell module88.$procdff$984 ($dff).
+Removed top 4 bits (of 5) from FF cell module88.$procdff$990 ($dff).
+Removed top 8 bits (of 9) from port B of cell module88.$le$rtl.v:406$281 ($le).
+Removed top 4 bits (of 5) from mux cell module88.$ternary$rtl.v:431$319 ($mux).
+Removed top 4 bits (of 5) from port A of cell module88.$sshr$rtl.v:431$323 ($sshr).
+Removed top 4 bits (of 5) from port A of cell module88.$lt$rtl.v:446$344 ($lt).
+Removed top 7 bits (of 18) from port A of cell module88.$xnor$rtl.v:457$362 ($xnor).
+Removed top 7 bits (of 21) from port B of cell module88.$or$rtl.v:458$363 ($or).
+Removed top 9 bits (of 21) from port Y of cell module88.$or$rtl.v:458$363 ($or).
+Removed top 2 bits (of 14) from port B of cell module88.$or$rtl.v:458$363 ($or).
+Removed top 8 bits (of 19) from port B of cell module88.$gt$rtl.v:467$383 ($gt).
+Removed top 1 bits (of 3) from port A of cell module88.$shl$rtl.v:475$396 ($shl).
+Removed top 18 bits (of 21) from port B of cell module88.$shl$rtl.v:475$396 ($shl).
+Removed top 8 bits (of 16) from port A of cell module88.$le$rtl.v:478$406 ($le).
+Removed top 8 bits (of 11) from port B of cell module88.$le$rtl.v:478$406 ($le).
+Removed top 7 bits (of 21) from port A of cell module88.$shl$rtl.v:488$411 ($shl).
+Removed top 3 bits (of 21) from port Y of cell module88.$not$rtl.v:488$417 ($not).
+Removed top 3 bits (of 21) from port A of cell module88.$not$rtl.v:488$417 ($not).
+Removed top 18 bits (of 21) from port B of cell module88.$sshr$rtl.v:498$426 ($sshr).
+Removed top 8 bits (of 9) from mux cell module88.$ternary$rtl.v:510$444 ($mux).
+Removed top 13 bits (of 14) from FF cell module88.$procdff$980 ($dff).
+Removed top 3 bits (of 21) from mux cell module88.$ternary$rtl.v:488$416 ($mux).
+Removed top 3 bits (of 21) from mux cell module88.$ternary$rtl.v:488$413 ($mux).
+Removed top 3 bits (of 21) from port Y of cell module88.$neg$rtl.v:488$414 ($neg).
+Removed top 3 bits (of 21) from port Y of cell module88.$shl$rtl.v:488$411 ($shl).
+Removed top 8 bits (of 16) from wire module88.$0\reg120[15:0].
+Removed top 1 bits (of 18) from wire module88.$0\reg121[17:0].
+Removed top 4 bits (of 5) from wire module88.$0\reg128[4:0].
+Removed top 8 bits (of 9) from wire module88.$0\reg99[8:0].
+Removed top 13 bits (of 22) from wire module88.$and$rtl.v:459$367_Y.
+Removed top 4 bits (of 6) from wire module88.$and$rtl.v:476$402_Y.
+Removed top 12 bits (of 13) from wire module88.$ge$rtl.v:392$267_Y.
+Removed top 21 bits (of 22) from wire module88.$ge$rtl.v:452$354_Y.
+Removed top 19 bits (of 20) from wire module88.$le$rtl.v:406$281_Y.
+Removed top 7 bits (of 8) from wire module88.$le$rtl.v:407$285_Y.
+Removed top 19 bits (of 20) from wire module88.$logic_not$rtl.v:377$241_Y.
+Removed top 6 bits (of 7) from wire module88.$logic_not$rtl.v:399$276_Y.
+Removed top 17 bits (of 18) from wire module88.$logic_not$rtl.v:468$385_Y.
+Removed top 17 bits (of 18) from wire module88.$lt$rtl.v:425$308_Y.
+Removed top 7 bits (of 8) from wire module88.$lt$rtl.v:446$344_Y.
+Removed top 11 bits (of 18) from wire module88.$mul$rtl.v:471$395_Y.
+Removed top 12 bits (of 13) from wire module88.$ne$rtl.v:390$263_Y.
+Removed top 3 bits (of 21) from wire module88.$neg$rtl.v:488$414_Y.
+Removed top 3 bits (of 21) from wire module88.$not$rtl.v:488$417_Y.
+Removed top 3 bits (of 21) from wire module88.$not$rtl.v:488$418_Y.
+Removed top 9 bits (of 21) from wire module88.$or$rtl.v:458$363_Y.
+Removed top 12 bits (of 16) from wire module88.$procmux$845_Y.
+Removed top 10 bits (of 11) from wire module88.$reduce_and$rtl.v:376$236_Y.
+Removed top 12 bits (of 13) from wire module88.$reduce_and$rtl.v:397$275_Y.
+Removed top 5 bits (of 6) from wire module88.$reduce_and$rtl.v:475$398_Y.
+Removed top 17 bits (of 18) from wire module88.$reduce_or$rtl.v:498$427_Y.
+Removed top 5 bits (of 6) from wire module88.$reduce_xnor$rtl.v:390$261_Y.
+Removed top 17 bits (of 18) from wire module88.$reduce_xnor$rtl.v:470$393_Y.
+Removed top 8 bits (of 9) from wire module88.$reduce_xnor$rtl.v:510$442_Y.
+Removed top 12 bits (of 13) from wire module88.$reduce_xor$rtl.v:379$249_Y.
+Removed top 3 bits (of 21) from wire module88.$shl$rtl.v:488$411_Y.
+Removed top 15 bits (of 22) from wire module88.$sshr$rtl.v:446$347_Y.
+Removed top 1 bits (of 12) from wire module88.$sshr$rtl.v:484$410_Y.
+Removed top 20 bits (of 22) from wire module88.$ternary$rtl.v:452$351_Y.
+Removed top 8 bits (of 19) from wire module88.$ternary$rtl.v:457$361_Y.
+Removed top 3 bits (of 11) from wire module88.$ternary$rtl.v:461$371_Y.
+Removed top 3 bits (of 11) from wire module88.$ternary$rtl.v:461$373_Y.
+Removed top 8 bits (of 19) from wire module88.$ternary$rtl.v:467$382_Y.
+Removed top 3 bits (of 21) from wire module88.$ternary$rtl.v:488$413_Y.
+Removed top 3 bits (of 21) from wire module88.$ternary$rtl.v:488$416_Y.
+Removed top 16 bits (of 18) from wire module88.$ternary$rtl.v:498$429_Y.
+Removed top 8 bits (of 9) from wire module88.$ternary$rtl.v:510$444_Y.
+Removed top 6 bits (of 20) from wire module88.$xor$rtl.v:455$356_Y.
+Removed top 10 bits (of 11) from wire module88.wire100.
+Removed top 8 bits (of 9) from wire module88.wire101.
+Removed top 17 bits (of 18) from wire module88.wire102.
+Removed top 15 bits (of 17) from wire module88.wire106.
+Removed top 10 bits (of 11) from wire module88.wire107.
+Removed top 18 bits (of 19) from wire module88.wire108.
+Removed top 10 bits (of 11) from wire module88.wire111.
+Removed top 17 bits (of 19) from port A of cell top.$xor$rtl.v:48$4 ($xor).
+Removed top 18 bits (of 19) from port B of cell top.$mul$rtl.v:48$6 ($mul).
+Removed top 11 bits (of 19) from port Y of cell top.$mul$rtl.v:48$6 ($mul).
+Removed top 7 bits (of 8) from port A of cell top.$ge$rtl.v:51$10 ($ge).
+Removed top 1 bits (of 8) from port B of cell top.$ge$rtl.v:51$10 ($ge).
+Removed top 19 bits (of 21) from port A of cell top.$sshl$rtl.v:51$8 ($sshl).
+Removed top 18 bits (of 19) from port A of cell top.$xnor$rtl.v:69$21 ($xnor).
+Removed top 7 bits (of 9) from mux cell top.$ternary$rtl.v:70$27 ($mux).
+Removed top 9 bits (of 10) from FF cell top.$procdff$1000 ($dff).
+Removed top 10 bits (of 11) from FF cell top.$procdff$1001 ($dff).
+Removed top 8 bits (of 9) from FF cell top.$procdff$1002 ($dff).
+Removed top 8 bits (of 10) from port B of cell top.$gt$rtl.v:68$17 ($gt).
+Removed top 9 bits (of 10) from wire top.$0\reg176[9:0].
+Removed top 18 bits (of 19) from wire top.$logic_not$rtl.v:48$2_Y.
+Removed top 8 bits (of 9) from wire top.$logic_not$rtl.v:70$24_Y.
+Removed top 18 bits (of 19) from wire top.$reduce_and$rtl.v:48$5_Y.
+Removed top 7 bits (of 8) from wire top.$reduce_and$rtl.v:51$9_Y.
+Removed top 18 bits (of 19) from wire top.$reduce_and$rtl.v:69$20_Y.
+Removed top 7 bits (of 9) from wire top.$ternary$rtl.v:70$27_Y.
+Removed top 20 bits (of 21) from wire top.wire182.
+Removed top 4 bits (of 5) from wire top.wire183.
+Removed top 20 bits (of 21) from wire top.wire5.
+
+2.8. Executing PEEPOPT pass (run peephole optimizers).
+
+2.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \module13..
+Finding unused cells or wires in module \module138..
+Finding unused cells or wires in module \module32..
+Finding unused cells or wires in module \module56..
+Finding unused cells or wires in module \module7..
+Finding unused cells or wires in module \module88..
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 145 unused wires.
+<suppressed ~7 debug messages>
+
+2.10. Executing TECHMAP pass (map to technology primitives).
+
+2.10.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/cmp2lut.v
+Parsing Verilog input from `/usr/bin/../share/yosys/cmp2lut.v' to AST representation.
+Generating RTLIL representation for module `\_90_lut_cmp_'.
+Successfully finished Verilog frontend.
+
+2.10.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~588 debug messages>
+
+2.11. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module module13:
+  creating $macc model for $neg$rtl.v:832$735 ($neg).
+  creating $macc model for $sub$rtl.v:834$743 ($sub).
+  merging $macc model for $neg$rtl.v:832$735 into $sub$rtl.v:834$743.
+  creating $macc cell for $sub$rtl.v:834$743: $auto$alumacc.cc:354:replace_macc$1131
+  created 0 $alu and 1 $macc cells.
+Extracting $alu and $macc cells in module module138:
+  creating $macc model for $sub$rtl.v:273$230 ($sub).
+  creating $alu model for $macc $sub$rtl.v:273$230.
+  creating $alu model for $ge$rtl.v:273$233 ($ge): new $alu
+  creating $alu model for $le$rtl.v:263$212 ($le): new $alu
+  creating $alu model for $le$rtl.v:266$213 ($le): new $alu
+  creating $alu cell for $le$rtl.v:266$213: $auto$alumacc.cc:474:replace_alu$1135
+  creating $alu cell for $le$rtl.v:263$212: $auto$alumacc.cc:474:replace_alu$1144
+  creating $alu cell for $ge$rtl.v:273$233: $auto$alumacc.cc:474:replace_alu$1157
+  creating $alu cell for $sub$rtl.v:273$230: $auto$alumacc.cc:474:replace_alu$1170
+  created 4 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module module32:
+  creating $macc model for $neg$rtl.v:705$574 ($neg).
+  creating $macc model for $neg$rtl.v:751$640 ($neg).
+  creating $macc model for $sub$rtl.v:732$608 ($sub).
+  creating $macc model for $sub$rtl.v:738$623 ($sub).
+  creating $alu model for $macc $sub$rtl.v:738$623.
+  creating $alu model for $macc $sub$rtl.v:732$608.
+  creating $alu model for $macc $neg$rtl.v:751$640.
+  creating $macc cell for $neg$rtl.v:705$574: $auto$alumacc.cc:354:replace_macc$1173
+  creating $alu model for $gt$rtl.v:766$675 ($gt): new $alu
+  creating $alu model for $le$rtl.v:766$677 ($le): new $alu
+  creating $alu model for $lt$rtl.v:728$600 ($lt): new $alu
+  creating $alu model for $lt$rtl.v:756$658 ($lt): new $alu
+  creating $alu cell for $lt$rtl.v:756$658: $auto$alumacc.cc:474:replace_alu$1178
+  creating $alu cell for $lt$rtl.v:728$600: $auto$alumacc.cc:474:replace_alu$1183
+  creating $alu cell for $le$rtl.v:766$677: $auto$alumacc.cc:474:replace_alu$1188
+  creating $alu cell for $gt$rtl.v:766$675: $auto$alumacc.cc:474:replace_alu$1197
+  creating $alu cell for $neg$rtl.v:751$640: $auto$alumacc.cc:474:replace_alu$1202
+  creating $alu cell for $sub$rtl.v:732$608: $auto$alumacc.cc:474:replace_alu$1205
+  creating $alu cell for $sub$rtl.v:738$623: $auto$alumacc.cc:474:replace_alu$1208
+  created 7 $alu and 1 $macc cells.
+Extracting $alu and $macc cells in module module56:
+  creating $macc model for $add$rtl.v:609$476 ($add).
+  creating $macc model for $add$rtl.v:624$498 ($add).
+  creating $macc model for $add$rtl.v:629$510 ($add).
+  creating $macc model for $add$rtl.v:645$531 ($add).
+  creating $macc model for $add$rtl.v:647$532 ($add).
+  creating $macc model for $mul$rtl.v:612$479 ($mul).
+  creating $macc model for $neg$rtl.v:612$482 ($neg).
+  creating $alu model for $macc $neg$rtl.v:612$482.
+  creating $alu model for $macc $add$rtl.v:647$532.
+  creating $alu model for $macc $add$rtl.v:645$531.
+  creating $alu model for $macc $add$rtl.v:629$510.
+  creating $alu model for $macc $add$rtl.v:624$498.
+  creating $alu model for $macc $add$rtl.v:609$476.
+  creating $macc cell for $mul$rtl.v:612$479: $auto$alumacc.cc:354:replace_macc$1211
+  creating $alu model for $le$rtl.v:609$475 ($le): new $alu
+  creating $alu model for $le$rtl.v:632$519 ($le): new $alu
+  creating $alu cell for $le$rtl.v:632$519: $auto$alumacc.cc:474:replace_alu$1214
+  creating $alu cell for $le$rtl.v:609$475: $auto$alumacc.cc:474:replace_alu$1223
+  creating $alu cell for $add$rtl.v:609$476: $auto$alumacc.cc:474:replace_alu$1234
+  creating $alu cell for $add$rtl.v:624$498: $auto$alumacc.cc:474:replace_alu$1237
+  creating $alu cell for $add$rtl.v:629$510: $auto$alumacc.cc:474:replace_alu$1240
+  creating $alu cell for $add$rtl.v:645$531: $auto$alumacc.cc:474:replace_alu$1243
+  creating $alu cell for $add$rtl.v:647$532: $auto$alumacc.cc:474:replace_alu$1246
+  creating $alu cell for $neg$rtl.v:612$482: $auto$alumacc.cc:474:replace_alu$1249
+  created 8 $alu and 1 $macc cells.
+Extracting $alu and $macc cells in module module7:
+  creating $macc model for $add$rtl.v:180$88 ($add).
+  creating $macc model for $add$rtl.v:198$120 ($add).
+  creating $macc model for $neg$rtl.v:184$112 ($neg).
+  creating $macc model for $neg$rtl.v:225$175 ($neg).
+  creating $macc model for $sub$rtl.v:155$46 ($sub).
+  creating $macc model for $sub$rtl.v:155$47 ($sub).
+  merging $macc model for $sub$rtl.v:155$46 into $sub$rtl.v:155$47.
+  creating $alu model for $macc $neg$rtl.v:225$175.
+  creating $alu model for $macc $neg$rtl.v:184$112.
+  creating $alu model for $macc $add$rtl.v:198$120.
+  creating $alu model for $macc $add$rtl.v:180$88.
+  creating $macc cell for $sub$rtl.v:155$47: $auto$alumacc.cc:354:replace_macc$1252
+  creating $alu model for $le$rtl.v:175$80 ($le): new $alu
+  creating $alu model for $lt$rtl.v:175$79 ($lt): new $alu
+  creating $alu model for $lt$rtl.v:206$129 ($lt): new $alu
+  creating $alu cell for $lt$rtl.v:206$129: $auto$alumacc.cc:474:replace_alu$1256
+  creating $alu cell for $lt$rtl.v:175$79: $auto$alumacc.cc:474:replace_alu$1263
+  creating $alu cell for $le$rtl.v:175$80: $auto$alumacc.cc:474:replace_alu$1274
+  creating $alu cell for $add$rtl.v:180$88: $auto$alumacc.cc:474:replace_alu$1285
+  creating $alu cell for $add$rtl.v:198$120: $auto$alumacc.cc:474:replace_alu$1288
+  creating $alu cell for $neg$rtl.v:184$112: $auto$alumacc.cc:474:replace_alu$1291
+  creating $alu cell for $neg$rtl.v:225$175: $auto$alumacc.cc:474:replace_alu$1294
+  created 7 $alu and 1 $macc cells.
+Extracting $alu and $macc cells in module module88:
+  creating $macc model for $mul$rtl.v:471$395 ($mul).
+  creating $macc model for $neg$rtl.v:389$257 ($neg).
+  creating $macc model for $neg$rtl.v:488$414 ($neg).
+  creating $macc model for $sub$rtl.v:470$394 ($sub).
+  creating $alu model for $macc $sub$rtl.v:470$394.
+  creating $alu model for $macc $neg$rtl.v:488$414.
+  creating $alu model for $macc $neg$rtl.v:389$257.
+  creating $macc cell for $mul$rtl.v:471$395: $auto$alumacc.cc:354:replace_macc$1297
+  creating $alu model for $ge$rtl.v:392$267 ($ge): new $alu
+  creating $alu model for $ge$rtl.v:407$286 ($ge): new $alu
+  creating $alu model for $ge$rtl.v:452$354 ($ge): new $alu
+  creating $alu model for $ge$rtl.v:452$355 ($ge): new $alu
+  creating $alu model for $gt$rtl.v:467$383 ($gt): new $alu
+  creating $alu model for $le$rtl.v:377$239 ($le): new $alu
+  creating $alu model for $le$rtl.v:406$281 ($le): new $alu
+  creating $alu model for $le$rtl.v:407$285 ($le): new $alu
+  creating $alu model for $le$rtl.v:452$352 ($le): new $alu
+  creating $alu model for $le$rtl.v:478$406 ($le): new $alu
+  creating $alu model for $lt$rtl.v:425$308 ($lt): new $alu
+  creating $alu model for $lt$rtl.v:426$309 ($lt): new $alu
+  creating $alu model for $lt$rtl.v:446$344 ($lt): new $alu
+  creating $alu cell for $lt$rtl.v:446$344: $auto$alumacc.cc:474:replace_alu$1311
+  creating $alu cell for $lt$rtl.v:426$309: $auto$alumacc.cc:474:replace_alu$1316
+  creating $alu cell for $lt$rtl.v:425$308: $auto$alumacc.cc:474:replace_alu$1327
+  creating $alu cell for $le$rtl.v:478$406: $auto$alumacc.cc:474:replace_alu$1338
+  creating $alu cell for $le$rtl.v:452$352: $auto$alumacc.cc:474:replace_alu$1351
+  creating $alu cell for $le$rtl.v:407$285: $auto$alumacc.cc:474:replace_alu$1366
+  creating $alu cell for $le$rtl.v:406$281: $auto$alumacc.cc:474:replace_alu$1375
+  creating $alu cell for $le$rtl.v:377$239: $auto$alumacc.cc:474:replace_alu$1388
+  creating $alu cell for $gt$rtl.v:467$383: $auto$alumacc.cc:474:replace_alu$1397
+  creating $alu cell for $ge$rtl.v:452$355: $auto$alumacc.cc:474:replace_alu$1408
+  creating $alu cell for $ge$rtl.v:452$354: $auto$alumacc.cc:474:replace_alu$1421
+  creating $alu cell for $ge$rtl.v:407$286: $auto$alumacc.cc:474:replace_alu$1432
+  creating $alu cell for $ge$rtl.v:392$267: $auto$alumacc.cc:474:replace_alu$1445
+  creating $alu cell for $neg$rtl.v:389$257: $auto$alumacc.cc:474:replace_alu$1454
+  creating $alu cell for $neg$rtl.v:488$414: $auto$alumacc.cc:474:replace_alu$1457
+  creating $alu cell for $sub$rtl.v:470$394: $auto$alumacc.cc:474:replace_alu$1460
+  created 16 $alu and 1 $macc cells.
+Extracting $alu and $macc cells in module top:
+  creating $macc model for $mul$rtl.v:48$6 ($mul).
+  creating $macc cell for $mul$rtl.v:48$6: $auto$alumacc.cc:354:replace_macc$1463
+  creating $alu model for $ge$rtl.v:51$10 ($ge): new $alu
+  creating $alu model for $gt$rtl.v:68$17 ($gt): new $alu
+  creating $alu cell for $gt$rtl.v:68$17: $auto$alumacc.cc:474:replace_alu$1466
+  creating $alu cell for $ge$rtl.v:51$10: $auto$alumacc.cc:474:replace_alu$1473
+  created 2 $alu and 1 $macc cells.
+
+2.12. Executing SHARE pass (SAT-based resource sharing).
+Found 7 cells in module module32 that may be considered for resource sharing.
+  Analyzing resource sharing options for $sshr$rtl.v:755$655 ($sshr):
+    Found 1 activation_patterns using ctrl signal { $procmux$788_CMP $procmux$779_CMP }.
+    No candidates found.
+  Analyzing resource sharing options for $sshr$rtl.v:738$622 ($sshr):
+    Found 1 activation_patterns using ctrl signal { $procmux$792_CMP $procmux$779_CMP $reduce_bool$rtl.v:738$624_Y }.
+    No candidates found.
+  Analyzing resource sharing options for $sshr$rtl.v:716$589 ($sshr):
+    Found 1 activation_patterns using ctrl signal { $procmux$779_CMP \wire36 [1] }.
+    No candidates found.
+  Analyzing resource sharing options for $sshl$rtl.v:746$630 ($sshl):
+    Found 1 activation_patterns using ctrl signal $procmux$779_CMP.
+    No candidates found.
+  Analyzing resource sharing options for $shl$rtl.v:747$632 ($shl):
+    Found 1 activation_patterns using ctrl signal $procmux$779_CMP.
+    No candidates found.
+  Analyzing resource sharing options for $shl$rtl.v:728$598 ($shl):
+    Found 1 activation_patterns using ctrl signal { $procmux$792_CMP $procmux$779_CMP $reduce_bool$rtl.v:728$601_Y $reduce_xor$rtl.v:726$597_Y }.
+    No candidates found.
+  Analyzing resource sharing options for $shl$rtl.v:702$566 ($shl):
+    Found 1 activation_patterns using ctrl signal $reduce_and$rtl.v:701$563_Y.
+    No candidates found.
+Found 2 cells in module module7 that may be considered for resource sharing.
+  Analyzing resource sharing options for $sshl$rtl.v:167$62 ($sshl):
+    Found 1 activation_patterns using ctrl signal $reduce_or$rtl.v:166$60_Y.
+    No candidates found.
+  Analyzing resource sharing options for $shl$rtl.v:206$136 ($shl):
+    Found 1 activation_patterns using ctrl signal { $procmux$908_CMP $reduce_bool$rtl.v:206$137_Y \reg153 [0] }.
+    No candidates found.
+Found 6 cells in module module88 that may be considered for resource sharing.
+  Analyzing resource sharing options for $sshr$rtl.v:484$410 ($sshr):
+    Found 1 activation_patterns using ctrl signal $auto$rtlil.cc:1836:ReduceOr$1420.
+    No candidates found.
+  Analyzing resource sharing options for $sshl$rtl.v:492$425 ($sshl):
+    Found 1 activation_patterns using ctrl signal { $procmux$857_CMP $auto$rtlil.cc:1836:ReduceOr$1420 }.
+    No candidates found.
+  Analyzing resource sharing options for $shl$rtl.v:488$411 ($shl):
+    Found 1 activation_patterns using ctrl signal { $auto$rtlil.cc:1836:ReduceOr$1420 $reduce_bool$rtl.v:488$415_Y $reduce_bool$rtl.v:445$338_Y }.
+    Found 1 candidates: $shl$rtl.v:377$240
+    Analyzing resource sharing with $shl$rtl.v:377$240 ($shl):
+      Found 1 activation_patterns using ctrl signal \wire90 [0].
+      Activation pattern for cell $shl$rtl.v:488$411: { $auto$rtlil.cc:1836:ReduceOr$1420 $reduce_bool$rtl.v:488$415_Y $reduce_bool$rtl.v:445$338_Y } = 3'010
+      Activation pattern for cell $shl$rtl.v:377$240: \wire90 [0] = 1'1
+      According to the SAT solver the cell $shl$rtl.v:488$411 is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $shl$rtl.v:475$396 ($shl):
+    Found 1 activation_patterns using ctrl signal { $procmux$846_CMP $auto$rtlil.cc:1836:ReduceOr$1420 }.
+    No candidates found.
+  Analyzing resource sharing options for $shl$rtl.v:392$268 ($shl):
+    Found 1 activation_patterns using ctrl signal { $ne$rtl.v:387$256_Y \reg97 [0] \wire90 [0] }.
+    No candidates found.
+  Analyzing resource sharing options for $shl$rtl.v:377$240 ($shl):
+    Found 1 activation_patterns using ctrl signal \wire90 [0].
+    No candidates found.
+Removing 1 cells in module module88:
+  Removing cell $shl$rtl.v:488$411 ($shl).
+
+2.13. Executing OPT pass (performing simple optimizations).
+
+2.13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module module13.
+<suppressed ~6 debug messages>
+Optimizing module module138.
+Optimizing module module32.
+Optimizing module module56.
+<suppressed ~1 debug messages>
+Optimizing module module7.
+<suppressed ~7 debug messages>
+Optimizing module module88.
+<suppressed ~13 debug messages>
+Optimizing module top.
+<suppressed ~1 debug messages>
+
+2.13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\module13'.
+Finding identical cells in module `\module138'.
+Finding identical cells in module `\module32'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `\module56'.
+Finding identical cells in module `\module7'.
+Finding identical cells in module `\module88'.
+Finding identical cells in module `\top'.
+Removed a total of 1 cells.
+
+2.13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \module13..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+      Replacing known input bits on port B of cell $ternary$rtl.v:834$742: $not$rtl.v:833$737_Y -> 1'1
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module138..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module56..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module7..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $ternary$rtl.v:206$135.
+Running muxtree optimizer on module \module88..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+      Replacing known input bits on port B of cell $ternary$rtl.v:437$331: { 5'00000 \wire100 } -> 6'000001
+  Analyzing evaluation results.
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 1 multiplexer ports.
+<suppressed ~100 debug messages>
+
+2.13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \module13.
+  Optimizing cells in module \module138.
+    New input vector for $reduce_or cell $auto$alumacc.cc:509:replace_alu$1142: { $auto$rtlil.cc:1832:Not$1139 $auto$rtlil.cc:1835:ReduceAnd$1141 }
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$1140: { $auto$alumacc.cc:490:replace_alu$1136 [0] $auto$alumacc.cc:490:replace_alu$1136 [1] $auto$alumacc.cc:490:replace_alu$1136 [2] $auto$alumacc.cc:490:replace_alu$1136 [3] $auto$alumacc.cc:490:replace_alu$1136 [4] $auto$alumacc.cc:490:replace_alu$1136 [5] $auto$alumacc.cc:490:replace_alu$1136 [6] $auto$alumacc.cc:490:replace_alu$1136 [7] $auto$alumacc.cc:490:replace_alu$1136 [8] $auto$alumacc.cc:490:replace_alu$1136 [9] $auto$alumacc.cc:490:replace_alu$1136 [10] $auto$alumacc.cc:490:replace_alu$1136 [11] $auto$alumacc.cc:490:replace_alu$1136 [12] $auto$alumacc.cc:490:replace_alu$1136 [13] $auto$alumacc.cc:490:replace_alu$1136 [14] $auto$alumacc.cc:490:replace_alu$1136 [15] $auto$alumacc.cc:490:replace_alu$1136 [16] $auto$alumacc.cc:490:replace_alu$1136 [17] $auto$alumacc.cc:490:replace_alu$1136 [18] }
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$1147: { $auto$alumacc.cc:490:replace_alu$1145 [0] $auto$alumacc.cc:490:replace_alu$1145 [1] $auto$alumacc.cc:490:replace_alu$1145 [2] $auto$alumacc.cc:490:replace_alu$1145 [3] $auto$alumacc.cc:490:replace_alu$1145 [4] $auto$alumacc.cc:490:replace_alu$1145 [5] $auto$alumacc.cc:490:replace_alu$1145 [6] $auto$alumacc.cc:490:replace_alu$1145 [7] $auto$alumacc.cc:490:replace_alu$1145 [8] $auto$alumacc.cc:490:replace_alu$1145 [9] $auto$alumacc.cc:490:replace_alu$1145 [10] $auto$alumacc.cc:490:replace_alu$1145 [11] $auto$alumacc.cc:490:replace_alu$1145 [12] $auto$alumacc.cc:490:replace_alu$1145 [13] $auto$alumacc.cc:490:replace_alu$1145 [14] $auto$alumacc.cc:490:replace_alu$1145 [15] $auto$alumacc.cc:490:replace_alu$1145 [16] $auto$alumacc.cc:490:replace_alu$1145 [17] $auto$alumacc.cc:490:replace_alu$1145 [18] $auto$alumacc.cc:490:replace_alu$1145 [19] $auto$alumacc.cc:490:replace_alu$1145 [20] $auto$alumacc.cc:490:replace_alu$1145 [21] }
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$1160: { $auto$alumacc.cc:490:replace_alu$1158 [0] $auto$alumacc.cc:490:replace_alu$1158 [1] $auto$alumacc.cc:490:replace_alu$1158 [2] $auto$alumacc.cc:490:replace_alu$1158 [3] $auto$alumacc.cc:490:replace_alu$1158 [4] $auto$alumacc.cc:490:replace_alu$1158 [5] $auto$alumacc.cc:490:replace_alu$1158 [6] $auto$alumacc.cc:490:replace_alu$1158 [7] $auto$alumacc.cc:490:replace_alu$1158 [8] $auto$alumacc.cc:490:replace_alu$1158 [9] $auto$alumacc.cc:490:replace_alu$1158 [10] $auto$alumacc.cc:490:replace_alu$1158 [11] $auto$alumacc.cc:490:replace_alu$1158 [12] $auto$alumacc.cc:490:replace_alu$1158 [13] $auto$alumacc.cc:490:replace_alu$1158 [14] $auto$alumacc.cc:490:replace_alu$1158 [15] $auto$alumacc.cc:490:replace_alu$1158 [16] $auto$alumacc.cc:490:replace_alu$1158 [17] $auto$alumacc.cc:490:replace_alu$1158 [18] $auto$alumacc.cc:490:replace_alu$1158 [19] $auto$alumacc.cc:490:replace_alu$1158 [20] $auto$alumacc.cc:490:replace_alu$1158 [21] }
+  Optimizing cells in module \module138.
+  Optimizing cells in module \module32.
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$1193: { $auto$alumacc.cc:490:replace_alu$1189 [0] $auto$alumacc.cc:490:replace_alu$1189 [1] $auto$alumacc.cc:490:replace_alu$1189 [2] $auto$alumacc.cc:490:replace_alu$1189 [3] $auto$alumacc.cc:490:replace_alu$1189 [4] $auto$alumacc.cc:490:replace_alu$1189 [5] $auto$alumacc.cc:490:replace_alu$1189 [6] $auto$alumacc.cc:490:replace_alu$1189 [7] $auto$alumacc.cc:490:replace_alu$1189 [8] }
+  Optimizing cells in module \module32.
+  Optimizing cells in module \module56.
+    New input vector for $reduce_or cell $reduce_or$rtl.v:651$536: { \reg76 [0] \reg76 [1] \reg76 [2] \reg76 [3] \reg76 [4] \reg76 [5] \reg76 [6] \reg76 [7] \reg76 [8] \reg76 [9] \reg76 [10] }
+    New input vector for $reduce_or cell $auto$alumacc.cc:509:replace_alu$1221: { $auto$rtlil.cc:1832:Not$1218 $auto$rtlil.cc:1835:ReduceAnd$1220 }
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$1230: { $auto$alumacc.cc:490:replace_alu$1224 [0] $auto$alumacc.cc:490:replace_alu$1224 [1] $auto$alumacc.cc:490:replace_alu$1224 [2] $auto$alumacc.cc:490:replace_alu$1224 [3] $auto$alumacc.cc:490:replace_alu$1224 [4] $auto$alumacc.cc:490:replace_alu$1224 [5] $auto$alumacc.cc:490:replace_alu$1224 [6] $auto$alumacc.cc:490:replace_alu$1224 [7] $auto$alumacc.cc:490:replace_alu$1224 [8] $auto$alumacc.cc:490:replace_alu$1224 [9] $auto$alumacc.cc:490:replace_alu$1224 [10] $auto$alumacc.cc:490:replace_alu$1224 [11] $auto$alumacc.cc:490:replace_alu$1224 [12] $auto$alumacc.cc:490:replace_alu$1224 [13] $auto$alumacc.cc:490:replace_alu$1224 [14] $auto$alumacc.cc:490:replace_alu$1224 [15] $auto$alumacc.cc:490:replace_alu$1224 [16] $auto$alumacc.cc:490:replace_alu$1224 [17] $auto$alumacc.cc:490:replace_alu$1224 [18] }
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$1219: { $auto$alumacc.cc:490:replace_alu$1215 [0] $auto$alumacc.cc:490:replace_alu$1215 [1] $auto$alumacc.cc:490:replace_alu$1215 [2] $auto$alumacc.cc:490:replace_alu$1215 [3] $auto$alumacc.cc:490:replace_alu$1215 [4] $auto$alumacc.cc:490:replace_alu$1215 [5] $auto$alumacc.cc:490:replace_alu$1215 [6] $auto$alumacc.cc:490:replace_alu$1215 [7] $auto$alumacc.cc:490:replace_alu$1215 [8] $auto$alumacc.cc:490:replace_alu$1215 [9] $auto$alumacc.cc:490:replace_alu$1215 [10] $auto$alumacc.cc:490:replace_alu$1215 [11] $auto$alumacc.cc:490:replace_alu$1215 [12] $auto$alumacc.cc:490:replace_alu$1215 [13] $auto$alumacc.cc:490:replace_alu$1215 [14] $auto$alumacc.cc:490:replace_alu$1215 [15] }
+  Optimizing cells in module \module56.
+  Optimizing cells in module \module7.
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$1281: { $auto$alumacc.cc:490:replace_alu$1275 [0] $auto$alumacc.cc:490:replace_alu$1275 [1] $auto$alumacc.cc:490:replace_alu$1275 [2] $auto$alumacc.cc:490:replace_alu$1275 [3] $auto$alumacc.cc:490:replace_alu$1275 [4] $auto$alumacc.cc:490:replace_alu$1275 [5] $auto$alumacc.cc:490:replace_alu$1275 [6] $auto$alumacc.cc:490:replace_alu$1275 [7] $auto$alumacc.cc:490:replace_alu$1275 [8] $auto$alumacc.cc:490:replace_alu$1275 [9] $auto$alumacc.cc:490:replace_alu$1275 [10] $auto$alumacc.cc:490:replace_alu$1275 [11] $auto$alumacc.cc:490:replace_alu$1275 [12] $auto$alumacc.cc:490:replace_alu$1275 [13] $auto$alumacc.cc:490:replace_alu$1275 [14] $auto$alumacc.cc:490:replace_alu$1275 [15] $auto$alumacc.cc:490:replace_alu$1275 [16] $auto$alumacc.cc:490:replace_alu$1275 [17] $auto$alumacc.cc:490:replace_alu$1275 [18] $auto$alumacc.cc:490:replace_alu$1275 [19] $auto$alumacc.cc:490:replace_alu$1275 [20] }
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$1266: { $auto$alumacc.cc:490:replace_alu$1264 [0] $auto$alumacc.cc:490:replace_alu$1264 [1] $auto$alumacc.cc:490:replace_alu$1264 [2] $auto$alumacc.cc:490:replace_alu$1264 [3] $auto$alumacc.cc:490:replace_alu$1264 [4] $auto$alumacc.cc:490:replace_alu$1264 [5] $auto$alumacc.cc:490:replace_alu$1264 [6] $auto$alumacc.cc:490:replace_alu$1264 [7] $auto$alumacc.cc:490:replace_alu$1264 [8] $auto$alumacc.cc:490:replace_alu$1264 [9] $auto$alumacc.cc:490:replace_alu$1264 [10] $auto$alumacc.cc:490:replace_alu$1264 [11] $auto$alumacc.cc:490:replace_alu$1264 [12] $auto$alumacc.cc:490:replace_alu$1264 [13] $auto$alumacc.cc:490:replace_alu$1264 [14] $auto$alumacc.cc:490:replace_alu$1264 [15] $auto$alumacc.cc:490:replace_alu$1264 [16] $auto$alumacc.cc:490:replace_alu$1264 [17] $auto$alumacc.cc:490:replace_alu$1264 [18] $auto$alumacc.cc:490:replace_alu$1264 [19] }
+  Optimizing cells in module \module7.
+  Optimizing cells in module \module88.
+    New input vector for $reduce_or cell $auto$alumacc.cc:509:replace_alu$1364: { $auto$rtlil.cc:1832:Not$1363 $auto$rtlil.cc:1835:ReduceAnd$1355 }
+    New input vector for $reduce_or cell $auto$alumacc.cc:509:replace_alu$1386: { $auto$rtlil.cc:1832:Not$1385 $auto$rtlil.cc:1835:ReduceAnd$1379 }
+    New input vector for $reduce_or cell $auto$alumacc.cc:509:replace_alu$1419: { $auto$rtlil.cc:1832:Not$1418 $auto$rtlil.cc:1835:ReduceAnd$1412 }
+    New input vector for $reduce_or cell $auto$alumacc.cc:509:replace_alu$1443: { $auto$rtlil.cc:1832:Not$1442 $auto$rtlil.cc:1835:ReduceAnd$1436 }
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$1428: { $auto$alumacc.cc:490:replace_alu$1422 [0] $auto$alumacc.cc:490:replace_alu$1422 [1] $auto$alumacc.cc:490:replace_alu$1422 [2] }
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$1450: { $auto$alumacc.cc:490:replace_alu$1446 [0] $auto$alumacc.cc:490:replace_alu$1446 [1] $auto$alumacc.cc:490:replace_alu$1446 [2] $auto$alumacc.cc:490:replace_alu$1446 [3] $auto$alumacc.cc:490:replace_alu$1446 [4] $auto$alumacc.cc:490:replace_alu$1446 [5] $auto$alumacc.cc:490:replace_alu$1446 [6] $auto$alumacc.cc:490:replace_alu$1446 [7] $auto$alumacc.cc:490:replace_alu$1446 [8] $auto$alumacc.cc:490:replace_alu$1446 [9] $auto$alumacc.cc:490:replace_alu$1446 [10] $auto$alumacc.cc:490:replace_alu$1446 [11] $auto$alumacc.cc:490:replace_alu$1446 [12] $auto$alumacc.cc:490:replace_alu$1446 [13] $auto$alumacc.cc:490:replace_alu$1446 [14] $auto$alumacc.cc:490:replace_alu$1446 [15] $auto$alumacc.cc:490:replace_alu$1446 [16] $auto$alumacc.cc:490:replace_alu$1446 [17] $auto$alumacc.cc:490:replace_alu$1446 [18] $auto$alumacc.cc:490:replace_alu$1446 [19] }
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$1435: { $auto$alumacc.cc:490:replace_alu$1433 [0] $auto$alumacc.cc:490:replace_alu$1433 [1] $auto$alumacc.cc:490:replace_alu$1433 [2] $auto$alumacc.cc:490:replace_alu$1433 [3] $auto$alumacc.cc:490:replace_alu$1433 [4] $auto$alumacc.cc:490:replace_alu$1433 [5] $auto$alumacc.cc:490:replace_alu$1433 [6] $auto$alumacc.cc:490:replace_alu$1433 [7] }
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$1319: { $auto$alumacc.cc:490:replace_alu$1317 [0] $auto$alumacc.cc:490:replace_alu$1317 [1] $auto$alumacc.cc:490:replace_alu$1317 [2] $auto$alumacc.cc:490:replace_alu$1317 [3] $auto$alumacc.cc:490:replace_alu$1317 [4] $auto$alumacc.cc:490:replace_alu$1317 [5] $auto$alumacc.cc:490:replace_alu$1317 [6] $auto$alumacc.cc:490:replace_alu$1317 [7] $auto$alumacc.cc:490:replace_alu$1317 [8] $auto$alumacc.cc:490:replace_alu$1317 [9] $auto$alumacc.cc:490:replace_alu$1317 [10] }
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$1330: { $auto$alumacc.cc:490:replace_alu$1328 [0] $auto$alumacc.cc:490:replace_alu$1328 [1] $auto$alumacc.cc:490:replace_alu$1328 [2] $auto$alumacc.cc:490:replace_alu$1328 [3] $auto$alumacc.cc:490:replace_alu$1328 [4] $auto$alumacc.cc:490:replace_alu$1328 [5] $auto$alumacc.cc:490:replace_alu$1328 [6] $auto$alumacc.cc:490:replace_alu$1328 [7] $auto$alumacc.cc:490:replace_alu$1328 [8] $auto$alumacc.cc:490:replace_alu$1328 [9] $auto$alumacc.cc:490:replace_alu$1328 [10] $auto$alumacc.cc:490:replace_alu$1328 [11] $auto$alumacc.cc:490:replace_alu$1328 [12] $auto$alumacc.cc:490:replace_alu$1328 [13] $auto$alumacc.cc:490:replace_alu$1328 [14] $auto$alumacc.cc:490:replace_alu$1328 [15] $auto$alumacc.cc:490:replace_alu$1328 [16] $auto$alumacc.cc:490:replace_alu$1328 [17] $auto$alumacc.cc:490:replace_alu$1328 [18] $auto$alumacc.cc:490:replace_alu$1328 [19] $auto$alumacc.cc:490:replace_alu$1328 [20] $auto$alumacc.cc:490:replace_alu$1328 [21] $auto$alumacc.cc:490:replace_alu$1328 [22] $auto$alumacc.cc:490:replace_alu$1328 [23] $auto$alumacc.cc:490:replace_alu$1328 [24] $auto$alumacc.cc:490:replace_alu$1328 [25] $auto$alumacc.cc:490:replace_alu$1328 [26] $auto$alumacc.cc:490:replace_alu$1328 [27] $auto$alumacc.cc:490:replace_alu$1328 [28] }
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$1341: { $auto$alumacc.cc:490:replace_alu$1339 [0] $auto$alumacc.cc:490:replace_alu$1339 [1] $auto$alumacc.cc:490:replace_alu$1339 [2] $auto$alumacc.cc:490:replace_alu$1339 [3] $auto$alumacc.cc:490:replace_alu$1339 [4] $auto$alumacc.cc:490:replace_alu$1339 [5] $auto$alumacc.cc:490:replace_alu$1339 [6] $auto$alumacc.cc:490:replace_alu$1339 [7] }
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$1354: { $auto$alumacc.cc:490:replace_alu$1352 [0] $auto$alumacc.cc:490:replace_alu$1352 [1] $auto$alumacc.cc:490:replace_alu$1352 [2] $auto$alumacc.cc:490:replace_alu$1352 [3] $auto$alumacc.cc:490:replace_alu$1352 [4] $auto$alumacc.cc:490:replace_alu$1352 [5] $auto$alumacc.cc:490:replace_alu$1352 [6] $auto$alumacc.cc:490:replace_alu$1352 [7] $auto$alumacc.cc:490:replace_alu$1352 [8] $auto$alumacc.cc:490:replace_alu$1352 [9] $auto$alumacc.cc:490:replace_alu$1352 [10] $auto$alumacc.cc:490:replace_alu$1352 [11] }
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$1371: { $auto$alumacc.cc:490:replace_alu$1367 [0] $auto$alumacc.cc:490:replace_alu$1367 [1] $auto$alumacc.cc:490:replace_alu$1367 [2] $auto$alumacc.cc:490:replace_alu$1367 [3] $auto$alumacc.cc:490:replace_alu$1367 [4] $auto$alumacc.cc:490:replace_alu$1367 [5] $auto$alumacc.cc:490:replace_alu$1367 [6] $auto$alumacc.cc:490:replace_alu$1367 [7] $auto$alumacc.cc:490:replace_alu$1367 [8] $auto$alumacc.cc:490:replace_alu$1367 [9] $auto$alumacc.cc:490:replace_alu$1367 [10] $auto$alumacc.cc:490:replace_alu$1367 [11] $auto$alumacc.cc:490:replace_alu$1367 [12] $auto$alumacc.cc:490:replace_alu$1367 [13] $auto$alumacc.cc:490:replace_alu$1367 [14] $auto$alumacc.cc:490:replace_alu$1367 [15] $auto$alumacc.cc:490:replace_alu$1367 [16] $auto$alumacc.cc:490:replace_alu$1367 [17] $auto$alumacc.cc:490:replace_alu$1367 [18] $auto$alumacc.cc:490:replace_alu$1367 [19] }
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$1378: { $auto$alumacc.cc:490:replace_alu$1376 [0] $auto$alumacc.cc:490:replace_alu$1376 [1] $auto$alumacc.cc:490:replace_alu$1376 [2] $auto$alumacc.cc:490:replace_alu$1376 [3] $auto$alumacc.cc:490:replace_alu$1376 [4] $auto$alumacc.cc:490:replace_alu$1376 [5] $auto$alumacc.cc:490:replace_alu$1376 [6] $auto$alumacc.cc:490:replace_alu$1376 [7] }
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$1393: { $auto$alumacc.cc:490:replace_alu$1389 [0] $auto$alumacc.cc:490:replace_alu$1389 [1] $auto$alumacc.cc:490:replace_alu$1389 [2] $auto$alumacc.cc:490:replace_alu$1389 [3] $auto$alumacc.cc:490:replace_alu$1389 [4] $auto$alumacc.cc:490:replace_alu$1389 [5] $auto$alumacc.cc:490:replace_alu$1389 [6] }
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$1400: { $auto$alumacc.cc:490:replace_alu$1398 [0] $auto$alumacc.cc:490:replace_alu$1398 [1] $auto$alumacc.cc:490:replace_alu$1398 [2] $auto$alumacc.cc:490:replace_alu$1398 [3] $auto$alumacc.cc:490:replace_alu$1398 [4] $auto$alumacc.cc:490:replace_alu$1398 [5] $auto$alumacc.cc:490:replace_alu$1398 [6] $auto$alumacc.cc:490:replace_alu$1398 [7] $auto$alumacc.cc:490:replace_alu$1398 [8] $auto$alumacc.cc:490:replace_alu$1398 [9] $auto$alumacc.cc:490:replace_alu$1398 [10] }
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$1411: { $auto$alumacc.cc:490:replace_alu$1409 [0] $auto$alumacc.cc:490:replace_alu$1409 [1] }
+  Optimizing cells in module \module88.
+  Optimizing cells in module \top.
+    New input vector for $reduce_or cell $auto$alumacc.cc:509:replace_alu$1484: { $auto$rtlil.cc:1832:Not$1483 $auto$rtlil.cc:1835:ReduceAnd$1477 }
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$1476: { $auto$alumacc.cc:490:replace_alu$1474 [0] $auto$alumacc.cc:490:replace_alu$1474 [1] $auto$alumacc.cc:490:replace_alu$1474 [2] $auto$alumacc.cc:490:replace_alu$1474 [3] $auto$alumacc.cc:490:replace_alu$1474 [4] $auto$alumacc.cc:490:replace_alu$1474 [5] $auto$alumacc.cc:490:replace_alu$1474 [6] }
+  Optimizing cells in module \top.
+Performed a total of 29 changes.
+
+2.13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\module13'.
+Finding identical cells in module `\module138'.
+Finding identical cells in module `\module32'.
+Finding identical cells in module `\module56'.
+Finding identical cells in module `\module7'.
+Finding identical cells in module `\module88'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.13.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \module13..
+Finding unused cells or wires in module \module138..
+Finding unused cells or wires in module \module32..
+Finding unused cells or wires in module \module56..
+Finding unused cells or wires in module \module7..
+Finding unused cells or wires in module \module88..
+Finding unused cells or wires in module \top..
+Removed 16 unused cells and 71 unused wires.
+<suppressed ~24 debug messages>
+
+2.13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module module13.
+Optimizing module module138.
+Optimizing module module32.
+Optimizing module module56.
+Optimizing module module7.
+Optimizing module module88.
+Optimizing module top.
+
+2.13.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.13.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \module13..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module138..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module56..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module7..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module88..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~99 debug messages>
+
+2.13.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \module13.
+  Optimizing cells in module \module138.
+  Optimizing cells in module \module32.
+  Optimizing cells in module \module56.
+  Optimizing cells in module \module7.
+  Optimizing cells in module \module88.
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.13.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\module13'.
+Finding identical cells in module `\module138'.
+Finding identical cells in module `\module32'.
+Finding identical cells in module `\module56'.
+Finding identical cells in module `\module7'.
+Finding identical cells in module `\module88'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.13.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.13.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \module13..
+Finding unused cells or wires in module \module138..
+Finding unused cells or wires in module \module32..
+Finding unused cells or wires in module \module56..
+Finding unused cells or wires in module \module7..
+Finding unused cells or wires in module \module88..
+Finding unused cells or wires in module \top..
+
+2.13.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module module13.
+Optimizing module module138.
+Optimizing module module32.
+Optimizing module module56.
+Optimizing module module7.
+Optimizing module module88.
+Optimizing module top.
+
+2.13.16. Finished OPT passes. (There is nothing left to do.)
+
+2.14. Executing FSM pass (extract and optimize FSM).
+
+2.14.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking module56.reg75 as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+    Register has an initialization value.
+
+2.14.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+2.14.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.14.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \module13..
+Finding unused cells or wires in module \module138..
+Finding unused cells or wires in module \module32..
+Finding unused cells or wires in module \module56..
+Finding unused cells or wires in module \module7..
+Finding unused cells or wires in module \module88..
+Finding unused cells or wires in module \top..
+
+2.14.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.14.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+2.14.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+2.14.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+2.15. Executing OPT pass (performing simple optimizations).
+
+2.15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module module13.
+Optimizing module module138.
+Optimizing module module32.
+Optimizing module module56.
+Optimizing module module7.
+Optimizing module module88.
+Optimizing module top.
+
+2.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\module13'.
+Finding identical cells in module `\module138'.
+Finding identical cells in module `\module32'.
+Finding identical cells in module `\module56'.
+Finding identical cells in module `\module7'.
+Finding identical cells in module `\module88'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.15.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.15.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \module13..
+Finding unused cells or wires in module \module138..
+Finding unused cells or wires in module \module32..
+Finding unused cells or wires in module \module56..
+Finding unused cells or wires in module \module7..
+Finding unused cells or wires in module \module88..
+Finding unused cells or wires in module \top..
+
+2.15.5. Finished fast OPT passes.
+
+2.16. Executing MEMORY pass.
+
+2.16.1. Executing MEMORY_DFF pass (merging $dff cells to $memrd and $memwr).
+
+2.16.2. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \module13..
+Finding unused cells or wires in module \module138..
+Finding unused cells or wires in module \module32..
+Finding unused cells or wires in module \module56..
+Finding unused cells or wires in module \module7..
+Finding unused cells or wires in module \module88..
+Finding unused cells or wires in module \top..
+
+2.16.3. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+2.16.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \module13..
+Finding unused cells or wires in module \module138..
+Finding unused cells or wires in module \module32..
+Finding unused cells or wires in module \module56..
+Finding unused cells or wires in module \module7..
+Finding unused cells or wires in module \module88..
+Finding unused cells or wires in module \top..
+
+2.16.5. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \module13..
+Finding unused cells or wires in module \module138..
+Finding unused cells or wires in module \module32..
+Finding unused cells or wires in module \module56..
+Finding unused cells or wires in module \module7..
+Finding unused cells or wires in module \module88..
+Finding unused cells or wires in module \top..
+
+2.18. Executing OPT pass (performing simple optimizations).
+
+2.18.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module module13.
+<suppressed ~11 debug messages>
+Optimizing module module138.
+Optimizing module module32.
+<suppressed ~42 debug messages>
+Optimizing module module56.
+<suppressed ~41 debug messages>
+Optimizing module module7.
+<suppressed ~71 debug messages>
+Optimizing module module88.
+<suppressed ~138 debug messages>
+Optimizing module top.
+<suppressed ~25 debug messages>
+
+2.18.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\module13'.
+Finding identical cells in module `\module138'.
+Finding identical cells in module `\module32'.
+Finding identical cells in module `\module56'.
+Finding identical cells in module `\module7'.
+Finding identical cells in module `\module88'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.18.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.18.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \module13..
+Finding unused cells or wires in module \module138..
+Finding unused cells or wires in module \module32..
+Finding unused cells or wires in module \module56..
+Finding unused cells or wires in module \module7..
+Finding unused cells or wires in module \module88..
+Finding unused cells or wires in module \top..
+Removed 21 unused cells and 112 unused wires.
+<suppressed ~34 debug messages>
+
+2.18.5. Finished fast OPT passes.
+
+2.19. Executing MEMORY_MAP pass (converting $mem cells to logic and flip-flops).
+
+2.20. Executing OPT pass (performing simple optimizations).
+
+2.20.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module module13.
+Optimizing module module138.
+Optimizing module module32.
+Optimizing module module56.
+Optimizing module module7.
+Optimizing module module88.
+<suppressed ~1 debug messages>
+Optimizing module top.
+
+2.20.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\module13'.
+Finding identical cells in module `\module138'.
+Finding identical cells in module `\module32'.
+Finding identical cells in module `\module56'.
+Finding identical cells in module `\module7'.
+Finding identical cells in module `\module88'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.20.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \module13..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module138..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module56..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module7..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module88..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~95 debug messages>
+
+2.20.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \module13.
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:822$711:
+      Old ports: A=7'1000010, B={ $ternary$rtl.v:822$709_Y [4] $ternary$rtl.v:822$709_Y [4] $ternary$rtl.v:822$709_Y }, Y=$ternary$rtl.v:822$711_Y
+      New ports: A=6'100010, B={ $ternary$rtl.v:822$709_Y [4] $ternary$rtl.v:822$709_Y }, Y={ $ternary$rtl.v:822$711_Y [6] $ternary$rtl.v:822$711_Y [4:0] }
+      New connections: $ternary$rtl.v:822$711_Y [5] = $ternary$rtl.v:822$711_Y [4]
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:823$716:
+      Old ports: A={ \wire15 [11] \wire15 [11] \wire15 [11] \wire15 }, B=15'000000000000000, Y=$ternary$rtl.v:823$716_Y
+      New ports: A=\wire15, B=12'000000000000, Y=$ternary$rtl.v:823$716_Y [11:0]
+      New connections: $ternary$rtl.v:823$716_Y [14:12] = { $ternary$rtl.v:823$716_Y [11] $ternary$rtl.v:823$716_Y [11] $ternary$rtl.v:823$716_Y [11] }
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:824$719:
+      Old ports: A={ 8'00000000 \wire15 }, B={ 8'10100000 \wire15 }, Y=$auto$wreduce.cc:455:run$1007 [19:0]
+      New ports: A=1'0, B=1'1, Y=$auto$wreduce.cc:455:run$1007 [17]
+      New connections: { $auto$wreduce.cc:455:run$1007 [19:18] $auto$wreduce.cc:455:run$1007 [16:0] } = { $auto$wreduce.cc:455:run$1007 [17] 6'000000 \wire15 }
+  Optimizing cells in module \module13.
+  Optimizing cells in module \module138.
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:263$211:
+      Old ports: A={ 20'00000000000000000000 \wire142 [6:5] }, B={ 7'1000100 $ternary$rtl.v:263$208_Y }, Y=$ternary$rtl.v:263$211_Y
+      New ports: A={ 14'00000000000000 \wire142 [6:5] }, B={ 1'1 $ternary$rtl.v:263$208_Y }, Y={ $ternary$rtl.v:263$211_Y [17] $ternary$rtl.v:263$211_Y [14:0] }
+      New connections: { $ternary$rtl.v:263$211_Y [21:18] $ternary$rtl.v:263$211_Y [16:15] } = { $ternary$rtl.v:263$211_Y [17] 5'00000 }
+  Optimizing cells in module \module138.
+  Optimizing cells in module \module32.
+    Consolidated identical input bits for $mux cell $procmux$805:
+      Old ports: A={ $auto$rtlil.cc:1836:ReduceOr$1196 $auto$rtlil.cc:1836:ReduceOr$1196 $auto$rtlil.cc:1836:ReduceOr$1196 $auto$rtlil.cc:1836:ReduceOr$1196 $auto$rtlil.cc:1836:ReduceOr$1196 $auto$rtlil.cc:1836:ReduceOr$1196 $auto$rtlil.cc:1836:ReduceOr$1196 $auto$rtlil.cc:1836:ReduceOr$1196 $auto$rtlil.cc:1836:ReduceOr$1196 $auto$rtlil.cc:1836:ReduceOr$1196 $auto$rtlil.cc:1836:ReduceOr$1196 $auto$rtlil.cc:1836:ReduceOr$1196 $auto$rtlil.cc:1836:ReduceOr$1196 $auto$rtlil.cc:1836:ReduceOr$1196 $auto$rtlil.cc:1836:ReduceOr$1196 $auto$rtlil.cc:1836:ReduceOr$1196 $auto$rtlil.cc:1836:ReduceOr$1196 $auto$rtlil.cc:1836:ReduceOr$1196 $auto$rtlil.cc:1836:ReduceOr$1196 $auto$rtlil.cc:1836:ReduceOr$1196 $auto$rtlil.cc:1836:ReduceOr$1196 $auto$rtlil.cc:1836:ReduceOr$1196 }, B={ 21'000000000000000000000 $auto$rtlil.cc:1832:Not$1182 }, Y=$procmux$805_Y
+      New ports: A={ $auto$rtlil.cc:1836:ReduceOr$1196 $auto$rtlil.cc:1836:ReduceOr$1196 }, B={ 1'0 $auto$rtlil.cc:1832:Not$1182 }, Y=$procmux$805_Y [1:0]
+      New connections: $procmux$805_Y [21:2] = { $procmux$805_Y [1] $procmux$805_Y [1] $procmux$805_Y [1] $procmux$805_Y [1] $procmux$805_Y [1] $procmux$805_Y [1] $procmux$805_Y [1] $procmux$805_Y [1] $procmux$805_Y [1] $procmux$805_Y [1] $procmux$805_Y [1] $procmux$805_Y [1] $procmux$805_Y [1] $procmux$805_Y [1] $procmux$805_Y [1] $procmux$805_Y [1] $procmux$805_Y [1] $procmux$805_Y [1] $procmux$805_Y [1] $procmux$805_Y [1] }
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:763$666:
+      Old ports: A={ \reg42 [14] \reg42 }, B={ \reg49 [8] \reg49 [8] \reg49 [8] \reg49 [8] \reg49 [8] \reg49 [8] \reg49 [8] \reg49 }, Y=$auto$wreduce.cc:455:run$1030 [15:0]
+      New ports: A=\reg42, B={ \reg49 [8] \reg49 [8] \reg49 [8] \reg49 [8] \reg49 [8] \reg49 [8] \reg49 }, Y=$auto$wreduce.cc:455:run$1030 [14:0]
+      New connections: $auto$wreduce.cc:455:run$1030 [15] = $auto$wreduce.cc:455:run$1030 [14]
+  Optimizing cells in module \module32.
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:763$668:
+      Old ports: A=$auto$wreduce.cc:455:run$1030 [15:0], B={ \wire37 [11] \wire37 [11] \wire37 [11] \wire37 [11] \wire37 }, Y=$auto$wreduce.cc:455:run$1031 [15:0]
+      New ports: A=$auto$wreduce.cc:455:run$1030 [14:0], B={ \wire37 [11] \wire37 [11] \wire37 [11] \wire37 }, Y=$auto$wreduce.cc:455:run$1031 [14:0]
+      New connections: $auto$wreduce.cc:455:run$1031 [15] = $auto$wreduce.cc:455:run$1031 [14]
+  Optimizing cells in module \module32.
+  Optimizing cells in module \module56.
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:641$525:
+      Old ports: A=8'10111100, B={ 6'000000 \reg73 [1:0] }, Y=$ternary$rtl.v:641$525_Y
+      New ports: A=3'100, B={ 1'0 \reg73 [1:0] }, Y=$ternary$rtl.v:641$525_Y [2:0]
+      New connections: $ternary$rtl.v:641$525_Y [7:3] = { $ternary$rtl.v:641$525_Y [2] 1'0 $ternary$rtl.v:641$525_Y [2] $ternary$rtl.v:641$525_Y [2] $ternary$rtl.v:641$525_Y [2] }
+  Optimizing cells in module \module56.
+  Optimizing cells in module \module7.
+    Consolidated identical input bits for $mux cell $procmux$922:
+      Old ports: A={ 14'00000000000000 $reduce_xnor$rtl.v:231$179_Y [0] }, B={ $reduce_xnor$rtl.v:225$176_Y $reduce_xnor$rtl.v:225$176_Y $reduce_xnor$rtl.v:225$176_Y $reduce_xnor$rtl.v:225$176_Y $reduce_xnor$rtl.v:225$176_Y $reduce_xnor$rtl.v:225$176_Y $reduce_xnor$rtl.v:225$176_Y $reduce_xnor$rtl.v:225$176_Y $reduce_xnor$rtl.v:225$176_Y $reduce_xnor$rtl.v:225$176_Y $reduce_xnor$rtl.v:225$176_Y $reduce_xnor$rtl.v:225$176_Y $reduce_xnor$rtl.v:225$176_Y $reduce_xnor$rtl.v:225$176_Y $reduce_xnor$rtl.v:225$176_Y }, Y=$procmux$922_Y
+      New ports: A={ 1'0 $reduce_xnor$rtl.v:231$179_Y [0] }, B={ $reduce_xnor$rtl.v:225$176_Y $reduce_xnor$rtl.v:225$176_Y }, Y=$procmux$922_Y [1:0]
+      New connections: $procmux$922_Y [14:2] = { $procmux$922_Y [1] $procmux$922_Y [1] $procmux$922_Y [1] $procmux$922_Y [1] $procmux$922_Y [1] $procmux$922_Y [1] $procmux$922_Y [1] $procmux$922_Y [1] $procmux$922_Y [1] $procmux$922_Y [1] $procmux$922_Y [1] $procmux$922_Y [1] $procmux$922_Y [1] }
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:186$118:
+      Old ports: A={ 13'0000000000000 \wire10 [10:4] }, B={ 7'0000000 $and$rtl.v:186$116_Y [12:0] }, Y=$ternary$rtl.v:186$118_Y [19:0]
+      New ports: A={ 6'000000 \wire10 [10:4] }, B=$and$rtl.v:186$116_Y [12:0], Y=$ternary$rtl.v:186$118_Y [12:0]
+      New connections: $ternary$rtl.v:186$118_Y [19:13] = 7'0000000
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:206$133:
+      Old ports: A={ 5'00000 $and$rtl.v:206$130_Y }, B=6'000000, Y=$auto$wreduce.cc:455:run$1063 [5:0]
+      New ports: A=$and$rtl.v:206$130_Y, B=1'0, Y=$auto$wreduce.cc:455:run$1063 [0]
+      New connections: $auto$wreduce.cc:455:run$1063 [5:1] = 5'00000
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:219$157:
+      Old ports: A=\wire9, B={ 6'000000 \wire9 [13:0] }, Y=$pos$rtl.v:219$158_Y
+      New ports: A=\wire9 [19:14], B=6'000000, Y=$pos$rtl.v:219$158_Y [19:14]
+      New connections: $pos$rtl.v:219$158_Y [13:0] = \wire9 [13:0]
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:236$182:
+      Old ports: A={ 5'00000 \wire9 [4:3] }, B=7'1000001, Y=$pos$rtl.v:236$183_Y [6:0]
+      New ports: A={ 1'0 \wire9 [4:3] }, B=3'101, Y={ $pos$rtl.v:236$183_Y [6] $pos$rtl.v:236$183_Y [1:0] }
+      New connections: $pos$rtl.v:236$183_Y [5:2] = 4'0000
+  Optimizing cells in module \module7.
+    Consolidated identical input bits for $mux cell $procmux$925:
+      Old ports: A=$procmux$922_Y, B={ 3'000 \wire9 [12:1] }, Y=$0\reg163[14:0]
+      New ports: A={ $procmux$922_Y [1] $procmux$922_Y [1] $procmux$922_Y [1] $procmux$922_Y [1] $procmux$922_Y [1] $procmux$922_Y [1] $procmux$922_Y [1] $procmux$922_Y [1] $procmux$922_Y [1] $procmux$922_Y [1] $procmux$922_Y [1] $procmux$922_Y [1:0] }, B={ 1'0 \wire9 [12:1] }, Y=$0\reg163[14:0] [12:0]
+      New connections: $0\reg163[14:0] [14:13] = { $0\reg163[14:0] [12] $0\reg163[14:0] [12] }
+  Optimizing cells in module \module7.
+  Optimizing cells in module \module88.
+    New input vector for $reduce_or cell $reduce_or$rtl.v:427$314: { \reg94 [18] \reg94 [19] $auto$opt_expr.cc:189:group_cell_inputs$1574 [0] $auto$opt_expr.cc:189:group_cell_inputs$1574 [1] $auto$opt_expr.cc:189:group_cell_inputs$1574 [2] $auto$opt_expr.cc:189:group_cell_inputs$1574 [3] $auto$opt_expr.cc:189:group_cell_inputs$1574 [4] $auto$opt_expr.cc:189:group_cell_inputs$1574 [5] $auto$opt_expr.cc:189:group_cell_inputs$1574 [6] $auto$opt_expr.cc:189:group_cell_inputs$1574 [7] $auto$opt_expr.cc:189:group_cell_inputs$1574 [8] $auto$opt_expr.cc:189:group_cell_inputs$1574 [9] $auto$opt_expr.cc:189:group_cell_inputs$1574 [10] $auto$opt_expr.cc:189:group_cell_inputs$1574 [11] $auto$opt_expr.cc:189:group_cell_inputs$1574 [12] $auto$opt_expr.cc:189:group_cell_inputs$1574 [13] $auto$opt_expr.cc:189:group_cell_inputs$1574 [14] $auto$opt_expr.cc:189:group_cell_inputs$1574 [15] $auto$opt_expr.cc:189:group_cell_inputs$1574 [16] $auto$opt_expr.cc:189:group_cell_inputs$1574 [17] }
+    Consolidated identical input bits for $mux cell $procmux$847:
+      Old ports: A=8'10101110, B={ 4'0000 $auto$wreduce.cc:455:run$1092 [3:0] }, Y=$0\reg120[15:0]
+      New ports: A=5'11110, B={ 1'0 $auto$wreduce.cc:455:run$1092 [3:0] }, Y={ $0\reg120[15:0] [5] $0\reg120[15:0] [3:0] }
+      New connections: { $0\reg120[15:0] [7:6] $0\reg120[15:0] [4] } = { $0\reg120[15:0] [5] 2'00 }
+    Consolidated identical input bits for $mux cell $procmux$877:
+      Old ports: A={ $auto$opt_expr.cc:189:group_cell_inputs$1578 $auto$opt_expr.cc:189:group_cell_inputs$1578 $auto$opt_expr.cc:189:group_cell_inputs$1578 $auto$opt_expr.cc:189:group_cell_inputs$1578 $auto$opt_expr.cc:189:group_cell_inputs$1578 $auto$opt_expr.cc:189:group_cell_inputs$1578 $auto$opt_expr.cc:189:group_cell_inputs$1578 $auto$opt_expr.cc:189:group_cell_inputs$1578 $auto$opt_expr.cc:189:group_cell_inputs$1578 $auto$opt_expr.cc:189:group_cell_inputs$1578 $auto$opt_expr.cc:189:group_cell_inputs$1578 $auto$opt_expr.cc:189:group_cell_inputs$1578 $auto$opt_expr.cc:189:group_cell_inputs$1578 $auto$opt_expr.cc:189:group_cell_inputs$1578 $auto$opt_expr.cc:189:group_cell_inputs$1578 $auto$opt_expr.cc:189:group_cell_inputs$1578 $auto$opt_expr.cc:189:group_cell_inputs$1578 $auto$opt_expr.cc:189:group_cell_inputs$1578 $auto$opt_expr.cc:189:group_cell_inputs$1578 $auto$opt_expr.cc:189:group_cell_inputs$1578 }, B={ 19'0000000000000000000 $auto$wreduce.cc:455:run$1081 [0] }, Y=$0\reg94[19:0]
+      New ports: A={ $auto$opt_expr.cc:189:group_cell_inputs$1578 $auto$opt_expr.cc:189:group_cell_inputs$1578 }, B={ 1'0 $auto$wreduce.cc:455:run$1081 [0] }, Y=$0\reg94[19:0] [1:0]
+      New connections: $0\reg94[19:0] [19:2] = { $0\reg94[19:0] [1] $0\reg94[19:0] [1] $0\reg94[19:0] [1] $0\reg94[19:0] [1] $0\reg94[19:0] [1] $0\reg94[19:0] [1] $0\reg94[19:0] [1] $0\reg94[19:0] [1] $0\reg94[19:0] [1] $0\reg94[19:0] [1] $0\reg94[19:0] [1] $0\reg94[19:0] [1] $0\reg94[19:0] [1] $0\reg94[19:0] [1] $0\reg94[19:0] [1] $0\reg94[19:0] [1] $0\reg94[19:0] [1] $0\reg94[19:0] [1] }
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:379$244:
+      Old ports: A={ 4'0000 \reg93 [0] }, B={ \wire91 [2] \wire91 [2] \wire91 }, Y=$pos$rtl.v:379$245_Y
+      New ports: A={ 2'00 \reg93 [0] }, B=\wire91, Y=$pos$rtl.v:379$245_Y [2:0]
+      New connections: $pos$rtl.v:379$245_Y [4:3] = { $pos$rtl.v:379$245_Y [2] $pos$rtl.v:379$245_Y [2] }
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:426$311:
+      Old ports: A={ 3'000 $auto$rtlil.cc:1832:Not$1337 }, B={ 3'000 $auto$rtlil.cc:1832:Not$1326 }, Y=$ternary$rtl.v:426$311_Y [3:0]
+      New ports: A=$auto$rtlil.cc:1832:Not$1337, B=$auto$rtlil.cc:1832:Not$1326, Y=$ternary$rtl.v:426$311_Y [0]
+      New connections: $ternary$rtl.v:426$311_Y [3:1] = 3'000
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:437$331:
+      Old ports: A=6'110011, B=6'000001, Y=$ternary$rtl.v:437$331_Y [5:0]
+      New ports: A=1'1, B=1'0, Y=$ternary$rtl.v:437$331_Y [1]
+      New connections: { $ternary$rtl.v:437$331_Y [5:2] $ternary$rtl.v:437$331_Y [0] } = { $ternary$rtl.v:437$331_Y [1] $ternary$rtl.v:437$331_Y [1] 3'001 }
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:452$351:
+      Old ports: A={ 1'0 \wire100 }, B={ 1'0 \wire104 [0] }, Y=$auto$wreduce.cc:455:run$1104 [1:0]
+      New ports: A=\wire100, B=\wire104 [0], Y=$auto$wreduce.cc:455:run$1104 [0]
+      New connections: $auto$wreduce.cc:455:run$1104 [1] = 1'0
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:461$371:
+      Old ports: A=8'01000100, B=8'10100011, Y=$auto$wreduce.cc:455:run$1106 [7:0]
+      New ports: A=2'10, B=2'01, Y={ $auto$wreduce.cc:455:run$1106 [2] $auto$wreduce.cc:455:run$1106 [0] }
+      New connections: { $auto$wreduce.cc:455:run$1106 [7:3] $auto$wreduce.cc:455:run$1106 [1] } = { $auto$wreduce.cc:455:run$1106 [0] $auto$wreduce.cc:455:run$1106 [2] $auto$wreduce.cc:455:run$1106 [0] 2'00 $auto$wreduce.cc:455:run$1106 [0] }
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:468$387:
+      Old ports: A=18'000000000000000000, B={ 9'111111111 $auto$opt_expr.cc:189:group_cell_inputs$1591 2'10 }, Y=$ternary$rtl.v:468$387_Y
+      New ports: A=8'00000000, B={ $auto$opt_expr.cc:189:group_cell_inputs$1591 1'1 }, Y=$ternary$rtl.v:468$387_Y [8:1]
+      New connections: { $ternary$rtl.v:468$387_Y [17:9] $ternary$rtl.v:468$387_Y [0] } = { $ternary$rtl.v:468$387_Y [1] $ternary$rtl.v:468$387_Y [1] $ternary$rtl.v:468$387_Y [1] $ternary$rtl.v:468$387_Y [1] $ternary$rtl.v:468$387_Y [1] $ternary$rtl.v:468$387_Y [1] $ternary$rtl.v:468$387_Y [1] $ternary$rtl.v:468$387_Y [1] $ternary$rtl.v:468$387_Y [1] 1'0 }
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:510$446:
+      Old ports: A={ 4'0000 \wire104 [0] }, B={ 4'0000 $reduce_or$rtl.v:509$439_Y }, Y=$0\reg126[4:0]
+      New ports: A=\wire104 [0], B=$reduce_or$rtl.v:509$439_Y, Y=$0\reg126[4:0] [0]
+      New connections: $0\reg126[4:0] [4:1] = 4'0000
+  Optimizing cells in module \module88.
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:379$248:
+      Old ports: A={ \wire91 [2] \wire91 [2] \wire91 }, B=$pos$rtl.v:379$245_Y, Y=$ternary$rtl.v:379$248_Y
+      New ports: A=\wire91, B=$pos$rtl.v:379$245_Y [2:0], Y=$ternary$rtl.v:379$248_Y [2:0]
+      New connections: $ternary$rtl.v:379$248_Y [4:3] = { $ternary$rtl.v:379$248_Y [2] $ternary$rtl.v:379$248_Y [2] }
+  Optimizing cells in module \module88.
+  Optimizing cells in module \top.
+Performed a total of 25 changes.
+
+2.20.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\module13'.
+Finding identical cells in module `\module138'.
+Finding identical cells in module `\module32'.
+Finding identical cells in module `\module56'.
+Finding identical cells in module `\module7'.
+Finding identical cells in module `\module88'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.20.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.20.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \module13..
+Finding unused cells or wires in module \module138..
+Finding unused cells or wires in module \module32..
+Finding unused cells or wires in module \module56..
+Finding unused cells or wires in module \module7..
+Finding unused cells or wires in module \module88..
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+2.20.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module module13.
+<suppressed ~1 debug messages>
+Optimizing module module138.
+Optimizing module module32.
+Optimizing module module56.
+<suppressed ~1 debug messages>
+Optimizing module module7.
+<suppressed ~1 debug messages>
+Optimizing module module88.
+<suppressed ~15 debug messages>
+Optimizing module top.
+
+2.20.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.20.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \module13..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module138..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module56..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module7..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module88..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~95 debug messages>
+
+2.20.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \module13.
+  Optimizing cells in module \module138.
+  Optimizing cells in module \module32.
+  Optimizing cells in module \module56.
+  Optimizing cells in module \module7.
+  Optimizing cells in module \module88.
+    New input vector for $reduce_or cell $reduce_or$rtl.v:427$314: { $auto$opt_expr.cc:189:group_cell_inputs$1639 \reg94 [18] \reg94 [19] $auto$opt_expr.cc:189:group_cell_inputs$1574 [4] $auto$opt_expr.cc:189:group_cell_inputs$1574 [5] $auto$opt_expr.cc:189:group_cell_inputs$1574 [6] $auto$opt_expr.cc:189:group_cell_inputs$1574 [7] $auto$opt_expr.cc:189:group_cell_inputs$1574 [8] $auto$opt_expr.cc:189:group_cell_inputs$1574 [9] $auto$opt_expr.cc:189:group_cell_inputs$1574 [10] $auto$opt_expr.cc:189:group_cell_inputs$1574 [11] $auto$opt_expr.cc:189:group_cell_inputs$1574 [12] $auto$opt_expr.cc:189:group_cell_inputs$1574 [13] $auto$opt_expr.cc:189:group_cell_inputs$1574 [14] $auto$opt_expr.cc:189:group_cell_inputs$1574 [15] $auto$opt_expr.cc:189:group_cell_inputs$1574 [16] $auto$opt_expr.cc:189:group_cell_inputs$1574 [17] $auto$opt_expr.cc:189:group_cell_inputs$1641 [0] $auto$opt_expr.cc:189:group_cell_inputs$1641 [1] $auto$opt_expr.cc:189:group_cell_inputs$1641 [2] }
+  Optimizing cells in module \module88.
+  Optimizing cells in module \top.
+Performed a total of 1 changes.
+
+2.20.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\module13'.
+Finding identical cells in module `\module138'.
+Finding identical cells in module `\module32'.
+Finding identical cells in module `\module56'.
+Finding identical cells in module `\module7'.
+Finding identical cells in module `\module88'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.20.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.20.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \module13..
+Finding unused cells or wires in module \module138..
+Finding unused cells or wires in module \module32..
+Finding unused cells or wires in module \module56..
+Finding unused cells or wires in module \module7..
+Finding unused cells or wires in module \module88..
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 5 unused wires.
+<suppressed ~2 debug messages>
+
+2.20.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module module13.
+Optimizing module module138.
+Optimizing module module32.
+Optimizing module module56.
+Optimizing module module7.
+Optimizing module module88.
+Optimizing module top.
+
+2.20.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.20.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \module13..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module138..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module56..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module7..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module88..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~95 debug messages>
+
+2.20.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \module13.
+  Optimizing cells in module \module138.
+  Optimizing cells in module \module32.
+  Optimizing cells in module \module56.
+  Optimizing cells in module \module7.
+  Optimizing cells in module \module88.
+    New input vector for $reduce_or cell $reduce_or$rtl.v:427$314: { \reg94 [18] \reg94 [19] $auto$opt_expr.cc:189:group_cell_inputs$1574 [0] $auto$opt_expr.cc:189:group_cell_inputs$1574 [1] $auto$opt_expr.cc:189:group_cell_inputs$1574 [2] $auto$opt_expr.cc:189:group_cell_inputs$1574 [3] $auto$opt_expr.cc:189:group_cell_inputs$1574 [4] $auto$opt_expr.cc:189:group_cell_inputs$1574 [5] $auto$opt_expr.cc:189:group_cell_inputs$1574 [6] $auto$opt_expr.cc:189:group_cell_inputs$1574 [7] $auto$opt_expr.cc:189:group_cell_inputs$1574 [8] $auto$opt_expr.cc:189:group_cell_inputs$1574 [9] $auto$opt_expr.cc:189:group_cell_inputs$1574 [10] $auto$opt_expr.cc:189:group_cell_inputs$1574 [11] $auto$opt_expr.cc:189:group_cell_inputs$1574 [12] $auto$opt_expr.cc:189:group_cell_inputs$1574 [13] $auto$opt_expr.cc:189:group_cell_inputs$1574 [14] $auto$opt_expr.cc:189:group_cell_inputs$1574 [15] $auto$opt_expr.cc:189:group_cell_inputs$1574 [16] $auto$opt_expr.cc:189:group_cell_inputs$1574 [17] }
+  Optimizing cells in module \module88.
+  Optimizing cells in module \top.
+Performed a total of 1 changes.
+
+2.20.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\module13'.
+Finding identical cells in module `\module138'.
+Finding identical cells in module `\module32'.
+Finding identical cells in module `\module56'.
+Finding identical cells in module `\module7'.
+Finding identical cells in module `\module88'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.20.20. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.20.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \module13..
+Finding unused cells or wires in module \module138..
+Finding unused cells or wires in module \module32..
+Finding unused cells or wires in module \module56..
+Finding unused cells or wires in module \module7..
+Finding unused cells or wires in module \module88..
+Finding unused cells or wires in module \top..
+
+2.20.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module module13.
+Optimizing module module138.
+Optimizing module module32.
+Optimizing module module56.
+Optimizing module module7.
+Optimizing module module88.
+Optimizing module top.
+
+2.20.23. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.20.24. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \module13..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module138..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module56..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module7..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \module88..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~95 debug messages>
+
+2.20.25. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \module13.
+  Optimizing cells in module \module138.
+  Optimizing cells in module \module32.
+  Optimizing cells in module \module56.
+  Optimizing cells in module \module7.
+  Optimizing cells in module \module88.
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.20.26. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\module13'.
+Finding identical cells in module `\module138'.
+Finding identical cells in module `\module32'.
+Finding identical cells in module `\module56'.
+Finding identical cells in module `\module7'.
+Finding identical cells in module `\module88'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.20.27. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.20.28. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \module13..
+Finding unused cells or wires in module \module138..
+Finding unused cells or wires in module \module32..
+Finding unused cells or wires in module \module56..
+Finding unused cells or wires in module \module7..
+Finding unused cells or wires in module \module88..
+Finding unused cells or wires in module \top..
+
+2.20.29. Executing OPT_EXPR pass (perform const folding).
+Optimizing module module13.
+Optimizing module module138.
+Optimizing module module32.
+Optimizing module module56.
+Optimizing module module7.
+Optimizing module module88.
+Optimizing module top.
+
+2.20.30. Finished OPT passes. (There is nothing left to do.)
+
+2.21. Executing TECHMAP pass (map to technology primitives).
+
+2.21.1. Executing Verilog-2005 frontend: <techmap.v>
+Parsing Verilog input from `<techmap.v>' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+2.21.2. Continuing TECHMAP pass.
+Using template $paramod$constmap:ce2cae3a7483cbe94f314f8bddd5050f1c405365$paramod$1e886c7d69b02a61a1311174167003ef8ab4ca11\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshl.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $reduce_and.
+Using template $paramod$constmap:7788e5ed3404516929690fb67778027e314826d2$paramod$7bb2e61eada98b09db36dc32b0e8d8ca7d9566c3\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshl.
+Using extmapper simplemap for cells of type $reduce_xnor.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $or.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=1\B_WIDTH=7\Y_WIDTH=7 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=1\B_SIGNED=1\A_WIDTH=2\B_WIDTH=20\Y_WIDTH=20 for cells of type $alu.
+Using extmapper maccmap for cells of type $macc.
+  add { $auto$opt_expr.cc:189:group_cell_inputs$1625 $auto$opt_expr.cc:189:group_cell_inputs$1623 } * $auto$wreduce.cc:455:run$1124 [0] (19x1 bits, unsigned)
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $xnor.
+Using extmapper simplemap for cells of type $dff.
+Using template $paramod\_90_lcu\WIDTH=7 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu\WIDTH=20 for cells of type $lcu.
+Using extmapper simplemap for cells of type $reduce_xor.
+Using template $paramod$constmap:71ca898d20f1e806157ffeb7f7ec0ab20dbeb398$paramod$3128bbc254ae9b9c7613e851d779fdcf77526a4a\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshl.
+Using template $paramod\_90_alu\A_SIGNED=1\B_SIGNED=1\A_WIDTH=2\B_WIDTH=6\Y_WIDTH=6 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=0\B_WIDTH=13\Y_WIDTH=13 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=1\B_WIDTH=5\Y_WIDTH=6 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=0\B_WIDTH=21\Y_WIDTH=21 for cells of type $alu.
+Using template $paramod$constmap:e7141771b381660c94e40d8328643f900251d488$paramod$cfc1c9cb079b10b299b620c8eeabb61416241f2b\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shr.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=8\B_WIDTH=8\Y_WIDTH=8 for cells of type $alu.
+Using template $paramod$constmap:9c488842f9c03d68da2b002efc7934031961bb4f$paramod$7d93baa64713c9c1a899683b9796e1c23d842b24\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shl.
+  sub \wire10 [11:0] (12 bits, unsigned)
+  add \wire52 (21 bits, unsigned)
+  add 21'000000000000010011110 (21 bits, unsigned)
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=20\B_WIDTH=20\Y_WIDTH=20 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=1\B_SIGNED=1\A_WIDTH=20\B_WIDTH=21\Y_WIDTH=21 for cells of type $alu.
+Using template $paramod\_90_lcu\WIDTH=6 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=13 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=21 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=8 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=21 for cells of type $fa.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=21\B_WIDTH=21\Y_WIDTH=21 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=0\B_WIDTH=6\Y_WIDTH=6 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=1\B_SIGNED=1\A_WIDTH=1\B_WIDTH=3\Y_WIDTH=3 for cells of type $alu.
+Using template $paramod$constmap:ad1e84f5efc4252a3206de49ab40c1a14c4a37be$paramod$c582105a3594cc75b4338781c51fa24cd4e7f45e\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shr.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=7\B_WIDTH=7\Y_WIDTH=7 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=5\B_WIDTH=11\Y_WIDTH=11 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=1\B_WIDTH=5\Y_WIDTH=5 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=3\B_WIDTH=3\Y_WIDTH=3 for cells of type $alu.
+Using template $paramod$constmap:62294ec2965586c0148ec1cec5f7c4c2b8f6d4c7$paramod$cfed26545d9443e4afa815b50c2b128bcadeb162\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shl.
+  add $auto$wreduce.cc:455:run$1036 * \wire64 (21x9 bits, unsigned)
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=4\B_WIDTH=16\Y_WIDTH=16 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=1\B_SIGNED=1\A_WIDTH=16\B_WIDTH=19\Y_WIDTH=19 for cells of type $alu.
+Using template $paramod\_90_lcu\WIDTH=3 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=11 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=5 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=6 for cells of type $fa.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=6\B_WIDTH=6\Y_WIDTH=6 for cells of type $alu.
+Using template $paramod\_90_lcu\WIDTH=16 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=19 for cells of type $lcu.
+  sub { \wire15 [10:6] $reduce_xor$rtl.v:832$734_Y } (6 bits, unsigned)
+  sub $auto$wreduce.cc:455:run$1009 [0] (1 bits, unsigned)
+Using template $paramod$constmap:5e937be60e6ea86027139d6284f8b70b2ed48bd9$paramod$e5f27175f67d6e140f5ac47f1c6f39373f388e0c\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shr.
+Using template $paramod$constmap:9fc26d8a1adb3236f949746bfdf4b6ed0e5f40b6$paramod$2efea6c0dcf81478096f49254e9b5dcd19a598e5\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shr.
+Using template $paramod$constmap:353eeb93f616342332d857053adef4079dd8d5f9$paramod$ce66efe472652a9c9cdff382cbeeee2c2c43a0b9\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shl.
+Using template $paramod\_90_fa\WIDTH=16 for cells of type $fa.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=16\B_WIDTH=16\Y_WIDTH=16 for cells of type $alu.
+Using template $paramod$constmap:a384558491840a25e30c51aef80e00f491310173$paramod$7326d22bb1e5c7a85c0e3fe88b85d4cfb98bbcdd\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshr.
+  sub \wire33 [0] (1 bits, signed)
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=2\B_WIDTH=7\Y_WIDTH=7 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=1\B_WIDTH=15\Y_WIDTH=15 for cells of type $alu.
+Using extmapper simplemap for cells of type $logic_or.
+Using template $paramod$constmap:45b2654557f27f3c00e28fdc7066b010ca7fa6a4$paramod$ebed3dfe2ed03b973899ea5d90e639eaca9b3194\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shl.
+Using template $paramod$constmap:133dd5ec3c086fa7e0399e03509999c53e91a528$paramod$2b1e5db7527df6449cbc8571907fd43efa60073a\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshr.
+Using template $paramod$constmap:ad2181fd4124837565184cb2b6b8dd840fcee9ce$paramod$4c254699ad3c0de9187f20ab0e1697ac96cb10f6\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shl.
+Using template $paramod$constmap:bd955e3a3697ebed44ef9a42e99e7f4d63b416d1$paramod$c41c858e59d5ad9de8b0f462d2905f5979f3b841\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshr.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=12\B_WIDTH=4\Y_WIDTH=12 for cells of type $alu.
+Using template $paramod$constmap:4314cefc17806754de7b28c8441f4e370e80be5f$paramod$999790ea9afb758bfb912d9a4ee44ea939469ed5\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshl.
+Using template $paramod$constmap:1070ae1f4a03b779f1bfc511a7b719f33aca30d6$paramod$47c8a527bcade96357ead7867162b07d3e09880a\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shl.
+Using extmapper simplemap for cells of type $eq.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=11\B_WIDTH=1\Y_WIDTH=22 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=0\B_WIDTH=1\Y_WIDTH=16 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=9\B_WIDTH=9\Y_WIDTH=9 for cells of type $alu.
+Using template $paramod\_90_lcu\WIDTH=15 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=12 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=22 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=9 for cells of type $lcu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=1\B_WIDTH=29\Y_WIDTH=29 for cells of type $alu.
+  add \reg96 * \wire117 [4] (6x1 bits, unsigned)
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=7\B_WIDTH=11\Y_WIDTH=11 for cells of type $alu.
+Using template $paramod$constmap:777f1dcad0c6f3485c54b711ef9afecaed503310$paramod$505265bb51695e35f4367182c09e9366fe97ee1b\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shl.
+Using template $paramod$constmap:99b4cc527a2aadc68782ca4648524f3d49c255ef$paramod$f4bfa6b5a3e8688175c8446f7f4dc1dac624e56f\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shl.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=18\B_WIDTH=1\Y_WIDTH=18 for cells of type $alu.
+Using template $paramod$constmap:e0cb33a7ac72719250497c4336289c8f15544eb0$paramod$51bbee0fbde0c1589a78881e90d91db5b49749f9\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshr.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=0\B_WIDTH=1\Y_WIDTH=18 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=13\B_WIDTH=20\Y_WIDTH=20 for cells of type $alu.
+Using template $paramod$constmap:a453e966f5f384c5bf0367d545b30467c9b057e2$paramod$b2060870657889d5a26e3ad849baa277990777b8\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshr.
+Using template $paramod$constmap:7af2791bc319060464b5dd3bf7c85a01ea616edc$paramod$d131aecbd84d43f2d7a1fdba0beb44ebadc7a4d5\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shl.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=1\B_WIDTH=8\Y_WIDTH=8 for cells of type $alu.
+Using template $paramod$constmap:17f4ac1cab84919f36de831c6109dadf07885e71$paramod$9f3e0487f3860a2e373d1b4bb5ef76ba4d56f799\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshr.
+Using template $paramod$constmap:4aa1a200c8b5276c10018e9e017fb49837256a39$paramod$284de7b32dc5e2043846b1197a6083b772f35e96\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshl.
+Using template $paramod$constmap:1d6e8d245a205f3854280ef70d3ae5c00a1aba3d$paramod$2a2b262ab8a9fa25647f36fe2ce2018b6076a51d\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshr.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=1\B_WIDTH=2\Y_WIDTH=2 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=9\B_WIDTH=11\Y_WIDTH=11 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=3\B_WIDTH=7\Y_WIDTH=7 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=1\B_WIDTH=20\Y_WIDTH=20 for cells of type $alu.
+Using template $paramod\_90_lcu\WIDTH=29 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=18 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=2 for cells of type $lcu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=9\B_WIDTH=19\Y_WIDTH=19 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=9\B_WIDTH=22\Y_WIDTH=22 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=22\B_WIDTH=22\Y_WIDTH=22 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=1\B_WIDTH=22\Y_WIDTH=22 for cells of type $alu.
+No more expansions possible.
+<suppressed ~11080 debug messages>
+
+2.22. Executing OPT pass (performing simple optimizations).
+
+2.22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module module13.
+<suppressed ~246 debug messages>
+Optimizing module module138.
+<suppressed ~300 debug messages>
+Optimizing module module32.
+<suppressed ~569 debug messages>
+Optimizing module module56.
+<suppressed ~526 debug messages>
+Optimizing module module7.
+<suppressed ~587 debug messages>
+Optimizing module module88.
+<suppressed ~1225 debug messages>
+Optimizing module top.
+<suppressed ~195 debug messages>
+
+2.22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\module13'.
+<suppressed ~60 debug messages>
+Finding identical cells in module `\module138'.
+<suppressed ~144 debug messages>
+Finding identical cells in module `\module32'.
+<suppressed ~714 debug messages>
+Finding identical cells in module `\module56'.
+<suppressed ~105 debug messages>
+Finding identical cells in module `\module7'.
+<suppressed ~357 debug messages>
+Finding identical cells in module `\module88'.
+<suppressed ~1194 debug messages>
+Finding identical cells in module `\top'.
+<suppressed ~27 debug messages>
+Removed a total of 867 cells.
+
+2.22.3. Executing OPT_RMDFF pass (remove dff with constant values).
+Removing $auto$simplemap.cc:420:simplemap_dff$12974 ($_DFF_P_) from module module32.
+Removing $auto$simplemap.cc:420:simplemap_dff$5170 ($_DFF_P_) from module module7.
+Removing $auto$simplemap.cc:420:simplemap_dff$16438 ($_DFF_P_) from module module88.
+Removing $auto$simplemap.cc:420:simplemap_dff$2572 ($_DFF_P_) from module top.
+Replaced 4 DFF cells.
+
+2.22.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \module13..
+Finding unused cells or wires in module \module138..
+Finding unused cells or wires in module \module32..
+Finding unused cells or wires in module \module56..
+Finding unused cells or wires in module \module7..
+Finding unused cells or wires in module \module88..
+Finding unused cells or wires in module \top..
+Removed 1021 unused cells and 2838 unused wires.
+<suppressed ~1028 debug messages>
+
+2.22.5. Rerunning OPT passes. (Removed registers in this run.)
+
+2.22.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module module13.
+Optimizing module module138.
+<suppressed ~3 debug messages>
+Optimizing module module32.
+<suppressed ~110 debug messages>
+Optimizing module module56.
+<suppressed ~1 debug messages>
+Optimizing module module7.
+<suppressed ~12 debug messages>
+Optimizing module module88.
+<suppressed ~33 debug messages>
+Optimizing module top.
+<suppressed ~1 debug messages>
+
+2.22.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\module13'.
+Finding identical cells in module `\module138'.
+Finding identical cells in module `\module32'.
+<suppressed ~30 debug messages>
+Finding identical cells in module `\module56'.
+Finding identical cells in module `\module7'.
+Finding identical cells in module `\module88'.
+<suppressed ~12 debug messages>
+Finding identical cells in module `\top'.
+Removed a total of 14 cells.
+
+2.22.8. Executing OPT_RMDFF pass (remove dff with constant values).
+Promoting init spec \reg167 [21:14] = 8'00000000 to constant driver in module module7.
+Removing $auto$simplemap.cc:420:simplemap_dff$16369 ($_DFF_P_) from module module88.
+Promoted 1 init specs to constant drivers.
+Replaced 1 DFF cells.
+
+2.22.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \module13..
+Finding unused cells or wires in module \module138..
+Finding unused cells or wires in module \module32..
+Finding unused cells or wires in module \module56..
+Finding unused cells or wires in module \module7..
+Finding unused cells or wires in module \module88..
+Finding unused cells or wires in module \top..
+Removed 167 unused cells and 98 unused wires.
+<suppressed ~171 debug messages>
+
+2.22.10. Rerunning OPT passes. (Removed registers in this run.)
+
+2.22.11. Executing OPT_EXPR pass (perform const folding).
+Optimizing module module13.
+Optimizing module module138.
+Optimizing module module32.
+<suppressed ~2 debug messages>
+Optimizing module module56.
+Optimizing module module7.
+Optimizing module module88.
+Optimizing module top.
+
+2.22.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\module13'.
+Finding identical cells in module `\module138'.
+Finding identical cells in module `\module32'.
+Finding identical cells in module `\module56'.
+Finding identical cells in module `\module7'.
+Finding identical cells in module `\module88'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.22.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.22.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \module13..
+Finding unused cells or wires in module \module138..
+Finding unused cells or wires in module \module32..
+Finding unused cells or wires in module \module56..
+Finding unused cells or wires in module \module7..
+Finding unused cells or wires in module \module88..
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+2.22.15. Finished fast OPT passes.
+
+2.23. Executing ABC pass (technology mapping using ABC).
+
+2.23.1. Extracting gate netlist of module `\module13' to `<abc-temp-dir>/input.blif'..
+Extracted 264 gates and 323 wires to a netlist network with 57 inputs and 12 outputs.
+
+2.23.1.1. Executing ABC.
+Running ABC command: berkeley-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 17 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + retime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.23.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        3
+ABC RESULTS:            ANDNOT cells:       13
+ABC RESULTS:              AOI3 cells:        8
+ABC RESULTS:              AOI4 cells:        1
+ABC RESULTS:               MUX cells:       19
+ABC RESULTS:              NAND cells:       12
+ABC RESULTS:               NOR cells:       21
+ABC RESULTS:               NOT cells:       17
+ABC RESULTS:              OAI3 cells:       10
+ABC RESULTS:                OR cells:       57
+ABC RESULTS:             ORNOT cells:        7
+ABC RESULTS:              XNOR cells:        9
+ABC RESULTS:               XOR cells:       40
+ABC RESULTS:        internal signals:      254
+ABC RESULTS:           input signals:       57
+ABC RESULTS:          output signals:       12
+Removing temp directory.
+
+2.23.2. Extracting gate netlist of module `\module138' to `<abc-temp-dir>/input.blif'..
+Extracted 481 gates and 553 wires to a netlist network with 70 inputs and 8 outputs.
+
+2.23.2.1. Executing ABC.
+Running ABC command: berkeley-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 17 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + retime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.23.2.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       12
+ABC RESULTS:            ANDNOT cells:       53
+ABC RESULTS:              AOI3 cells:       36
+ABC RESULTS:              AOI4 cells:        1
+ABC RESULTS:               MUX cells:       38
+ABC RESULTS:              NAND cells:       14
+ABC RESULTS:               NOR cells:       25
+ABC RESULTS:               NOT cells:       30
+ABC RESULTS:              OAI3 cells:       25
+ABC RESULTS:              OAI4 cells:        1
+ABC RESULTS:                OR cells:       57
+ABC RESULTS:             ORNOT cells:       10
+ABC RESULTS:               XOR cells:       55
+ABC RESULTS:        internal signals:      475
+ABC RESULTS:           input signals:       70
+ABC RESULTS:          output signals:        8
+Removing temp directory.
+
+2.23.3. Extracting gate netlist of module `\module32' to `<abc-temp-dir>/input.blif'..
+Extracted 1309 gates and 1471 wires to a netlist network with 160 inputs and 114 outputs.
+
+2.23.3.1. Executing ABC.
+Running ABC command: berkeley-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 17 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + retime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.23.3.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        6
+ABC RESULTS:            ANDNOT cells:      156
+ABC RESULTS:              AOI3 cells:       21
+ABC RESULTS:               BUF cells:        1
+ABC RESULTS:               MUX cells:      363
+ABC RESULTS:              NAND cells:       44
+ABC RESULTS:               NOR cells:       55
+ABC RESULTS:               NOT cells:       85
+ABC RESULTS:              OAI3 cells:       51
+ABC RESULTS:                OR cells:      285
+ABC RESULTS:             ORNOT cells:       48
+ABC RESULTS:              XNOR cells:       29
+ABC RESULTS:               XOR cells:       59
+ABC RESULTS:              ZERO cells:        1
+ABC RESULTS:        internal signals:     1197
+ABC RESULTS:           input signals:      160
+ABC RESULTS:          output signals:      114
+Removing temp directory.
+
+2.23.4. Extracting gate netlist of module `\module56' to `<abc-temp-dir>/input.blif'..
+Extracted 647 gates and 769 wires to a netlist network with 120 inputs and 107 outputs.
+
+2.23.4.1. Executing ABC.
+Running ABC command: berkeley-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 17 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + retime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.23.4.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       57
+ABC RESULTS:            ANDNOT cells:       96
+ABC RESULTS:              AOI3 cells:       24
+ABC RESULTS:              AOI4 cells:        1
+ABC RESULTS:               MUX cells:       51
+ABC RESULTS:              NAND cells:        7
+ABC RESULTS:               NOR cells:       15
+ABC RESULTS:               NOT cells:       44
+ABC RESULTS:              OAI3 cells:        6
+ABC RESULTS:              OAI4 cells:        1
+ABC RESULTS:               ONE cells:        1
+ABC RESULTS:                OR cells:       97
+ABC RESULTS:             ORNOT cells:       22
+ABC RESULTS:              XNOR cells:       32
+ABC RESULTS:               XOR cells:       82
+ABC RESULTS:              ZERO cells:        1
+ABC RESULTS:        internal signals:      542
+ABC RESULTS:           input signals:      120
+ABC RESULTS:          output signals:      107
+Removing temp directory.
+
+2.23.5. Extracting gate netlist of module `\module7' to `<abc-temp-dir>/input.blif'..
+Extracted 1740 gates and 1954 wires to a netlist network with 212 inputs and 108 outputs.
+
+2.23.5.1. Executing ABC.
+Running ABC command: berkeley-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 17 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + retime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.23.5.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       37
+ABC RESULTS:            ANDNOT cells:      213
+ABC RESULTS:              AOI3 cells:       50
+ABC RESULTS:               MUX cells:      242
+ABC RESULTS:              NAND cells:       51
+ABC RESULTS:               NOR cells:       55
+ABC RESULTS:               NOT cells:      110
+ABC RESULTS:              OAI3 cells:       46
+ABC RESULTS:              OAI4 cells:        1
+ABC RESULTS:                OR cells:      391
+ABC RESULTS:             ORNOT cells:       31
+ABC RESULTS:              XNOR cells:       40
+ABC RESULTS:               XOR cells:      220
+ABC RESULTS:        internal signals:     1634
+ABC RESULTS:           input signals:      212
+ABC RESULTS:          output signals:      108
+Removing temp directory.
+
+2.23.6. Extracting gate netlist of module `\module88' to `<abc-temp-dir>/input.blif'..
+Extracted 791 gates and 875 wires to a netlist network with 82 inputs and 94 outputs.
+
+2.23.6.1. Executing ABC.
+Running ABC command: berkeley-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 17 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + retime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.23.6.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       23
+ABC RESULTS:            ANDNOT cells:      108
+ABC RESULTS:              AOI3 cells:       13
+ABC RESULTS:              AOI4 cells:        2
+ABC RESULTS:               MUX cells:       32
+ABC RESULTS:              NAND cells:       16
+ABC RESULTS:               NOR cells:       32
+ABC RESULTS:               NOT cells:       36
+ABC RESULTS:              OAI3 cells:       33
+ABC RESULTS:              OAI4 cells:        1
+ABC RESULTS:               ONE cells:        7
+ABC RESULTS:                OR cells:      144
+ABC RESULTS:             ORNOT cells:        9
+ABC RESULTS:              XNOR cells:       17
+ABC RESULTS:               XOR cells:       35
+ABC RESULTS:        internal signals:      699
+ABC RESULTS:           input signals:       82
+ABC RESULTS:          output signals:       94
+Removing temp directory.
+
+2.23.7. Extracting gate netlist of module `\top' to `<abc-temp-dir>/input.blif'..
+Extracted 155 gates and 212 wires to a netlist network with 56 inputs and 9 outputs.
+
+2.23.7.1. Executing ABC.
+Running ABC command: berkeley-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 17 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + retime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.23.7.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:            ANDNOT cells:       22
+ABC RESULTS:              AOI3 cells:        6
+ABC RESULTS:              AOI4 cells:        1
+ABC RESULTS:               MUX cells:       48
+ABC RESULTS:              NAND cells:        3
+ABC RESULTS:               NOR cells:        1
+ABC RESULTS:               NOT cells:        3
+ABC RESULTS:              OAI3 cells:        2
+ABC RESULTS:                OR cells:       39
+ABC RESULTS:             ORNOT cells:       22
+ABC RESULTS:              XNOR cells:        4
+ABC RESULTS:               XOR cells:        6
+ABC RESULTS:        internal signals:      147
+ABC RESULTS:           input signals:       56
+ABC RESULTS:          output signals:        9
+Removing temp directory.
+
+2.24. Executing OPT pass (performing simple optimizations).
+
+2.24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module module13.
+<suppressed ~12 debug messages>
+Optimizing module module138.
+Optimizing module module32.
+<suppressed ~54 debug messages>
+Optimizing module module56.
+Optimizing module module7.
+<suppressed ~35 debug messages>
+Optimizing module module88.
+<suppressed ~4 debug messages>
+Optimizing module top.
+
+2.24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\module13'.
+Finding identical cells in module `\module138'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `\module32'.
+<suppressed ~27 debug messages>
+Finding identical cells in module `\module56'.
+<suppressed ~6 debug messages>
+Finding identical cells in module `\module7'.
+<suppressed ~6 debug messages>
+Finding identical cells in module `\module88'.
+<suppressed ~75 debug messages>
+Finding identical cells in module `\top'.
+Removed a total of 39 cells.
+
+2.24.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.24.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \module13..
+Finding unused cells or wires in module \module138..
+Finding unused cells or wires in module \module32..
+Finding unused cells or wires in module \module56..
+Finding unused cells or wires in module \module7..
+Finding unused cells or wires in module \module88..
+Finding unused cells or wires in module \top..
+Removed 2 unused cells and 2695 unused wires.
+<suppressed ~9 debug messages>
+
+2.24.5. Finished fast OPT passes.
+
+2.25. Executing HIERARCHY pass (managing design hierarchy).
+
+2.26. Printing statistics.
+
+=== module13 ===
+
+   Number of wires:                224
+   Number of wire bits:            495
+   Number of public wires:          17
+   Number of public wire bits:     273
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                228
+     $_ANDNOT_                      13
+     $_AND_                          3
+     $_AOI3_                         8
+     $_AOI4_                         1
+     $_DFF_P_                       11
+     $_MUX_                         19
+     $_NAND_                        12
+     $_NOR_                         21
+     $_NOT_                         17
+     $_OAI3_                        10
+     $_ORNOT_                        7
+     $_OR_                          57
+     $_XNOR_                         9
+     $_XOR_                         40
+
+=== module138 ===
+
+   Number of wires:                360
+   Number of wire bits:            522
+   Number of public wires:          12
+   Number of public wire bits:     174
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                356
+     $_ANDNOT_                      52
+     $_AND_                         12
+     $_AOI3_                        36
+     $_AOI4_                         1
+     $_MUX_                         38
+     $_NAND_                        14
+     $_NOR_                         25
+     $_NOT_                         30
+     $_OAI3_                        25
+     $_OAI4_                         1
+     $_ORNOT_                       10
+     $_OR_                          57
+     $_XOR_                         55
+
+=== module32 ===
+
+   Number of wires:               1109
+   Number of wire bits:           1622
+   Number of public wires:          21
+   Number of public wire bits:     424
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1303
+     $_ANDNOT_                     154
+     $_AND_                          6
+     $_AOI3_                        21
+     $_DFF_P_                      111
+     $_MUX_                        363
+     $_NAND_                        44
+     $_NOR_                         48
+     $_NOT_                         84
+     $_OAI3_                        51
+     $_ORNOT_                       48
+     $_OR_                         285
+     $_XNOR_                        29
+     $_XOR_                         59
+
+=== module56 ===
+
+   Number of wires:                459
+   Number of wire bits:            860
+   Number of public wires:          25
+   Number of public wire bits:     366
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                598
+     $_ANDNOT_                      96
+     $_AND_                         56
+     $_AOI3_                        24
+     $_AOI4_                         1
+     $_DFF_P_                       65
+     $_MUX_                         51
+     $_NAND_                         7
+     $_NOR_                         14
+     $_NOT_                         44
+     $_OAI3_                         6
+     $_OAI4_                         1
+     $_ORNOT_                       22
+     $_OR_                          97
+     $_XNOR_                        32
+     $_XOR_                         82
+
+=== module7 ===
+
+   Number of wires:               1424
+   Number of wire bits:           3736
+   Number of public wires:          34
+   Number of public wire bits:     830
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1562
+     $_ANDNOT_                     213
+     $_AND_                         37
+     $_AOI3_                        50
+     $_DFF_P_                       72
+     $_MUX_                        242
+     $_NAND_                        51
+     $_NOR_                         53
+     $_NOT_                        109
+     $_OAI3_                        46
+     $_OAI4_                         1
+     $_ORNOT_                       31
+     $_OR_                         391
+     $_XNOR_                        40
+     $_XOR_                        220
+     module13                        1
+     module138                       1
+     module32                        1
+     module56                        1
+     module88                        2
+
+=== module88 ===
+
+   Number of wires:                471
+   Number of wire bits:           1534
+   Number of public wires:          48
+   Number of public wire bits:    1000
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                559
+     $_ANDNOT_                     103
+     $_AND_                         23
+     $_AOI3_                        13
+     $_AOI4_                         2
+     $_DFF_P_                       74
+     $_MUX_                         32
+     $_NAND_                        16
+     $_NOR_                         32
+     $_NOT_                         36
+     $_OAI3_                        25
+     $_OAI4_                         1
+     $_ORNOT_                        9
+     $_OR_                         141
+     $_XNOR_                        17
+     $_XOR_                         35
+
+=== top ===
+
+   Number of wires:                174
+   Number of wire bits:           1072
+   Number of public wires:          21
+   Number of public wire bits:     409
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                163
+     $_ANDNOT_                      22
+     $_AND_                          2
+     $_AOI3_                         6
+     $_AOI4_                         1
+     $_DFF_P_                        2
+     $_MUX_                         48
+     $_NAND_                         3
+     $_NOR_                          1
+     $_NOT_                          3
+     $_OAI3_                         2
+     $_ORNOT_                       22
+     $_OR_                          39
+     $_XNOR_                         4
+     $_XOR_                          6
+     module56                        1
+     module7                         1
+
+2.27. Executing CHECK pass (checking for obvious problems).
+checking module module13..
+checking module module138..
+checking module module32..
+checking module module56..
+checking module module7..
+checking module module88..
+checking module top..
+found and reported 0 problems.
+
+3. Executing Verilog backend.
+Dumping module `\module13'.
+Dumping module `\module138'.
+Dumping module `\module32'.
+Dumping module `\module56'.
+Dumping module `\module7'.
+Dumping module `\module88'.
+Dumping module `\top'.
+
+Warnings: 29 unique messages, 29 total
+End of script. Logfile hash: 302c981d9e
+CPU: user 6.28s system 0.02s, MEM: 65.03 MB total, 57.68 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 23% 44x proc (1 sec), 16% 2x techmap (1 sec), ...

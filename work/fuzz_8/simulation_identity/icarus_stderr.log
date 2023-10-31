@@ -1,0 +1,232 @@
+./syn_identity.v:460: warning: Port 1 (y) of module11 expects 799 bits, got 15.
+./syn_identity.v:460:        : Padding 784 high bits of the port.
+./syn_identity.v:460: warning: Port 3 (wire16) of module11 expects 9 bits, got 19.
+./syn_identity.v:460:        : Pruning 10 high bits of the expression.
+./syn_identity.v:460: warning: Port 4 (wire15) of module11 expects 5 bits, got 6.
+./syn_identity.v:460:        : Pruning (signed) 1 high bits of the expression.
+./syn_identity.v:460: warning: Port 6 (wire13) of module11 expects 16 bits, got 22.
+./syn_identity.v:460:        : Pruning 6 high bits of the expression.
+./syn_identity.v:460: warning: Port 7 (wire12) of module11 expects 8 bits, got 16.
+./syn_identity.v:460:        : Pruning (signed) 8 high bits of the expression.
+./syn_identity.v:465: warning: Port 1 (y) of module90 expects 732 bits, got 22.
+./syn_identity.v:465:        : Padding 710 high bits of the port.
+./syn_identity.v:465: warning: Port 6 (wire91) of module90 expects 20 bits, got 22.
+./syn_identity.v:465:        : Pruning 2 high bits of the expression.
+./syn_identity.v:609: warning: Port 1 (y) of module198 expects 320 bits, got 16.
+./syn_identity.v:609:        : Padding 304 high bits of the port.
+./syn_identity.v:609: warning: Port 3 (wire202) of module198 expects 9 bits, got 21.
+./syn_identity.v:609:        : Pruning 12 high bits of the expression.
+./syn_identity.v:609: warning: Port 4 (wire201) of module198 expects 3 bits, got 6.
+./syn_identity.v:609:        : Pruning (signed) 3 high bits of the expression.
+./syn_identity.v:609: warning: Port 6 (wire199) of module198 expects 20 bits, got 22.
+./syn_identity.v:609:        : Pruning 2 high bits of the expression.
+./syn_identity.v:632: warning: Port 1 (y) of module241 expects 210 bits, got 9.
+./syn_identity.v:632:        : Padding 201 high bits of the port.
+./syn_identity.v:632: warning: Port 3 (wire246) of module241 expects 3 bits, got 22.
+./syn_identity.v:632:        : Pruning 19 high bits of the expression.
+./syn_identity.v:632: warning: Port 4 (wire245) of module241 expects 7 bits, got 13.
+./syn_identity.v:632:        : Pruning (signed) 6 high bits of the expression.
+./syn_identity.v:632: warning: Port 5 (wire244) of module241 expects 5 bits, got 21.
+./syn_identity.v:632:        : Pruning 16 high bits of the expression.
+./syn_identity.v:632: warning: Port 7 (wire242) of module241 expects 7 bits, got 10.
+./syn_identity.v:632:        : Pruning 3 high bits of the expression.
+./syn_identity.v:117: warning: Port 1 (y) of module4 expects 631 bits, got 22.
+./syn_identity.v:117:        : Padding 609 high bits of the port.
+./syn_identity.v:117: warning: Port 5 (wire7) of module4 expects 6 bits, got 21.
+./syn_identity.v:117:        : Pruning (signed) 15 high bits of the expression.
+./syn_identity.v:117: warning: Port 7 (wire5) of module4 expects 19 bits, got 8.
+./syn_identity.v:117:        : Padding 11 high bits of the port.
+./syn_identity.v:460: warning: Port 1 (y) of module11 expects 799 bits, got 15.
+./syn_identity.v:460:        : Padding 784 high bits of the port.
+./syn_identity.v:460: warning: Port 3 (wire16) of module11 expects 9 bits, got 19.
+./syn_identity.v:460:        : Pruning 10 high bits of the expression.
+./syn_identity.v:460: warning: Port 4 (wire15) of module11 expects 5 bits, got 6.
+./syn_identity.v:460:        : Pruning (signed) 1 high bits of the expression.
+./syn_identity.v:460: warning: Port 6 (wire13) of module11 expects 16 bits, got 22.
+./syn_identity.v:460:        : Pruning 6 high bits of the expression.
+./syn_identity.v:460: warning: Port 7 (wire12) of module11 expects 8 bits, got 16.
+./syn_identity.v:460:        : Pruning (signed) 8 high bits of the expression.
+./syn_identity.v:465: warning: Port 1 (y) of module90 expects 732 bits, got 22.
+./syn_identity.v:465:        : Padding 710 high bits of the port.
+./syn_identity.v:465: warning: Port 6 (wire91) of module90 expects 20 bits, got 22.
+./syn_identity.v:465:        : Pruning 2 high bits of the expression.
+./syn_identity.v:609: warning: Port 1 (y) of module198 expects 320 bits, got 16.
+./syn_identity.v:609:        : Padding 304 high bits of the port.
+./syn_identity.v:609: warning: Port 3 (wire202) of module198 expects 9 bits, got 21.
+./syn_identity.v:609:        : Pruning 12 high bits of the expression.
+./syn_identity.v:609: warning: Port 4 (wire201) of module198 expects 3 bits, got 6.
+./syn_identity.v:609:        : Pruning (signed) 3 high bits of the expression.
+./syn_identity.v:609: warning: Port 6 (wire199) of module198 expects 20 bits, got 22.
+./syn_identity.v:609:        : Pruning 2 high bits of the expression.
+./syn_identity.v:632: warning: Port 1 (y) of module241 expects 210 bits, got 9.
+./syn_identity.v:632:        : Padding 201 high bits of the port.
+./syn_identity.v:632: warning: Port 3 (wire246) of module241 expects 3 bits, got 22.
+./syn_identity.v:632:        : Pruning 19 high bits of the expression.
+./syn_identity.v:632: warning: Port 4 (wire245) of module241 expects 7 bits, got 13.
+./syn_identity.v:632:        : Pruning (signed) 6 high bits of the expression.
+./syn_identity.v:632: warning: Port 5 (wire244) of module241 expects 5 bits, got 21.
+./syn_identity.v:632:        : Pruning 16 high bits of the expression.
+./syn_identity.v:632: warning: Port 7 (wire242) of module241 expects 7 bits, got 10.
+./syn_identity.v:632:        : Pruning 3 high bits of the expression.
+./syn_identity.v:195: warning: Port 1 (y) of module4 expects 631 bits, got 20.
+./syn_identity.v:195:        : Padding 611 high bits of the port.
+./syn_identity.v:195: warning: Port 3 (wire9) of module4 expects 13 bits, got 17.
+./syn_identity.v:195:        : Pruning (signed) 4 high bits of the expression.
+./syn_identity.v:195: warning: Port 5 (wire7) of module4 expects 6 bits, got 10.
+./syn_identity.v:195:        : Pruning (signed) 4 high bits of the expression.
+./syn_identity.v:195: warning: Port 7 (wire5) of module4 expects 19 bits, got 22.
+./syn_identity.v:195:        : Pruning (signed) 3 high bits of the expression.
+./syn_identity.v:460: warning: Port 1 (y) of module11 expects 799 bits, got 15.
+./syn_identity.v:460:        : Padding 784 high bits of the port.
+./syn_identity.v:460: warning: Port 3 (wire16) of module11 expects 9 bits, got 19.
+./syn_identity.v:460:        : Pruning 10 high bits of the expression.
+./syn_identity.v:460: warning: Port 4 (wire15) of module11 expects 5 bits, got 6.
+./syn_identity.v:460:        : Pruning (signed) 1 high bits of the expression.
+./syn_identity.v:460: warning: Port 6 (wire13) of module11 expects 16 bits, got 22.
+./syn_identity.v:460:        : Pruning 6 high bits of the expression.
+./syn_identity.v:460: warning: Port 7 (wire12) of module11 expects 8 bits, got 16.
+./syn_identity.v:460:        : Pruning (signed) 8 high bits of the expression.
+./syn_identity.v:465: warning: Port 1 (y) of module90 expects 732 bits, got 22.
+./syn_identity.v:465:        : Padding 710 high bits of the port.
+./syn_identity.v:465: warning: Port 6 (wire91) of module90 expects 20 bits, got 22.
+./syn_identity.v:465:        : Pruning 2 high bits of the expression.
+./syn_identity.v:609: warning: Port 1 (y) of module198 expects 320 bits, got 16.
+./syn_identity.v:609:        : Padding 304 high bits of the port.
+./syn_identity.v:609: warning: Port 3 (wire202) of module198 expects 9 bits, got 21.
+./syn_identity.v:609:        : Pruning 12 high bits of the expression.
+./syn_identity.v:609: warning: Port 4 (wire201) of module198 expects 3 bits, got 6.
+./syn_identity.v:609:        : Pruning (signed) 3 high bits of the expression.
+./syn_identity.v:609: warning: Port 6 (wire199) of module198 expects 20 bits, got 22.
+./syn_identity.v:609:        : Pruning 2 high bits of the expression.
+./syn_identity.v:632: warning: Port 1 (y) of module241 expects 210 bits, got 9.
+./syn_identity.v:632:        : Padding 201 high bits of the port.
+./syn_identity.v:632: warning: Port 3 (wire246) of module241 expects 3 bits, got 22.
+./syn_identity.v:632:        : Pruning 19 high bits of the expression.
+./syn_identity.v:632: warning: Port 4 (wire245) of module241 expects 7 bits, got 13.
+./syn_identity.v:632:        : Pruning (signed) 6 high bits of the expression.
+./syn_identity.v:632: warning: Port 5 (wire244) of module241 expects 5 bits, got 21.
+./syn_identity.v:632:        : Pruning 16 high bits of the expression.
+./syn_identity.v:632: warning: Port 7 (wire242) of module241 expects 7 bits, got 10.
+./syn_identity.v:632:        : Pruning 3 high bits of the expression.
+./syn_identity.v:196: warning: Port 1 (y) of module4 expects 631 bits, got 4.
+./syn_identity.v:196:        : Padding 627 high bits of the port.
+./syn_identity.v:196: warning: Port 3 (wire9) of module4 expects 13 bits, got 17.
+./syn_identity.v:196:        : Pruning (signed) 4 high bits of the expression.
+./syn_identity.v:196: warning: Port 5 (wire7) of module4 expects 6 bits, got 21.
+./syn_identity.v:196:        : Pruning 15 high bits of the expression.
+./syn_identity.v:460: warning: Port 1 (y) of module11 expects 799 bits, got 15.
+./syn_identity.v:460:        : Padding 784 high bits of the port.
+./syn_identity.v:460: warning: Port 3 (wire16) of module11 expects 9 bits, got 19.
+./syn_identity.v:460:        : Pruning 10 high bits of the expression.
+./syn_identity.v:460: warning: Port 4 (wire15) of module11 expects 5 bits, got 6.
+./syn_identity.v:460:        : Pruning (signed) 1 high bits of the expression.
+./syn_identity.v:460: warning: Port 6 (wire13) of module11 expects 16 bits, got 22.
+./syn_identity.v:460:        : Pruning 6 high bits of the expression.
+./syn_identity.v:460: warning: Port 7 (wire12) of module11 expects 8 bits, got 16.
+./syn_identity.v:460:        : Pruning (signed) 8 high bits of the expression.
+./syn_identity.v:465: warning: Port 1 (y) of module90 expects 732 bits, got 22.
+./syn_identity.v:465:        : Padding 710 high bits of the port.
+./syn_identity.v:465: warning: Port 6 (wire91) of module90 expects 20 bits, got 22.
+./syn_identity.v:465:        : Pruning 2 high bits of the expression.
+./syn_identity.v:609: warning: Port 1 (y) of module198 expects 320 bits, got 16.
+./syn_identity.v:609:        : Padding 304 high bits of the port.
+./syn_identity.v:609: warning: Port 3 (wire202) of module198 expects 9 bits, got 21.
+./syn_identity.v:609:        : Pruning 12 high bits of the expression.
+./syn_identity.v:609: warning: Port 4 (wire201) of module198 expects 3 bits, got 6.
+./syn_identity.v:609:        : Pruning (signed) 3 high bits of the expression.
+./syn_identity.v:609: warning: Port 6 (wire199) of module198 expects 20 bits, got 22.
+./syn_identity.v:609:        : Pruning 2 high bits of the expression.
+./syn_identity.v:632: warning: Port 1 (y) of module241 expects 210 bits, got 9.
+./syn_identity.v:632:        : Padding 201 high bits of the port.
+./syn_identity.v:632: warning: Port 3 (wire246) of module241 expects 3 bits, got 22.
+./syn_identity.v:632:        : Pruning 19 high bits of the expression.
+./syn_identity.v:632: warning: Port 4 (wire245) of module241 expects 7 bits, got 13.
+./syn_identity.v:632:        : Pruning (signed) 6 high bits of the expression.
+./syn_identity.v:632: warning: Port 5 (wire244) of module241 expects 5 bits, got 21.
+./syn_identity.v:632:        : Pruning 16 high bits of the expression.
+./syn_identity.v:632: warning: Port 7 (wire242) of module241 expects 7 bits, got 10.
+./syn_identity.v:632:        : Pruning 3 high bits of the expression.
+./syn_identity.v:117: warning: Port 1 (y) of module4 expects 631 bits, got 22.
+./syn_identity.v:117:        : Padding 609 high bits of the port.
+./syn_identity.v:117: warning: Port 5 (wire7) of module4 expects 6 bits, got 21.
+./syn_identity.v:117:        : Pruning (signed) 15 high bits of the expression.
+./syn_identity.v:117: warning: Port 7 (wire5) of module4 expects 19 bits, got 8.
+./syn_identity.v:117:        : Padding 11 high bits of the port.
+./syn_identity.v:460: warning: Port 1 (y) of module11 expects 799 bits, got 15.
+./syn_identity.v:460:        : Padding 784 high bits of the port.
+./syn_identity.v:460: warning: Port 3 (wire16) of module11 expects 9 bits, got 19.
+./syn_identity.v:460:        : Pruning 10 high bits of the expression.
+./syn_identity.v:460: warning: Port 4 (wire15) of module11 expects 5 bits, got 6.
+./syn_identity.v:460:        : Pruning (signed) 1 high bits of the expression.
+./syn_identity.v:460: warning: Port 6 (wire13) of module11 expects 16 bits, got 22.
+./syn_identity.v:460:        : Pruning 6 high bits of the expression.
+./syn_identity.v:460: warning: Port 7 (wire12) of module11 expects 8 bits, got 16.
+./syn_identity.v:460:        : Pruning (signed) 8 high bits of the expression.
+./syn_identity.v:465: warning: Port 1 (y) of module90 expects 732 bits, got 22.
+./syn_identity.v:465:        : Padding 710 high bits of the port.
+./syn_identity.v:465: warning: Port 6 (wire91) of module90 expects 20 bits, got 22.
+./syn_identity.v:465:        : Pruning 2 high bits of the expression.
+./syn_identity.v:609: warning: Port 1 (y) of module198 expects 320 bits, got 16.
+./syn_identity.v:609:        : Padding 304 high bits of the port.
+./syn_identity.v:609: warning: Port 3 (wire202) of module198 expects 9 bits, got 21.
+./syn_identity.v:609:        : Pruning 12 high bits of the expression.
+./syn_identity.v:609: warning: Port 4 (wire201) of module198 expects 3 bits, got 6.
+./syn_identity.v:609:        : Pruning (signed) 3 high bits of the expression.
+./syn_identity.v:609: warning: Port 6 (wire199) of module198 expects 20 bits, got 22.
+./syn_identity.v:609:        : Pruning 2 high bits of the expression.
+./syn_identity.v:632: warning: Port 1 (y) of module241 expects 210 bits, got 9.
+./syn_identity.v:632:        : Padding 201 high bits of the port.
+./syn_identity.v:632: warning: Port 3 (wire246) of module241 expects 3 bits, got 22.
+./syn_identity.v:632:        : Pruning 19 high bits of the expression.
+./syn_identity.v:632: warning: Port 4 (wire245) of module241 expects 7 bits, got 13.
+./syn_identity.v:632:        : Pruning (signed) 6 high bits of the expression.
+./syn_identity.v:632: warning: Port 5 (wire244) of module241 expects 5 bits, got 21.
+./syn_identity.v:632:        : Pruning 16 high bits of the expression.
+./syn_identity.v:632: warning: Port 7 (wire242) of module241 expects 7 bits, got 10.
+./syn_identity.v:632:        : Pruning 3 high bits of the expression.
+./syn_identity.v:195: warning: Port 1 (y) of module4 expects 631 bits, got 20.
+./syn_identity.v:195:        : Padding 611 high bits of the port.
+./syn_identity.v:195: warning: Port 3 (wire9) of module4 expects 13 bits, got 17.
+./syn_identity.v:195:        : Pruning (signed) 4 high bits of the expression.
+./syn_identity.v:195: warning: Port 5 (wire7) of module4 expects 6 bits, got 10.
+./syn_identity.v:195:        : Pruning (signed) 4 high bits of the expression.
+./syn_identity.v:195: warning: Port 7 (wire5) of module4 expects 19 bits, got 22.
+./syn_identity.v:195:        : Pruning (signed) 3 high bits of the expression.
+./syn_identity.v:460: warning: Port 1 (y) of module11 expects 799 bits, got 15.
+./syn_identity.v:460:        : Padding 784 high bits of the port.
+./syn_identity.v:460: warning: Port 3 (wire16) of module11 expects 9 bits, got 19.
+./syn_identity.v:460:        : Pruning 10 high bits of the expression.
+./syn_identity.v:460: warning: Port 4 (wire15) of module11 expects 5 bits, got 6.
+./syn_identity.v:460:        : Pruning (signed) 1 high bits of the expression.
+./syn_identity.v:460: warning: Port 6 (wire13) of module11 expects 16 bits, got 22.
+./syn_identity.v:460:        : Pruning 6 high bits of the expression.
+./syn_identity.v:460: warning: Port 7 (wire12) of module11 expects 8 bits, got 16.
+./syn_identity.v:460:        : Pruning (signed) 8 high bits of the expression.
+./syn_identity.v:465: warning: Port 1 (y) of module90 expects 732 bits, got 22.
+./syn_identity.v:465:        : Padding 710 high bits of the port.
+./syn_identity.v:465: warning: Port 6 (wire91) of module90 expects 20 bits, got 22.
+./syn_identity.v:465:        : Pruning 2 high bits of the expression.
+./syn_identity.v:609: warning: Port 1 (y) of module198 expects 320 bits, got 16.
+./syn_identity.v:609:        : Padding 304 high bits of the port.
+./syn_identity.v:609: warning: Port 3 (wire202) of module198 expects 9 bits, got 21.
+./syn_identity.v:609:        : Pruning 12 high bits of the expression.
+./syn_identity.v:609: warning: Port 4 (wire201) of module198 expects 3 bits, got 6.
+./syn_identity.v:609:        : Pruning (signed) 3 high bits of the expression.
+./syn_identity.v:609: warning: Port 6 (wire199) of module198 expects 20 bits, got 22.
+./syn_identity.v:609:        : Pruning 2 high bits of the expression.
+./syn_identity.v:632: warning: Port 1 (y) of module241 expects 210 bits, got 9.
+./syn_identity.v:632:        : Padding 201 high bits of the port.
+./syn_identity.v:632: warning: Port 3 (wire246) of module241 expects 3 bits, got 22.
+./syn_identity.v:632:        : Pruning 19 high bits of the expression.
+./syn_identity.v:632: warning: Port 4 (wire245) of module241 expects 7 bits, got 13.
+./syn_identity.v:632:        : Pruning (signed) 6 high bits of the expression.
+./syn_identity.v:632: warning: Port 5 (wire244) of module241 expects 5 bits, got 21.
+./syn_identity.v:632:        : Pruning 16 high bits of the expression.
+./syn_identity.v:632: warning: Port 7 (wire242) of module241 expects 7 bits, got 10.
+./syn_identity.v:632:        : Pruning 3 high bits of the expression.
+./syn_identity.v:196: warning: Port 1 (y) of module4 expects 631 bits, got 4.
+./syn_identity.v:196:        : Padding 627 high bits of the port.
+./syn_identity.v:196: warning: Port 3 (wire9) of module4 expects 13 bits, got 17.
+./syn_identity.v:196:        : Pruning (signed) 4 high bits of the expression.
+./syn_identity.v:196: warning: Port 5 (wire7) of module4 expects 6 bits, got 21.
+./syn_identity.v:196:        : Pruning 15 high bits of the expression.

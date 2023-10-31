@@ -1,0 +1,3039 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend: cells_cmos.v
+Parsing formal SystemVerilog input from `cells_cmos.v' to AST representation.
+Generating RTLIL representation for module `\NOT'.
+Generating RTLIL representation for module `\NAND'.
+Generating RTLIL representation for module `\NOR'.
+Generating RTLIL representation for module `\DFF'.
+Generating RTLIL representation for module `\DFFSR'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: cells_cyclone_v.v
+Parsing formal SystemVerilog input from `cells_cyclone_v.v' to AST representation.
+Generating RTLIL representation for module `\dffeas'.
+Generating RTLIL representation for module `\cyclonev_lcell_comb'.
+Note: Assuming pure combinatorial block at cells_cyclone_v.v:131 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\cyclonev_clkena'.
+Generating RTLIL representation for module `\cyclonev_io_ibuf'.
+Generating RTLIL representation for module `\cyclonev_io_obuf'.
+Generating RTLIL representation for module `\cyclone10lp_lcell_comb'.
+Note: Assuming pure combinatorial block at cells_cyclone_v.v:351 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\cyclone10lp_io_ibuf'.
+Generating RTLIL representation for module `\cyclone10lp_io_obuf'.
+Generating RTLIL representation for module `\cyclone10lp_clkena'.
+Generating RTLIL representation for module `\cyclone10gx_lcell_comb'.
+Note: Assuming pure combinatorial block at cells_cyclone_v.v:570 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\cyclone10gx_io_ibuf'.
+Generating RTLIL representation for module `\cyclone10gx_io_obuf'.
+Generating RTLIL representation for module `\cyclone10gx_clkena'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: cells_verific.v
+Parsing formal SystemVerilog input from `cells_verific.v' to AST representation.
+Generating RTLIL representation for module `\VERIFIC_FADD'.
+Generating RTLIL representation for module `\VERIFIC_DFFRS'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: cells_xilinx_7.v
+Parsing formal SystemVerilog input from `cells_xilinx_7.v' to AST representation.
+Warning: Yosys has only limited support for tri-state logic at the moment. (cells_xilinx_7.v:18)
+Generating RTLIL representation for module `\IBUF'.
+Generating RTLIL representation for module `\OBUF'.
+Generating RTLIL representation for module `\OBUFT'.
+Generating RTLIL representation for module `\GND'.
+Generating RTLIL representation for module `\INV'.
+Generating RTLIL representation for module `\LUT1'.
+Generating RTLIL representation for module `\LUT2'.
+Generating RTLIL representation for module `\LUT3'.
+Generating RTLIL representation for module `\LUT4'.
+Generating RTLIL representation for module `\LUT5'.
+Generating RTLIL representation for module `\LUT6'.
+Generating RTLIL representation for module `\MUXCY'.
+Generating RTLIL representation for module `\MUXF7'.
+Generating RTLIL representation for module `\MUXF8'.
+Generating RTLIL representation for module `\VCC'.
+Generating RTLIL representation for module `\XORCY'.
+Generating RTLIL representation for module `\CARRY4'.
+Generating RTLIL representation for module `\FD_1'.
+Generating RTLIL representation for module `\FDC_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:148 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDCE_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:163 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDCE'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:179 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDCP_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:195 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDCPE_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:212 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDCPE'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:230 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDCP'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:248 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDC'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:264 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDDRCPE'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:288 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDDRRSE'.
+Generating RTLIL representation for module `\FDE_1'.
+Generating RTLIL representation for module `\FDE'.
+Generating RTLIL representation for module `\FDP_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:401 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDPE_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:416 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDPE'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:432 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDP'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:448 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDR_1'.
+Generating RTLIL representation for module `\FDRE_1'.
+Generating RTLIL representation for module `\FDRE'.
+Generating RTLIL representation for module `\FDRS_1'.
+Generating RTLIL representation for module `\FDRSE_1'.
+Generating RTLIL representation for module `\FDRSE'.
+Generating RTLIL representation for module `\FDRS'.
+Generating RTLIL representation for module `\FDR'.
+Generating RTLIL representation for module `\FDS_1'.
+Generating RTLIL representation for module `\FDSE_1'.
+Generating RTLIL representation for module `\FDSE'.
+Generating RTLIL representation for module `\FDS'.
+Generating RTLIL representation for module `\FD'.
+Generating RTLIL representation for module `\LD_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:664 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDC_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:677 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDCE_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:692 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDCE'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:707 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDCP_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:722 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDCPE_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:739 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDCPE'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:756 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDCP'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:773 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDC'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:790 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDE_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:805 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDE'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:818 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDP_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:831 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDPE_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:846 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDPE'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:861 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDP'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:876 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LD'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:891 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\BUFCF'.
+Generating RTLIL representation for module `\BUFE'.
+Generating RTLIL representation for module `\BUFGCE_1'.
+Generating RTLIL representation for module `\BUFGCE'.
+Generating RTLIL representation for module `\BUFGCTRL'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:958 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\BUFG_LB'.
+Generating RTLIL representation for module `\BUFGMUX_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:998 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:1001 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:1004 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:1009 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\BUFGMUX_CTRL'.
+Generating RTLIL representation for module `\BUFGMUX'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:1042 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:1045 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:1048 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:1053 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\BUFGMUX_VIRTEX4'.
+Generating RTLIL representation for module `\BUFGP'.
+Generating RTLIL representation for module `\BUFG'.
+Generating RTLIL representation for module `\BUFHCE'.
+Generating RTLIL representation for module `\BUFH'.
+Generating RTLIL representation for module `\BUFIO2FB'.
+Generating RTLIL representation for module `\BUFIODQS'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:1146 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:1150 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\BUFIO'.
+Generating RTLIL representation for module `\BUFMRCE'.
+Generating RTLIL representation for module `\BUFMR'.
+Generating RTLIL representation for module `\BUFT'.
+Generating RTLIL representation for module `\BUF'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: cells_yosys.v
+Parsing formal SystemVerilog input from `cells_yosys.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: syn_identity.v
+Parsing formal SystemVerilog input from `syn_identity.v' to AST representation.
+Generating RTLIL representation for module `\top_1'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: syn_vivado.v
+Parsing formal SystemVerilog input from `syn_vivado.v' to AST representation.
+Generating RTLIL representation for module `\top_2'.
+Successfully finished Verilog frontend.
+
+8. Executing Verilog-2005 frontend: top.v
+Parsing formal SystemVerilog input from `top.v' to AST representation.
+Generating RTLIL representation for module `\top'.
+Successfully finished Verilog frontend.
+
+9. Executing PREP pass.
+
+9.1. Executing HIERARCHY pass (managing design hierarchy).
+
+9.1.1. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \top_2
+Used module:         \OBUF
+Used module:         \IBUF
+Used module:         \CARRY4
+Used module:         \FDRE
+Used module:         \LUT6
+Used module:         \LUT5
+Used module:         \LUT3
+Used module:         \LUT2
+Used module:         \LUT1
+Used module:         \LUT4
+Used module:         \BUFG
+Used module:         \VCC
+Used module:         \GND
+Used module:     \top_1
+
+9.1.2. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Generating RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.3. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT6'.
+Parameter \INIT = 64'0001111100000000000111110000000000011111000000000001111100011111
+Generating RTLIL representation for module `$paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6'.
+
+9.1.4. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT6'.
+Parameter \INIT = 64'0001111100000000000111110000000000011111000000000001111100011111
+Found cached RTLIL representation for module `$paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6'.
+
+9.1.5. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT6'.
+Parameter \INIT = 64'0000000010100010101000101010001000000000000000000000000000000000
+Generating RTLIL representation for module `$paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6'.
+
+9.1.6. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT6'.
+Parameter \INIT = 64'0000000000000000000000001010101110101011101010111010101110101011
+Generating RTLIL representation for module `$paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6'.
+
+9.1.7. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT5'.
+Parameter \INIT = 1886417015
+Generating RTLIL representation for module `$paramod\LUT5\INIT=1886417015'.
+
+9.1.8. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT3'.
+Parameter \INIT = 8'11110001
+Generating RTLIL representation for module `$paramod\LUT3\INIT=8'11110001'.
+
+9.1.9. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT2'.
+Parameter \INIT = 4'1110
+Generating RTLIL representation for module `$paramod\LUT2\INIT=4'1110'.
+
+9.1.10. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT2'.
+Parameter \INIT = 4'1110
+Found cached RTLIL representation for module `$paramod\LUT2\INIT=4'1110'.
+
+9.1.11. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT6'.
+Parameter \INIT = 64'1111111111111111111111111111111111111111111111111111111111111110
+Generating RTLIL representation for module `$paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6'.
+
+9.1.12. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT6'.
+Parameter \INIT = 64'0000000000000000111111111111110111111111111111111111111111111101
+Generating RTLIL representation for module `$paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6'.
+
+9.1.13. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT6'.
+Parameter \INIT = 64'1111111111111111111111111111111111111111111111111111111111111110
+Found cached RTLIL representation for module `$paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6'.
+
+9.1.14. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT6'.
+Parameter \INIT = 64'1010101000001000000010000000100000000000101000101010001010100010
+Generating RTLIL representation for module `$paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6'.
+
+9.1.15. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT6'.
+Parameter \INIT = 64'0001111100000000000111110000000000011111000000000001111100011111
+Found cached RTLIL representation for module `$paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6'.
+
+9.1.16. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT2'.
+Parameter \INIT = 4'0010
+Generating RTLIL representation for module `$paramod\LUT2\INIT=4'0010'.
+
+9.1.17. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.18. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT3'.
+Parameter \INIT = 8'11110100
+Generating RTLIL representation for module `$paramod\LUT3\INIT=8'11110100'.
+
+9.1.19. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.20. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.21. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.22. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.23. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.24. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.25. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.26. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.27. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.28. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.29. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.30. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.31. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.32. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.33. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.34. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.35. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.36. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.37. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.38. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.39. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT1'.
+Parameter \INIT = 2'01
+Generating RTLIL representation for module `$paramod\LUT1\INIT=2'01'.
+
+9.1.40. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT1'.
+Parameter \INIT = 2'01
+Found cached RTLIL representation for module `$paramod\LUT1\INIT=2'01'.
+
+9.1.41. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT1'.
+Parameter \INIT = 2'01
+Found cached RTLIL representation for module `$paramod\LUT1\INIT=2'01'.
+
+9.1.42. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT1'.
+Parameter \INIT = 2'01
+Found cached RTLIL representation for module `$paramod\LUT1\INIT=2'01'.
+
+9.1.43. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT1'.
+Parameter \INIT = 2'01
+Found cached RTLIL representation for module `$paramod\LUT1\INIT=2'01'.
+
+9.1.44. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT1'.
+Parameter \INIT = 2'01
+Found cached RTLIL representation for module `$paramod\LUT1\INIT=2'01'.
+
+9.1.45. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT1'.
+Parameter \INIT = 2'01
+Found cached RTLIL representation for module `$paramod\LUT1\INIT=2'01'.
+
+9.1.46. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT1'.
+Parameter \INIT = 2'01
+Found cached RTLIL representation for module `$paramod\LUT1\INIT=2'01'.
+
+9.1.47. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT1'.
+Parameter \INIT = 2'01
+Found cached RTLIL representation for module `$paramod\LUT1\INIT=2'01'.
+
+9.1.48. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT3'.
+Parameter \INIT = 8'11111110
+Generating RTLIL representation for module `$paramod\LUT3\INIT=8'11111110'.
+
+9.1.49. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT4'.
+Parameter \INIT = 16'1111111111111110
+Generating RTLIL representation for module `$paramod\LUT4\INIT=16'1111111111111110'.
+
+9.1.50. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT4'.
+Parameter \INIT = 16'1111111111111110
+Found cached RTLIL representation for module `$paramod\LUT4\INIT=16'1111111111111110'.
+
+9.1.51. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT4'.
+Parameter \INIT = 16'1111111111111110
+Found cached RTLIL representation for module `$paramod\LUT4\INIT=16'1111111111111110'.
+
+9.1.52. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT4'.
+Parameter \INIT = 16'1111111111111110
+Found cached RTLIL representation for module `$paramod\LUT4\INIT=16'1111111111111110'.
+
+9.1.53. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT5'.
+Parameter \INIT = 32'11111111111111111111111111111110
+Generating RTLIL representation for module `$paramod\LUT5\INIT=32'11111111111111111111111111111110'.
+
+9.1.54. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT3'.
+Parameter \INIT = 8'00001000
+Generating RTLIL representation for module `$paramod\LUT3\INIT=8'00001000'.
+
+9.1.55. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT2'.
+Parameter \INIT = 4'0010
+Found cached RTLIL representation for module `$paramod\LUT2\INIT=4'0010'.
+
+9.1.56. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT2'.
+Parameter \INIT = 4'1110
+Found cached RTLIL representation for module `$paramod\LUT2\INIT=4'1110'.
+
+9.1.57. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT2'.
+Parameter \INIT = 4'0010
+Found cached RTLIL representation for module `$paramod\LUT2\INIT=4'0010'.
+
+9.1.58. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT2'.
+Parameter \INIT = 4'0010
+Found cached RTLIL representation for module `$paramod\LUT2\INIT=4'0010'.
+
+9.1.59. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT2'.
+Parameter \INIT = 4'0010
+Found cached RTLIL representation for module `$paramod\LUT2\INIT=4'0010'.
+
+9.1.60. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT1'.
+Parameter \INIT = 2'01
+Found cached RTLIL representation for module `$paramod\LUT1\INIT=2'01'.
+
+9.1.61. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT3'.
+Parameter \INIT = 8'10001011
+Generating RTLIL representation for module `$paramod\LUT3\INIT=8'10001011'.
+
+9.1.62. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.63. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT4'.
+Parameter \INIT = 16'1010001110100000
+Generating RTLIL representation for module `$paramod\LUT4\INIT=16'1010001110100000'.
+
+9.1.64. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.65. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.66. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.67. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.68. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.69. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.70. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.71. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT2'.
+Parameter \INIT = 4'0010
+Found cached RTLIL representation for module `$paramod\LUT2\INIT=4'0010'.
+
+9.1.72. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT1'.
+Parameter \INIT = 2'01
+Found cached RTLIL representation for module `$paramod\LUT1\INIT=2'01'.
+
+9.1.73. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT4'.
+Parameter \INIT = 16'1111111111111110
+Found cached RTLIL representation for module `$paramod\LUT4\INIT=16'1111111111111110'.
+
+9.1.74. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT5'.
+Parameter \INIT = 1
+Generating RTLIL representation for module `$paramod\LUT5\INIT=1'.
+
+9.1.75. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT5'.
+Parameter \INIT = 790634528
+Generating RTLIL representation for module `$paramod\LUT5\INIT=790634528'.
+
+9.1.76. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT5'.
+Parameter \INIT = 790634528
+Found cached RTLIL representation for module `$paramod\LUT5\INIT=790634528'.
+
+9.1.77. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT2'.
+Parameter \INIT = 4'1110
+Found cached RTLIL representation for module `$paramod\LUT2\INIT=4'1110'.
+
+9.1.78. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT2'.
+Parameter \INIT = 4'1110
+Found cached RTLIL representation for module `$paramod\LUT2\INIT=4'1110'.
+
+9.1.79. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT2'.
+Parameter \INIT = 4'1110
+Found cached RTLIL representation for module `$paramod\LUT2\INIT=4'1110'.
+
+9.1.80. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT2'.
+Parameter \INIT = 4'0001
+Generating RTLIL representation for module `$paramod\LUT2\INIT=4'0001'.
+
+9.1.81. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT1'.
+Parameter \INIT = 2'01
+Found cached RTLIL representation for module `$paramod\LUT1\INIT=2'01'.
+
+9.1.82. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT2'.
+Parameter \INIT = 4'1110
+Found cached RTLIL representation for module `$paramod\LUT2\INIT=4'1110'.
+
+9.1.83. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT6'.
+Parameter \INIT = 64'1001011001101001011010011001011001101001100101101001011001101001
+Generating RTLIL representation for module `$paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6'.
+
+9.1.84. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT6'.
+Parameter \INIT = 64'1001011001101001011010011001011001101001100101101001011001101001
+Found cached RTLIL representation for module `$paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6'.
+
+9.1.85. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT5'.
+Parameter \INIT = 1
+Found cached RTLIL representation for module `$paramod\LUT5\INIT=1'.
+
+9.1.86. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT6'.
+Parameter \INIT = 64'0000101110110000101100000000101111110100010011110100111111110100
+Generating RTLIL representation for module `$paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6'.
+
+9.1.87. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT3'.
+Parameter \INIT = 8'00000110
+Generating RTLIL representation for module `$paramod\LUT3\INIT=8'00000110'.
+
+9.1.88. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT2'.
+Parameter \INIT = 4'0001
+Found cached RTLIL representation for module `$paramod\LUT2\INIT=4'0001'.
+
+9.1.89. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT2'.
+Parameter \INIT = 4'0001
+Found cached RTLIL representation for module `$paramod\LUT2\INIT=4'0001'.
+
+9.1.90. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT2'.
+Parameter \INIT = 4'0001
+Found cached RTLIL representation for module `$paramod\LUT2\INIT=4'0001'.
+
+9.1.91. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT3'.
+Parameter \INIT = 8'11101010
+Generating RTLIL representation for module `$paramod\LUT3\INIT=8'11101010'.
+
+9.1.92. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT6'.
+Parameter \INIT = 64'1110111111100000111011111110111111101111111000001110000011100000
+Generating RTLIL representation for module `$paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6'.
+
+9.1.93. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.94. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.95. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.96. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.97. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.98. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.99. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.100. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.101. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.102. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.103. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.104. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT3'.
+Parameter \INIT = 8'10111000
+Generating RTLIL representation for module `$paramod\LUT3\INIT=8'10111000'.
+
+9.1.105. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT1'.
+Parameter \INIT = 2'01
+Found cached RTLIL representation for module `$paramod\LUT1\INIT=2'01'.
+
+9.1.106. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT3'.
+Parameter \INIT = 8'10111000
+Found cached RTLIL representation for module `$paramod\LUT3\INIT=8'10111000'.
+
+9.1.107. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.108. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.109. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT6'.
+Parameter \INIT = 64'1111111111111111111111111111111111111111111111111111111111111110
+Found cached RTLIL representation for module `$paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6'.
+
+9.1.110. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT5'.
+Parameter \INIT = 32'10101010101010011010101010101010
+Generating RTLIL representation for module `$paramod\LUT5\INIT=32'10101010101010011010101010101010'.
+
+9.1.111. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT5'.
+Parameter \INIT = 32'11111111111111111111111111111110
+Found cached RTLIL representation for module `$paramod\LUT5\INIT=32'11111111111111111111111111111110'.
+
+9.1.112. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT6'.
+Parameter \INIT = 64'0000000000000000000000000000000000000000000000000000000010101110
+Generating RTLIL representation for module `$paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6'.
+
+9.1.113. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT3'.
+Parameter \INIT = 8'00000001
+Generating RTLIL representation for module `$paramod\LUT3\INIT=8'00000001'.
+
+9.1.114. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT3'.
+Parameter \INIT = 8'00000001
+Found cached RTLIL representation for module `$paramod\LUT3\INIT=8'00000001'.
+
+9.1.115. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT2'.
+Parameter \INIT = 4'0001
+Found cached RTLIL representation for module `$paramod\LUT2\INIT=4'0001'.
+
+9.1.116. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT6'.
+Parameter \INIT = 64'0000000000000000000000000000000000000000000000000000000000000001
+Generating RTLIL representation for module `$paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6'.
+
+9.1.117. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT4'.
+Parameter \INIT = 16'1111111111111110
+Found cached RTLIL representation for module `$paramod\LUT4\INIT=16'1111111111111110'.
+
+9.1.118. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT4'.
+Parameter \INIT = 16'1111111111111110
+Found cached RTLIL representation for module `$paramod\LUT4\INIT=16'1111111111111110'.
+
+9.1.119. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT4'.
+Parameter \INIT = 16'1111111111111110
+Found cached RTLIL representation for module `$paramod\LUT4\INIT=16'1111111111111110'.
+
+9.1.120. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT3'.
+Parameter \INIT = 8'10000000
+Generating RTLIL representation for module `$paramod\LUT3\INIT=8'10000000'.
+
+9.1.121. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT3'.
+Parameter \INIT = 8'10000000
+Found cached RTLIL representation for module `$paramod\LUT3\INIT=8'10000000'.
+
+9.1.122. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.123. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.124. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.125. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.126. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.127. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.128. Executing AST frontend in derive mode using pre-parsed AST for module `\FDRE'.
+Parameter \INIT = 1'0
+Found cached RTLIL representation for module `$paramod\FDRE\INIT=1'0'.
+
+9.1.129. Executing AST frontend in derive mode using pre-parsed AST for module `\LUT1'.
+Parameter \INIT = 2'01
+Found cached RTLIL representation for module `$paramod\LUT1\INIT=2'01'.
+
+9.1.130. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \top_2
+Used module:         \OBUF
+Used module:         \IBUF
+Used module:         \CARRY4
+Used module:         $paramod\FDRE\INIT=1'0
+Used module:         $paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6
+Used module:         $paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6
+Used module:         $paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6
+Used module:         $paramod\LUT5\INIT=1886417015
+Used module:         $paramod\LUT3\INIT=8'11110001
+Used module:         $paramod\LUT2\INIT=4'1110
+Used module:         $paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6
+Used module:         $paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6
+Used module:         $paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6
+Used module:         $paramod\LUT2\INIT=4'0010
+Used module:         $paramod\LUT3\INIT=8'11110100
+Used module:         $paramod\LUT1\INIT=2'01
+Used module:         $paramod\LUT3\INIT=8'11111110
+Used module:         $paramod\LUT4\INIT=16'1111111111111110
+Used module:         $paramod\LUT5\INIT=32'11111111111111111111111111111110
+Used module:         $paramod\LUT3\INIT=8'00001000
+Used module:         $paramod\LUT3\INIT=8'10001011
+Used module:         $paramod\LUT4\INIT=16'1010001110100000
+Used module:         $paramod\LUT5\INIT=1
+Used module:         $paramod\LUT5\INIT=790634528
+Used module:         $paramod\LUT2\INIT=4'0001
+Used module:         $paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6
+Used module:         $paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6
+Used module:         $paramod\LUT3\INIT=8'00000110
+Used module:         $paramod\LUT3\INIT=8'11101010
+Used module:         $paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6
+Used module:         $paramod\LUT3\INIT=8'10111000
+Used module:         $paramod\LUT5\INIT=32'10101010101010011010101010101010
+Used module:         $paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6
+Used module:         $paramod\LUT3\INIT=8'00000001
+Used module:         $paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6
+Used module:         $paramod\LUT3\INIT=8'10000000
+Used module:         \BUFG
+Used module:         \VCC
+Used module:         \GND
+Used module:     \top_1
+
+9.1.131. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \top_2
+Used module:         \OBUF
+Used module:         \IBUF
+Used module:         \CARRY4
+Used module:         $paramod\FDRE\INIT=1'0
+Used module:         $paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6
+Used module:         $paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6
+Used module:         $paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6
+Used module:         $paramod\LUT5\INIT=1886417015
+Used module:         $paramod\LUT3\INIT=8'11110001
+Used module:         $paramod\LUT2\INIT=4'1110
+Used module:         $paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6
+Used module:         $paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6
+Used module:         $paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6
+Used module:         $paramod\LUT2\INIT=4'0010
+Used module:         $paramod\LUT3\INIT=8'11110100
+Used module:         $paramod\LUT1\INIT=2'01
+Used module:         $paramod\LUT3\INIT=8'11111110
+Used module:         $paramod\LUT4\INIT=16'1111111111111110
+Used module:         $paramod\LUT5\INIT=32'11111111111111111111111111111110
+Used module:         $paramod\LUT3\INIT=8'00001000
+Used module:         $paramod\LUT3\INIT=8'10001011
+Used module:         $paramod\LUT4\INIT=16'1010001110100000
+Used module:         $paramod\LUT5\INIT=1
+Used module:         $paramod\LUT5\INIT=790634528
+Used module:         $paramod\LUT2\INIT=4'0001
+Used module:         $paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6
+Used module:         $paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6
+Used module:         $paramod\LUT3\INIT=8'00000110
+Used module:         $paramod\LUT3\INIT=8'11101010
+Used module:         $paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6
+Used module:         $paramod\LUT3\INIT=8'10111000
+Used module:         $paramod\LUT5\INIT=32'10101010101010011010101010101010
+Used module:         $paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6
+Used module:         $paramod\LUT3\INIT=8'00000001
+Used module:         $paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6
+Used module:         $paramod\LUT3\INIT=8'10000000
+Used module:         \BUFG
+Used module:         \VCC
+Used module:         \GND
+Used module:     \top_1
+Removing unused module `\$_DLATCH_P_'.
+Removing unused module `\$_DLATCH_N_'.
+Removing unused module `\BUF'.
+Removing unused module `\BUFT'.
+Removing unused module `\BUFMR'.
+Removing unused module `\BUFMRCE'.
+Removing unused module `\BUFIO'.
+Removing unused module `\BUFIODQS'.
+Removing unused module `\BUFIO2FB'.
+Removing unused module `\BUFH'.
+Removing unused module `\BUFHCE'.
+Removing unused module `\BUFGP'.
+Removing unused module `\BUFGMUX_VIRTEX4'.
+Removing unused module `\BUFGMUX'.
+Removing unused module `\BUFGMUX_CTRL'.
+Removing unused module `\BUFGMUX_1'.
+Removing unused module `\BUFG_LB'.
+Removing unused module `\BUFGCTRL'.
+Removing unused module `\BUFGCE'.
+Removing unused module `\BUFGCE_1'.
+Removing unused module `\BUFE'.
+Removing unused module `\BUFCF'.
+Removing unused module `\LD'.
+Removing unused module `\LDP'.
+Removing unused module `\LDPE'.
+Removing unused module `\LDPE_1'.
+Removing unused module `\LDP_1'.
+Removing unused module `\LDE'.
+Removing unused module `\LDE_1'.
+Removing unused module `\LDC'.
+Removing unused module `\LDCP'.
+Removing unused module `\LDCPE'.
+Removing unused module `\LDCPE_1'.
+Removing unused module `\LDCP_1'.
+Removing unused module `\LDCE'.
+Removing unused module `\LDCE_1'.
+Removing unused module `\LDC_1'.
+Removing unused module `\LD_1'.
+Removing unused module `\FD'.
+Removing unused module `\FDS'.
+Removing unused module `\FDSE'.
+Removing unused module `\FDSE_1'.
+Removing unused module `\FDS_1'.
+Removing unused module `\FDR'.
+Removing unused module `\FDRS'.
+Removing unused module `\FDRSE'.
+Removing unused module `\FDRSE_1'.
+Removing unused module `\FDRS_1'.
+Removing unused module `\FDRE'.
+Removing unused module `\FDRE_1'.
+Removing unused module `\FDR_1'.
+Removing unused module `\FDP'.
+Removing unused module `\FDPE'.
+Removing unused module `\FDPE_1'.
+Removing unused module `\FDP_1'.
+Removing unused module `\FDE'.
+Removing unused module `\FDE_1'.
+Removing unused module `\FDDRRSE'.
+Removing unused module `\FDDRCPE'.
+Removing unused module `\FDC'.
+Removing unused module `\FDCP'.
+Removing unused module `\FDCPE'.
+Removing unused module `\FDCPE_1'.
+Removing unused module `\FDCP_1'.
+Removing unused module `\FDCE'.
+Removing unused module `\FDCE_1'.
+Removing unused module `\FDC_1'.
+Removing unused module `\FD_1'.
+Removing unused module `\XORCY'.
+Removing unused module `\MUXF8'.
+Removing unused module `\MUXF7'.
+Removing unused module `\MUXCY'.
+Removing unused module `\LUT6'.
+Removing unused module `\LUT5'.
+Removing unused module `\LUT4'.
+Removing unused module `\LUT3'.
+Removing unused module `\LUT2'.
+Removing unused module `\LUT1'.
+Removing unused module `\INV'.
+Removing unused module `\OBUFT'.
+Removing unused module `\VERIFIC_DFFRS'.
+Removing unused module `\VERIFIC_FADD'.
+Removing unused module `\cyclone10gx_clkena'.
+Removing unused module `\cyclone10gx_io_obuf'.
+Removing unused module `\cyclone10gx_io_ibuf'.
+Removing unused module `\cyclone10gx_lcell_comb'.
+Removing unused module `\cyclone10lp_clkena'.
+Removing unused module `\cyclone10lp_io_obuf'.
+Removing unused module `\cyclone10lp_io_ibuf'.
+Removing unused module `\cyclone10lp_lcell_comb'.
+Removing unused module `\cyclonev_io_obuf'.
+Removing unused module `\cyclonev_io_ibuf'.
+Removing unused module `\cyclonev_clkena'.
+Removing unused module `\cyclonev_lcell_comb'.
+Removing unused module `\dffeas'.
+Removing unused module `\DFFSR'.
+Removing unused module `\DFF'.
+Removing unused module `\NOR'.
+Removing unused module `\NAND'.
+Removing unused module `\NOT'.
+Removed 100 unused modules.
+Module top directly or indirectly contains formal properties -> setting "keep" attribute.
+Warning: Resizing cell port top.top_2.y from 91 bits to 192 bits.
+Warning: Resizing cell port top.top_1.y from 91 bits to 192 bits.
+Warning: Resizing cell port top_2.reg9_reg[0]_i_2.CO from 3 bits to 4 bits.
+Warning: Resizing cell port top_2.reg5_reg[0]_i_2.CO from 2 bits to 4 bits.
+
+9.2. Executing PROC pass (convert processes to netlists).
+
+9.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+9.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$cells_xilinx_7.v:493$778 in module $paramod\FDRE\INIT=1'0.
+Marked 1 switch rules as full_case in process $proc$syn_identity.v:77$722 in module top_1.
+Marked 2 switch rules as full_case in process $proc$syn_identity.v:43$696 in module top_1.
+Removed a total of 0 dead cases.
+
+9.2.3. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `$paramod\FDRE\INIT=1'0.$proc$cells_xilinx_7.v:491$779'.
+  Set init value: \q_out = 1'0
+Found init rule in `\top.$proc$top.v:13$776'.
+  Set init value: $formal$top.v:13$770_EN = 1'0
+Found init rule in `\top_1.$proc$syn_identity.v:25$769'.
+  Set init value: \reg4 = 11'00000000000
+Found init rule in `\top_1.$proc$syn_identity.v:24$768'.
+  Set init value: \reg5 = 7'0000000
+Found init rule in `\top_1.$proc$syn_identity.v:23$767'.
+  Set init value: \reg6 = 15'000000000000000
+Found init rule in `\top_1.$proc$syn_identity.v:22$766'.
+  Set init value: \reg7 = 20'00000000000000000000
+Found init rule in `\top_1.$proc$syn_identity.v:21$765'.
+  Set init value: \reg8 = 10'0000000000
+Found init rule in `\top_1.$proc$syn_identity.v:20$764'.
+  Set init value: \reg9 = 18'000000000000000000
+Found init rule in `\top_1.$proc$syn_identity.v:19$763'.
+  Set init value: \reg10 = 22'0000000000000000000000
+Found init rule in `\top_1.$proc$syn_identity.v:16$762'.
+  Set init value: \reg13 = 7'0000000
+Found init rule in `\top_1.$proc$syn_identity.v:15$761'.
+  Set init value: \reg14 = 18'000000000000000000
+Found init rule in `\top_1.$proc$syn_identity.v:14$760'.
+  Set init value: \reg15 = 12'000000000000
+Found init rule in `\top_1.$proc$syn_identity.v:13$759'.
+  Set init value: \reg16 = 7'0000000
+Found init rule in `\top_1.$proc$syn_identity.v:12$758'.
+  Set init value: \reg17 = 7'0000000
+Found init rule in `\top_1.$proc$syn_identity.v:11$757'.
+  Set init value: \reg18 = 21'000000000000000000000
+Found init rule in `\top_1.$proc$syn_identity.v:10$756'.
+  Set init value: \reg19 = 8'00000000
+
+9.2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+9.2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod\FDRE\INIT=1'0.$proc$cells_xilinx_7.v:491$779'.
+     1/1: $1\q_out[0:0]
+Creating decoders for process `$paramod\FDRE\INIT=1'0.$proc$cells_xilinx_7.v:493$778'.
+     1/1: $0\q_out[0:0]
+Creating decoders for process `\top.$proc$top.v:13$776'.
+     1/1: $0$formal$top.v:13$770_EN[0:0]$777
+Creating decoders for process `\top.$proc$top.v:11$771'.
+     1/2: $0$formal$top.v:13$770_EN[0:0]$773
+     2/2: $0$formal$top.v:13$770_CHECK[0:0]$772
+Creating decoders for process `\top_1.$proc$syn_identity.v:25$769'.
+     1/1: $1\reg4[10:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:24$768'.
+     1/1: $1\reg5[6:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:23$767'.
+     1/1: $1\reg6[14:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:22$766'.
+     1/1: $1\reg7[19:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:21$765'.
+     1/1: $1\reg8[9:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:20$764'.
+     1/1: $1\reg9[17:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:19$763'.
+     1/1: $1\reg10[21:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:16$762'.
+     1/1: $1\reg13[6:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:15$761'.
+     1/1: $1\reg14[17:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:14$760'.
+     1/1: $1\reg15[11:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:13$759'.
+     1/1: $1\reg16[6:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:12$758'.
+     1/1: $1\reg17[6:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:11$757'.
+     1/1: $1\reg18[20:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:10$756'.
+     1/1: $1\reg19[7:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:77$722'.
+     1/7: $0\reg15[11:0]
+     2/7: $0\reg14[17:0]
+     3/7: $0\reg13[6:0]
+     4/7: $0\reg17[6:0]
+     5/7: $0\reg18[20:0]
+     6/7: $0\reg19[7:0]
+     7/7: $0\reg16[6:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:43$696'.
+     1/7: $0\reg4[10:0]
+     2/7: $0\reg5[6:0]
+     3/7: $0\reg6[14:0]
+     4/7: $0\reg7[19:0]
+     5/7: $0\reg8[9:0]
+     6/7: $0\reg9[17:0]
+     7/7: $0\reg10[21:0]
+
+9.2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+9.2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod\FDRE\INIT=1'0.\q_out' using process `$paramod\FDRE\INIT=1'0.$proc$cells_xilinx_7.v:493$778'.
+  created $dff cell `$procdff$869' with positive edge clock.
+Creating register for signal `\top.$formal$top.v:13$770_CHECK' using process `\top.$proc$top.v:11$771'.
+  created $dff cell `$procdff$870' with positive edge clock.
+Creating register for signal `\top.$formal$top.v:13$770_EN' using process `\top.$proc$top.v:11$771'.
+  created $dff cell `$procdff$871' with positive edge clock.
+Creating register for signal `\top_1.\reg16' using process `\top_1.$proc$syn_identity.v:77$722'.
+  created $dff cell `$procdff$872' with positive edge clock.
+Creating register for signal `\top_1.\reg19' using process `\top_1.$proc$syn_identity.v:77$722'.
+  created $dff cell `$procdff$873' with positive edge clock.
+Creating register for signal `\top_1.\reg18' using process `\top_1.$proc$syn_identity.v:77$722'.
+  created $dff cell `$procdff$874' with positive edge clock.
+Creating register for signal `\top_1.\reg17' using process `\top_1.$proc$syn_identity.v:77$722'.
+  created $dff cell `$procdff$875' with positive edge clock.
+Creating register for signal `\top_1.\reg15' using process `\top_1.$proc$syn_identity.v:77$722'.
+  created $dff cell `$procdff$876' with positive edge clock.
+Creating register for signal `\top_1.\reg14' using process `\top_1.$proc$syn_identity.v:77$722'.
+  created $dff cell `$procdff$877' with positive edge clock.
+Creating register for signal `\top_1.\reg13' using process `\top_1.$proc$syn_identity.v:77$722'.
+  created $dff cell `$procdff$878' with positive edge clock.
+Creating register for signal `\top_1.\reg10' using process `\top_1.$proc$syn_identity.v:43$696'.
+  created $dff cell `$procdff$879' with positive edge clock.
+Creating register for signal `\top_1.\reg9' using process `\top_1.$proc$syn_identity.v:43$696'.
+  created $dff cell `$procdff$880' with positive edge clock.
+Creating register for signal `\top_1.\reg8' using process `\top_1.$proc$syn_identity.v:43$696'.
+  created $dff cell `$procdff$881' with positive edge clock.
+Creating register for signal `\top_1.\reg7' using process `\top_1.$proc$syn_identity.v:43$696'.
+  created $dff cell `$procdff$882' with positive edge clock.
+Creating register for signal `\top_1.\reg6' using process `\top_1.$proc$syn_identity.v:43$696'.
+  created $dff cell `$procdff$883' with positive edge clock.
+Creating register for signal `\top_1.\reg5' using process `\top_1.$proc$syn_identity.v:43$696'.
+  created $dff cell `$procdff$884' with positive edge clock.
+Creating register for signal `\top_1.\reg4' using process `\top_1.$proc$syn_identity.v:43$696'.
+  created $dff cell `$procdff$885' with positive edge clock.
+
+9.2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod\FDRE\INIT=1'0.$proc$cells_xilinx_7.v:491$779'.
+Found and cleaned up 2 empty switches in `$paramod\FDRE\INIT=1'0.$proc$cells_xilinx_7.v:493$778'.
+Removing empty process `$paramod\FDRE\INIT=1'0.$proc$cells_xilinx_7.v:493$778'.
+Removing empty process `top.$proc$top.v:13$776'.
+Removing empty process `top.$proc$top.v:11$771'.
+Removing empty process `top_1.$proc$syn_identity.v:25$769'.
+Removing empty process `top_1.$proc$syn_identity.v:24$768'.
+Removing empty process `top_1.$proc$syn_identity.v:23$767'.
+Removing empty process `top_1.$proc$syn_identity.v:22$766'.
+Removing empty process `top_1.$proc$syn_identity.v:21$765'.
+Removing empty process `top_1.$proc$syn_identity.v:20$764'.
+Removing empty process `top_1.$proc$syn_identity.v:19$763'.
+Removing empty process `top_1.$proc$syn_identity.v:16$762'.
+Removing empty process `top_1.$proc$syn_identity.v:15$761'.
+Removing empty process `top_1.$proc$syn_identity.v:14$760'.
+Removing empty process `top_1.$proc$syn_identity.v:13$759'.
+Removing empty process `top_1.$proc$syn_identity.v:12$758'.
+Removing empty process `top_1.$proc$syn_identity.v:11$757'.
+Removing empty process `top_1.$proc$syn_identity.v:10$756'.
+Found and cleaned up 1 empty switch in `\top_1.$proc$syn_identity.v:77$722'.
+Removing empty process `top_1.$proc$syn_identity.v:77$722'.
+Found and cleaned up 2 empty switches in `\top_1.$proc$syn_identity.v:43$696'.
+Removing empty process `top_1.$proc$syn_identity.v:43$696'.
+Cleaned up 5 empty switches.
+
+9.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\LUT2\INIT=4'1110.
+Optimizing module $paramod\LUT3\INIT=8'11110001.
+Optimizing module $paramod\LUT5\INIT=1886417015.
+Optimizing module $paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6.
+Optimizing module $paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6.
+Optimizing module CARRY4.
+Optimizing module $paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6.
+Optimizing module VCC.
+Optimizing module $paramod\FDRE\INIT=1'0.
+Optimizing module top.
+Optimizing module top_2.
+Optimizing module top_1.
+<suppressed ~12 debug messages>
+Optimizing module $paramod\LUT3\INIT=8'10000000.
+Optimizing module $paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6.
+Optimizing module $paramod\LUT3\INIT=8'00000001.
+Optimizing module $paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6.
+Optimizing module $paramod\LUT5\INIT=32'10101010101010011010101010101010.
+Optimizing module $paramod\LUT3\INIT=8'10111000.
+Optimizing module GND.
+Optimizing module $paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6.
+Optimizing module OBUF.
+Optimizing module IBUF.
+Optimizing module $paramod\LUT3\INIT=8'11101010.
+Optimizing module $paramod\LUT3\INIT=8'00000110.
+Optimizing module $paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6.
+Optimizing module $paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6.
+Optimizing module BUFG.
+Optimizing module $paramod\LUT2\INIT=4'0001.
+Optimizing module $paramod\LUT5\INIT=790634528.
+Optimizing module $paramod\LUT5\INIT=1.
+Optimizing module $paramod\LUT4\INIT=16'1010001110100000.
+Optimizing module $paramod\LUT3\INIT=8'10001011.
+Optimizing module $paramod\LUT3\INIT=8'00001000.
+Optimizing module $paramod\LUT5\INIT=32'11111111111111111111111111111110.
+Optimizing module $paramod\LUT4\INIT=16'1111111111111110.
+Optimizing module $paramod\LUT3\INIT=8'11111110.
+Optimizing module $paramod\LUT1\INIT=2'01.
+Optimizing module $paramod\LUT3\INIT=8'11110100.
+Optimizing module $paramod\LUT2\INIT=4'0010.
+Optimizing module $paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6.
+Optimizing module $paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6.
+Optimizing module $paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6.
+
+9.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\LUT2\INIT=4'1110..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'11110001..
+Finding unused cells or wires in module $paramod\LUT5\INIT=1886417015..
+Finding unused cells or wires in module $paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6..
+Finding unused cells or wires in module $paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6..
+Finding unused cells or wires in module \CARRY4..
+Finding unused cells or wires in module $paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6..
+Finding unused cells or wires in module \VCC..
+Finding unused cells or wires in module $paramod\FDRE\INIT=1'0..
+Finding unused cells or wires in module \top..
+Finding unused cells or wires in module \top_2..
+Finding unused cells or wires in module \top_1..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'10000000..
+Finding unused cells or wires in module $paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'00000001..
+Finding unused cells or wires in module $paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6..
+Finding unused cells or wires in module $paramod\LUT5\INIT=32'10101010101010011010101010101010..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'10111000..
+Finding unused cells or wires in module \GND..
+Finding unused cells or wires in module $paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6..
+Finding unused cells or wires in module \OBUF..
+Finding unused cells or wires in module \IBUF..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'11101010..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'00000110..
+Finding unused cells or wires in module $paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6..
+Finding unused cells or wires in module $paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6..
+Finding unused cells or wires in module \BUFG..
+Finding unused cells or wires in module $paramod\LUT2\INIT=4'0001..
+Finding unused cells or wires in module $paramod\LUT5\INIT=790634528..
+Finding unused cells or wires in module $paramod\LUT5\INIT=1..
+Finding unused cells or wires in module $paramod\LUT4\INIT=16'1010001110100000..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'10001011..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'00001000..
+Finding unused cells or wires in module $paramod\LUT5\INIT=32'11111111111111111111111111111110..
+Finding unused cells or wires in module $paramod\LUT4\INIT=16'1111111111111110..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'11111110..
+Finding unused cells or wires in module $paramod\LUT1\INIT=2'01..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'11110100..
+Finding unused cells or wires in module $paramod\LUT2\INIT=4'0010..
+Finding unused cells or wires in module $paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6..
+Finding unused cells or wires in module $paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6..
+Finding unused cells or wires in module $paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6..
+Removed 8 unused cells and 109 unused wires.
+<suppressed ~52 debug messages>
+
+9.5. Executing CHECK pass (checking for obvious problems).
+checking module $paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6..
+checking module $paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6..
+checking module $paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6..
+checking module $paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6..
+checking module $paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6..
+checking module $paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6..
+checking module $paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6..
+checking module $paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6..
+checking module $paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6..
+checking module $paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6..
+checking module $paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6..
+checking module $paramod\FDRE\INIT=1'0..
+checking module $paramod\LUT1\INIT=2'01..
+checking module $paramod\LUT2\INIT=4'0001..
+checking module $paramod\LUT2\INIT=4'0010..
+checking module $paramod\LUT2\INIT=4'1110..
+checking module $paramod\LUT3\INIT=8'00000001..
+checking module $paramod\LUT3\INIT=8'00000110..
+checking module $paramod\LUT3\INIT=8'00001000..
+checking module $paramod\LUT3\INIT=8'10000000..
+checking module $paramod\LUT3\INIT=8'10001011..
+checking module $paramod\LUT3\INIT=8'10111000..
+checking module $paramod\LUT3\INIT=8'11101010..
+checking module $paramod\LUT3\INIT=8'11110001..
+checking module $paramod\LUT3\INIT=8'11110100..
+checking module $paramod\LUT3\INIT=8'11111110..
+checking module $paramod\LUT4\INIT=16'1010001110100000..
+checking module $paramod\LUT4\INIT=16'1111111111111110..
+checking module $paramod\LUT5\INIT=1..
+checking module $paramod\LUT5\INIT=1886417015..
+checking module $paramod\LUT5\INIT=32'10101010101010011010101010101010..
+checking module $paramod\LUT5\INIT=32'11111111111111111111111111111110..
+checking module $paramod\LUT5\INIT=790634528..
+checking module BUFG..
+checking module CARRY4..
+checking module GND..
+checking module IBUF..
+checking module OBUF..
+checking module VCC..
+checking module top..
+checking module top_1..
+checking module top_2..
+found and reported 0 problems.
+
+9.6. Executing OPT pass (performing simple optimizations).
+
+9.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6.
+Optimizing module $paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6.
+Optimizing module $paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6.
+Optimizing module $paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6.
+Optimizing module $paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6.
+Optimizing module $paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6.
+Optimizing module $paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6.
+Optimizing module $paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6.
+Optimizing module $paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6.
+Optimizing module $paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6.
+Optimizing module $paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6.
+Optimizing module $paramod\FDRE\INIT=1'0.
+Optimizing module $paramod\LUT1\INIT=2'01.
+Optimizing module $paramod\LUT2\INIT=4'0001.
+Optimizing module $paramod\LUT2\INIT=4'0010.
+Optimizing module $paramod\LUT2\INIT=4'1110.
+Optimizing module $paramod\LUT3\INIT=8'00000001.
+Optimizing module $paramod\LUT3\INIT=8'00000110.
+Optimizing module $paramod\LUT3\INIT=8'00001000.
+Optimizing module $paramod\LUT3\INIT=8'10000000.
+Optimizing module $paramod\LUT3\INIT=8'10001011.
+Optimizing module $paramod\LUT3\INIT=8'10111000.
+Optimizing module $paramod\LUT3\INIT=8'11101010.
+Optimizing module $paramod\LUT3\INIT=8'11110001.
+Optimizing module $paramod\LUT3\INIT=8'11110100.
+Optimizing module $paramod\LUT3\INIT=8'11111110.
+Optimizing module $paramod\LUT4\INIT=16'1010001110100000.
+Optimizing module $paramod\LUT4\INIT=16'1111111111111110.
+Optimizing module $paramod\LUT5\INIT=1.
+Optimizing module $paramod\LUT5\INIT=1886417015.
+Optimizing module $paramod\LUT5\INIT=32'10101010101010011010101010101010.
+Optimizing module $paramod\LUT5\INIT=32'11111111111111111111111111111110.
+Optimizing module $paramod\LUT5\INIT=790634528.
+Optimizing module BUFG.
+Optimizing module CARRY4.
+Optimizing module GND.
+Optimizing module IBUF.
+Optimizing module OBUF.
+Optimizing module VCC.
+Optimizing module top.
+Optimizing module top_1.
+Optimizing module top_2.
+
+9.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6'.
+Finding identical cells in module `$paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6'.
+Finding identical cells in module `$paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6'.
+Finding identical cells in module `$paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6'.
+Finding identical cells in module `$paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6'.
+Finding identical cells in module `$paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6'.
+Finding identical cells in module `$paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6'.
+Finding identical cells in module `$paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6'.
+Finding identical cells in module `$paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6'.
+Finding identical cells in module `$paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6'.
+Finding identical cells in module `$paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6'.
+Finding identical cells in module `$paramod\FDRE\INIT=1'0'.
+Finding identical cells in module `$paramod\LUT1\INIT=2'01'.
+Finding identical cells in module `$paramod\LUT2\INIT=4'0001'.
+Finding identical cells in module `$paramod\LUT2\INIT=4'0010'.
+Finding identical cells in module `$paramod\LUT2\INIT=4'1110'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'00000001'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'00000110'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'00001000'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'10000000'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'10001011'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'10111000'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'11101010'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'11110001'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'11110100'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'11111110'.
+Finding identical cells in module `$paramod\LUT4\INIT=16'1010001110100000'.
+Finding identical cells in module `$paramod\LUT4\INIT=16'1111111111111110'.
+Finding identical cells in module `$paramod\LUT5\INIT=1'.
+Finding identical cells in module `$paramod\LUT5\INIT=1886417015'.
+Finding identical cells in module `$paramod\LUT5\INIT=32'10101010101010011010101010101010'.
+Finding identical cells in module `$paramod\LUT5\INIT=32'11111111111111111111111111111110'.
+Finding identical cells in module `$paramod\LUT5\INIT=790634528'.
+Finding identical cells in module `\BUFG'.
+Finding identical cells in module `\CARRY4'.
+Finding identical cells in module `\GND'.
+Finding identical cells in module `\IBUF'.
+Finding identical cells in module `\OBUF'.
+Finding identical cells in module `\VCC'.
+Finding identical cells in module `\top'.
+Finding identical cells in module `\top_1'.
+<suppressed ~6 debug messages>
+Finding identical cells in module `\top_2'.
+Removed a total of 2 cells.
+
+9.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\FDRE\INIT=1'0..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\LUT1\INIT=2'01..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT2\INIT=4'0001..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT2\INIT=4'0010..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT2\INIT=4'1110..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT3\INIT=8'00000001..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT3\INIT=8'00000110..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT3\INIT=8'00001000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT3\INIT=8'10000000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT3\INIT=8'10001011..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT3\INIT=8'10111000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT3\INIT=8'11101010..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT3\INIT=8'11110001..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT3\INIT=8'11110100..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT3\INIT=8'11111110..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT4\INIT=16'1010001110100000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT4\INIT=16'1111111111111110..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT5\INIT=1..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT5\INIT=1886417015..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT5\INIT=32'10101010101010011010101010101010..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT5\INIT=32'11111111111111111111111111111110..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT5\INIT=790634528..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \BUFG..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \CARRY4..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \GND..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \IBUF..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \OBUF..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \VCC..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \top_1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+      Replacing known input bits on port A of cell $procmux$849: \reg7 -> { \reg7 [19:18] 1'0 \reg7 [16:0] }
+  Analyzing evaluation results.
+Running muxtree optimizer on module \top_2..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~21 debug messages>
+
+9.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6.
+  Optimizing cells in module $paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6.
+  Optimizing cells in module $paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6.
+  Optimizing cells in module $paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6.
+  Optimizing cells in module $paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6.
+  Optimizing cells in module $paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6.
+  Optimizing cells in module $paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6.
+  Optimizing cells in module $paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6.
+  Optimizing cells in module $paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6.
+  Optimizing cells in module $paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6.
+  Optimizing cells in module $paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6.
+  Optimizing cells in module $paramod\FDRE\INIT=1'0.
+  Optimizing cells in module $paramod\LUT1\INIT=2'01.
+  Optimizing cells in module $paramod\LUT2\INIT=4'0001.
+  Optimizing cells in module $paramod\LUT2\INIT=4'0010.
+  Optimizing cells in module $paramod\LUT2\INIT=4'1110.
+  Optimizing cells in module $paramod\LUT3\INIT=8'00000001.
+  Optimizing cells in module $paramod\LUT3\INIT=8'00000110.
+  Optimizing cells in module $paramod\LUT3\INIT=8'00001000.
+  Optimizing cells in module $paramod\LUT3\INIT=8'10000000.
+  Optimizing cells in module $paramod\LUT3\INIT=8'10001011.
+  Optimizing cells in module $paramod\LUT3\INIT=8'10111000.
+  Optimizing cells in module $paramod\LUT3\INIT=8'11101010.
+  Optimizing cells in module $paramod\LUT3\INIT=8'11110001.
+  Optimizing cells in module $paramod\LUT3\INIT=8'11110100.
+  Optimizing cells in module $paramod\LUT3\INIT=8'11111110.
+  Optimizing cells in module $paramod\LUT4\INIT=16'1010001110100000.
+  Optimizing cells in module $paramod\LUT4\INIT=16'1111111111111110.
+  Optimizing cells in module $paramod\LUT5\INIT=1.
+  Optimizing cells in module $paramod\LUT5\INIT=1886417015.
+  Optimizing cells in module $paramod\LUT5\INIT=32'10101010101010011010101010101010.
+  Optimizing cells in module $paramod\LUT5\INIT=32'11111111111111111111111111111110.
+  Optimizing cells in module $paramod\LUT5\INIT=790634528.
+  Optimizing cells in module \BUFG.
+  Optimizing cells in module \CARRY4.
+  Optimizing cells in module \GND.
+  Optimizing cells in module \IBUF.
+  Optimizing cells in module \OBUF.
+  Optimizing cells in module \VCC.
+  Optimizing cells in module \top.
+  Optimizing cells in module \top_1.
+    New input vector for $reduce_or cell $reduce_or$syn_identity.v:88$746: { $ternary$syn_identity.v:88$745_Y [0] $ternary$syn_identity.v:88$745_Y [1] $ternary$syn_identity.v:88$745_Y [2] $ternary$syn_identity.v:88$745_Y [3] $ternary$syn_identity.v:88$745_Y [4] $ternary$syn_identity.v:88$745_Y [5] $ternary$syn_identity.v:88$745_Y [6] $ternary$syn_identity.v:88$745_Y [7] $ternary$syn_identity.v:88$745_Y [8] $ternary$syn_identity.v:88$745_Y [9] $ternary$syn_identity.v:88$745_Y [10] $ternary$syn_identity.v:88$745_Y [11] $ternary$syn_identity.v:88$745_Y [12] $ternary$syn_identity.v:88$745_Y [13] $ternary$syn_identity.v:88$745_Y [14] $ternary$syn_identity.v:88$745_Y [15] }
+    New input vector for $reduce_and cell $reduce_and$syn_identity.v:93$750: { \reg10 [0] \reg10 [1] \reg10 [2] \reg10 [3] \reg10 [4] \reg10 [5] \reg10 [6] \reg10 [7] \reg10 [8] \reg10 [9] \reg10 [10] \reg10 [11] \reg10 [12] \reg10 [13] \reg10 [14] \reg10 [15] \reg10 [16] \reg10 [17] \reg10 [18] \reg10 [19] \reg10 [20] \reg10 [21] }
+  Optimizing cells in module \top_1.
+  Optimizing cells in module \top_2.
+Performed a total of 2 changes.
+
+9.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6'.
+Finding identical cells in module `$paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6'.
+Finding identical cells in module `$paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6'.
+Finding identical cells in module `$paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6'.
+Finding identical cells in module `$paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6'.
+Finding identical cells in module `$paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6'.
+Finding identical cells in module `$paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6'.
+Finding identical cells in module `$paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6'.
+Finding identical cells in module `$paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6'.
+Finding identical cells in module `$paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6'.
+Finding identical cells in module `$paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6'.
+Finding identical cells in module `$paramod\FDRE\INIT=1'0'.
+Finding identical cells in module `$paramod\LUT1\INIT=2'01'.
+Finding identical cells in module `$paramod\LUT2\INIT=4'0001'.
+Finding identical cells in module `$paramod\LUT2\INIT=4'0010'.
+Finding identical cells in module `$paramod\LUT2\INIT=4'1110'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'00000001'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'00000110'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'00001000'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'10000000'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'10001011'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'10111000'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'11101010'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'11110001'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'11110100'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'11111110'.
+Finding identical cells in module `$paramod\LUT4\INIT=16'1010001110100000'.
+Finding identical cells in module `$paramod\LUT4\INIT=16'1111111111111110'.
+Finding identical cells in module `$paramod\LUT5\INIT=1'.
+Finding identical cells in module `$paramod\LUT5\INIT=1886417015'.
+Finding identical cells in module `$paramod\LUT5\INIT=32'10101010101010011010101010101010'.
+Finding identical cells in module `$paramod\LUT5\INIT=32'11111111111111111111111111111110'.
+Finding identical cells in module `$paramod\LUT5\INIT=790634528'.
+Finding identical cells in module `\BUFG'.
+Finding identical cells in module `\CARRY4'.
+Finding identical cells in module `\GND'.
+Finding identical cells in module `\IBUF'.
+Finding identical cells in module `\OBUF'.
+Finding identical cells in module `\VCC'.
+Finding identical cells in module `\top'.
+Finding identical cells in module `\top_1'.
+Finding identical cells in module `\top_2'.
+Removed a total of 0 cells.
+
+9.6.6. Executing OPT_RMDFF pass (remove dff with constant values).
+Promoting init spec \reg19 = 8'00000000 to constant driver in module top_1.
+Promoted 1 init specs to constant drivers.
+
+9.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6..
+Finding unused cells or wires in module $paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6..
+Finding unused cells or wires in module $paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6..
+Finding unused cells or wires in module $paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6..
+Finding unused cells or wires in module $paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6..
+Finding unused cells or wires in module $paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6..
+Finding unused cells or wires in module $paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6..
+Finding unused cells or wires in module $paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6..
+Finding unused cells or wires in module $paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6..
+Finding unused cells or wires in module $paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6..
+Finding unused cells or wires in module $paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6..
+Finding unused cells or wires in module $paramod\FDRE\INIT=1'0..
+Finding unused cells or wires in module $paramod\LUT1\INIT=2'01..
+Finding unused cells or wires in module $paramod\LUT2\INIT=4'0001..
+Finding unused cells or wires in module $paramod\LUT2\INIT=4'0010..
+Finding unused cells or wires in module $paramod\LUT2\INIT=4'1110..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'00000001..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'00000110..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'00001000..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'10000000..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'10001011..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'10111000..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'11101010..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'11110001..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'11110100..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'11111110..
+Finding unused cells or wires in module $paramod\LUT4\INIT=16'1010001110100000..
+Finding unused cells or wires in module $paramod\LUT4\INIT=16'1111111111111110..
+Finding unused cells or wires in module $paramod\LUT5\INIT=1..
+Finding unused cells or wires in module $paramod\LUT5\INIT=1886417015..
+Finding unused cells or wires in module $paramod\LUT5\INIT=32'10101010101010011010101010101010..
+Finding unused cells or wires in module $paramod\LUT5\INIT=32'11111111111111111111111111111110..
+Finding unused cells or wires in module $paramod\LUT5\INIT=790634528..
+Finding unused cells or wires in module \BUFG..
+Finding unused cells or wires in module \CARRY4..
+Finding unused cells or wires in module \GND..
+Finding unused cells or wires in module \IBUF..
+Finding unused cells or wires in module \OBUF..
+Finding unused cells or wires in module \VCC..
+Finding unused cells or wires in module \top..
+Finding unused cells or wires in module \top_1..
+Finding unused cells or wires in module \top_2..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+9.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6.
+Optimizing module $paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6.
+Optimizing module $paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6.
+Optimizing module $paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6.
+Optimizing module $paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6.
+Optimizing module $paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6.
+Optimizing module $paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6.
+Optimizing module $paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6.
+Optimizing module $paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6.
+Optimizing module $paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6.
+Optimizing module $paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6.
+Optimizing module $paramod\FDRE\INIT=1'0.
+Optimizing module $paramod\LUT1\INIT=2'01.
+Optimizing module $paramod\LUT2\INIT=4'0001.
+Optimizing module $paramod\LUT2\INIT=4'0010.
+Optimizing module $paramod\LUT2\INIT=4'1110.
+Optimizing module $paramod\LUT3\INIT=8'00000001.
+Optimizing module $paramod\LUT3\INIT=8'00000110.
+Optimizing module $paramod\LUT3\INIT=8'00001000.
+Optimizing module $paramod\LUT3\INIT=8'10000000.
+Optimizing module $paramod\LUT3\INIT=8'10001011.
+Optimizing module $paramod\LUT3\INIT=8'10111000.
+Optimizing module $paramod\LUT3\INIT=8'11101010.
+Optimizing module $paramod\LUT3\INIT=8'11110001.
+Optimizing module $paramod\LUT3\INIT=8'11110100.
+Optimizing module $paramod\LUT3\INIT=8'11111110.
+Optimizing module $paramod\LUT4\INIT=16'1010001110100000.
+Optimizing module $paramod\LUT4\INIT=16'1111111111111110.
+Optimizing module $paramod\LUT5\INIT=1.
+Optimizing module $paramod\LUT5\INIT=1886417015.
+Optimizing module $paramod\LUT5\INIT=32'10101010101010011010101010101010.
+Optimizing module $paramod\LUT5\INIT=32'11111111111111111111111111111110.
+Optimizing module $paramod\LUT5\INIT=790634528.
+Optimizing module BUFG.
+Optimizing module CARRY4.
+Optimizing module GND.
+Optimizing module IBUF.
+Optimizing module OBUF.
+Optimizing module VCC.
+Optimizing module top.
+Optimizing module top_1.
+Optimizing module top_2.
+
+9.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\FDRE\INIT=1'0..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\LUT1\INIT=2'01..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT2\INIT=4'0001..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT2\INIT=4'0010..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT2\INIT=4'1110..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT3\INIT=8'00000001..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT3\INIT=8'00000110..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT3\INIT=8'00001000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT3\INIT=8'10000000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT3\INIT=8'10001011..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT3\INIT=8'10111000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT3\INIT=8'11101010..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT3\INIT=8'11110001..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT3\INIT=8'11110100..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT3\INIT=8'11111110..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT4\INIT=16'1010001110100000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT4\INIT=16'1111111111111110..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT5\INIT=1..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT5\INIT=1886417015..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT5\INIT=32'10101010101010011010101010101010..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT5\INIT=32'11111111111111111111111111111110..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LUT5\INIT=790634528..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \BUFG..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \CARRY4..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \GND..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \IBUF..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \OBUF..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \VCC..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \top_1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \top_2..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~21 debug messages>
+
+9.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6.
+  Optimizing cells in module $paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6.
+  Optimizing cells in module $paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6.
+  Optimizing cells in module $paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6.
+  Optimizing cells in module $paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6.
+  Optimizing cells in module $paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6.
+  Optimizing cells in module $paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6.
+  Optimizing cells in module $paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6.
+  Optimizing cells in module $paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6.
+  Optimizing cells in module $paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6.
+  Optimizing cells in module $paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6.
+  Optimizing cells in module $paramod\FDRE\INIT=1'0.
+  Optimizing cells in module $paramod\LUT1\INIT=2'01.
+  Optimizing cells in module $paramod\LUT2\INIT=4'0001.
+  Optimizing cells in module $paramod\LUT2\INIT=4'0010.
+  Optimizing cells in module $paramod\LUT2\INIT=4'1110.
+  Optimizing cells in module $paramod\LUT3\INIT=8'00000001.
+  Optimizing cells in module $paramod\LUT3\INIT=8'00000110.
+  Optimizing cells in module $paramod\LUT3\INIT=8'00001000.
+  Optimizing cells in module $paramod\LUT3\INIT=8'10000000.
+  Optimizing cells in module $paramod\LUT3\INIT=8'10001011.
+  Optimizing cells in module $paramod\LUT3\INIT=8'10111000.
+  Optimizing cells in module $paramod\LUT3\INIT=8'11101010.
+  Optimizing cells in module $paramod\LUT3\INIT=8'11110001.
+  Optimizing cells in module $paramod\LUT3\INIT=8'11110100.
+  Optimizing cells in module $paramod\LUT3\INIT=8'11111110.
+  Optimizing cells in module $paramod\LUT4\INIT=16'1010001110100000.
+  Optimizing cells in module $paramod\LUT4\INIT=16'1111111111111110.
+  Optimizing cells in module $paramod\LUT5\INIT=1.
+  Optimizing cells in module $paramod\LUT5\INIT=1886417015.
+  Optimizing cells in module $paramod\LUT5\INIT=32'10101010101010011010101010101010.
+  Optimizing cells in module $paramod\LUT5\INIT=32'11111111111111111111111111111110.
+  Optimizing cells in module $paramod\LUT5\INIT=790634528.
+  Optimizing cells in module \BUFG.
+  Optimizing cells in module \CARRY4.
+  Optimizing cells in module \GND.
+  Optimizing cells in module \IBUF.
+  Optimizing cells in module \OBUF.
+  Optimizing cells in module \VCC.
+  Optimizing cells in module \top.
+  Optimizing cells in module \top_1.
+  Optimizing cells in module \top_2.
+Performed a total of 0 changes.
+
+9.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6'.
+Finding identical cells in module `$paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6'.
+Finding identical cells in module `$paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6'.
+Finding identical cells in module `$paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6'.
+Finding identical cells in module `$paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6'.
+Finding identical cells in module `$paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6'.
+Finding identical cells in module `$paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6'.
+Finding identical cells in module `$paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6'.
+Finding identical cells in module `$paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6'.
+Finding identical cells in module `$paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6'.
+Finding identical cells in module `$paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6'.
+Finding identical cells in module `$paramod\FDRE\INIT=1'0'.
+Finding identical cells in module `$paramod\LUT1\INIT=2'01'.
+Finding identical cells in module `$paramod\LUT2\INIT=4'0001'.
+Finding identical cells in module `$paramod\LUT2\INIT=4'0010'.
+Finding identical cells in module `$paramod\LUT2\INIT=4'1110'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'00000001'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'00000110'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'00001000'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'10000000'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'10001011'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'10111000'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'11101010'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'11110001'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'11110100'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'11111110'.
+Finding identical cells in module `$paramod\LUT4\INIT=16'1010001110100000'.
+Finding identical cells in module `$paramod\LUT4\INIT=16'1111111111111110'.
+Finding identical cells in module `$paramod\LUT5\INIT=1'.
+Finding identical cells in module `$paramod\LUT5\INIT=1886417015'.
+Finding identical cells in module `$paramod\LUT5\INIT=32'10101010101010011010101010101010'.
+Finding identical cells in module `$paramod\LUT5\INIT=32'11111111111111111111111111111110'.
+Finding identical cells in module `$paramod\LUT5\INIT=790634528'.
+Finding identical cells in module `\BUFG'.
+Finding identical cells in module `\CARRY4'.
+Finding identical cells in module `\GND'.
+Finding identical cells in module `\IBUF'.
+Finding identical cells in module `\OBUF'.
+Finding identical cells in module `\VCC'.
+Finding identical cells in module `\top'.
+Finding identical cells in module `\top_1'.
+Finding identical cells in module `\top_2'.
+Removed a total of 0 cells.
+
+9.6.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+9.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6..
+Finding unused cells or wires in module $paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6..
+Finding unused cells or wires in module $paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6..
+Finding unused cells or wires in module $paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6..
+Finding unused cells or wires in module $paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6..
+Finding unused cells or wires in module $paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6..
+Finding unused cells or wires in module $paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6..
+Finding unused cells or wires in module $paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6..
+Finding unused cells or wires in module $paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6..
+Finding unused cells or wires in module $paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6..
+Finding unused cells or wires in module $paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6..
+Finding unused cells or wires in module $paramod\FDRE\INIT=1'0..
+Finding unused cells or wires in module $paramod\LUT1\INIT=2'01..
+Finding unused cells or wires in module $paramod\LUT2\INIT=4'0001..
+Finding unused cells or wires in module $paramod\LUT2\INIT=4'0010..
+Finding unused cells or wires in module $paramod\LUT2\INIT=4'1110..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'00000001..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'00000110..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'00001000..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'10000000..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'10001011..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'10111000..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'11101010..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'11110001..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'11110100..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'11111110..
+Finding unused cells or wires in module $paramod\LUT4\INIT=16'1010001110100000..
+Finding unused cells or wires in module $paramod\LUT4\INIT=16'1111111111111110..
+Finding unused cells or wires in module $paramod\LUT5\INIT=1..
+Finding unused cells or wires in module $paramod\LUT5\INIT=1886417015..
+Finding unused cells or wires in module $paramod\LUT5\INIT=32'10101010101010011010101010101010..
+Finding unused cells or wires in module $paramod\LUT5\INIT=32'11111111111111111111111111111110..
+Finding unused cells or wires in module $paramod\LUT5\INIT=790634528..
+Finding unused cells or wires in module \BUFG..
+Finding unused cells or wires in module \CARRY4..
+Finding unused cells or wires in module \GND..
+Finding unused cells or wires in module \IBUF..
+Finding unused cells or wires in module \OBUF..
+Finding unused cells or wires in module \VCC..
+Finding unused cells or wires in module \top..
+Finding unused cells or wires in module \top_1..
+Finding unused cells or wires in module \top_2..
+
+9.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6.
+Optimizing module $paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6.
+Optimizing module $paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6.
+Optimizing module $paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6.
+Optimizing module $paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6.
+Optimizing module $paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6.
+Optimizing module $paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6.
+Optimizing module $paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6.
+Optimizing module $paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6.
+Optimizing module $paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6.
+Optimizing module $paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6.
+Optimizing module $paramod\FDRE\INIT=1'0.
+Optimizing module $paramod\LUT1\INIT=2'01.
+Optimizing module $paramod\LUT2\INIT=4'0001.
+Optimizing module $paramod\LUT2\INIT=4'0010.
+Optimizing module $paramod\LUT2\INIT=4'1110.
+Optimizing module $paramod\LUT3\INIT=8'00000001.
+Optimizing module $paramod\LUT3\INIT=8'00000110.
+Optimizing module $paramod\LUT3\INIT=8'00001000.
+Optimizing module $paramod\LUT3\INIT=8'10000000.
+Optimizing module $paramod\LUT3\INIT=8'10001011.
+Optimizing module $paramod\LUT3\INIT=8'10111000.
+Optimizing module $paramod\LUT3\INIT=8'11101010.
+Optimizing module $paramod\LUT3\INIT=8'11110001.
+Optimizing module $paramod\LUT3\INIT=8'11110100.
+Optimizing module $paramod\LUT3\INIT=8'11111110.
+Optimizing module $paramod\LUT4\INIT=16'1010001110100000.
+Optimizing module $paramod\LUT4\INIT=16'1111111111111110.
+Optimizing module $paramod\LUT5\INIT=1.
+Optimizing module $paramod\LUT5\INIT=1886417015.
+Optimizing module $paramod\LUT5\INIT=32'10101010101010011010101010101010.
+Optimizing module $paramod\LUT5\INIT=32'11111111111111111111111111111110.
+Optimizing module $paramod\LUT5\INIT=790634528.
+Optimizing module BUFG.
+Optimizing module CARRY4.
+Optimizing module GND.
+Optimizing module IBUF.
+Optimizing module OBUF.
+Optimizing module VCC.
+Optimizing module top.
+Optimizing module top_1.
+Optimizing module top_2.
+
+9.6.16. Finished OPT passes. (There is nothing left to do.)
+
+9.7. Executing WREDUCE pass (reducing word size of cells).
+Removed top 5 bits (of 7) from mux cell top_1.$procmux$831 ($mux).
+Removed top 17 bits (of 18) from FF cell top_1.$procdff$877 ($dff).
+Removed top 8 bits (of 12) from FF cell top_1.$procdff$876 ($dff).
+Removed top 5 bits (of 7) from FF cell top_1.$procdff$872 ($dff).
+Removed top 11 bits (of 18) from mux cell top_1.$ternary$syn_identity.v:49$702 ($mux).
+Removed top 10 bits (of 11) from port B of cell top_1.$ge$syn_identity.v:59$708 ($ge).
+Removed top 3 bits (of 14) from port A of cell top_1.$mul$syn_identity.v:70$715 ($mul).
+Removed top 4 bits (of 14) from port B of cell top_1.$mul$syn_identity.v:70$715 ($mul).
+Removed top 13 bits (of 14) from port A of cell top_1.$ge$syn_identity.v:70$718 ($ge).
+Removed top 8 bits (of 22) from port A of cell top_1.$neg$syn_identity.v:84$735 ($neg).
+Removed top 15 bits (of 22) from port Y of cell top_1.$xnor$syn_identity.v:79$724 ($xnor).
+Removed top 8 bits (of 12) from port A of cell top_1.$shr$syn_identity.v:85$737 ($shr).
+Removed top 9 bits (of 11) from port A of cell top_1.$ne$syn_identity.v:88$749 ($ne).
+Removed top 11 bits (of 18) from port Y of cell top_1.$neg$syn_identity.v:49$699 ($neg).
+Removed top 11 bits (of 18) from port A of cell top_1.$neg$syn_identity.v:49$699 ($neg).
+Removed top 11 bits (of 18) from port Y of cell top_1.$xnor$syn_identity.v:49$698 ($xnor).
+Removed top 5 bits (of 7) from wire top_1.$0\reg16[6:0].
+Removed top 6 bits (of 7) from wire top_1.$ge$syn_identity.v:59$708_Y.
+Removed top 11 bits (of 18) from wire top_1.$neg$syn_identity.v:49$699_Y.
+Removed top 6 bits (of 7) from wire top_1.$reduce_and$syn_identity.v:93$750_Y.
+Removed top 9 bits (of 10) from wire top_1.$reduce_xnor$syn_identity.v:68$714_Y.
+Removed top 21 bits (of 22) from wire top_1.$reduce_xor$syn_identity.v:72$720_Y.
+Removed top 11 bits (of 18) from wire top_1.$xnor$syn_identity.v:49$698_Y.
+Removed top 15 bits (of 16) from wire top_1.wire12.
+
+9.8. Executing MEMORY_DFF pass (merging $dff cells to $memrd and $memwr).
+
+9.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6..
+Finding unused cells or wires in module $paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6..
+Finding unused cells or wires in module $paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6..
+Finding unused cells or wires in module $paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6..
+Finding unused cells or wires in module $paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6..
+Finding unused cells or wires in module $paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6..
+Finding unused cells or wires in module $paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6..
+Finding unused cells or wires in module $paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6..
+Finding unused cells or wires in module $paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6..
+Finding unused cells or wires in module $paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6..
+Finding unused cells or wires in module $paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6..
+Finding unused cells or wires in module $paramod\FDRE\INIT=1'0..
+Finding unused cells or wires in module $paramod\LUT1\INIT=2'01..
+Finding unused cells or wires in module $paramod\LUT2\INIT=4'0001..
+Finding unused cells or wires in module $paramod\LUT2\INIT=4'0010..
+Finding unused cells or wires in module $paramod\LUT2\INIT=4'1110..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'00000001..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'00000110..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'00001000..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'10000000..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'10001011..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'10111000..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'11101010..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'11110001..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'11110100..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'11111110..
+Finding unused cells or wires in module $paramod\LUT4\INIT=16'1010001110100000..
+Finding unused cells or wires in module $paramod\LUT4\INIT=16'1111111111111110..
+Finding unused cells or wires in module $paramod\LUT5\INIT=1..
+Finding unused cells or wires in module $paramod\LUT5\INIT=1886417015..
+Finding unused cells or wires in module $paramod\LUT5\INIT=32'10101010101010011010101010101010..
+Finding unused cells or wires in module $paramod\LUT5\INIT=32'11111111111111111111111111111110..
+Finding unused cells or wires in module $paramod\LUT5\INIT=790634528..
+Finding unused cells or wires in module \BUFG..
+Finding unused cells or wires in module \CARRY4..
+Finding unused cells or wires in module \GND..
+Finding unused cells or wires in module \IBUF..
+Finding unused cells or wires in module \OBUF..
+Finding unused cells or wires in module \VCC..
+Finding unused cells or wires in module \top..
+Finding unused cells or wires in module \top_1..
+Finding unused cells or wires in module \top_2..
+Removed 0 unused cells and 9 unused wires.
+<suppressed ~1 debug messages>
+
+9.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+9.11. Executing OPT pass (performing simple optimizations).
+
+9.11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6.
+Optimizing module $paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6.
+Optimizing module $paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6.
+Optimizing module $paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6.
+Optimizing module $paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6.
+Optimizing module $paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6.
+Optimizing module $paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6.
+Optimizing module $paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6.
+Optimizing module $paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6.
+Optimizing module $paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6.
+Optimizing module $paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6.
+Optimizing module $paramod\FDRE\INIT=1'0.
+Optimizing module $paramod\LUT1\INIT=2'01.
+Optimizing module $paramod\LUT2\INIT=4'0001.
+Optimizing module $paramod\LUT2\INIT=4'0010.
+Optimizing module $paramod\LUT2\INIT=4'1110.
+Optimizing module $paramod\LUT3\INIT=8'00000001.
+Optimizing module $paramod\LUT3\INIT=8'00000110.
+Optimizing module $paramod\LUT3\INIT=8'00001000.
+Optimizing module $paramod\LUT3\INIT=8'10000000.
+Optimizing module $paramod\LUT3\INIT=8'10001011.
+Optimizing module $paramod\LUT3\INIT=8'10111000.
+Optimizing module $paramod\LUT3\INIT=8'11101010.
+Optimizing module $paramod\LUT3\INIT=8'11110001.
+Optimizing module $paramod\LUT3\INIT=8'11110100.
+Optimizing module $paramod\LUT3\INIT=8'11111110.
+Optimizing module $paramod\LUT4\INIT=16'1010001110100000.
+Optimizing module $paramod\LUT4\INIT=16'1111111111111110.
+Optimizing module $paramod\LUT5\INIT=1.
+Optimizing module $paramod\LUT5\INIT=1886417015.
+Optimizing module $paramod\LUT5\INIT=32'10101010101010011010101010101010.
+Optimizing module $paramod\LUT5\INIT=32'11111111111111111111111111111110.
+Optimizing module $paramod\LUT5\INIT=790634528.
+Optimizing module BUFG.
+Optimizing module CARRY4.
+Optimizing module GND.
+Optimizing module IBUF.
+Optimizing module OBUF.
+Optimizing module VCC.
+Optimizing module top.
+Optimizing module top_1.
+<suppressed ~4 debug messages>
+Optimizing module top_2.
+
+9.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6'.
+Finding identical cells in module `$paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6'.
+Finding identical cells in module `$paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6'.
+Finding identical cells in module `$paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6'.
+Finding identical cells in module `$paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6'.
+Finding identical cells in module `$paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6'.
+Finding identical cells in module `$paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6'.
+Finding identical cells in module `$paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6'.
+Finding identical cells in module `$paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6'.
+Finding identical cells in module `$paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6'.
+Finding identical cells in module `$paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6'.
+Finding identical cells in module `$paramod\FDRE\INIT=1'0'.
+Finding identical cells in module `$paramod\LUT1\INIT=2'01'.
+Finding identical cells in module `$paramod\LUT2\INIT=4'0001'.
+Finding identical cells in module `$paramod\LUT2\INIT=4'0010'.
+Finding identical cells in module `$paramod\LUT2\INIT=4'1110'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'00000001'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'00000110'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'00001000'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'10000000'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'10001011'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'10111000'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'11101010'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'11110001'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'11110100'.
+Finding identical cells in module `$paramod\LUT3\INIT=8'11111110'.
+Finding identical cells in module `$paramod\LUT4\INIT=16'1010001110100000'.
+Finding identical cells in module `$paramod\LUT4\INIT=16'1111111111111110'.
+Finding identical cells in module `$paramod\LUT5\INIT=1'.
+Finding identical cells in module `$paramod\LUT5\INIT=1886417015'.
+Finding identical cells in module `$paramod\LUT5\INIT=32'10101010101010011010101010101010'.
+Finding identical cells in module `$paramod\LUT5\INIT=32'11111111111111111111111111111110'.
+Finding identical cells in module `$paramod\LUT5\INIT=790634528'.
+Finding identical cells in module `\BUFG'.
+Finding identical cells in module `\CARRY4'.
+Finding identical cells in module `\GND'.
+Finding identical cells in module `\IBUF'.
+Finding identical cells in module `\OBUF'.
+Finding identical cells in module `\VCC'.
+Finding identical cells in module `\top'.
+Finding identical cells in module `\top_1'.
+Finding identical cells in module `\top_2'.
+Removed a total of 0 cells.
+
+9.11.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+9.11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6..
+Finding unused cells or wires in module $paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6..
+Finding unused cells or wires in module $paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6..
+Finding unused cells or wires in module $paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6..
+Finding unused cells or wires in module $paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6..
+Finding unused cells or wires in module $paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6..
+Finding unused cells or wires in module $paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6..
+Finding unused cells or wires in module $paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6..
+Finding unused cells or wires in module $paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6..
+Finding unused cells or wires in module $paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6..
+Finding unused cells or wires in module $paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6..
+Finding unused cells or wires in module $paramod\FDRE\INIT=1'0..
+Finding unused cells or wires in module $paramod\LUT1\INIT=2'01..
+Finding unused cells or wires in module $paramod\LUT2\INIT=4'0001..
+Finding unused cells or wires in module $paramod\LUT2\INIT=4'0010..
+Finding unused cells or wires in module $paramod\LUT2\INIT=4'1110..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'00000001..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'00000110..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'00001000..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'10000000..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'10001011..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'10111000..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'11101010..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'11110001..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'11110100..
+Finding unused cells or wires in module $paramod\LUT3\INIT=8'11111110..
+Finding unused cells or wires in module $paramod\LUT4\INIT=16'1010001110100000..
+Finding unused cells or wires in module $paramod\LUT4\INIT=16'1111111111111110..
+Finding unused cells or wires in module $paramod\LUT5\INIT=1..
+Finding unused cells or wires in module $paramod\LUT5\INIT=1886417015..
+Finding unused cells or wires in module $paramod\LUT5\INIT=32'10101010101010011010101010101010..
+Finding unused cells or wires in module $paramod\LUT5\INIT=32'11111111111111111111111111111110..
+Finding unused cells or wires in module $paramod\LUT5\INIT=790634528..
+Finding unused cells or wires in module \BUFG..
+Finding unused cells or wires in module \CARRY4..
+Finding unused cells or wires in module \GND..
+Finding unused cells or wires in module \IBUF..
+Finding unused cells or wires in module \OBUF..
+Finding unused cells or wires in module \VCC..
+Finding unused cells or wires in module \top..
+Finding unused cells or wires in module \top_1..
+Finding unused cells or wires in module \top_2..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+9.11.5. Finished fast OPT passes.
+
+9.12. Printing statistics.
+
+=== $paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6 ===
+
+   Number of wires:                  9
+   Number of wire bits:             77
+   Number of public wires:           9
+   Number of public wire bits:      77
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6 ===
+
+   Number of wires:                  9
+   Number of wire bits:             77
+   Number of public wires:           9
+   Number of public wire bits:      77
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6 ===
+
+   Number of wires:                  9
+   Number of wire bits:             77
+   Number of public wires:           9
+   Number of public wire bits:      77
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6 ===
+
+   Number of wires:                  9
+   Number of wire bits:             77
+   Number of public wires:           9
+   Number of public wire bits:      77
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6 ===
+
+   Number of wires:                  9
+   Number of wire bits:             77
+   Number of public wires:           9
+   Number of public wire bits:      77
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6 ===
+
+   Number of wires:                  9
+   Number of wire bits:             77
+   Number of public wires:           9
+   Number of public wire bits:      77
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6 ===
+
+   Number of wires:                  9
+   Number of wire bits:             77
+   Number of public wires:           9
+   Number of public wire bits:      77
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6 ===
+
+   Number of wires:                  9
+   Number of wire bits:             77
+   Number of public wires:           9
+   Number of public wire bits:      77
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6 ===
+
+   Number of wires:                  9
+   Number of wire bits:             77
+   Number of public wires:           9
+   Number of public wire bits:      77
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6 ===
+
+   Number of wires:                  9
+   Number of wire bits:             77
+   Number of public wires:           9
+   Number of public wire bits:      77
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6 ===
+
+   Number of wires:                  9
+   Number of wire bits:             77
+   Number of public wires:           9
+   Number of public wire bits:      77
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod\FDRE\INIT=1'0 ===
+
+   Number of wires:                  8
+   Number of wire bits:              8
+   Number of public wires:           6
+   Number of public wire bits:       6
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  3
+     $dff                            1
+     $mux                            2
+
+=== $paramod\LUT1\INIT=2'01 ===
+
+   Number of wires:                  4
+   Number of wire bits:              5
+   Number of public wires:           4
+   Number of public wire bits:       5
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod\LUT2\INIT=4'0001 ===
+
+   Number of wires:                  5
+   Number of wire bits:              9
+   Number of public wires:           5
+   Number of public wire bits:       9
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod\LUT2\INIT=4'0010 ===
+
+   Number of wires:                  5
+   Number of wire bits:              9
+   Number of public wires:           5
+   Number of public wire bits:       9
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod\LUT2\INIT=4'1110 ===
+
+   Number of wires:                  5
+   Number of wire bits:              9
+   Number of public wires:           5
+   Number of public wire bits:       9
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod\LUT3\INIT=8'00000001 ===
+
+   Number of wires:                  6
+   Number of wire bits:             15
+   Number of public wires:           6
+   Number of public wire bits:      15
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod\LUT3\INIT=8'00000110 ===
+
+   Number of wires:                  6
+   Number of wire bits:             15
+   Number of public wires:           6
+   Number of public wire bits:      15
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod\LUT3\INIT=8'00001000 ===
+
+   Number of wires:                  6
+   Number of wire bits:             15
+   Number of public wires:           6
+   Number of public wire bits:      15
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod\LUT3\INIT=8'10000000 ===
+
+   Number of wires:                  6
+   Number of wire bits:             15
+   Number of public wires:           6
+   Number of public wire bits:      15
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod\LUT3\INIT=8'10001011 ===
+
+   Number of wires:                  6
+   Number of wire bits:             15
+   Number of public wires:           6
+   Number of public wire bits:      15
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod\LUT3\INIT=8'10111000 ===
+
+   Number of wires:                  6
+   Number of wire bits:             15
+   Number of public wires:           6
+   Number of public wire bits:      15
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod\LUT3\INIT=8'11101010 ===
+
+   Number of wires:                  6
+   Number of wire bits:             15
+   Number of public wires:           6
+   Number of public wire bits:      15
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod\LUT3\INIT=8'11110001 ===
+
+   Number of wires:                  6
+   Number of wire bits:             15
+   Number of public wires:           6
+   Number of public wire bits:      15
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod\LUT3\INIT=8'11110100 ===
+
+   Number of wires:                  6
+   Number of wire bits:             15
+   Number of public wires:           6
+   Number of public wire bits:      15
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod\LUT3\INIT=8'11111110 ===
+
+   Number of wires:                  6
+   Number of wire bits:             15
+   Number of public wires:           6
+   Number of public wire bits:      15
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod\LUT4\INIT=16'1010001110100000 ===
+
+   Number of wires:                  7
+   Number of wire bits:             25
+   Number of public wires:           7
+   Number of public wire bits:      25
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod\LUT4\INIT=16'1111111111111110 ===
+
+   Number of wires:                  7
+   Number of wire bits:             25
+   Number of public wires:           7
+   Number of public wire bits:      25
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod\LUT5\INIT=1 ===
+
+   Number of wires:                  8
+   Number of wire bits:             43
+   Number of public wires:           8
+   Number of public wire bits:      43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod\LUT5\INIT=1886417015 ===
+
+   Number of wires:                  8
+   Number of wire bits:             43
+   Number of public wires:           8
+   Number of public wire bits:      43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod\LUT5\INIT=32'10101010101010011010101010101010 ===
+
+   Number of wires:                  8
+   Number of wire bits:             43
+   Number of public wires:           8
+   Number of public wire bits:      43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod\LUT5\INIT=32'11111111111111111111111111111110 ===
+
+   Number of wires:                  8
+   Number of wire bits:             43
+   Number of public wires:           8
+   Number of public wire bits:      43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== $paramod\LUT5\INIT=790634528 ===
+
+   Number of wires:                  8
+   Number of wire bits:             43
+   Number of public wires:           8
+   Number of public wire bits:      43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $shiftx                         1
+
+=== BUFG ===
+
+   Number of wires:                  2
+   Number of wire bits:              2
+   Number of public wires:           2
+   Number of public wire bits:       2
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  0
+
+=== CARRY4 ===
+
+   Number of wires:                  7
+   Number of wire bits:             19
+   Number of public wires:           7
+   Number of public wire bits:      19
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  6
+     $mux                            4
+     $or                             1
+     $xor                            1
+
+=== GND ===
+
+   Number of wires:                  1
+   Number of wire bits:              1
+   Number of public wires:           1
+   Number of public wire bits:       1
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  0
+
+=== IBUF ===
+
+   Number of wires:                  2
+   Number of wire bits:              2
+   Number of public wires:           2
+   Number of public wire bits:       2
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  0
+
+=== OBUF ===
+
+   Number of wires:                  2
+   Number of wire bits:              2
+   Number of public wires:           2
+   Number of public wire bits:       2
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  0
+
+=== VCC ===
+
+   Number of wires:                  1
+   Number of wire bits:              1
+   Number of public wires:           1
+   Number of public wire bits:       1
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  0
+
+=== top ===
+
+   Number of wires:                 12
+   Number of wire bits:            450
+   Number of public wires:           7
+   Number of public wire bits:     245
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  6
+     $assert                         1
+     $dff                            2
+     $eq                             1
+     top_1                           1
+     top_2                           1
+
+=== top_1 ===
+
+   Number of wires:                 70
+   Number of wire bits:            922
+   Number of public wires:          22
+   Number of public wire bits:     446
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 62
+     $dff                           13
+     $ge                             2
+     $logic_not                      3
+     $lt                             1
+     $mul                            1
+     $mux                           22
+     $ne                             1
+     $neg                            2
+     $not                            2
+     $reduce_and                     1
+     $reduce_bool                    6
+     $reduce_or                      1
+     $reduce_xnor                    2
+     $reduce_xor                     1
+     $shr                            2
+     $xnor                           2
+
+=== top_2 ===
+
+   Number of wires:                107
+   Number of wire bits:            596
+   Number of public wires:         105
+   Number of public wire bits:     593
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                391
+     $paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6      1
+     $paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6      2
+     $paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6      1
+     $paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6      1
+     $paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6      1
+     $paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6      3
+     $paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6      3
+     $paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6      1
+     $paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6      1
+     $paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6      1
+     $paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6      1
+     $paramod\FDRE\INIT=1'0         50
+     $paramod\LUT1\INIT=2'01        14
+     $paramod\LUT2\INIT=4'0001       5
+     $paramod\LUT2\INIT=4'0010       6
+     $paramod\LUT2\INIT=4'1110       7
+     $paramod\LUT3\INIT=8'00000001      2
+     $paramod\LUT3\INIT=8'00000110      1
+     $paramod\LUT3\INIT=8'00001000      1
+     $paramod\LUT3\INIT=8'10000000      2
+     $paramod\LUT3\INIT=8'10001011      1
+     $paramod\LUT3\INIT=8'10111000      2
+     $paramod\LUT3\INIT=8'11101010      1
+     $paramod\LUT3\INIT=8'11110001      1
+     $paramod\LUT3\INIT=8'11110100      1
+     $paramod\LUT3\INIT=8'11111110      1
+     $paramod\LUT4\INIT=16'1010001110100000      1
+     $paramod\LUT4\INIT=16'1111111111111110      8
+     $paramod\LUT5\INIT=1            2
+     $paramod\LUT5\INIT=1886417015      1
+     $paramod\LUT5\INIT=32'10101010101010011010101010101010      1
+     $paramod\LUT5\INIT=32'11111111111111111111111111111110      2
+     $paramod\LUT5\INIT=790634528      2
+     BUFG                            1
+     CARRY4                          5
+     GND                             1
+     IBUF                           63
+     OBUF                          192
+     VCC                             1
+
+=== design hierarchy ===
+
+   top                               1
+     top_1                           1
+     top_2                           1
+       $paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6      1
+       $paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6      2
+       $paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6      1
+       $paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6      1
+       $paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6      1
+       $paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6      3
+       $paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6      3
+       $paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6      1
+       $paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6      1
+       $paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6      1
+       $paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6      1
+       $paramod\FDRE\INIT=1'0       50
+       $paramod\LUT1\INIT=2'01      14
+       $paramod\LUT2\INIT=4'0001      5
+       $paramod\LUT2\INIT=4'0010      6
+       $paramod\LUT2\INIT=4'1110      7
+       $paramod\LUT3\INIT=8'00000001      2
+       $paramod\LUT3\INIT=8'00000110      1
+       $paramod\LUT3\INIT=8'00001000      1
+       $paramod\LUT3\INIT=8'10000000      2
+       $paramod\LUT3\INIT=8'10001011      1
+       $paramod\LUT3\INIT=8'10111000      2
+       $paramod\LUT3\INIT=8'11101010      1
+       $paramod\LUT3\INIT=8'11110001      1
+       $paramod\LUT3\INIT=8'11110100      1
+       $paramod\LUT3\INIT=8'11111110      1
+       $paramod\LUT4\INIT=16'1010001110100000      1
+       $paramod\LUT4\INIT=16'1111111111111110      8
+       $paramod\LUT5\INIT=1          2
+       $paramod\LUT5\INIT=1886417015      1
+       $paramod\LUT5\INIT=32'10101010101010011010101010101010      1
+       $paramod\LUT5\INIT=32'11111111111111111111111111111110      2
+       $paramod\LUT5\INIT=790634528      2
+       BUFG                          1
+       CARRY4                        5
+       GND                           1
+       IBUF                         63
+       OBUF                        192
+       VCC                           1
+
+   Number of wires:               1633
+   Number of wire bits:           5205
+   Number of public wires:        1478
+   Number of public wire bits:    4421
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                324
+     $assert                         1
+     $dff                           65
+     $eq                             1
+     $ge                             2
+     $logic_not                      3
+     $lt                             1
+     $mul                            1
+     $mux                          142
+     $ne                             1
+     $neg                            2
+     $not                            2
+     $or                             5
+     $reduce_and                     1
+     $reduce_bool                    6
+     $reduce_or                      1
+     $reduce_xnor                    2
+     $reduce_xor                     1
+     $shiftx                        78
+     $shr                            2
+     $xnor                           2
+     $xor                            5
+
+9.13. Executing CHECK pass (checking for obvious problems).
+checking module $paramod$0930c0315e8aac4c6361a0ffddc974b7dfe643ab\LUT6..
+checking module $paramod$0f4eb54c62750d58f516fb3435b8bf69f39d76bc\LUT6..
+checking module $paramod$15f511d2e7ff7f0e33e062304bda97bb3a90e205\LUT6..
+checking module $paramod$181baba916184874b54da0b82398f078a8f0ab03\LUT6..
+checking module $paramod$20246d5e7b6bcf137d425da26da5fdd90dad3f52\LUT6..
+checking module $paramod$2524fcecdf7799f363b7b60d0b4b0d9ded2a216d\LUT6..
+checking module $paramod$3298539fdfbe99ab50335da40301ff2cdf7d21ab\LUT6..
+checking module $paramod$3b3b7b8bd0c22af7cdcf8c3b4df5bd2ef1ef4f80\LUT6..
+checking module $paramod$3c912848f7e0eb97b7fd59d71d1a5a828965d909\LUT6..
+checking module $paramod$731051c4ae331902fc395b3f08a26bf0955bff1c\LUT6..
+checking module $paramod$f9018733a65e4d4f27429d1b379fc00f317ecfd0\LUT6..
+checking module $paramod\FDRE\INIT=1'0..
+checking module $paramod\LUT1\INIT=2'01..
+checking module $paramod\LUT2\INIT=4'0001..
+checking module $paramod\LUT2\INIT=4'0010..
+checking module $paramod\LUT2\INIT=4'1110..
+checking module $paramod\LUT3\INIT=8'00000001..
+checking module $paramod\LUT3\INIT=8'00000110..
+checking module $paramod\LUT3\INIT=8'00001000..
+checking module $paramod\LUT3\INIT=8'10000000..
+checking module $paramod\LUT3\INIT=8'10001011..
+checking module $paramod\LUT3\INIT=8'10111000..
+checking module $paramod\LUT3\INIT=8'11101010..
+checking module $paramod\LUT3\INIT=8'11110001..
+checking module $paramod\LUT3\INIT=8'11110100..
+checking module $paramod\LUT3\INIT=8'11111110..
+checking module $paramod\LUT4\INIT=16'1010001110100000..
+checking module $paramod\LUT4\INIT=16'1111111111111110..
+checking module $paramod\LUT5\INIT=1..
+checking module $paramod\LUT5\INIT=1886417015..
+checking module $paramod\LUT5\INIT=32'10101010101010011010101010101010..
+checking module $paramod\LUT5\INIT=32'11111111111111111111111111111110..
+checking module $paramod\LUT5\INIT=790634528..
+checking module BUFG..
+checking module CARRY4..
+checking module GND..
+checking module IBUF..
+checking module OBUF..
+checking module VCC..
+checking module top..
+checking module top_1..
+checking module top_2..
+found and reported 0 problems.
+
+10. Executing HIERARCHY pass (managing design hierarchy).
+
+Syntax error in command `hierarchy -smtcheck':
+
+    hierarchy [-check] [-top <module>]
+    hierarchy -generate <cell-types> <port-decls>
+
+In parametric designs, a module might exists in several variations with
+different parameter values. This pass looks at all modules in the current
+design an re-runs the language frontends for the parametric modules as
+needed. It also resolves assignments to wired logic data types (wand/wor),
+resolves positional module parameters, unroll array instances, and more.
+
+    -check
+        also check the design hierarchy. this generates an error when
+        an unknown module is used as cell type.
+
+    -simcheck
+        like -check, but also throw an error if blackbox modules are
+        instantiated, and throw an error if the design has no top module.
+
+    -purge_lib
+        by default the hierarchy command will not remove library (blackbox)
+        modules. use this option to also remove unused blackbox modules.
+
+    -libdir <directory>
+        search for files named <module_name>.v in the specified directory
+        for unknown modules and automatically run read_verilog for each
+        unknown module.
+
+    -keep_positionals
+        per default this pass also converts positional arguments in cells
+        to arguments using port names. This option disables this behavior.
+
+    -keep_portwidths
+        per default this pass adjusts the port width on cells that are
+        module instances when the width does not match the module port. This
+        option disables this behavior.
+
+    -nodefaults
+        do not resolve input port default values
+
+    -nokeep_asserts
+        per default this pass sets the "keep" attribute on all modules
+        that directly or indirectly contain one or more formal properties.
+        This option disables this behavior.
+
+    -top <module>
+        use the specified top module to build the design hierarchy. Modules
+        outside this tree (unused modules) are removed.
+
+        when the -top option is used, the 'top' attribute will be set on the
+        specified top module. otherwise a module with the 'top' attribute set
+        will implicitly be used as top module, if such a module exists.
+
+    -auto-top
+        automatically determine the top of the design hierarchy and mark it.
+
+    -chparam name value 
+       elaborate the top module using this parameter value. Modules on which
+       this parameter does not exist may cause a warning message to be output.
+       This option can be specified multiple times to override multiple
+       parameters. String values must be passed in double quotes (").
+
+In -generate mode this pass generates blackbox modules for the given cell
+types (wildcards supported). For this the design is searched for cells that
+match the given types and then the given port declarations are used to
+determine the direction of the ports. The syntax for a port declaration is:
+
+    {i|o|io}[@<num>]:<portname>
+
+Input ports are specified with the 'i' prefix, output ports with the 'o'
+prefix and inout ports with the 'io' prefix. The optional <num> specifies
+the position of the port in the parameter list (needed when instantiated
+using positional arguments). When <num> is not specified, the <portname> can
+also contain wildcard characters.
+
+This pass ignores the current selection and always operates on all modules
+in the current design.
+
+ERROR: Command syntax error: Unknown option or option in arguments.
+> hierarchy -smtcheck
+>           ^

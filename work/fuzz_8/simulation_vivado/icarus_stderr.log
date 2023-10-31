@@ -1,0 +1,32 @@
+./syn_vivado.v:369: warning: Port 1 (CO) of CARRY4 expects 4 bits, got 3.
+./syn_vivado.v:369:        : Padding 1 high bits of the port.
+./syn_vivado.v:369: warning: Port 2 (O) of CARRY4 expects 4 bits, got 2.
+./syn_vivado.v:369:        : Padding 2 high bits of the port.
+./syn_vivado.v:180: warning: Port 1 (CO) of CARRY4 expects 4 bits, got 2.
+./syn_vivado.v:180:        : Padding 2 high bits of the port.
+./syn_vivado.v:180: warning: Port 2 (O) of CARRY4 expects 4 bits, got 1.
+./syn_vivado.v:180:        : Padding 3 high bits of the port.
+./syn_vivado.v:194: warning: Port 1 (CO) of CARRY4 expects 4 bits, got 1.
+./syn_vivado.v:194:        : Padding 3 high bits of the port.
+./syn_vivado.v:200: warning: Port 1 (CO) of CARRY4 expects 4 bits, got 2.
+./syn_vivado.v:200:        : Padding 2 high bits of the port.
+./syn_vivado.v:200: warning: Port 2 (O) of CARRY4 expects 4 bits, got 1.
+./syn_vivado.v:200:        : Padding 3 high bits of the port.
+./syn_vivado.v:3519: warning: Port 2 (O) of CARRY4 expects 4 bits, got 3.
+./syn_vivado.v:3519:        : Padding 1 high bits of the port.
+./syn_vivado.v:4164: warning: Port 1 (CO) of CARRY4 expects 4 bits, got 1.
+./syn_vivado.v:4164:        : Padding 3 high bits of the port.
+./syn_vivado.v:4164: warning: Port 2 (O) of CARRY4 expects 4 bits, got 2.
+./syn_vivado.v:4164:        : Padding 2 high bits of the port.
+./syn_vivado.v:4685: warning: Port 1 (CO) of CARRY4 expects 4 bits, got 2.
+./syn_vivado.v:4685:        : Padding 2 high bits of the port.
+./syn_vivado.v:5044: warning: Port 2 (O) of CARRY4 expects 4 bits, got 1.
+./syn_vivado.v:5044:        : Padding 3 high bits of the port.
+./syn_vivado.v:5051: warning: Port 1 (CO) of CARRY4 expects 4 bits, got 1.
+./syn_vivado.v:5051:        : Padding 3 high bits of the port.
+./syn_vivado.v:5051: warning: Port 2 (O) of CARRY4 expects 4 bits, got 2.
+./syn_vivado.v:5051:        : Padding 2 high bits of the port.
+./syn_vivado.v:6801: warning: Port 1 (CO) of CARRY4 expects 4 bits, got 3.
+./syn_vivado.v:6801:        : Padding 1 high bits of the port.
+warning: Found both default and `timescale based delays. Use
+       : -Wtimescale to find the module(s) with no `timescale.

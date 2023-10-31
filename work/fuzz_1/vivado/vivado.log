@@ -1,0 +1,510 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri Jul 21 20:30:09 2023
+# Process ID: 3771292
+# Current directory: /doc/wxy/2023_7_21/fuzz_1/vivado
+# Command line: vivado -mode batch -source vivado_top.tcl
+# Log file: /doc/wxy/2023_7_21/fuzz_1/vivado/vivado.log
+# Journal file: /doc/wxy/2023_7_21/fuzz_1/vivado/vivado.jou
+# Running On: tsmc-System-Product-Name, OS: Linux, CPU Frequency: 5115.770 MHz, CPU Physical cores: 10, Host memory: 134955 MB
+#-----------------------------------------------------------
+source vivado_top.tcl
+# set_msg_config -id {Synth 8-5821} -new_severity {WARNING}
+# read_verilog rtl.v
+# synth_design -part xc7k70t -top top
+Command: synth_design -part xc7k70t -top top
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3771341
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2898.492 ; gain = 0.000 ; free physical = 12975 ; free virtual = 126343
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:1]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6157] synthesizing module 'module21' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:405]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6157] synthesizing module 'module46' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:523]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6155] done synthesizing module 'module46' (0#1) [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:523]
+WARNING: [Synth 8-689] width (15) of port connection 'y' does not match port width (178) of module 'module46' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:516]
+WARNING: [Synth 8-689] width (15) of port connection 'wire48' does not match port width (4) of module 'module46' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:516]
+WARNING: [Synth 8-689] width (14) of port connection 'wire49' does not match port width (3) of module 'module46' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:516]
+INFO: [Synth 8-6155] done synthesizing module 'module21' (0#1) [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:405]
+WARNING: [Synth 8-689] width (10) of port connection 'wire26' does not match port width (4) of module 'module21' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:104]
+WARNING: [Synth 8-689] width (12) of port connection 'wire25' does not match port width (4) of module 'module21' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:104]
+WARNING: [Synth 8-689] width (21) of port connection 'y' does not match port width (226) of module 'module21' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:104]
+INFO: [Synth 8-6157] synthesizing module 'module74' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:130]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6157] synthesizing module 'module86' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:985]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6155] done synthesizing module 'module86' (0#1) [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:985]
+WARNING: [Synth 8-689] width (22) of port connection 'y' does not match port width (264) of module 'module86' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:240]
+WARNING: [Synth 8-689] width (9) of port connection 'wire90' does not match port width (4) of module 'module86' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:240]
+WARNING: [Synth 8-689] width (10) of port connection 'wire87' does not match port width (3) of module 'module86' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:240]
+INFO: [Synth 8-6157] synthesizing module 'module125' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:876]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6155] done synthesizing module 'module125' (0#1) [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:876]
+WARNING: [Synth 8-689] width (10) of port connection 'y' does not match port width (284) of module 'module125' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:302]
+WARNING: [Synth 8-689] width (22) of port connection 'wire128' does not match port width (16) of module 'module125' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:302]
+INFO: [Synth 8-6157] synthesizing module 'module161' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:742]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6155] done synthesizing module 'module161' (0#1) [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:742]
+WARNING: [Synth 8-689] width (11) of port connection 'y' does not match port width (274) of module 'module161' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:306]
+WARNING: [Synth 8-689] width (20) of port connection 'wire165' does not match port width (3) of module 'module161' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:306]
+WARNING: [Synth 8-689] width (17) of port connection 'wire164' does not match port width (6) of module 'module161' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:306]
+INFO: [Synth 8-6157] synthesizing module 'module198' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:641]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-451] negative shift count is treated as unsigned [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:720]
+INFO: [Synth 8-6155] done synthesizing module 'module198' (0#1) [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:641]
+WARNING: [Synth 8-689] width (12) of port connection 'y' does not match port width (210) of module 'module198' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:320]
+WARNING: [Synth 8-689] width (10) of port connection 'wire201' does not match port width (9) of module 'module198' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:320]
+INFO: [Synth 8-6155] done synthesizing module 'module74' (0#1) [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:130]
+WARNING: [Synth 8-689] width (21) of port connection 'wire78' does not match port width (14) of module 'module74' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:105]
+WARNING: [Synth 8-689] width (4) of port connection 'y' does not match port width (557) of module 'module74' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:105]
+WARNING: [Synth 8-689] width (6) of port connection 'y' does not match port width (274) of module 'module161' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:125]
+WARNING: [Synth 8-689] width (12) of port connection 'wire165' does not match port width (3) of module 'module161' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:125]
+WARNING: [Synth 8-689] width (14) of port connection 'wire164' does not match port width (6) of module 'module161' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:125]
+WARNING: [Synth 8-689] width (22) of port connection 'wire162' does not match port width (20) of module 'module161' [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:125]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:1]
+WARNING: [Synth 8-3917] design top has port y[318] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[317] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[316] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[315] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[314] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[313] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[312] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[311] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[310] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[309] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[308] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[307] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[247] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[246] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[245] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[244] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[243] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[242] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[241] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[240] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[239] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[238] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[237] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[236] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[235] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[234] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[233] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[232] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[231] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[230] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[229] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[228] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[227] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[226] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[225] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[224] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[223] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[222] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[221] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[220] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[219] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[218] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[216] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[215] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[214] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[213] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[212] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[211] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[210] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[209] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[208] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[207] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[206] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[178] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[177] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[176] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[175] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[174] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[173] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[172] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[171] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[170] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[169] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[168] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[167] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[166] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[165] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[164] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[163] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[161] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[160] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[159] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[158] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[157] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[156] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[155] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[154] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[153] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[152] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[151] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[150] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[149] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[148] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[147] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[92] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[91] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[90] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[89] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[88] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[87] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[86] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[85] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[84] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[83] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[82] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[81] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[80] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[79] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[78] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[77] driven by constant 0
+INFO: [Common 17-14] Message 'Synth 8-3917' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2898.492 ; gain = 0.000 ; free physical = 14059 ; free virtual = 127428
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2898.492 ; gain = 0.000 ; free physical = 14059 ; free virtual = 127429
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbg676-3
+INFO: [Device 21-403] Loading part xc7k70tfbg676-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2906.492 ; gain = 8.000 ; free physical = 14059 ; free virtual = 127429
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3936] Found unconnected internal register 'reg240_reg' and it is trimmed from '18' to '10' bits. [/doc/wxy/2023_7_21/fuzz_1/vivado/rtl.v:185]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2906.492 ; gain = 8.000 ; free physical = 13989 ; free virtual = 127360
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   22 Bit       Adders := 1     
+	   3 Input   21 Bit       Adders := 2     
+	   2 Input   16 Bit       Adders := 2     
+	   2 Input   14 Bit       Adders := 1     
+	   2 Input   13 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 2     
+	   3 Input    4 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
++---XORs : 
+	   2 Input     21 Bit         XORs := 1     
+	   2 Input     20 Bit         XORs := 7     
+	   2 Input     18 Bit         XORs := 1     
+	   2 Input     17 Bit         XORs := 1     
+	   2 Input     16 Bit         XORs := 1     
+	   2 Input     15 Bit         XORs := 1     
+	   2 Input     14 Bit         XORs := 1     
+	   2 Input     13 Bit         XORs := 1     
+	   2 Input     12 Bit         XORs := 1     
+	   2 Input     11 Bit         XORs := 3     
+	   2 Input     10 Bit         XORs := 2     
+	   2 Input      8 Bit         XORs := 2     
+	   2 Input      6 Bit         XORs := 1     
+	   2 Input      5 Bit         XORs := 1     
+	   2 Input      3 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 2     
++---XORs : 
+	               33 Bit    Wide XORs := 1     
+	               23 Bit    Wide XORs := 1     
+	               22 Bit    Wide XORs := 3     
+	               21 Bit    Wide XORs := 3     
+	               20 Bit    Wide XORs := 6     
+	               18 Bit    Wide XORs := 1     
+	               17 Bit    Wide XORs := 1     
+	               16 Bit    Wide XORs := 4     
+	               15 Bit    Wide XORs := 3     
+	               14 Bit    Wide XORs := 1     
+	               12 Bit    Wide XORs := 5     
+	               11 Bit    Wide XORs := 4     
+	               10 Bit    Wide XORs := 6     
+	                7 Bit    Wide XORs := 4     
+	                5 Bit    Wide XORs := 3     
+	                4 Bit    Wide XORs := 4     
+	                3 Bit    Wide XORs := 1     
+	                1 Bit    Wide XORs := 5     
++---Registers : 
+	               22 Bit    Registers := 1     
+	               21 Bit    Registers := 7     
+	               20 Bit    Registers := 7     
+	               19 Bit    Registers := 3     
+	               18 Bit    Registers := 1     
+	               17 Bit    Registers := 4     
+	               16 Bit    Registers := 5     
+	               15 Bit    Registers := 5     
+	               14 Bit    Registers := 3     
+	               13 Bit    Registers := 2     
+	               12 Bit    Registers := 3     
+	               11 Bit    Registers := 3     
+	               10 Bit    Registers := 6     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 5     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 8     
+	                5 Bit    Registers := 9     
+	                4 Bit    Registers := 6     
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Multipliers : 
+	              12x16  Multipliers := 2     
+	               1x13  Multipliers := 1     
+	               1x12  Multipliers := 1     
+	               8x11  Multipliers := 1     
+	               5x10  Multipliers := 1     
+	                9x9  Multipliers := 1     
+	                4x8  Multipliers := 1     
+	                1x5  Multipliers := 1     
+	                1x1  Multipliers := 3     
++---Muxes : 
+	   2 Input   40 Bit        Muxes := 1     
+	   2 Input   30 Bit        Muxes := 1     
+	   2 Input   29 Bit        Muxes := 1     
+	   2 Input   23 Bit        Muxes := 1     
+	   2 Input   22 Bit        Muxes := 4     
+	   2 Input   21 Bit        Muxes := 14    
+	   2 Input   20 Bit        Muxes := 15    
+	   2 Input   19 Bit        Muxes := 1     
+	   2 Input   18 Bit        Muxes := 2     
+	   2 Input   17 Bit        Muxes := 12    
+	   2 Input   16 Bit        Muxes := 17    
+	   2 Input   15 Bit        Muxes := 11    
+	   2 Input   14 Bit        Muxes := 2     
+	   2 Input   13 Bit        Muxes := 11    
+	   2 Input   12 Bit        Muxes := 12    
+	   2 Input   11 Bit        Muxes := 6     
+	   2 Input   10 Bit        Muxes := 6     
+	   2 Input    9 Bit        Muxes := 16    
+	   2 Input    8 Bit        Muxes := 13    
+	   3 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 13    
+	   2 Input    6 Bit        Muxes := 8     
+	   2 Input    5 Bit        Muxes := 5     
+	   2 Input    4 Bit        Muxes := 22    
+	   3 Input    4 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 6     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 15    
+	   4 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port wire129[20] in module module125 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire129[19] in module module125 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire129[18] in module module125 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire129[17] in module module125 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire129[16] in module module125 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire129[15] in module module125 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire129[14] in module module125 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire129[13] in module module125 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire129[12] in module module125 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire129[11] in module module125 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire129[10] in module module125 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire129[9] in module module125 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2906.492 ; gain = 8.000 ; free physical = 13748 ; free virtual = 127123
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2906.492 ; gain = 8.000 ; free physical = 13748 ; free virtual = 127123
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2906.492 ; gain = 8.000 ; free physical = 13748 ; free virtual = 127124
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2906.492 ; gain = 8.000 ; free physical = 13743 ; free virtual = 127118
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2906.492 ; gain = 8.000 ; free physical = 13743 ; free virtual = 127118
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2906.492 ; gain = 8.000 ; free physical = 13743 ; free virtual = 127118
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2906.492 ; gain = 8.000 ; free physical = 13743 ; free virtual = 127118
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2906.492 ; gain = 8.000 ; free physical = 13743 ; free virtual = 127118
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2906.492 ; gain = 8.000 ; free physical = 13743 ; free virtual = 127118
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    30|
+|3     |LUT1   |    29|
+|4     |LUT2   |    48|
+|5     |LUT3   |    31|
+|6     |LUT4   |    69|
+|7     |LUT5   |    49|
+|8     |LUT6   |   107|
+|9     |FDRE   |    18|
+|10    |IBUF   |    64|
+|11    |OBUF   |   319|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   765|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2906.492 ; gain = 8.000 ; free physical = 13743 ; free virtual = 127118
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 329 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2906.492 ; gain = 8.000 ; free physical = 13753 ; free virtual = 127129
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2906.500 ; gain = 8.000 ; free physical = 13753 ; free virtual = 127129
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2906.500 ; gain = 0.000 ; free physical = 13840 ; free virtual = 127215
+INFO: [Netlist 29-17] Analyzing 30 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2962.520 ; gain = 0.000 ; free physical = 13765 ; free virtual = 127140
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 8b86e233
+INFO: [Common 17-83] Releasing license: Synthesis
+29 Infos, 145 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 2962.520 ; gain = 64.031 ; free physical = 13969 ; free virtual = 127344
+# write_verilog -force syn_vivado.v
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 21 20:30:29 2023...
+------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    30|
+|3     |LUT1   |    29|
+|4     |LUT2   |    48|
+|5     |LUT3   |    31|
+|6     |LUT4   |    69|
+|7     |LUT5   |    49|
+|8     |LUT6   |   107|
+|9     |FDRE   |    18|
+|10    |IBUF   |    64|
+|11    |OBUF   |   319|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   765|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2906.492 ; gain = 8.000 ; free physical = 13743 ; free virtual = 127118
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 329 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2906.492 ; gain = 8.000 ; free physical = 13753 ; free virtual = 127129
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2906.500 ; gain = 8.000 ; free physical = 13753 ; free virtual = 127129
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2906.500 ; gain = 0.000 ; free physical = 13840 ; free virtual = 127215
+INFO: [Netlist 29-17] Analyzing 30 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2962.520 ; gain = 0.000 ; free physical = 13765 ; free virtual = 127140
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 8b86e233
+INFO: [Common 17-83] Releasing license: Synthesis
+29 Infos, 145 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 2962.520 ; gain = 64.031 ; free physical = 13969 ; free virtual = 127344
+# write_verilog -force syn_vivado.v
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 21 20:30:29 2023...

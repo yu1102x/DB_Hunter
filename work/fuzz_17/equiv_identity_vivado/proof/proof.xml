@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2023-07-21T20:41:32" hostname="tsmc-System-Product-Name" package="proof" id="0" name="default" tests="1" errors="1" failures="0" time="0" skipped="0">
+<properties>
+<property name="os" value="Linux"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="ERROR"/>
+</properties>
+<testcase classname="default" name="default" time="0">
+<error type="ERROR"/>
+</testcase>
+<system-out>SBY 20:41:32 [proof] Removing directory '/doc/wxy/2023_7_21/fuzz_17/equiv_identity_vivado/proof'.
+SBY 20:41:32 [proof] Copy '/root/.cabal/store/ghc-8.6.5/verismith-1.0.0.2-05803d1a9dd1b31fa5e685873f3f3eb6965857608706500c1d15ff488351d7bb/share/data/cells_cmos.v' to '/doc/wxy/2023_7_21/fuzz_17/equiv_identity_vivado/proof/src/cells_cmos.v'.
+SBY 20:41:32 [proof] Copy '/root/.cabal/store/ghc-8.6.5/verismith-1.0.0.2-05803d1a9dd1b31fa5e685873f3f3eb6965857608706500c1d15ff488351d7bb/share/data/cells_cyclone_v.v' to '/doc/wxy/2023_7_21/fuzz_17/equiv_identity_vivado/proof/src/cells_cyclone_v.v'.
+SBY 20:41:32 [proof] Copy '/root/.cabal/store/ghc-8.6.5/verismith-1.0.0.2-05803d1a9dd1b31fa5e685873f3f3eb6965857608706500c1d15ff488351d7bb/share/data/cells_verific.v' to '/doc/wxy/2023_7_21/fuzz_17/equiv_identity_vivado/proof/src/cells_verific.v'.
+SBY 20:41:32 [proof] Copy '/root/.cabal/store/ghc-8.6.5/verismith-1.0.0.2-05803d1a9dd1b31fa5e685873f3f3eb6965857608706500c1d15ff488351d7bb/share/data/cells_xilinx_7.v' to '/doc/wxy/2023_7_21/fuzz_17/equiv_identity_vivado/proof/src/cells_xilinx_7.v'.
+SBY 20:41:32 [proof] Copy '/root/.cabal/store/ghc-8.6.5/verismith-1.0.0.2-05803d1a9dd1b31fa5e685873f3f3eb6965857608706500c1d15ff488351d7bb/share/data/cells_yosys.v' to '/doc/wxy/2023_7_21/fuzz_17/equiv_identity_vivado/proof/src/cells_yosys.v'.
+SBY 20:41:32 [proof] Copy '/doc/wxy/2023_7_21/fuzz_17/equiv_identity_vivado/syn_vivado.v' to '/doc/wxy/2023_7_21/fuzz_17/equiv_identity_vivado/proof/src/syn_vivado.v'.
+SBY 20:41:32 [proof] Copy '/doc/wxy/2023_7_21/fuzz_17/equiv_identity_vivado/syn_identity.v' to '/doc/wxy/2023_7_21/fuzz_17/equiv_identity_vivado/proof/src/syn_identity.v'.
+SBY 20:41:32 [proof] Copy '/doc/wxy/2023_7_21/fuzz_17/equiv_identity_vivado/top.v' to '/doc/wxy/2023_7_21/fuzz_17/equiv_identity_vivado/proof/src/top.v'.
+SBY 20:41:32 [proof] engine_0: abc pdr
+SBY 20:41:32 [proof] base: starting process &quot;cd proof/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 20:41:32 [proof] base: Warning: Yosys has only limited support for tri-state logic at the moment. (cells_xilinx_7.v:18)
+SBY 20:41:32 [proof] base: Warning: Resizing cell port top.top_2.y from 91 bits to 192 bits.
+SBY 20:41:32 [proof] base: Warning: Resizing cell port top.top_1.y from 91 bits to 192 bits.
+SBY 20:41:32 [proof] base: Warning: Resizing cell port top_2.reg9_reg[0]_i_2.CO from 3 bits to 4 bits.
+SBY 20:41:32 [proof] base: Warning: Resizing cell port top_2.reg5_reg[0]_i_2.CO from 2 bits to 4 bits.
+SBY 20:41:32 [proof] base: ERROR: Command syntax error: Unknown option or option in arguments.
+SBY 20:41:32 [proof] base: &gt; hierarchy -smtcheck
+SBY 20:41:32 [proof] base: &gt;           ^
+SBY 20:41:32 [proof] base: finished (returncode=1)
+SBY 20:41:32 [proof] base: task failed. ERROR.
+SBY 20:41:32 [proof] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 20:41:32 [proof] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 20:41:32 [proof] summary: engine_0 (abc pdr) did not return a status
+SBY 20:41:32 [proof] summary: engine_0 did not produce any traces
+SBY 20:41:32 [proof] DONE (ERROR, rc=16)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

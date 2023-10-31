@@ -1,0 +1,2087 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend: cells_cmos.v
+Parsing formal SystemVerilog input from `cells_cmos.v' to AST representation.
+Generating RTLIL representation for module `\NOT'.
+Generating RTLIL representation for module `\NAND'.
+Generating RTLIL representation for module `\NOR'.
+Generating RTLIL representation for module `\DFF'.
+Generating RTLIL representation for module `\DFFSR'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: cells_cyclone_v.v
+Parsing formal SystemVerilog input from `cells_cyclone_v.v' to AST representation.
+Generating RTLIL representation for module `\dffeas'.
+Generating RTLIL representation for module `\cyclonev_lcell_comb'.
+Note: Assuming pure combinatorial block at cells_cyclone_v.v:131 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\cyclonev_clkena'.
+Generating RTLIL representation for module `\cyclonev_io_ibuf'.
+Generating RTLIL representation for module `\cyclonev_io_obuf'.
+Generating RTLIL representation for module `\cyclone10lp_lcell_comb'.
+Note: Assuming pure combinatorial block at cells_cyclone_v.v:351 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\cyclone10lp_io_ibuf'.
+Generating RTLIL representation for module `\cyclone10lp_io_obuf'.
+Generating RTLIL representation for module `\cyclone10lp_clkena'.
+Generating RTLIL representation for module `\cyclone10gx_lcell_comb'.
+Note: Assuming pure combinatorial block at cells_cyclone_v.v:570 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\cyclone10gx_io_ibuf'.
+Generating RTLIL representation for module `\cyclone10gx_io_obuf'.
+Generating RTLIL representation for module `\cyclone10gx_clkena'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: cells_verific.v
+Parsing formal SystemVerilog input from `cells_verific.v' to AST representation.
+Generating RTLIL representation for module `\VERIFIC_FADD'.
+Generating RTLIL representation for module `\VERIFIC_DFFRS'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: cells_xilinx_7.v
+Parsing formal SystemVerilog input from `cells_xilinx_7.v' to AST representation.
+Warning: Yosys has only limited support for tri-state logic at the moment. (cells_xilinx_7.v:18)
+Generating RTLIL representation for module `\IBUF'.
+Generating RTLIL representation for module `\OBUF'.
+Generating RTLIL representation for module `\OBUFT'.
+Generating RTLIL representation for module `\GND'.
+Generating RTLIL representation for module `\INV'.
+Generating RTLIL representation for module `\LUT1'.
+Generating RTLIL representation for module `\LUT2'.
+Generating RTLIL representation for module `\LUT3'.
+Generating RTLIL representation for module `\LUT4'.
+Generating RTLIL representation for module `\LUT5'.
+Generating RTLIL representation for module `\LUT6'.
+Generating RTLIL representation for module `\MUXCY'.
+Generating RTLIL representation for module `\MUXF7'.
+Generating RTLIL representation for module `\MUXF8'.
+Generating RTLIL representation for module `\VCC'.
+Generating RTLIL representation for module `\XORCY'.
+Generating RTLIL representation for module `\CARRY4'.
+Generating RTLIL representation for module `\FD_1'.
+Generating RTLIL representation for module `\FDC_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:148 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDCE_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:163 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDCE'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:179 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDCP_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:195 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDCPE_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:212 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDCPE'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:230 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDCP'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:248 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDC'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:264 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDDRCPE'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:288 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDDRRSE'.
+Generating RTLIL representation for module `\FDE_1'.
+Generating RTLIL representation for module `\FDE'.
+Generating RTLIL representation for module `\FDP_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:401 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDPE_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:416 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDPE'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:432 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDP'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:448 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\FDR_1'.
+Generating RTLIL representation for module `\FDRE_1'.
+Generating RTLIL representation for module `\FDRE'.
+Generating RTLIL representation for module `\FDRS_1'.
+Generating RTLIL representation for module `\FDRSE_1'.
+Generating RTLIL representation for module `\FDRSE'.
+Generating RTLIL representation for module `\FDRS'.
+Generating RTLIL representation for module `\FDR'.
+Generating RTLIL representation for module `\FDS_1'.
+Generating RTLIL representation for module `\FDSE_1'.
+Generating RTLIL representation for module `\FDSE'.
+Generating RTLIL representation for module `\FDS'.
+Generating RTLIL representation for module `\FD'.
+Generating RTLIL representation for module `\LD_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:664 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDC_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:677 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDCE_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:692 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDCE'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:707 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDCP_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:722 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDCPE_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:739 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDCPE'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:756 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDCP'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:773 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDC'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:790 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDE_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:805 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDE'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:818 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDP_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:831 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDPE_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:846 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDPE'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:861 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LDP'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:876 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\LD'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:891 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\BUFCF'.
+Generating RTLIL representation for module `\BUFE'.
+Generating RTLIL representation for module `\BUFGCE_1'.
+Generating RTLIL representation for module `\BUFGCE'.
+Generating RTLIL representation for module `\BUFGCTRL'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:958 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\BUFG_LB'.
+Generating RTLIL representation for module `\BUFGMUX_1'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:998 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:1001 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:1004 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:1009 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\BUFGMUX_CTRL'.
+Generating RTLIL representation for module `\BUFGMUX'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:1042 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:1045 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:1048 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:1053 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\BUFGMUX_VIRTEX4'.
+Generating RTLIL representation for module `\BUFGP'.
+Generating RTLIL representation for module `\BUFG'.
+Generating RTLIL representation for module `\BUFHCE'.
+Generating RTLIL representation for module `\BUFH'.
+Generating RTLIL representation for module `\BUFIO2FB'.
+Generating RTLIL representation for module `\BUFIODQS'.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:1146 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at cells_xilinx_7.v:1150 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\BUFIO'.
+Generating RTLIL representation for module `\BUFMRCE'.
+Generating RTLIL representation for module `\BUFMR'.
+Generating RTLIL representation for module `\BUFT'.
+Generating RTLIL representation for module `\BUF'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: cells_yosys.v
+Parsing formal SystemVerilog input from `cells_yosys.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: syn_identity.v
+Parsing formal SystemVerilog input from `syn_identity.v' to AST representation.
+Generating RTLIL representation for module `\top_1'.
+Generating RTLIL representation for module `\module10_1'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: syn_yosys.v
+Parsing formal SystemVerilog input from `syn_yosys.v' to AST representation.
+Generating RTLIL representation for module `\module10_2'.
+Generating RTLIL representation for module `\top_2'.
+Successfully finished Verilog frontend.
+
+8. Executing Verilog-2005 frontend: top.v
+Parsing formal SystemVerilog input from `top.v' to AST representation.
+Generating RTLIL representation for module `\top'.
+Successfully finished Verilog frontend.
+
+9. Executing PREP pass.
+
+9.1. Executing HIERARCHY pass (managing design hierarchy).
+
+9.1.1. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \top_2
+Used module:         \module10_2
+Used module:     \top_1
+Used module:         \module10_1
+
+9.1.2. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \top_2
+Used module:         \module10_2
+Used module:     \top_1
+Used module:         \module10_1
+Removing unused module `\$_DLATCH_P_'.
+Removing unused module `\$_DLATCH_N_'.
+Removing unused module `\BUF'.
+Removing unused module `\BUFT'.
+Removing unused module `\BUFMR'.
+Removing unused module `\BUFMRCE'.
+Removing unused module `\BUFIO'.
+Removing unused module `\BUFIODQS'.
+Removing unused module `\BUFIO2FB'.
+Removing unused module `\BUFH'.
+Removing unused module `\BUFHCE'.
+Removing unused module `\BUFG'.
+Removing unused module `\BUFGP'.
+Removing unused module `\BUFGMUX_VIRTEX4'.
+Removing unused module `\BUFGMUX'.
+Removing unused module `\BUFGMUX_CTRL'.
+Removing unused module `\BUFGMUX_1'.
+Removing unused module `\BUFG_LB'.
+Removing unused module `\BUFGCTRL'.
+Removing unused module `\BUFGCE'.
+Removing unused module `\BUFGCE_1'.
+Removing unused module `\BUFE'.
+Removing unused module `\BUFCF'.
+Removing unused module `\LD'.
+Removing unused module `\LDP'.
+Removing unused module `\LDPE'.
+Removing unused module `\LDPE_1'.
+Removing unused module `\LDP_1'.
+Removing unused module `\LDE'.
+Removing unused module `\LDE_1'.
+Removing unused module `\LDC'.
+Removing unused module `\LDCP'.
+Removing unused module `\LDCPE'.
+Removing unused module `\LDCPE_1'.
+Removing unused module `\LDCP_1'.
+Removing unused module `\LDCE'.
+Removing unused module `\LDCE_1'.
+Removing unused module `\LDC_1'.
+Removing unused module `\LD_1'.
+Removing unused module `\FD'.
+Removing unused module `\FDS'.
+Removing unused module `\FDSE'.
+Removing unused module `\FDSE_1'.
+Removing unused module `\FDS_1'.
+Removing unused module `\FDR'.
+Removing unused module `\FDRS'.
+Removing unused module `\FDRSE'.
+Removing unused module `\FDRSE_1'.
+Removing unused module `\FDRS_1'.
+Removing unused module `\FDRE'.
+Removing unused module `\FDRE_1'.
+Removing unused module `\FDR_1'.
+Removing unused module `\FDP'.
+Removing unused module `\FDPE'.
+Removing unused module `\FDPE_1'.
+Removing unused module `\FDP_1'.
+Removing unused module `\FDE'.
+Removing unused module `\FDE_1'.
+Removing unused module `\FDDRRSE'.
+Removing unused module `\FDDRCPE'.
+Removing unused module `\FDC'.
+Removing unused module `\FDCP'.
+Removing unused module `\FDCPE'.
+Removing unused module `\FDCPE_1'.
+Removing unused module `\FDCP_1'.
+Removing unused module `\FDCE'.
+Removing unused module `\FDCE_1'.
+Removing unused module `\FDC_1'.
+Removing unused module `\FD_1'.
+Removing unused module `\CARRY4'.
+Removing unused module `\XORCY'.
+Removing unused module `\VCC'.
+Removing unused module `\MUXF8'.
+Removing unused module `\MUXF7'.
+Removing unused module `\MUXCY'.
+Removing unused module `\LUT6'.
+Removing unused module `\LUT5'.
+Removing unused module `\LUT4'.
+Removing unused module `\LUT3'.
+Removing unused module `\LUT2'.
+Removing unused module `\LUT1'.
+Removing unused module `\INV'.
+Removing unused module `\GND'.
+Removing unused module `\OBUFT'.
+Removing unused module `\OBUF'.
+Removing unused module `\IBUF'.
+Removing unused module `\VERIFIC_DFFRS'.
+Removing unused module `\VERIFIC_FADD'.
+Removing unused module `\cyclone10gx_clkena'.
+Removing unused module `\cyclone10gx_io_obuf'.
+Removing unused module `\cyclone10gx_io_ibuf'.
+Removing unused module `\cyclone10gx_lcell_comb'.
+Removing unused module `\cyclone10lp_clkena'.
+Removing unused module `\cyclone10lp_io_obuf'.
+Removing unused module `\cyclone10lp_io_ibuf'.
+Removing unused module `\cyclone10lp_lcell_comb'.
+Removing unused module `\cyclonev_io_obuf'.
+Removing unused module `\cyclonev_io_ibuf'.
+Removing unused module `\cyclonev_clkena'.
+Removing unused module `\cyclonev_lcell_comb'.
+Removing unused module `\dffeas'.
+Removing unused module `\DFFSR'.
+Removing unused module `\DFF'.
+Removing unused module `\NOR'.
+Removing unused module `\NAND'.
+Removing unused module `\NOT'.
+Removed 106 unused modules.
+Module top directly or indirectly contains formal properties -> setting "keep" attribute.
+Mapping positional arguments of cell top_1.modinst21 (module10_1).
+Warning: Resizing cell port top_1.modinst21.y from 22 bits to 71 bits.
+Warning: Resizing cell port top_1.modinst21.wire13 from 15 bits to 11 bits.
+Warning: Resizing cell port top_1.modinst21.wire12 from 16 bits to 5 bits.
+Warning: Resizing cell port top_1.modinst21.wire11 from 20 bits to 14 bits.
+Warning: Resizing cell port top.top_2.y from 91 bits to 421 bits.
+Warning: Resizing cell port top.top_1.y from 91 bits to 421 bits.
+
+9.2. Executing PROC pass (convert processes to netlists).
+
+9.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+9.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 2 switch rules as full_case in process $proc$syn_identity.v:171$819 in module top_1.
+Marked 1 switch rules as full_case in process $proc$syn_identity.v:144$776 in module top_1.
+Removed a total of 0 dead cases.
+
+9.2.3. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\top_2.$proc$syn_yosys.v:2016$2351'.
+  Set init value: \reg6_reg[5] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:2012$2350'.
+  Set init value: \reg6_reg[4] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:2008$2349'.
+  Set init value: \reg6_reg[3] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:2004$2348'.
+  Set init value: \reg6_reg[2] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:2000$2347'.
+  Set init value: \reg6_reg[1] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1996$2346'.
+  Set init value: \reg6_reg[0] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1962$2345'.
+  Set init value: \reg23_reg[8] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1958$2344'.
+  Set init value: \reg23_reg[7] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1954$2343'.
+  Set init value: \reg23_reg[6] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1950$2342'.
+  Set init value: \reg23_reg[5] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1946$2341'.
+  Set init value: \reg23_reg[4] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1942$2340'.
+  Set init value: \reg23_reg[3] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1938$2339'.
+  Set init value: \reg23_reg[2] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1934$2338'.
+  Set init value: \reg23_reg[1] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1930$2337'.
+  Set init value: \reg23_reg[0] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1926$2336'.
+  Set init value: \reg27_reg[4] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1922$2335'.
+  Set init value: \reg27_reg[3] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1918$2334'.
+  Set init value: \reg27_reg[2] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1914$2333'.
+  Set init value: \reg27_reg[1] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1910$2332'.
+  Set init value: \reg27_reg[0] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1906$2331'.
+  Set init value: \reg28_reg[0] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1902$2330'.
+  Set init value: \reg29_reg[7] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1898$2329'.
+  Set init value: \reg29_reg[6] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1894$2328'.
+  Set init value: \reg29_reg[5] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1890$2327'.
+  Set init value: \reg29_reg[4] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1886$2326'.
+  Set init value: \reg29_reg[3] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1882$2325'.
+  Set init value: \reg29_reg[2] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1878$2324'.
+  Set init value: \reg29_reg[1] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1874$2323'.
+  Set init value: \reg29_reg[0] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1870$2322'.
+  Set init value: \reg30_reg[0] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1866$2321'.
+  Set init value: \reg31_reg[2] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1862$2320'.
+  Set init value: \reg31_reg[1] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1858$2319'.
+  Set init value: \reg31_reg[0] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1854$2318'.
+  Set init value: \reg32_reg[6] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1850$2317'.
+  Set init value: \reg32_reg[5] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1846$2316'.
+  Set init value: \reg32_reg[4] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1842$2315'.
+  Set init value: \reg32_reg[3] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1838$2314'.
+  Set init value: \reg32_reg[2] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1834$2313'.
+  Set init value: \reg32_reg[1] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1830$2312'.
+  Set init value: \reg32_reg[0] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1826$2311'.
+  Set init value: \reg33_reg[0] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1822$2310'.
+  Set init value: \reg37_reg[4] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1818$2309'.
+  Set init value: \reg37_reg[3] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1814$2308'.
+  Set init value: \reg37_reg[2] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1810$2307'.
+  Set init value: \reg37_reg[1] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1806$2306'.
+  Set init value: \reg37_reg[0] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1802$2305'.
+  Set init value: \reg39_reg[0] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1798$2304'.
+  Set init value: \reg40_reg[0] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1706$2303'.
+  Set init value: \reg47_reg[4] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1702$2302'.
+  Set init value: \reg47_reg[3] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1698$2301'.
+  Set init value: \reg47_reg[2] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1694$2300'.
+  Set init value: \reg47_reg[1] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:1690$2299'.
+  Set init value: \reg47_reg[0] = 1'0
+Found init rule in `\top_2.$proc$syn_yosys.v:864$2298'.
+  Set init value: \reg7 = 15'000000000000000
+Found init rule in `\top_2.$proc$syn_yosys.v:858$2297'.
+  Set init value: \reg46 = 14'00000000000000
+Found init rule in `\top_2.$proc$syn_yosys.v:856$2296'.
+  Set init value: \reg43 = 11'00000000000
+Found init rule in `\top_2.$proc$syn_yosys.v:855$2295'.
+  Set init value: \reg42 = 15'000000000000000
+Found init rule in `\top_2.$proc$syn_yosys.v:854$2294'.
+  Set init value: \reg41 = 4'0000
+Found init rule in `\top_1.$proc$syn_identity.v:43$915'.
+  Set init value: \reg6 = 16'0000000000000000
+Found init rule in `\top_1.$proc$syn_identity.v:42$914'.
+  Set init value: \reg7 = 15'000000000000000
+Found init rule in `\top_1.$proc$syn_identity.v:38$913'.
+  Set init value: \reg22 = 21'000000000000000000000
+Found init rule in `\top_1.$proc$syn_identity.v:37$912'.
+  Set init value: \reg23 = 22'0000000000000000000000
+Found init rule in `\top_1.$proc$syn_identity.v:33$911'.
+  Set init value: \reg27 = 9'000000000
+Found init rule in `\top_1.$proc$syn_identity.v:32$910'.
+  Set init value: \reg28 = 15'000000000000000
+Found init rule in `\top_1.$proc$syn_identity.v:31$909'.
+  Set init value: \reg29 = 11'00000000000
+Found init rule in `\top_1.$proc$syn_identity.v:30$908'.
+  Set init value: \reg30 = 21'000000000000000000000
+Found init rule in `\top_1.$proc$syn_identity.v:29$907'.
+  Set init value: \reg31 = 20'00000000000000000000
+Found init rule in `\top_1.$proc$syn_identity.v:28$906'.
+  Set init value: \reg32 = 10'0000000000
+Found init rule in `\top_1.$proc$syn_identity.v:27$905'.
+  Set init value: \reg33 = 16'0000000000000000
+Found init rule in `\top_1.$proc$syn_identity.v:23$904'.
+  Set init value: \reg37 = 18'000000000000000000
+Found init rule in `\top_1.$proc$syn_identity.v:21$903'.
+  Set init value: \reg39 = 19'0000000000000000000
+Found init rule in `\top_1.$proc$syn_identity.v:20$902'.
+  Set init value: \reg40 = 10'0000000000
+Found init rule in `\top_1.$proc$syn_identity.v:19$901'.
+  Set init value: \reg41 = 4'0000
+Found init rule in `\top_1.$proc$syn_identity.v:18$900'.
+  Set init value: \reg42 = 15'000000000000000
+Found init rule in `\top_1.$proc$syn_identity.v:17$899'.
+  Set init value: \reg43 = 11'00000000000
+Found init rule in `\top_1.$proc$syn_identity.v:16$898'.
+  Set init value: \reg44 = 4'0000
+Found init rule in `\top_1.$proc$syn_identity.v:14$897'.
+  Set init value: \reg46 = 14'00000000000000
+Found init rule in `\top_1.$proc$syn_identity.v:13$896'.
+  Set init value: \reg47 = 9'000000000
+Found init rule in `\top_1.$proc$syn_identity.v:12$895'.
+  Set init value: \reg48 = 5'00000
+Found init rule in `\top_1.$proc$syn_identity.v:11$894'.
+  Set init value: \reg49 = 6'000000
+Found init rule in `\top_1.$proc$syn_identity.v:10$893'.
+  Set init value: \reg50 = 20'00000000000000000000
+Found init rule in `\top.$proc$top.v:13$2358'.
+  Set init value: $formal$top.v:13$2352_EN = 1'0
+
+9.2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+9.2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\top_2.$proc$syn_yosys.v:2016$2351'.
+     1/1: $1\reg6_reg[5][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:2012$2350'.
+     1/1: $1\reg6_reg[4][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:2008$2349'.
+     1/1: $1\reg6_reg[3][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:2004$2348'.
+     1/1: $1\reg6_reg[2][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:2000$2347'.
+     1/1: $1\reg6_reg[1][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1996$2346'.
+     1/1: $1\reg6_reg[0][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1962$2345'.
+     1/1: $1\reg23_reg[8][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1958$2344'.
+     1/1: $1\reg23_reg[7][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1954$2343'.
+     1/1: $1\reg23_reg[6][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1950$2342'.
+     1/1: $1\reg23_reg[5][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1946$2341'.
+     1/1: $1\reg23_reg[4][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1942$2340'.
+     1/1: $1\reg23_reg[3][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1938$2339'.
+     1/1: $1\reg23_reg[2][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1934$2338'.
+     1/1: $1\reg23_reg[1][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1930$2337'.
+     1/1: $1\reg23_reg[0][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1926$2336'.
+     1/1: $1\reg27_reg[4][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1922$2335'.
+     1/1: $1\reg27_reg[3][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1918$2334'.
+     1/1: $1\reg27_reg[2][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1914$2333'.
+     1/1: $1\reg27_reg[1][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1910$2332'.
+     1/1: $1\reg27_reg[0][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1906$2331'.
+     1/1: $1\reg28_reg[0][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1902$2330'.
+     1/1: $1\reg29_reg[7][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1898$2329'.
+     1/1: $1\reg29_reg[6][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1894$2328'.
+     1/1: $1\reg29_reg[5][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1890$2327'.
+     1/1: $1\reg29_reg[4][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1886$2326'.
+     1/1: $1\reg29_reg[3][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1882$2325'.
+     1/1: $1\reg29_reg[2][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1878$2324'.
+     1/1: $1\reg29_reg[1][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1874$2323'.
+     1/1: $1\reg29_reg[0][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1870$2322'.
+     1/1: $1\reg30_reg[0][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1866$2321'.
+     1/1: $1\reg31_reg[2][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1862$2320'.
+     1/1: $1\reg31_reg[1][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1858$2319'.
+     1/1: $1\reg31_reg[0][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1854$2318'.
+     1/1: $1\reg32_reg[6][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1850$2317'.
+     1/1: $1\reg32_reg[5][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1846$2316'.
+     1/1: $1\reg32_reg[4][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1842$2315'.
+     1/1: $1\reg32_reg[3][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1838$2314'.
+     1/1: $1\reg32_reg[2][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1834$2313'.
+     1/1: $1\reg32_reg[1][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1830$2312'.
+     1/1: $1\reg32_reg[0][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1826$2311'.
+     1/1: $1\reg33_reg[0][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1822$2310'.
+     1/1: $1\reg37_reg[4][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1818$2309'.
+     1/1: $1\reg37_reg[3][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1814$2308'.
+     1/1: $1\reg37_reg[2][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1810$2307'.
+     1/1: $1\reg37_reg[1][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1806$2306'.
+     1/1: $1\reg37_reg[0][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1802$2305'.
+     1/1: $1\reg39_reg[0][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1798$2304'.
+     1/1: $1\reg40_reg[0][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1706$2303'.
+     1/1: $1\reg47_reg[4][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1702$2302'.
+     1/1: $1\reg47_reg[3][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1698$2301'.
+     1/1: $1\reg47_reg[2][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1694$2300'.
+     1/1: $1\reg47_reg[1][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1690$2299'.
+     1/1: $1\reg47_reg[0][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:864$2298'.
+     1/1: $0\reg7[14:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:858$2297'.
+     1/1: $0\reg46[13:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:856$2296'.
+     1/1: $0\reg43[10:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:855$2295'.
+     1/1: $0\reg42[14:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:854$2294'.
+     1/1: $0\reg41[3:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:2017$2293'.
+     1/1: $0\reg6_reg[5][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:2013$2292'.
+     1/1: $0\reg6_reg[4][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:2009$2291'.
+     1/1: $0\reg6_reg[3][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:2005$2290'.
+     1/1: $0\reg6_reg[2][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:2001$2289'.
+     1/1: $0\reg6_reg[1][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1997$2288'.
+     1/1: $0\reg6_reg[0][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1994$2287'.
+     1/1: $0\reg7[14:14]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1992$2286'.
+     1/1: $0\reg7[13:13]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1990$2285'.
+     1/1: $0\reg7[12:12]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1988$2284'.
+     1/1: $0\reg7[11:11]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1986$2283'.
+     1/1: $0\reg7[10:10]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1984$2282'.
+     1/1: $0\reg7[9:9]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1982$2281'.
+     1/1: $0\reg7[8:8]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1980$2280'.
+     1/1: $0\reg7[7:7]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1978$2279'.
+     1/1: $0\reg7[6:6]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1976$2278'.
+     1/1: $0\reg7[5:5]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1974$2277'.
+     1/1: $0\reg7[4:4]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1972$2276'.
+     1/1: $0\reg7[3:3]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1970$2275'.
+     1/1: $0\reg7[2:2]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1968$2274'.
+     1/1: $0\reg7[1:1]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1966$2273'.
+     1/1: $0\reg7[0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1963$2272'.
+     1/1: $0\reg23_reg[8][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1959$2271'.
+     1/1: $0\reg23_reg[7][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1955$2270'.
+     1/1: $0\reg23_reg[6][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1951$2269'.
+     1/1: $0\reg23_reg[5][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1947$2268'.
+     1/1: $0\reg23_reg[4][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1943$2267'.
+     1/1: $0\reg23_reg[3][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1939$2266'.
+     1/1: $0\reg23_reg[2][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1935$2265'.
+     1/1: $0\reg23_reg[1][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1931$2264'.
+     1/1: $0\reg23_reg[0][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1927$2263'.
+     1/1: $0\reg27_reg[4][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1923$2262'.
+     1/1: $0\reg27_reg[3][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1919$2261'.
+     1/1: $0\reg27_reg[2][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1915$2260'.
+     1/1: $0\reg27_reg[1][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1911$2259'.
+     1/1: $0\reg27_reg[0][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1907$2258'.
+     1/1: $0\reg28_reg[0][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1903$2257'.
+     1/1: $0\reg29_reg[7][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1899$2256'.
+     1/1: $0\reg29_reg[6][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1895$2255'.
+     1/1: $0\reg29_reg[5][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1891$2254'.
+     1/1: $0\reg29_reg[4][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1887$2253'.
+     1/1: $0\reg29_reg[3][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1883$2252'.
+     1/1: $0\reg29_reg[2][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1879$2251'.
+     1/1: $0\reg29_reg[1][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1875$2250'.
+     1/1: $0\reg29_reg[0][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1871$2249'.
+     1/1: $0\reg30_reg[0][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1867$2248'.
+     1/1: $0\reg31_reg[2][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1863$2247'.
+     1/1: $0\reg31_reg[1][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1859$2246'.
+     1/1: $0\reg31_reg[0][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1855$2245'.
+     1/1: $0\reg32_reg[6][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1851$2244'.
+     1/1: $0\reg32_reg[5][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1847$2243'.
+     1/1: $0\reg32_reg[4][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1843$2242'.
+     1/1: $0\reg32_reg[3][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1839$2241'.
+     1/1: $0\reg32_reg[2][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1835$2240'.
+     1/1: $0\reg32_reg[1][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1831$2239'.
+     1/1: $0\reg32_reg[0][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1827$2238'.
+     1/1: $0\reg33_reg[0][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1823$2237'.
+     1/1: $0\reg37_reg[4][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1819$2236'.
+     1/1: $0\reg37_reg[3][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1815$2235'.
+     1/1: $0\reg37_reg[2][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1811$2234'.
+     1/1: $0\reg37_reg[1][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1807$2233'.
+     1/1: $0\reg37_reg[0][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1803$2232'.
+     1/1: $0\reg39_reg[0][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1799$2231'.
+     1/1: $0\reg40_reg[0][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1796$2230'.
+     1/1: $0\reg41[3:3]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1794$2229'.
+     1/1: $0\reg41[2:2]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1792$2228'.
+     1/1: $0\reg41[1:1]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1790$2227'.
+     1/1: $0\reg41[0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1788$2226'.
+     1/1: $0\reg42[14:14]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1786$2225'.
+     1/1: $0\reg42[13:13]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1784$2224'.
+     1/1: $0\reg42[12:12]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1782$2223'.
+     1/1: $0\reg42[11:11]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1780$2222'.
+     1/1: $0\reg42[10:10]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1778$2221'.
+     1/1: $0\reg42[9:9]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1776$2220'.
+     1/1: $0\reg42[8:8]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1774$2219'.
+     1/1: $0\reg42[7:7]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1772$2218'.
+     1/1: $0\reg42[6:6]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1770$2217'.
+     1/1: $0\reg42[5:5]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1768$2216'.
+     1/1: $0\reg42[4:4]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1766$2215'.
+     1/1: $0\reg42[3:3]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1764$2214'.
+     1/1: $0\reg42[2:2]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1762$2213'.
+     1/1: $0\reg42[1:1]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1760$2212'.
+     1/1: $0\reg42[0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1758$2211'.
+     1/1: $0\reg43[10:10]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1756$2210'.
+     1/1: $0\reg43[9:9]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1754$2209'.
+     1/1: $0\reg43[8:8]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1752$2208'.
+     1/1: $0\reg43[7:7]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1750$2207'.
+     1/1: $0\reg43[6:6]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1748$2206'.
+     1/1: $0\reg43[5:5]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1746$2205'.
+     1/1: $0\reg43[4:4]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1744$2204'.
+     1/1: $0\reg43[3:3]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1742$2203'.
+     1/1: $0\reg43[2:2]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1740$2202'.
+     1/1: $0\reg43[1:1]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1738$2201'.
+     1/1: $0\reg43[0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1736$2200'.
+     1/1: $0\reg46[13:13]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1734$2199'.
+     1/1: $0\reg46[12:12]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1732$2198'.
+     1/1: $0\reg46[11:11]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1730$2197'.
+     1/1: $0\reg46[10:10]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1728$2196'.
+     1/1: $0\reg46[9:9]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1726$2195'.
+     1/1: $0\reg46[8:8]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1724$2194'.
+     1/1: $0\reg46[7:7]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1722$2193'.
+     1/1: $0\reg46[6:6]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1720$2192'.
+     1/1: $0\reg46[5:5]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1718$2191'.
+     1/1: $0\reg46[4:4]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1716$2190'.
+     1/1: $0\reg46[3:3]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1714$2189'.
+     1/1: $0\reg46[2:2]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1712$2188'.
+     1/1: $0\reg46[1:1]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1710$2187'.
+     1/1: $0\reg46[0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1707$2186'.
+     1/1: $0\reg47_reg[4][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1703$2185'.
+     1/1: $0\reg47_reg[3][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1699$2184'.
+     1/1: $0\reg47_reg[2][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1695$2183'.
+     1/1: $0\reg47_reg[1][0:0]
+Creating decoders for process `\top_2.$proc$syn_yosys.v:1691$2182'.
+     1/1: $0\reg47_reg[0][0:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:43$915'.
+     1/1: $1\reg6[15:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:42$914'.
+     1/1: $1\reg7[14:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:38$913'.
+     1/1: $1\reg22[20:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:37$912'.
+     1/1: $1\reg23[21:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:33$911'.
+     1/1: $1\reg27[8:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:32$910'.
+     1/1: $1\reg28[14:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:31$909'.
+     1/1: $1\reg29[10:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:30$908'.
+     1/1: $1\reg30[20:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:29$907'.
+     1/1: $1\reg31[19:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:28$906'.
+     1/1: $1\reg32[9:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:27$905'.
+     1/1: $1\reg33[15:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:23$904'.
+     1/1: $1\reg37[17:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:21$903'.
+     1/1: $1\reg39[18:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:20$902'.
+     1/1: $1\reg40[9:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:19$901'.
+     1/1: $1\reg41[3:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:18$900'.
+     1/1: $1\reg42[14:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:17$899'.
+     1/1: $1\reg43[10:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:16$898'.
+     1/1: $1\reg44[3:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:14$897'.
+     1/1: $1\reg46[13:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:13$896'.
+     1/1: $1\reg47[8:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:12$895'.
+     1/1: $1\reg48[4:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:11$894'.
+     1/1: $1\reg49[5:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:10$893'.
+     1/1: $1\reg50[19:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:211$883'.
+     1/1: $0\reg50[19:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:171$819'.
+     1/4: $0\reg46[13:0]
+     2/4: $0\reg48[4:0]
+     3/4: $0\reg49[5:0]
+     4/4: $0\reg47[8:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:144$776'.
+     1/6: $0\reg44[3:0]
+     2/6: $0\reg41[3:0]
+     3/6: $0\reg40[9:0]
+     4/6: $0\reg39[18:0]
+     5/6: $0\reg42[14:0]
+     6/6: $0\reg43[10:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:136$765'.
+     1/1: $0\reg37[17:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:116$747'.
+     1/4: $0\reg33[15:0]
+     2/4: $0\reg32[9:0]
+     3/4: $0\reg31[19:0]
+     4/4: $0\reg30[20:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:104$723'.
+     1/3: $0\reg29[10:0]
+     2/3: $0\reg28[14:0]
+     3/3: $0\reg27[8:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:93$705'.
+     1/2: $0\reg23[21:0]
+     2/2: $0\reg22[20:0]
+Creating decoders for process `\top_1.$proc$syn_identity.v:85$696'.
+     1/2: $0\reg7[14:0]
+     2/2: $0\reg6[15:0]
+Creating decoders for process `\top.$proc$top.v:13$2358'.
+     1/1: $0$formal$top.v:13$2352_EN[0:0]$2359
+Creating decoders for process `\top.$proc$top.v:11$2353'.
+     1/2: $0$formal$top.v:13$2352_EN[0:0]$2355
+     2/2: $0$formal$top.v:13$2352_CHECK[0:0]$2354
+
+9.2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+9.2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\top_2.\reg6_reg[5]' using process `\top_2.$proc$syn_yosys.v:2017$2293'.
+  created $dff cell `$procdff$2381' with positive edge clock.
+Creating register for signal `\top_2.\reg6_reg[4]' using process `\top_2.$proc$syn_yosys.v:2013$2292'.
+  created $dff cell `$procdff$2382' with positive edge clock.
+Creating register for signal `\top_2.\reg6_reg[3]' using process `\top_2.$proc$syn_yosys.v:2009$2291'.
+  created $dff cell `$procdff$2383' with positive edge clock.
+Creating register for signal `\top_2.\reg6_reg[2]' using process `\top_2.$proc$syn_yosys.v:2005$2290'.
+  created $dff cell `$procdff$2384' with positive edge clock.
+Creating register for signal `\top_2.\reg6_reg[1]' using process `\top_2.$proc$syn_yosys.v:2001$2289'.
+  created $dff cell `$procdff$2385' with positive edge clock.
+Creating register for signal `\top_2.\reg6_reg[0]' using process `\top_2.$proc$syn_yosys.v:1997$2288'.
+  created $dff cell `$procdff$2386' with positive edge clock.
+Creating register for signal `\top_2.\reg7 [14]' using process `\top_2.$proc$syn_yosys.v:1994$2287'.
+  created $dff cell `$procdff$2387' with positive edge clock.
+Creating register for signal `\top_2.\reg7 [13]' using process `\top_2.$proc$syn_yosys.v:1992$2286'.
+  created $dff cell `$procdff$2388' with positive edge clock.
+Creating register for signal `\top_2.\reg7 [12]' using process `\top_2.$proc$syn_yosys.v:1990$2285'.
+  created $dff cell `$procdff$2389' with positive edge clock.
+Creating register for signal `\top_2.\reg7 [11]' using process `\top_2.$proc$syn_yosys.v:1988$2284'.
+  created $dff cell `$procdff$2390' with positive edge clock.
+Creating register for signal `\top_2.\reg7 [10]' using process `\top_2.$proc$syn_yosys.v:1986$2283'.
+  created $dff cell `$procdff$2391' with positive edge clock.
+Creating register for signal `\top_2.\reg7 [9]' using process `\top_2.$proc$syn_yosys.v:1984$2282'.
+  created $dff cell `$procdff$2392' with positive edge clock.
+Creating register for signal `\top_2.\reg7 [8]' using process `\top_2.$proc$syn_yosys.v:1982$2281'.
+  created $dff cell `$procdff$2393' with positive edge clock.
+Creating register for signal `\top_2.\reg7 [7]' using process `\top_2.$proc$syn_yosys.v:1980$2280'.
+  created $dff cell `$procdff$2394' with positive edge clock.
+Creating register for signal `\top_2.\reg7 [6]' using process `\top_2.$proc$syn_yosys.v:1978$2279'.
+  created $dff cell `$procdff$2395' with positive edge clock.
+Creating register for signal `\top_2.\reg7 [5]' using process `\top_2.$proc$syn_yosys.v:1976$2278'.
+  created $dff cell `$procdff$2396' with positive edge clock.
+Creating register for signal `\top_2.\reg7 [4]' using process `\top_2.$proc$syn_yosys.v:1974$2277'.
+  created $dff cell `$procdff$2397' with positive edge clock.
+Creating register for signal `\top_2.\reg7 [3]' using process `\top_2.$proc$syn_yosys.v:1972$2276'.
+  created $dff cell `$procdff$2398' with positive edge clock.
+Creating register for signal `\top_2.\reg7 [2]' using process `\top_2.$proc$syn_yosys.v:1970$2275'.
+  created $dff cell `$procdff$2399' with positive edge clock.
+Creating register for signal `\top_2.\reg7 [1]' using process `\top_2.$proc$syn_yosys.v:1968$2274'.
+  created $dff cell `$procdff$2400' with positive edge clock.
+Creating register for signal `\top_2.\reg7 [0]' using process `\top_2.$proc$syn_yosys.v:1966$2273'.
+  created $dff cell `$procdff$2401' with positive edge clock.
+Creating register for signal `\top_2.\reg23_reg[8]' using process `\top_2.$proc$syn_yosys.v:1963$2272'.
+  created $dff cell `$procdff$2402' with positive edge clock.
+Creating register for signal `\top_2.\reg23_reg[7]' using process `\top_2.$proc$syn_yosys.v:1959$2271'.
+  created $dff cell `$procdff$2403' with positive edge clock.
+Creating register for signal `\top_2.\reg23_reg[6]' using process `\top_2.$proc$syn_yosys.v:1955$2270'.
+  created $dff cell `$procdff$2404' with positive edge clock.
+Creating register for signal `\top_2.\reg23_reg[5]' using process `\top_2.$proc$syn_yosys.v:1951$2269'.
+  created $dff cell `$procdff$2405' with positive edge clock.
+Creating register for signal `\top_2.\reg23_reg[4]' using process `\top_2.$proc$syn_yosys.v:1947$2268'.
+  created $dff cell `$procdff$2406' with positive edge clock.
+Creating register for signal `\top_2.\reg23_reg[3]' using process `\top_2.$proc$syn_yosys.v:1943$2267'.
+  created $dff cell `$procdff$2407' with positive edge clock.
+Creating register for signal `\top_2.\reg23_reg[2]' using process `\top_2.$proc$syn_yosys.v:1939$2266'.
+  created $dff cell `$procdff$2408' with positive edge clock.
+Creating register for signal `\top_2.\reg23_reg[1]' using process `\top_2.$proc$syn_yosys.v:1935$2265'.
+  created $dff cell `$procdff$2409' with positive edge clock.
+Creating register for signal `\top_2.\reg23_reg[0]' using process `\top_2.$proc$syn_yosys.v:1931$2264'.
+  created $dff cell `$procdff$2410' with positive edge clock.
+Creating register for signal `\top_2.\reg27_reg[4]' using process `\top_2.$proc$syn_yosys.v:1927$2263'.
+  created $dff cell `$procdff$2411' with positive edge clock.
+Creating register for signal `\top_2.\reg27_reg[3]' using process `\top_2.$proc$syn_yosys.v:1923$2262'.
+  created $dff cell `$procdff$2412' with positive edge clock.
+Creating register for signal `\top_2.\reg27_reg[2]' using process `\top_2.$proc$syn_yosys.v:1919$2261'.
+  created $dff cell `$procdff$2413' with positive edge clock.
+Creating register for signal `\top_2.\reg27_reg[1]' using process `\top_2.$proc$syn_yosys.v:1915$2260'.
+  created $dff cell `$procdff$2414' with positive edge clock.
+Creating register for signal `\top_2.\reg27_reg[0]' using process `\top_2.$proc$syn_yosys.v:1911$2259'.
+  created $dff cell `$procdff$2415' with positive edge clock.
+Creating register for signal `\top_2.\reg28_reg[0]' using process `\top_2.$proc$syn_yosys.v:1907$2258'.
+  created $dff cell `$procdff$2416' with positive edge clock.
+Creating register for signal `\top_2.\reg29_reg[7]' using process `\top_2.$proc$syn_yosys.v:1903$2257'.
+  created $dff cell `$procdff$2417' with positive edge clock.
+Creating register for signal `\top_2.\reg29_reg[6]' using process `\top_2.$proc$syn_yosys.v:1899$2256'.
+  created $dff cell `$procdff$2418' with positive edge clock.
+Creating register for signal `\top_2.\reg29_reg[5]' using process `\top_2.$proc$syn_yosys.v:1895$2255'.
+  created $dff cell `$procdff$2419' with positive edge clock.
+Creating register for signal `\top_2.\reg29_reg[4]' using process `\top_2.$proc$syn_yosys.v:1891$2254'.
+  created $dff cell `$procdff$2420' with positive edge clock.
+Creating register for signal `\top_2.\reg29_reg[3]' using process `\top_2.$proc$syn_yosys.v:1887$2253'.
+  created $dff cell `$procdff$2421' with positive edge clock.
+Creating register for signal `\top_2.\reg29_reg[2]' using process `\top_2.$proc$syn_yosys.v:1883$2252'.
+  created $dff cell `$procdff$2422' with positive edge clock.
+Creating register for signal `\top_2.\reg29_reg[1]' using process `\top_2.$proc$syn_yosys.v:1879$2251'.
+  created $dff cell `$procdff$2423' with positive edge clock.
+Creating register for signal `\top_2.\reg29_reg[0]' using process `\top_2.$proc$syn_yosys.v:1875$2250'.
+  created $dff cell `$procdff$2424' with positive edge clock.
+Creating register for signal `\top_2.\reg30_reg[0]' using process `\top_2.$proc$syn_yosys.v:1871$2249'.
+  created $dff cell `$procdff$2425' with positive edge clock.
+Creating register for signal `\top_2.\reg31_reg[2]' using process `\top_2.$proc$syn_yosys.v:1867$2248'.
+  created $dff cell `$procdff$2426' with positive edge clock.
+Creating register for signal `\top_2.\reg31_reg[1]' using process `\top_2.$proc$syn_yosys.v:1863$2247'.
+  created $dff cell `$procdff$2427' with positive edge clock.
+Creating register for signal `\top_2.\reg31_reg[0]' using process `\top_2.$proc$syn_yosys.v:1859$2246'.
+  created $dff cell `$procdff$2428' with positive edge clock.
+Creating register for signal `\top_2.\reg32_reg[6]' using process `\top_2.$proc$syn_yosys.v:1855$2245'.
+  created $dff cell `$procdff$2429' with positive edge clock.
+Creating register for signal `\top_2.\reg32_reg[5]' using process `\top_2.$proc$syn_yosys.v:1851$2244'.
+  created $dff cell `$procdff$2430' with positive edge clock.
+Creating register for signal `\top_2.\reg32_reg[4]' using process `\top_2.$proc$syn_yosys.v:1847$2243'.
+  created $dff cell `$procdff$2431' with positive edge clock.
+Creating register for signal `\top_2.\reg32_reg[3]' using process `\top_2.$proc$syn_yosys.v:1843$2242'.
+  created $dff cell `$procdff$2432' with positive edge clock.
+Creating register for signal `\top_2.\reg32_reg[2]' using process `\top_2.$proc$syn_yosys.v:1839$2241'.
+  created $dff cell `$procdff$2433' with positive edge clock.
+Creating register for signal `\top_2.\reg32_reg[1]' using process `\top_2.$proc$syn_yosys.v:1835$2240'.
+  created $dff cell `$procdff$2434' with positive edge clock.
+Creating register for signal `\top_2.\reg32_reg[0]' using process `\top_2.$proc$syn_yosys.v:1831$2239'.
+  created $dff cell `$procdff$2435' with positive edge clock.
+Creating register for signal `\top_2.\reg33_reg[0]' using process `\top_2.$proc$syn_yosys.v:1827$2238'.
+  created $dff cell `$procdff$2436' with positive edge clock.
+Creating register for signal `\top_2.\reg37_reg[4]' using process `\top_2.$proc$syn_yosys.v:1823$2237'.
+  created $dff cell `$procdff$2437' with positive edge clock.
+Creating register for signal `\top_2.\reg37_reg[3]' using process `\top_2.$proc$syn_yosys.v:1819$2236'.
+  created $dff cell `$procdff$2438' with positive edge clock.
+Creating register for signal `\top_2.\reg37_reg[2]' using process `\top_2.$proc$syn_yosys.v:1815$2235'.
+  created $dff cell `$procdff$2439' with positive edge clock.
+Creating register for signal `\top_2.\reg37_reg[1]' using process `\top_2.$proc$syn_yosys.v:1811$2234'.
+  created $dff cell `$procdff$2440' with positive edge clock.
+Creating register for signal `\top_2.\reg37_reg[0]' using process `\top_2.$proc$syn_yosys.v:1807$2233'.
+  created $dff cell `$procdff$2441' with positive edge clock.
+Creating register for signal `\top_2.\reg39_reg[0]' using process `\top_2.$proc$syn_yosys.v:1803$2232'.
+  created $dff cell `$procdff$2442' with positive edge clock.
+Creating register for signal `\top_2.\reg40_reg[0]' using process `\top_2.$proc$syn_yosys.v:1799$2231'.
+  created $dff cell `$procdff$2443' with positive edge clock.
+Creating register for signal `\top_2.\reg41 [3]' using process `\top_2.$proc$syn_yosys.v:1796$2230'.
+  created $dff cell `$procdff$2444' with positive edge clock.
+Creating register for signal `\top_2.\reg41 [2]' using process `\top_2.$proc$syn_yosys.v:1794$2229'.
+  created $dff cell `$procdff$2445' with positive edge clock.
+Creating register for signal `\top_2.\reg41 [1]' using process `\top_2.$proc$syn_yosys.v:1792$2228'.
+  created $dff cell `$procdff$2446' with positive edge clock.
+Creating register for signal `\top_2.\reg41 [0]' using process `\top_2.$proc$syn_yosys.v:1790$2227'.
+  created $dff cell `$procdff$2447' with positive edge clock.
+Creating register for signal `\top_2.\reg42 [14]' using process `\top_2.$proc$syn_yosys.v:1788$2226'.
+  created $dff cell `$procdff$2448' with positive edge clock.
+Creating register for signal `\top_2.\reg42 [13]' using process `\top_2.$proc$syn_yosys.v:1786$2225'.
+  created $dff cell `$procdff$2449' with positive edge clock.
+Creating register for signal `\top_2.\reg42 [12]' using process `\top_2.$proc$syn_yosys.v:1784$2224'.
+  created $dff cell `$procdff$2450' with positive edge clock.
+Creating register for signal `\top_2.\reg42 [11]' using process `\top_2.$proc$syn_yosys.v:1782$2223'.
+  created $dff cell `$procdff$2451' with positive edge clock.
+Creating register for signal `\top_2.\reg42 [10]' using process `\top_2.$proc$syn_yosys.v:1780$2222'.
+  created $dff cell `$procdff$2452' with positive edge clock.
+Creating register for signal `\top_2.\reg42 [9]' using process `\top_2.$proc$syn_yosys.v:1778$2221'.
+  created $dff cell `$procdff$2453' with positive edge clock.
+Creating register for signal `\top_2.\reg42 [8]' using process `\top_2.$proc$syn_yosys.v:1776$2220'.
+  created $dff cell `$procdff$2454' with positive edge clock.
+Creating register for signal `\top_2.\reg42 [7]' using process `\top_2.$proc$syn_yosys.v:1774$2219'.
+  created $dff cell `$procdff$2455' with positive edge clock.
+Creating register for signal `\top_2.\reg42 [6]' using process `\top_2.$proc$syn_yosys.v:1772$2218'.
+  created $dff cell `$procdff$2456' with positive edge clock.
+Creating register for signal `\top_2.\reg42 [5]' using process `\top_2.$proc$syn_yosys.v:1770$2217'.
+  created $dff cell `$procdff$2457' with positive edge clock.
+Creating register for signal `\top_2.\reg42 [4]' using process `\top_2.$proc$syn_yosys.v:1768$2216'.
+  created $dff cell `$procdff$2458' with positive edge clock.
+Creating register for signal `\top_2.\reg42 [3]' using process `\top_2.$proc$syn_yosys.v:1766$2215'.
+  created $dff cell `$procdff$2459' with positive edge clock.
+Creating register for signal `\top_2.\reg42 [2]' using process `\top_2.$proc$syn_yosys.v:1764$2214'.
+  created $dff cell `$procdff$2460' with positive edge clock.
+Creating register for signal `\top_2.\reg42 [1]' using process `\top_2.$proc$syn_yosys.v:1762$2213'.
+  created $dff cell `$procdff$2461' with positive edge clock.
+Creating register for signal `\top_2.\reg42 [0]' using process `\top_2.$proc$syn_yosys.v:1760$2212'.
+  created $dff cell `$procdff$2462' with positive edge clock.
+Creating register for signal `\top_2.\reg43 [10]' using process `\top_2.$proc$syn_yosys.v:1758$2211'.
+  created $dff cell `$procdff$2463' with positive edge clock.
+Creating register for signal `\top_2.\reg43 [9]' using process `\top_2.$proc$syn_yosys.v:1756$2210'.
+  created $dff cell `$procdff$2464' with positive edge clock.
+Creating register for signal `\top_2.\reg43 [8]' using process `\top_2.$proc$syn_yosys.v:1754$2209'.
+  created $dff cell `$procdff$2465' with positive edge clock.
+Creating register for signal `\top_2.\reg43 [7]' using process `\top_2.$proc$syn_yosys.v:1752$2208'.
+  created $dff cell `$procdff$2466' with positive edge clock.
+Creating register for signal `\top_2.\reg43 [6]' using process `\top_2.$proc$syn_yosys.v:1750$2207'.
+  created $dff cell `$procdff$2467' with positive edge clock.
+Creating register for signal `\top_2.\reg43 [5]' using process `\top_2.$proc$syn_yosys.v:1748$2206'.
+  created $dff cell `$procdff$2468' with positive edge clock.
+Creating register for signal `\top_2.\reg43 [4]' using process `\top_2.$proc$syn_yosys.v:1746$2205'.
+  created $dff cell `$procdff$2469' with positive edge clock.
+Creating register for signal `\top_2.\reg43 [3]' using process `\top_2.$proc$syn_yosys.v:1744$2204'.
+  created $dff cell `$procdff$2470' with positive edge clock.
+Creating register for signal `\top_2.\reg43 [2]' using process `\top_2.$proc$syn_yosys.v:1742$2203'.
+  created $dff cell `$procdff$2471' with positive edge clock.
+Creating register for signal `\top_2.\reg43 [1]' using process `\top_2.$proc$syn_yosys.v:1740$2202'.
+  created $dff cell `$procdff$2472' with positive edge clock.
+Creating register for signal `\top_2.\reg43 [0]' using process `\top_2.$proc$syn_yosys.v:1738$2201'.
+  created $dff cell `$procdff$2473' with positive edge clock.
+Creating register for signal `\top_2.\reg46 [13]' using process `\top_2.$proc$syn_yosys.v:1736$2200'.
+  created $dff cell `$procdff$2474' with positive edge clock.
+Creating register for signal `\top_2.\reg46 [12]' using process `\top_2.$proc$syn_yosys.v:1734$2199'.
+  created $dff cell `$procdff$2475' with positive edge clock.
+Creating register for signal `\top_2.\reg46 [11]' using process `\top_2.$proc$syn_yosys.v:1732$2198'.
+  created $dff cell `$procdff$2476' with positive edge clock.
+Creating register for signal `\top_2.\reg46 [10]' using process `\top_2.$proc$syn_yosys.v:1730$2197'.
+  created $dff cell `$procdff$2477' with positive edge clock.
+Creating register for signal `\top_2.\reg46 [9]' using process `\top_2.$proc$syn_yosys.v:1728$2196'.
+  created $dff cell `$procdff$2478' with positive edge clock.
+Creating register for signal `\top_2.\reg46 [8]' using process `\top_2.$proc$syn_yosys.v:1726$2195'.
+  created $dff cell `$procdff$2479' with positive edge clock.
+Creating register for signal `\top_2.\reg46 [7]' using process `\top_2.$proc$syn_yosys.v:1724$2194'.
+  created $dff cell `$procdff$2480' with positive edge clock.
+Creating register for signal `\top_2.\reg46 [6]' using process `\top_2.$proc$syn_yosys.v:1722$2193'.
+  created $dff cell `$procdff$2481' with positive edge clock.
+Creating register for signal `\top_2.\reg46 [5]' using process `\top_2.$proc$syn_yosys.v:1720$2192'.
+  created $dff cell `$procdff$2482' with positive edge clock.
+Creating register for signal `\top_2.\reg46 [4]' using process `\top_2.$proc$syn_yosys.v:1718$2191'.
+  created $dff cell `$procdff$2483' with positive edge clock.
+Creating register for signal `\top_2.\reg46 [3]' using process `\top_2.$proc$syn_yosys.v:1716$2190'.
+  created $dff cell `$procdff$2484' with positive edge clock.
+Creating register for signal `\top_2.\reg46 [2]' using process `\top_2.$proc$syn_yosys.v:1714$2189'.
+  created $dff cell `$procdff$2485' with positive edge clock.
+Creating register for signal `\top_2.\reg46 [1]' using process `\top_2.$proc$syn_yosys.v:1712$2188'.
+  created $dff cell `$procdff$2486' with positive edge clock.
+Creating register for signal `\top_2.\reg46 [0]' using process `\top_2.$proc$syn_yosys.v:1710$2187'.
+  created $dff cell `$procdff$2487' with positive edge clock.
+Creating register for signal `\top_2.\reg47_reg[4]' using process `\top_2.$proc$syn_yosys.v:1707$2186'.
+  created $dff cell `$procdff$2488' with positive edge clock.
+Creating register for signal `\top_2.\reg47_reg[3]' using process `\top_2.$proc$syn_yosys.v:1703$2185'.
+  created $dff cell `$procdff$2489' with positive edge clock.
+Creating register for signal `\top_2.\reg47_reg[2]' using process `\top_2.$proc$syn_yosys.v:1699$2184'.
+  created $dff cell `$procdff$2490' with positive edge clock.
+Creating register for signal `\top_2.\reg47_reg[1]' using process `\top_2.$proc$syn_yosys.v:1695$2183'.
+  created $dff cell `$procdff$2491' with positive edge clock.
+Creating register for signal `\top_2.\reg47_reg[0]' using process `\top_2.$proc$syn_yosys.v:1691$2182'.
+  created $dff cell `$procdff$2492' with positive edge clock.
+Creating register for signal `\top_1.\reg50' using process `\top_1.$proc$syn_identity.v:211$883'.
+  created $dff cell `$procdff$2493' with positive edge clock.
+Creating register for signal `\top_1.\reg47' using process `\top_1.$proc$syn_identity.v:171$819'.
+  created $dff cell `$procdff$2494' with positive edge clock.
+Creating register for signal `\top_1.\reg49' using process `\top_1.$proc$syn_identity.v:171$819'.
+  created $dff cell `$procdff$2495' with positive edge clock.
+Creating register for signal `\top_1.\reg48' using process `\top_1.$proc$syn_identity.v:171$819'.
+  created $dff cell `$procdff$2496' with positive edge clock.
+Creating register for signal `\top_1.\reg46' using process `\top_1.$proc$syn_identity.v:171$819'.
+  created $dff cell `$procdff$2497' with positive edge clock.
+Creating register for signal `\top_1.\reg44' using process `\top_1.$proc$syn_identity.v:144$776'.
+  created $dff cell `$procdff$2498' with positive edge clock.
+Creating register for signal `\top_1.\reg43' using process `\top_1.$proc$syn_identity.v:144$776'.
+  created $dff cell `$procdff$2499' with positive edge clock.
+Creating register for signal `\top_1.\reg42' using process `\top_1.$proc$syn_identity.v:144$776'.
+  created $dff cell `$procdff$2500' with positive edge clock.
+Creating register for signal `\top_1.\reg41' using process `\top_1.$proc$syn_identity.v:144$776'.
+  created $dff cell `$procdff$2501' with positive edge clock.
+Creating register for signal `\top_1.\reg40' using process `\top_1.$proc$syn_identity.v:144$776'.
+  created $dff cell `$procdff$2502' with positive edge clock.
+Creating register for signal `\top_1.\reg39' using process `\top_1.$proc$syn_identity.v:144$776'.
+  created $dff cell `$procdff$2503' with positive edge clock.
+Creating register for signal `\top_1.\reg37' using process `\top_1.$proc$syn_identity.v:136$765'.
+  created $dff cell `$procdff$2504' with positive edge clock.
+Creating register for signal `\top_1.\reg33' using process `\top_1.$proc$syn_identity.v:116$747'.
+  created $dff cell `$procdff$2505' with positive edge clock.
+Creating register for signal `\top_1.\reg32' using process `\top_1.$proc$syn_identity.v:116$747'.
+  created $dff cell `$procdff$2506' with positive edge clock.
+Creating register for signal `\top_1.\reg31' using process `\top_1.$proc$syn_identity.v:116$747'.
+  created $dff cell `$procdff$2507' with positive edge clock.
+Creating register for signal `\top_1.\reg30' using process `\top_1.$proc$syn_identity.v:116$747'.
+  created $dff cell `$procdff$2508' with positive edge clock.
+Creating register for signal `\top_1.\reg29' using process `\top_1.$proc$syn_identity.v:104$723'.
+  created $dff cell `$procdff$2509' with positive edge clock.
+Creating register for signal `\top_1.\reg28' using process `\top_1.$proc$syn_identity.v:104$723'.
+  created $dff cell `$procdff$2510' with positive edge clock.
+Creating register for signal `\top_1.\reg27' using process `\top_1.$proc$syn_identity.v:104$723'.
+  created $dff cell `$procdff$2511' with positive edge clock.
+Creating register for signal `\top_1.\reg23' using process `\top_1.$proc$syn_identity.v:93$705'.
+  created $dff cell `$procdff$2512' with positive edge clock.
+Creating register for signal `\top_1.\reg22' using process `\top_1.$proc$syn_identity.v:93$705'.
+  created $dff cell `$procdff$2513' with positive edge clock.
+Creating register for signal `\top_1.\reg7' using process `\top_1.$proc$syn_identity.v:85$696'.
+  created $dff cell `$procdff$2514' with positive edge clock.
+Creating register for signal `\top_1.\reg6' using process `\top_1.$proc$syn_identity.v:85$696'.
+  created $dff cell `$procdff$2515' with positive edge clock.
+Creating register for signal `\top.$formal$top.v:13$2352_CHECK' using process `\top.$proc$top.v:11$2353'.
+  created $dff cell `$procdff$2516' with positive edge clock.
+Creating register for signal `\top.$formal$top.v:13$2352_EN' using process `\top.$proc$top.v:11$2353'.
+  created $dff cell `$procdff$2517' with positive edge clock.
+
+9.2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `top_2.$proc$syn_yosys.v:2016$2351'.
+Removing empty process `top_2.$proc$syn_yosys.v:2012$2350'.
+Removing empty process `top_2.$proc$syn_yosys.v:2008$2349'.
+Removing empty process `top_2.$proc$syn_yosys.v:2004$2348'.
+Removing empty process `top_2.$proc$syn_yosys.v:2000$2347'.
+Removing empty process `top_2.$proc$syn_yosys.v:1996$2346'.
+Removing empty process `top_2.$proc$syn_yosys.v:1962$2345'.
+Removing empty process `top_2.$proc$syn_yosys.v:1958$2344'.
+Removing empty process `top_2.$proc$syn_yosys.v:1954$2343'.
+Removing empty process `top_2.$proc$syn_yosys.v:1950$2342'.
+Removing empty process `top_2.$proc$syn_yosys.v:1946$2341'.
+Removing empty process `top_2.$proc$syn_yosys.v:1942$2340'.
+Removing empty process `top_2.$proc$syn_yosys.v:1938$2339'.
+Removing empty process `top_2.$proc$syn_yosys.v:1934$2338'.
+Removing empty process `top_2.$proc$syn_yosys.v:1930$2337'.
+Removing empty process `top_2.$proc$syn_yosys.v:1926$2336'.
+Removing empty process `top_2.$proc$syn_yosys.v:1922$2335'.
+Removing empty process `top_2.$proc$syn_yosys.v:1918$2334'.
+Removing empty process `top_2.$proc$syn_yosys.v:1914$2333'.
+Removing empty process `top_2.$proc$syn_yosys.v:1910$2332'.
+Removing empty process `top_2.$proc$syn_yosys.v:1906$2331'.
+Removing empty process `top_2.$proc$syn_yosys.v:1902$2330'.
+Removing empty process `top_2.$proc$syn_yosys.v:1898$2329'.
+Removing empty process `top_2.$proc$syn_yosys.v:1894$2328'.
+Removing empty process `top_2.$proc$syn_yosys.v:1890$2327'.
+Removing empty process `top_2.$proc$syn_yosys.v:1886$2326'.
+Removing empty process `top_2.$proc$syn_yosys.v:1882$2325'.
+Removing empty process `top_2.$proc$syn_yosys.v:1878$2324'.
+Removing empty process `top_2.$proc$syn_yosys.v:1874$2323'.
+Removing empty process `top_2.$proc$syn_yosys.v:1870$2322'.
+Removing empty process `top_2.$proc$syn_yosys.v:1866$2321'.
+Removing empty process `top_2.$proc$syn_yosys.v:1862$2320'.
+Removing empty process `top_2.$proc$syn_yosys.v:1858$2319'.
+Removing empty process `top_2.$proc$syn_yosys.v:1854$2318'.
+Removing empty process `top_2.$proc$syn_yosys.v:1850$2317'.
+Removing empty process `top_2.$proc$syn_yosys.v:1846$2316'.
+Removing empty process `top_2.$proc$syn_yosys.v:1842$2315'.
+Removing empty process `top_2.$proc$syn_yosys.v:1838$2314'.
+Removing empty process `top_2.$proc$syn_yosys.v:1834$2313'.
+Removing empty process `top_2.$proc$syn_yosys.v:1830$2312'.
+Removing empty process `top_2.$proc$syn_yosys.v:1826$2311'.
+Removing empty process `top_2.$proc$syn_yosys.v:1822$2310'.
+Removing empty process `top_2.$proc$syn_yosys.v:1818$2309'.
+Removing empty process `top_2.$proc$syn_yosys.v:1814$2308'.
+Removing empty process `top_2.$proc$syn_yosys.v:1810$2307'.
+Removing empty process `top_2.$proc$syn_yosys.v:1806$2306'.
+Removing empty process `top_2.$proc$syn_yosys.v:1802$2305'.
+Removing empty process `top_2.$proc$syn_yosys.v:1798$2304'.
+Removing empty process `top_2.$proc$syn_yosys.v:1706$2303'.
+Removing empty process `top_2.$proc$syn_yosys.v:1702$2302'.
+Removing empty process `top_2.$proc$syn_yosys.v:1698$2301'.
+Removing empty process `top_2.$proc$syn_yosys.v:1694$2300'.
+Removing empty process `top_2.$proc$syn_yosys.v:1690$2299'.
+Removing empty process `top_2.$proc$syn_yosys.v:864$2298'.
+Removing empty process `top_2.$proc$syn_yosys.v:858$2297'.
+Removing empty process `top_2.$proc$syn_yosys.v:856$2296'.
+Removing empty process `top_2.$proc$syn_yosys.v:855$2295'.
+Removing empty process `top_2.$proc$syn_yosys.v:854$2294'.
+Removing empty process `top_2.$proc$syn_yosys.v:2017$2293'.
+Removing empty process `top_2.$proc$syn_yosys.v:2013$2292'.
+Removing empty process `top_2.$proc$syn_yosys.v:2009$2291'.
+Removing empty process `top_2.$proc$syn_yosys.v:2005$2290'.
+Removing empty process `top_2.$proc$syn_yosys.v:2001$2289'.
+Removing empty process `top_2.$proc$syn_yosys.v:1997$2288'.
+Removing empty process `top_2.$proc$syn_yosys.v:1994$2287'.
+Removing empty process `top_2.$proc$syn_yosys.v:1992$2286'.
+Removing empty process `top_2.$proc$syn_yosys.v:1990$2285'.
+Removing empty process `top_2.$proc$syn_yosys.v:1988$2284'.
+Removing empty process `top_2.$proc$syn_yosys.v:1986$2283'.
+Removing empty process `top_2.$proc$syn_yosys.v:1984$2282'.
+Removing empty process `top_2.$proc$syn_yosys.v:1982$2281'.
+Removing empty process `top_2.$proc$syn_yosys.v:1980$2280'.
+Removing empty process `top_2.$proc$syn_yosys.v:1978$2279'.
+Removing empty process `top_2.$proc$syn_yosys.v:1976$2278'.
+Removing empty process `top_2.$proc$syn_yosys.v:1974$2277'.
+Removing empty process `top_2.$proc$syn_yosys.v:1972$2276'.
+Removing empty process `top_2.$proc$syn_yosys.v:1970$2275'.
+Removing empty process `top_2.$proc$syn_yosys.v:1968$2274'.
+Removing empty process `top_2.$proc$syn_yosys.v:1966$2273'.
+Removing empty process `top_2.$proc$syn_yosys.v:1963$2272'.
+Removing empty process `top_2.$proc$syn_yosys.v:1959$2271'.
+Removing empty process `top_2.$proc$syn_yosys.v:1955$2270'.
+Removing empty process `top_2.$proc$syn_yosys.v:1951$2269'.
+Removing empty process `top_2.$proc$syn_yosys.v:1947$2268'.
+Removing empty process `top_2.$proc$syn_yosys.v:1943$2267'.
+Removing empty process `top_2.$proc$syn_yosys.v:1939$2266'.
+Removing empty process `top_2.$proc$syn_yosys.v:1935$2265'.
+Removing empty process `top_2.$proc$syn_yosys.v:1931$2264'.
+Removing empty process `top_2.$proc$syn_yosys.v:1927$2263'.
+Removing empty process `top_2.$proc$syn_yosys.v:1923$2262'.
+Removing empty process `top_2.$proc$syn_yosys.v:1919$2261'.
+Removing empty process `top_2.$proc$syn_yosys.v:1915$2260'.
+Removing empty process `top_2.$proc$syn_yosys.v:1911$2259'.
+Removing empty process `top_2.$proc$syn_yosys.v:1907$2258'.
+Removing empty process `top_2.$proc$syn_yosys.v:1903$2257'.
+Removing empty process `top_2.$proc$syn_yosys.v:1899$2256'.
+Removing empty process `top_2.$proc$syn_yosys.v:1895$2255'.
+Removing empty process `top_2.$proc$syn_yosys.v:1891$2254'.
+Removing empty process `top_2.$proc$syn_yosys.v:1887$2253'.
+Removing empty process `top_2.$proc$syn_yosys.v:1883$2252'.
+Removing empty process `top_2.$proc$syn_yosys.v:1879$2251'.
+Removing empty process `top_2.$proc$syn_yosys.v:1875$2250'.
+Removing empty process `top_2.$proc$syn_yosys.v:1871$2249'.
+Removing empty process `top_2.$proc$syn_yosys.v:1867$2248'.
+Removing empty process `top_2.$proc$syn_yosys.v:1863$2247'.
+Removing empty process `top_2.$proc$syn_yosys.v:1859$2246'.
+Removing empty process `top_2.$proc$syn_yosys.v:1855$2245'.
+Removing empty process `top_2.$proc$syn_yosys.v:1851$2244'.
+Removing empty process `top_2.$proc$syn_yosys.v:1847$2243'.
+Removing empty process `top_2.$proc$syn_yosys.v:1843$2242'.
+Removing empty process `top_2.$proc$syn_yosys.v:1839$2241'.
+Removing empty process `top_2.$proc$syn_yosys.v:1835$2240'.
+Removing empty process `top_2.$proc$syn_yosys.v:1831$2239'.
+Removing empty process `top_2.$proc$syn_yosys.v:1827$2238'.
+Removing empty process `top_2.$proc$syn_yosys.v:1823$2237'.
+Removing empty process `top_2.$proc$syn_yosys.v:1819$2236'.
+Removing empty process `top_2.$proc$syn_yosys.v:1815$2235'.
+Removing empty process `top_2.$proc$syn_yosys.v:1811$2234'.
+Removing empty process `top_2.$proc$syn_yosys.v:1807$2233'.
+Removing empty process `top_2.$proc$syn_yosys.v:1803$2232'.
+Removing empty process `top_2.$proc$syn_yosys.v:1799$2231'.
+Removing empty process `top_2.$proc$syn_yosys.v:1796$2230'.
+Removing empty process `top_2.$proc$syn_yosys.v:1794$2229'.
+Removing empty process `top_2.$proc$syn_yosys.v:1792$2228'.
+Removing empty process `top_2.$proc$syn_yosys.v:1790$2227'.
+Removing empty process `top_2.$proc$syn_yosys.v:1788$2226'.
+Removing empty process `top_2.$proc$syn_yosys.v:1786$2225'.
+Removing empty process `top_2.$proc$syn_yosys.v:1784$2224'.
+Removing empty process `top_2.$proc$syn_yosys.v:1782$2223'.
+Removing empty process `top_2.$proc$syn_yosys.v:1780$2222'.
+Removing empty process `top_2.$proc$syn_yosys.v:1778$2221'.
+Removing empty process `top_2.$proc$syn_yosys.v:1776$2220'.
+Removing empty process `top_2.$proc$syn_yosys.v:1774$2219'.
+Removing empty process `top_2.$proc$syn_yosys.v:1772$2218'.
+Removing empty process `top_2.$proc$syn_yosys.v:1770$2217'.
+Removing empty process `top_2.$proc$syn_yosys.v:1768$2216'.
+Removing empty process `top_2.$proc$syn_yosys.v:1766$2215'.
+Removing empty process `top_2.$proc$syn_yosys.v:1764$2214'.
+Removing empty process `top_2.$proc$syn_yosys.v:1762$2213'.
+Removing empty process `top_2.$proc$syn_yosys.v:1760$2212'.
+Removing empty process `top_2.$proc$syn_yosys.v:1758$2211'.
+Removing empty process `top_2.$proc$syn_yosys.v:1756$2210'.
+Removing empty process `top_2.$proc$syn_yosys.v:1754$2209'.
+Removing empty process `top_2.$proc$syn_yosys.v:1752$2208'.
+Removing empty process `top_2.$proc$syn_yosys.v:1750$2207'.
+Removing empty process `top_2.$proc$syn_yosys.v:1748$2206'.
+Removing empty process `top_2.$proc$syn_yosys.v:1746$2205'.
+Removing empty process `top_2.$proc$syn_yosys.v:1744$2204'.
+Removing empty process `top_2.$proc$syn_yosys.v:1742$2203'.
+Removing empty process `top_2.$proc$syn_yosys.v:1740$2202'.
+Removing empty process `top_2.$proc$syn_yosys.v:1738$2201'.
+Removing empty process `top_2.$proc$syn_yosys.v:1736$2200'.
+Removing empty process `top_2.$proc$syn_yosys.v:1734$2199'.
+Removing empty process `top_2.$proc$syn_yosys.v:1732$2198'.
+Removing empty process `top_2.$proc$syn_yosys.v:1730$2197'.
+Removing empty process `top_2.$proc$syn_yosys.v:1728$2196'.
+Removing empty process `top_2.$proc$syn_yosys.v:1726$2195'.
+Removing empty process `top_2.$proc$syn_yosys.v:1724$2194'.
+Removing empty process `top_2.$proc$syn_yosys.v:1722$2193'.
+Removing empty process `top_2.$proc$syn_yosys.v:1720$2192'.
+Removing empty process `top_2.$proc$syn_yosys.v:1718$2191'.
+Removing empty process `top_2.$proc$syn_yosys.v:1716$2190'.
+Removing empty process `top_2.$proc$syn_yosys.v:1714$2189'.
+Removing empty process `top_2.$proc$syn_yosys.v:1712$2188'.
+Removing empty process `top_2.$proc$syn_yosys.v:1710$2187'.
+Removing empty process `top_2.$proc$syn_yosys.v:1707$2186'.
+Removing empty process `top_2.$proc$syn_yosys.v:1703$2185'.
+Removing empty process `top_2.$proc$syn_yosys.v:1699$2184'.
+Removing empty process `top_2.$proc$syn_yosys.v:1695$2183'.
+Removing empty process `top_2.$proc$syn_yosys.v:1691$2182'.
+Removing empty process `top_1.$proc$syn_identity.v:43$915'.
+Removing empty process `top_1.$proc$syn_identity.v:42$914'.
+Removing empty process `top_1.$proc$syn_identity.v:38$913'.
+Removing empty process `top_1.$proc$syn_identity.v:37$912'.
+Removing empty process `top_1.$proc$syn_identity.v:33$911'.
+Removing empty process `top_1.$proc$syn_identity.v:32$910'.
+Removing empty process `top_1.$proc$syn_identity.v:31$909'.
+Removing empty process `top_1.$proc$syn_identity.v:30$908'.
+Removing empty process `top_1.$proc$syn_identity.v:29$907'.
+Removing empty process `top_1.$proc$syn_identity.v:28$906'.
+Removing empty process `top_1.$proc$syn_identity.v:27$905'.
+Removing empty process `top_1.$proc$syn_identity.v:23$904'.
+Removing empty process `top_1.$proc$syn_identity.v:21$903'.
+Removing empty process `top_1.$proc$syn_identity.v:20$902'.
+Removing empty process `top_1.$proc$syn_identity.v:19$901'.
+Removing empty process `top_1.$proc$syn_identity.v:18$900'.
+Removing empty process `top_1.$proc$syn_identity.v:17$899'.
+Removing empty process `top_1.$proc$syn_identity.v:16$898'.
+Removing empty process `top_1.$proc$syn_identity.v:14$897'.
+Removing empty process `top_1.$proc$syn_identity.v:13$896'.
+Removing empty process `top_1.$proc$syn_identity.v:12$895'.
+Removing empty process `top_1.$proc$syn_identity.v:11$894'.
+Removing empty process `top_1.$proc$syn_identity.v:10$893'.
+Removing empty process `top_1.$proc$syn_identity.v:211$883'.
+Found and cleaned up 2 empty switches in `\top_1.$proc$syn_identity.v:171$819'.
+Removing empty process `top_1.$proc$syn_identity.v:171$819'.
+Found and cleaned up 1 empty switch in `\top_1.$proc$syn_identity.v:144$776'.
+Removing empty process `top_1.$proc$syn_identity.v:144$776'.
+Removing empty process `top_1.$proc$syn_identity.v:136$765'.
+Removing empty process `top_1.$proc$syn_identity.v:116$747'.
+Removing empty process `top_1.$proc$syn_identity.v:104$723'.
+Removing empty process `top_1.$proc$syn_identity.v:93$705'.
+Removing empty process `top_1.$proc$syn_identity.v:85$696'.
+Removing empty process `top.$proc$top.v:13$2358'.
+Removing empty process `top.$proc$top.v:11$2353'.
+Cleaned up 3 empty switches.
+
+9.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_2.
+<suppressed ~64 debug messages>
+Optimizing module module10_2.
+<suppressed ~1 debug messages>
+Optimizing module module10_1.
+<suppressed ~4 debug messages>
+Optimizing module top_1.
+<suppressed ~28 debug messages>
+Optimizing module top.
+
+9.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_2..
+Finding unused cells or wires in module \module10_2..
+Finding unused cells or wires in module \module10_1..
+Finding unused cells or wires in module \top_1..
+Finding unused cells or wires in module \top..
+Removed 40 unused cells and 1201 unused wires.
+<suppressed ~69 debug messages>
+
+9.5. Executing CHECK pass (checking for obvious problems).
+checking module module10_1..
+checking module module10_2..
+checking module top..
+checking module top_1..
+checking module top_2..
+found and reported 0 problems.
+
+9.6. Executing OPT pass (performing simple optimizations).
+
+9.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module module10_1.
+Optimizing module module10_2.
+Optimizing module top.
+Optimizing module top_1.
+Optimizing module top_2.
+
+9.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\module10_1'.
+Finding identical cells in module `\module10_2'.
+Finding identical cells in module `\top'.
+Finding identical cells in module `\top_1'.
+<suppressed ~15 debug messages>
+Finding identical cells in module `\top_2'.
+<suppressed ~114 debug messages>
+Removed a total of 43 cells.
+
+9.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \module10_1..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \module10_2..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \top_1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \top_2..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~105 debug messages>
+
+9.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \module10_1.
+    New input vector for $reduce_and cell $reduce_and$syn_identity.v:235$918: { \wire14 [0] \wire14 [1] \wire14 [2] \wire14 [3] \wire14 [4] \wire14 [5] \wire14 [6] \wire14 [7] \wire14 [8] \wire14 [9] \wire14 [10] \wire14 [11] \wire14 [12] \wire14 [13] \wire14 [14] \wire14 [15] \wire14 [16] \wire14 [17] }
+  Optimizing cells in module \module10_1.
+  Optimizing cells in module \module10_2.
+  Optimizing cells in module \top.
+  Optimizing cells in module \top_1.
+    New input vector for $reduce_or cell $reduce_or$syn_identity.v:205$868: { \reg40 [0] \reg40 [1] \reg40 [2] \reg40 [3] \reg40 [4] \reg40 [5] \reg40 [6] \reg40 [7] \reg40 [8] \reg40 [9] }
+    New input vector for $reduce_or cell $reduce_or$syn_identity.v:151$788: { $ternary$syn_identity.v:151$787_Y [0] $ternary$syn_identity.v:151$787_Y [1] $ternary$syn_identity.v:151$787_Y [2] $ternary$syn_identity.v:151$787_Y [3] $ternary$syn_identity.v:151$787_Y [4] $ternary$syn_identity.v:151$787_Y [5] $ternary$syn_identity.v:151$787_Y [6] $ternary$syn_identity.v:151$787_Y [7] $ternary$syn_identity.v:151$787_Y [8] }
+    New input vector for $reduce_or cell $reduce_or$syn_identity.v:139$769: { $ternary$syn_identity.v:139$768_Y [0] $ternary$syn_identity.v:139$768_Y [1] $ternary$syn_identity.v:139$768_Y [2] $ternary$syn_identity.v:139$768_Y [3] $ternary$syn_identity.v:139$768_Y [4] $ternary$syn_identity.v:139$768_Y [5] $ternary$syn_identity.v:139$768_Y [6] $ternary$syn_identity.v:139$768_Y [7] $ternary$syn_identity.v:139$768_Y [8] }
+    New input vector for $reduce_or cell $reduce_or$syn_identity.v:123$753: { \reg22 [0] \reg22 [1] \reg22 [2] \reg22 [3] \reg22 [4] \reg22 [5] \reg22 [6] \reg22 [7] \reg22 [8] \reg22 [9] \reg22 [10] \reg22 [11] \reg22 [12] \reg22 [13] \reg22 [14] \reg22 [15] \reg22 [16] \reg22 [17] \reg22 [18] \reg22 [19] \reg22 [20] }
+    New input vector for $reduce_and cell $reduce_and$syn_identity.v:202$874: { \wire25 [0] \wire25 [1] \wire25 [2] \wire25 [3] \wire25 [4] \wire25 [5] \wire25 [6] \wire25 [7] \wire25 [8] }
+    New input vector for $reduce_and cell $reduce_and$syn_identity.v:174$822: { $add$syn_identity.v:174$821_Y [0] $add$syn_identity.v:174$821_Y [1] $add$syn_identity.v:174$821_Y [2] $add$syn_identity.v:174$821_Y [3] $add$syn_identity.v:174$821_Y [4] $add$syn_identity.v:174$821_Y [5] $add$syn_identity.v:174$821_Y [6] $add$syn_identity.v:174$821_Y [7] $add$syn_identity.v:174$821_Y [8] $add$syn_identity.v:174$821_Y [9] $add$syn_identity.v:174$821_Y [10] $add$syn_identity.v:174$821_Y [11] $add$syn_identity.v:174$821_Y [12] $add$syn_identity.v:174$821_Y [13] $add$syn_identity.v:174$821_Y [14] $add$syn_identity.v:174$821_Y [15] $add$syn_identity.v:174$821_Y [16] $add$syn_identity.v:174$821_Y [17] $add$syn_identity.v:174$821_Y [18] $add$syn_identity.v:174$821_Y [19] $add$syn_identity.v:174$821_Y [20] $add$syn_identity.v:174$821_Y [21] $add$syn_identity.v:174$821_Y [22] $add$syn_identity.v:174$821_Y [23] $add$syn_identity.v:174$821_Y [24] $add$syn_identity.v:174$821_Y [25] $add$syn_identity.v:174$821_Y [26] $add$syn_identity.v:174$821_Y [27] $add$syn_identity.v:174$821_Y [28] $add$syn_identity.v:174$821_Y [29] $add$syn_identity.v:174$821_Y [30] $add$syn_identity.v:174$821_Y [31] $add$syn_identity.v:174$821_Y [32] $add$syn_identity.v:174$821_Y [33] $add$syn_identity.v:174$821_Y [34] $add$syn_identity.v:174$821_Y [35] }
+    New input vector for $reduce_and cell $reduce_and$syn_identity.v:135$763: { $mul$syn_identity.v:135$762_Y [0] $mul$syn_identity.v:135$762_Y [1] $mul$syn_identity.v:135$762_Y [2] $mul$syn_identity.v:135$762_Y [3] $mul$syn_identity.v:135$762_Y [4] $mul$syn_identity.v:135$762_Y [5] $mul$syn_identity.v:135$762_Y [6] $mul$syn_identity.v:135$762_Y [7] $mul$syn_identity.v:135$762_Y [8] }
+  Optimizing cells in module \top_1.
+  Optimizing cells in module \top_2.
+Performed a total of 8 changes.
+
+9.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\module10_1'.
+Finding identical cells in module `\module10_2'.
+Finding identical cells in module `\top'.
+Finding identical cells in module `\top_1'.
+Finding identical cells in module `\top_2'.
+Removed a total of 0 cells.
+
+9.6.6. Executing OPT_RMDFF pass (remove dff with constant values).
+Promoting init spec \reg50 = 20'00000000000000000000 to constant driver in module top_1.
+Promoting init spec \reg49 = 6'000000 to constant driver in module top_1.
+Promoting init spec \reg48 = 5'00000 to constant driver in module top_1.
+Promoted 3 init specs to constant drivers.
+
+9.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \module10_1..
+Finding unused cells or wires in module \module10_2..
+Finding unused cells or wires in module \top..
+Finding unused cells or wires in module \top_1..
+Finding unused cells or wires in module \top_2..
+Removed 0 unused cells and 43 unused wires.
+<suppressed ~2 debug messages>
+
+9.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module module10_1.
+Optimizing module module10_2.
+Optimizing module top.
+Optimizing module top_1.
+Optimizing module top_2.
+
+9.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \module10_1..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \module10_2..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \top_1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \top_2..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~105 debug messages>
+
+9.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \module10_1.
+  Optimizing cells in module \module10_2.
+  Optimizing cells in module \top.
+  Optimizing cells in module \top_1.
+  Optimizing cells in module \top_2.
+Performed a total of 0 changes.
+
+9.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\module10_1'.
+Finding identical cells in module `\module10_2'.
+Finding identical cells in module `\top'.
+Finding identical cells in module `\top_1'.
+Finding identical cells in module `\top_2'.
+Removed a total of 0 cells.
+
+9.6.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+9.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \module10_1..
+Finding unused cells or wires in module \module10_2..
+Finding unused cells or wires in module \top..
+Finding unused cells or wires in module \top_1..
+Finding unused cells or wires in module \top_2..
+
+9.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module module10_1.
+Optimizing module module10_2.
+Optimizing module top.
+Optimizing module top_1.
+Optimizing module top_2.
+
+9.6.16. Finished OPT passes. (There is nothing left to do.)
+
+9.7. Executing WREDUCE pass (reducing word size of cells).
+Removed top 21 bits (of 22) from wire module10_1.wire16.
+Removed top 10 bits (of 11) from wire module10_1.wire17.
+Removed top 12 bits (of 16) from wire module10_1.wire18.
+Removed top 10 bits (of 16) from FF cell top_1.$procdff$2515 ($dff).
+Removed cell top_1.$procdff$2513 ($dff).
+Removed top 4 bits (of 9) from FF cell top_1.$procdff$2511 ($dff).
+Removed top 14 bits (of 15) from FF cell top_1.$procdff$2510 ($dff).
+Removed top 18 bits (of 21) from FF cell top_1.$procdff$2508 ($dff).
+Removed top 17 bits (of 20) from FF cell top_1.$procdff$2507 ($dff).
+Removed top 3 bits (of 10) from FF cell top_1.$procdff$2506 ($dff).
+Removed top 15 bits (of 16) from FF cell top_1.$procdff$2505 ($dff).
+Removed top 18 bits (of 19) from FF cell top_1.$procdff$2503 ($dff).
+Removed top 3 bits (of 4) from FF cell top_1.$procdff$2498 ($dff).
+Removed top 1 bits (of 15) from port A of cell top_1.$xnor$syn_identity.v:88$698 ($xnor).
+Removed top 2 bits (of 15) from port B of cell top_1.$xnor$syn_identity.v:88$698 ($xnor).
+Removed top 1 bits (of 15) from port A of cell top_1.$sub$syn_identity.v:88$699 ($sub).
+Removed top 13 bits (of 22) from mux cell top_1.$ternary$syn_identity.v:98$718 ($mux).
+Removed top 7 bits (of 21) from mux cell top_1.$ternary$syn_identity.v:111$735 ($mux).
+Removed top 8 bits (of 22) from port B of cell top_1.$add$syn_identity.v:111$736 ($add).
+Removed top 10 bits (of 16) from port B of cell top_1.$xnor$syn_identity.v:113$737 ($xnor).
+Removed top 7 bits (of 21) from port A of cell top_1.$lt$syn_identity.v:113$746 ($lt).
+Removed top 17 bits (of 41) from port A of cell top_1.$mul$syn_identity.v:123$755 ($mul).
+Removed top 40 bits (of 41) from port B of cell top_1.$mul$syn_identity.v:123$755 ($mul).
+Removed top 16 bits (of 41) from port Y of cell top_1.$mul$syn_identity.v:123$755 ($mul).
+Removed top 33 bits (of 41) from port A of cell top_1.$xor$syn_identity.v:123$756 ($xor).
+Removed top 16 bits (of 41) from port B of cell top_1.$xor$syn_identity.v:123$756 ($xor).
+Removed top 16 bits (of 41) from port Y of cell top_1.$xor$syn_identity.v:123$756 ($xor).
+Removed top 8 bits (of 9) from port A of cell top_1.$mul$syn_identity.v:135$762 ($mul).
+Removed top 4 bits (of 9) from mux cell top_1.$ternary$syn_identity.v:139$768 ($mux).
+Removed top 5 bits (of 6) from mux cell top_1.$ternary$syn_identity.v:140$771 ($mux).
+Removed top 3 bits (of 6) from port A of cell top_1.$or$syn_identity.v:140$772 ($or).
+Removed top 5 bits (of 6) from port B of cell top_1.$or$syn_identity.v:140$772 ($or).
+Removed top 3 bits (of 6) from port Y of cell top_1.$or$syn_identity.v:140$772 ($or).
+Removed top 13 bits (of 18) from mux cell top_1.$ternary$syn_identity.v:141$775 ($mux).
+Removed top 19 bits (of 23) from mux cell top_1.$ternary$syn_identity.v:156$805 ($mux).
+Removed top 4 bits (of 9) from mux cell top_1.$ternary$syn_identity.v:151$787 ($mux).
+Removed top 9 bits (of 10) from mux cell top_1.$ternary$syn_identity.v:151$791 ($mux).
+Removed top 16 bits (of 17) from mux cell top_1.$ternary$syn_identity.v:153$795 ($mux).
+Removed top 14 bits (of 23) from port A of cell top_1.$shr$syn_identity.v:153$796 ($shr).
+Removed top 16 bits (of 17) from port B of cell top_1.$shr$syn_identity.v:153$796 ($shr).
+Removed top 14 bits (of 22) from mux cell top_1.$ternary$syn_identity.v:156$799 ($mux).
+Removed top 19 bits (of 22) from port A of cell top_1.$sub$syn_identity.v:156$800 ($sub).
+Removed top 14 bits (of 22) from port B of cell top_1.$sub$syn_identity.v:156$800 ($sub).
+Removed top 18 bits (of 22) from port Y of cell top_1.$sub$syn_identity.v:156$800 ($sub).
+Removed top 4 bits (of 8) from port B of cell top_1.$sub$syn_identity.v:156$800 ($sub).
+Removed top 14 bits (of 15) from port B of cell top_1.$ne$syn_identity.v:159$814 ($ne).
+Removed top 5 bits (of 10) from port A of cell top_1.$eq$syn_identity.v:166$818 ($eq).
+Removed top 33 bits (of 36) from port B of cell top_1.$add$syn_identity.v:174$821 ($add).
+Removed top 3 bits (of 4) from port A of cell top_1.$add$syn_identity.v:183$835 ($add).
+Removed top 9 bits (of 17) from mux cell top_1.$ternary$syn_identity.v:187$840 ($mux).
+Removed top 14 bits (of 23) from mux cell top_1.$ternary$syn_identity.v:188$843 ($mux).
+Removed top 3 bits (of 10) from port A of cell top_1.$sshr$syn_identity.v:189$844 ($sshr).
+Removed top 9 bits (of 15) from port B of cell top_1.$sshr$syn_identity.v:189$844 ($sshr).
+Removed top 2 bits (of 5) from port A of cell top_1.$mul$syn_identity.v:190$845 ($mul).
+Removed top 5 bits (of 19) from port Y of cell top_1.$mul$syn_identity.v:190$845 ($mul).
+Removed top 4 bits (of 19) from mux cell top_1.$ternary$syn_identity.v:192$853 ($mux).
+Removed top 1 bits (of 9) from port B of cell top_1.$xor$syn_identity.v:193$855 ($xor).
+Removed top 36 bits (of 52) from mux cell top_1.$ternary$syn_identity.v:196$858 ($mux).
+Removed top 36 bits (of 52) from port A of cell top_1.$le$syn_identity.v:198$865 ($le).
+Removed top 16 bits (of 17) from port A of cell top_1.$sub$syn_identity.v:205$870 ($sub).
+Removed top 16 bits (of 17) from port B of cell top_1.$sub$syn_identity.v:205$870 ($sub).
+Removed top 3 bits (of 8) from port A of cell top_1.$gt$syn_identity.v:202$873 ($gt).
+Removed top 17 bits (of 20) from port B of cell top_1.$gt$syn_identity.v:202$873 ($gt).
+Removed top 18 bits (of 19) from port A of cell top_1.$add$syn_identity.v:204$882 ($add).
+Removed top 11 bits (of 19) from port Y of cell top_1.$add$syn_identity.v:204$882 ($add).
+Removed top 11 bits (of 19) from port B of cell top_1.$add$syn_identity.v:204$882 ($add).
+Removed top 4 bits (of 8) from mux cell top_1.$ternary$syn_identity.v:156$799 ($mux).
+Removed top 11 bits (of 19) from mux cell top_1.$ternary$syn_identity.v:204$881 ($mux).
+Removed top 11 bits (of 19) from mux cell top_1.$ternary$syn_identity.v:204$879 ($mux).
+Removed top 13 bits (of 22) from wire top_1.$0\reg23[21:0].
+Removed top 14 bits (of 15) from wire top_1.$0\reg28[14:0].
+Removed top 15 bits (of 16) from wire top_1.$0\reg33[15:0].
+Removed top 13 bits (of 18) from wire top_1.$0\reg37[17:0].
+Removed top 9 bits (of 10) from wire top_1.$0\reg40[9:0].
+Removed top 11 bits (of 19) from wire top_1.$add$syn_identity.v:204$882_Y.
+Removed top 22 bits (of 23) from wire top_1.$eq$syn_identity.v:188$841_Y.
+Removed top 8 bits (of 9) from wire top_1.$le$syn_identity.v:198$865_Y.
+Removed top 40 bits (of 41) from wire top_1.$logic_not$syn_identity.v:123$754_Y.
+Removed top 16 bits (of 17) from wire top_1.$logic_not$syn_identity.v:205$869_Y.
+Removed top 16 bits (of 41) from wire top_1.$mul$syn_identity.v:123$755_Y.
+Removed top 5 bits (of 19) from wire top_1.$mul$syn_identity.v:190$845_Y.
+Removed top 3 bits (of 6) from wire top_1.$or$syn_identity.v:140$772_Y.
+Removed top 9 bits (of 10) from wire top_1.$reduce_or$syn_identity.v:151$788_Y.
+Removed top 20 bits (of 21) from wire top_1.$reduce_xnor$syn_identity.v:113$738_Y.
+Removed top 18 bits (of 22) from wire top_1.$sub$syn_identity.v:156$800_Y.
+Removed top 7 bits (of 21) from wire top_1.$ternary$syn_identity.v:111$735_Y.
+Removed top 4 bits (of 9) from wire top_1.$ternary$syn_identity.v:139$768_Y.
+Removed top 4 bits (of 9) from wire top_1.$ternary$syn_identity.v:151$787_Y.
+Removed top 16 bits (of 17) from wire top_1.$ternary$syn_identity.v:153$795_Y.
+Removed top 18 bits (of 22) from wire top_1.$ternary$syn_identity.v:156$799_Y.
+Removed top 9 bits (of 17) from wire top_1.$ternary$syn_identity.v:187$840_Y.
+Removed top 14 bits (of 23) from wire top_1.$ternary$syn_identity.v:188$843_Y.
+Removed top 4 bits (of 19) from wire top_1.$ternary$syn_identity.v:192$853_Y.
+Removed top 36 bits (of 52) from wire top_1.$ternary$syn_identity.v:196$858_Y.
+Removed top 11 bits (of 19) from wire top_1.$ternary$syn_identity.v:204$879_Y.
+Removed top 11 bits (of 19) from wire top_1.$ternary$syn_identity.v:204$881_Y.
+Removed top 16 bits (of 41) from wire top_1.$xor$syn_identity.v:123$756_Y.
+Removed top 1 bits (of 6) from wire top_1.wire24.
+Removed top 8 bits (of 9) from wire top_1.wire25.
+Removed top 2 bits (of 5) from wire top_1.wire34.
+Removed top 16 bits (of 17) from wire top_1.wire36.
+Removed top 3 bits (of 8) from wire top_1.wire38.
+Removed top 1 bits (of 6) from wire top_1.wire8.
+Removed top 13 bits (of 22) from wire top_2.reg23.
+Removed top 18 bits (of 21) from wire top_2.reg30.
+Removed top 3 bits (of 10) from wire top_2.reg32.
+Removed top 13 bits (of 18) from wire top_2.reg37.
+Removed top 4 bits (of 9) from wire top_2.reg47.
+Removed top 10 bits (of 16) from wire top_2.reg6.
+
+9.8. Executing MEMORY_DFF pass (merging $dff cells to $memrd and $memwr).
+
+9.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \module10_1..
+Finding unused cells or wires in module \module10_2..
+Finding unused cells or wires in module \top..
+Finding unused cells or wires in module \top_1..
+Finding unused cells or wires in module \top_2..
+Removed 1 unused cells and 45 unused wires.
+<suppressed ~4 debug messages>
+
+9.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+9.11. Executing OPT pass (performing simple optimizations).
+
+9.11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module module10_1.
+Optimizing module module10_2.
+Optimizing module top.
+Optimizing module top_1.
+<suppressed ~15 debug messages>
+Optimizing module top_2.
+
+9.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\module10_1'.
+Finding identical cells in module `\module10_2'.
+Finding identical cells in module `\top'.
+Finding identical cells in module `\top_1'.
+Finding identical cells in module `\top_2'.
+Removed a total of 0 cells.
+
+9.11.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+9.11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \module10_1..
+Finding unused cells or wires in module \module10_2..
+Finding unused cells or wires in module \top..
+Finding unused cells or wires in module \top_1..
+Finding unused cells or wires in module \top_2..
+Removed 1 unused cells and 14 unused wires.
+<suppressed ~2 debug messages>
+
+9.11.5. Finished fast OPT passes.
+
+9.12. Printing statistics.
+
+=== module10_1 ===
+
+   Number of wires:                 15
+   Number of wire bits:            155
+   Number of public wires:          11
+   Number of public wire bits:     151
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  5
+     $ge                             1
+     $gt                             1
+     $logic_and                      1
+     $logic_not                      1
+     $reduce_and                     1
+
+=== module10_2 ===
+
+   Number of wires:                 58
+   Number of wire bits:            198
+   Number of public wires:          44
+   Number of public wire bits:     184
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 48
+     $and                           13
+     $not                           12
+     $or                            23
+
+=== top ===
+
+   Number of wires:                 12
+   Number of wire bits:            909
+   Number of public wires:           7
+   Number of public wire bits:     246
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  6
+     $assert                         1
+     $dff                            2
+     $eq                             1
+     top_1                           1
+     top_2                           1
+
+=== top_1 ===
+
+   Number of wires:                145
+   Number of wire bits:           2056
+   Number of public wires:          42
+   Number of public wire bits:     909
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                125
+     $add                            4
+     $and                            1
+     $dff                           19
+     $eq                             2
+     $le                             2
+     $logic_and                      1
+     $logic_not                      5
+     $logic_or                       1
+     $lt                             1
+     $mul                            3
+     $mux                           36
+     $ne                             1
+     $neg                            2
+     $not                            2
+     $or                             1
+     $reduce_and                     2
+     $reduce_bool                   19
+     $reduce_or                      3
+     $reduce_xnor                    6
+     $shr                            1
+     $sshl                           1
+     $sshr                           1
+     $sub                            3
+     $xnor                           4
+     $xor                            3
+     module10_1                      1
+
+=== top_2 ===
+
+   Number of wires:               1151
+   Number of wire bits:           2082
+   Number of public wires:         837
+   Number of public wire bits:    1768
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1227
+     $and                          206
+     $dff                          112
+     $mux                           89
+     $not                          322
+     $or                           308
+     $xor                          189
+     module10_2                      1
+
+=== design hierarchy ===
+
+   top                               1
+     top_1                           1
+       module10_1                    1
+     top_2                           1
+       module10_2                    1
+
+   Number of wires:               1381
+   Number of wire bits:           5400
+   Number of public wires:         941
+   Number of public wire bits:    3258
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1407
+     $add                            4
+     $and                          220
+     $assert                         1
+     $dff                          133
+     $eq                             3
+     $ge                             1
+     $gt                             1
+     $le                             2
+     $logic_and                      2
+     $logic_not                      6
+     $logic_or                       1
+     $lt                             1
+     $mul                            3
+     $mux                          125
+     $ne                             1
+     $neg                            2
+     $not                          336
+     $or                           332
+     $reduce_and                     3
+     $reduce_bool                   19
+     $reduce_or                      3
+     $reduce_xnor                    6
+     $shr                            1
+     $sshl                           1
+     $sshr                           1
+     $sub                            3
+     $xnor                           4
+     $xor                          192
+
+9.13. Executing CHECK pass (checking for obvious problems).
+checking module module10_1..
+checking module module10_2..
+checking module top..
+checking module top_1..
+checking module top_2..
+found and reported 0 problems.
+
+10. Executing HIERARCHY pass (managing design hierarchy).
+
+Syntax error in command `hierarchy -smtcheck':
+
+    hierarchy [-check] [-top <module>]
+    hierarchy -generate <cell-types> <port-decls>
+
+In parametric designs, a module might exists in several variations with
+different parameter values. This pass looks at all modules in the current
+design an re-runs the language frontends for the parametric modules as
+needed. It also resolves assignments to wired logic data types (wand/wor),
+resolves positional module parameters, unroll array instances, and more.
+
+    -check
+        also check the design hierarchy. this generates an error when
+        an unknown module is used as cell type.
+
+    -simcheck
+        like -check, but also throw an error if blackbox modules are
+        instantiated, and throw an error if the design has no top module.
+
+    -purge_lib
+        by default the hierarchy command will not remove library (blackbox)
+        modules. use this option to also remove unused blackbox modules.
+
+    -libdir <directory>
+        search for files named <module_name>.v in the specified directory
+        for unknown modules and automatically run read_verilog for each
+        unknown module.
+
+    -keep_positionals
+        per default this pass also converts positional arguments in cells
+        to arguments using port names. This option disables this behavior.
+
+    -keep_portwidths
+        per default this pass adjusts the port width on cells that are
+        module instances when the width does not match the module port. This
+        option disables this behavior.
+
+    -nodefaults
+        do not resolve input port default values
+
+    -nokeep_asserts
+        per default this pass sets the "keep" attribute on all modules
+        that directly or indirectly contain one or more formal properties.
+        This option disables this behavior.
+
+    -top <module>
+        use the specified top module to build the design hierarchy. Modules
+        outside this tree (unused modules) are removed.
+
+        when the -top option is used, the 'top' attribute will be set on the
+        specified top module. otherwise a module with the 'top' attribute set
+        will implicitly be used as top module, if such a module exists.
+
+    -auto-top
+        automatically determine the top of the design hierarchy and mark it.
+
+    -chparam name value 
+       elaborate the top module using this parameter value. Modules on which
+       this parameter does not exist may cause a warning message to be output.
+       This option can be specified multiple times to override multiple
+       parameters. String values must be passed in double quotes (").
+
+In -generate mode this pass generates blackbox modules for the given cell
+types (wildcards supported). For this the design is searched for cells that
+match the given types and then the given port declarations are used to
+determine the direction of the ports. The syntax for a port declaration is:
+
+    {i|o|io}[@<num>]:<portname>
+
+Input ports are specified with the 'i' prefix, output ports with the 'o'
+prefix and inout ports with the 'io' prefix. The optional <num> specifies
+the position of the port in the parameter list (needed when instantiated
+using positional arguments). When <num> is not specified, the <portname> can
+also contain wildcard characters.
+
+This pass ignores the current selection and always operates on all modules
+in the current design.
+
+ERROR: Command syntax error: Unknown option or option in arguments.
+> hierarchy -smtcheck
+>           ^

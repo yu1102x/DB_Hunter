@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2023-07-21T20:34:11" hostname="tsmc-System-Product-Name" package="proof" id="0" name="default" tests="1" errors="1" failures="0" time="1" skipped="0">
+<properties>
+<property name="os" value="Linux"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="ERROR"/>
+</properties>
+<testcase classname="default" name="default" time="1">
+<error type="ERROR"/>
+</testcase>
+<system-out>SBY 20:34:10 [proof] Removing directory '/doc/wxy/2023_7_21/fuzz_6/equiv_identity_vivado/proof'.
+SBY 20:34:10 [proof] Copy '/root/.cabal/store/ghc-8.6.5/verismith-1.0.0.2-05803d1a9dd1b31fa5e685873f3f3eb6965857608706500c1d15ff488351d7bb/share/data/cells_cmos.v' to '/doc/wxy/2023_7_21/fuzz_6/equiv_identity_vivado/proof/src/cells_cmos.v'.
+SBY 20:34:10 [proof] Copy '/root/.cabal/store/ghc-8.6.5/verismith-1.0.0.2-05803d1a9dd1b31fa5e685873f3f3eb6965857608706500c1d15ff488351d7bb/share/data/cells_cyclone_v.v' to '/doc/wxy/2023_7_21/fuzz_6/equiv_identity_vivado/proof/src/cells_cyclone_v.v'.
+SBY 20:34:10 [proof] Copy '/root/.cabal/store/ghc-8.6.5/verismith-1.0.0.2-05803d1a9dd1b31fa5e685873f3f3eb6965857608706500c1d15ff488351d7bb/share/data/cells_verific.v' to '/doc/wxy/2023_7_21/fuzz_6/equiv_identity_vivado/proof/src/cells_verific.v'.
+SBY 20:34:10 [proof] Copy '/root/.cabal/store/ghc-8.6.5/verismith-1.0.0.2-05803d1a9dd1b31fa5e685873f3f3eb6965857608706500c1d15ff488351d7bb/share/data/cells_xilinx_7.v' to '/doc/wxy/2023_7_21/fuzz_6/equiv_identity_vivado/proof/src/cells_xilinx_7.v'.
+SBY 20:34:10 [proof] Copy '/root/.cabal/store/ghc-8.6.5/verismith-1.0.0.2-05803d1a9dd1b31fa5e685873f3f3eb6965857608706500c1d15ff488351d7bb/share/data/cells_yosys.v' to '/doc/wxy/2023_7_21/fuzz_6/equiv_identity_vivado/proof/src/cells_yosys.v'.
+SBY 20:34:10 [proof] Copy '/doc/wxy/2023_7_21/fuzz_6/equiv_identity_vivado/syn_vivado.v' to '/doc/wxy/2023_7_21/fuzz_6/equiv_identity_vivado/proof/src/syn_vivado.v'.
+SBY 20:34:10 [proof] Copy '/doc/wxy/2023_7_21/fuzz_6/equiv_identity_vivado/syn_identity.v' to '/doc/wxy/2023_7_21/fuzz_6/equiv_identity_vivado/proof/src/syn_identity.v'.
+SBY 20:34:10 [proof] Copy '/doc/wxy/2023_7_21/fuzz_6/equiv_identity_vivado/top.v' to '/doc/wxy/2023_7_21/fuzz_6/equiv_identity_vivado/proof/src/top.v'.
+SBY 20:34:10 [proof] engine_0: abc pdr
+SBY 20:34:10 [proof] base: starting process &quot;cd proof/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 20:34:10 [proof] base: Warning: Yosys has only limited support for tri-state logic at the moment. (cells_xilinx_7.v:18)
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top.top_2.y from 91 bits to 541 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top.top_1.y from 91 bits to 541 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_2.y_OBUF[28]_inst_i_12.O from 2 bits to 4 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_2.y_OBUF[28]_inst_i_12.CO from 1 bits to 4 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_2.y_OBUF[28]_inst_i_1.CO from 1 bits to 4 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_2.reg70_reg[6]_i_4.CO from 1 bits to 4 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_2.reg68_reg[0]_i_2.CO from 1 bits to 4 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_2.reg67_reg[0]_i_2.CO from 1 bits to 4 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_2.reg64_reg[6]_i_31.O from 2 bits to 4 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_2.reg64_reg[6]_i_31.CO from 1 bits to 4 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_2.reg61_reg[0]_i_4.CO from 3 bits to 4 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_2.reg54_reg[5]_i_2.CO from 1 bits to 4 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_2.reg51_reg[9]_i_9.CO from 3 bits to 4 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_2.reg51_reg[9]_i_7.CO from 2 bits to 4 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_2.reg50_reg[6]_i_1.O from 2 bits to 4 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_2.reg50_reg[6]_i_1.CO from 3 bits to 4 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_2.reg49_reg[0]_i_3.CO from 1 bits to 4 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_2.reg222_reg[9]_i_4.O from 3 bits to 4 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_2.reg102_reg[2]_i_9.CO from 1 bits to 4 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port module4_1.modinst41.y from 13 bits to 76 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port module4_1.modinst41.wire31 from 20 bits to 11 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port module4_1.modinst41.wire30 from 18 bits to 5 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port module4_1.modinst41.wire29 from 12 bits to 8 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port module4_1.modinst25.wire17 from 19 bits to 10 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port module4_1.modinst25.y from 18 bits to 68 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port module4_1.modinst25.wire16 from 21 bits to 16 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port module80_1.modinst211.wire178 from 13 bits to 11 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port module80_1.modinst211.wire179 from 8 bits to 4 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port module80_1.modinst211.wire180 from 7 bits to 6 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port module80_1.modinst211.y from 22 bits to 304 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port module80_1.modinst175.wire96 from 18 bits to 16 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port module80_1.modinst175.wire98 from 12 bits to 3 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port module80_1.modinst175.wire97 from 21 bits to 3 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port module80_1.modinst175.y from 22 bits to 829 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_1.modinst219.y from 3 bits to 68 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_1.modinst219.wire18 from 22 bits to 20 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_1.modinst219.wire16 from 20 bits to 16 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_1.modinst216.y from 8 bits to 163 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_1.modinst216.wire81 from 18 bits to 13 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_1.modinst216.wire82 from 22 bits to 8 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_1.modinst216.wire83 from 21 bits to 11 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_1.modinst216.wire84 from 17 bits to 7 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_1.modinst46.y from 21 bits to 140 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_1.modinst46.wire8 from 20 bits to 8 bits.
+SBY 20:34:10 [proof] base: Warning: Resizing cell port top_1.modinst46.wire5 from 21 bits to 12 bits.
+SBY 20:34:11 [proof] base: ERROR: Command syntax error: Unknown option or option in arguments.
+SBY 20:34:11 [proof] base: &gt; hierarchy -smtcheck
+SBY 20:34:11 [proof] base: &gt;           ^
+SBY 20:34:11 [proof] base: finished (returncode=1)
+SBY 20:34:11 [proof] base: task failed. ERROR.
+SBY 20:34:11 [proof] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:01 (1)
+SBY 20:34:11 [proof] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:01 (1)
+SBY 20:34:11 [proof] summary: engine_0 (abc pdr) did not return a status
+SBY 20:34:11 [proof] summary: engine_0 did not produce any traces
+SBY 20:34:11 [proof] DONE (ERROR, rc=16)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>
