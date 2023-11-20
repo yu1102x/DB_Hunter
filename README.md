@@ -11,7 +11,11 @@
 ---
 
 ### Our Works:
-FPGA developers often rely on debuggers in FPGA development tools to check for errors in their programs. However, since the debugger itself may have some bugs, this may cause developers to make incorrect modifications to the program. This article proposes a Debugger testing method called DB_Hunter for the Vivado debugger in FPGA development tools, aiming to help us better discover errors in the Debugger of FPGA development tools. DB_Hunter mutates the program by dividing the Verilog development program into two components, namely the program conversion component and the debugging action conversion component, and generates a series of equivalent variants. It then runs the original program and these variants separately in Vivado, producing a series of debugging traces. Finally, DB_Hunter uses differential testing to compare these debugging traces to determine whether bugs exist. Experiments have proven that DB_Hunter has excellent performance. It successfully discovered 10 confirmed bugs, one of which has been fixed. This approach is expected to improve the reliability of FPGA development tools and reduce unnecessary problems caused by debugger errors.
+Commercial FPGA simulation verification tools such as Xilinx’ Vivado aids developers in swiftly identifying and rectifying bugs and issues in FPGA designs through a robust built-in debugger.
+The debug process ensures the correctness and development efficiency of the FPGA design.
+Hardening such FPGA debugger tools by testing is crucial since engineers might misinterpret code and introduce incorrect fixes, leading to security risks. 
+To address this issue, we propose DB-Hunter to perform program and debug action transformations to generate diverse and complex Verilog design file code and debug actions, to thoroughly test the Vivado debugger using differential testing and detect bugs. 
+In three months, DB-Hunter reported 18 issues, including 10 confirmed as bugs by Xilinx Support, 6 of which have been fixed.
 
 
 ### **If you want to quickly understand our model, you can follow the following steps.**
