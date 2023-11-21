@@ -3,7 +3,7 @@
 ## DB-Hunter: Interactive-Guided Differential Testing for FPGA Simulation Debugger 
 
 ### **Env dependencies:**
-+ Vivado 2022.1
++ Vivado 2022.1 and Vivado 2023.1
 + python 3.8.16
 + GHC 8.6.5
 + Cabal 3.4.1
