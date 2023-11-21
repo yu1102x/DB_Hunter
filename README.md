@@ -1,6 +1,6 @@
-# DB_Hunter
+# DB-Hunter
 
-## DB_Hunter: Interactive-guided Differential Testing for FPGA Simulation Debugger 
+## DB-Hunter: Interactive-Guided Differential Testing for FPGA Simulation Debugger 
 
 ### **Env dependencies:**
 + Vivado 2022.1
@@ -50,7 +50,7 @@ Third, output results. The result of code will output as .txt in your main file.
 ---
 
 ### Here are the details of these bugs
-These errors in the error file can be reproduced using Vivado 2022.1.
+These errors in the error file can be reproduced using Vivado 2022.1 and Vivado 2023.1.
 
 You can find all bug files in path `DB_Hunter_Find_Bugs`.
 The 'DB_Hunter_Find_Bugs' folder contains the compressed package of all bug-related information, You can access this folder and reproduce these bugs.
