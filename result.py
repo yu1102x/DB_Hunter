@@ -12,7 +12,6 @@ def result(cmd):
             return points
         else:
             Find(points[-1],text,points)
-
     def Find2(index,text,points2):
         find_text = text[index:]
         point2 = find_text.find("Stopped")
