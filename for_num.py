@@ -1,6 +1,5 @@
 import os
 import change_testbench
-
 # for循环中，begin-end的匹配
 def find_begin_end(filename, start_line):
     stack = []  # 用于模拟栈的列表
