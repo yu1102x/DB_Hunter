@@ -5,7 +5,6 @@ import change_testbench
 def find_begin_end(filename, start_line):
     stack = []  # 用于模拟栈的列表
     line_number = 0
-
     with open(filename, "r") as file:
         for line in file:
             line_number += 1  # 增加行号
