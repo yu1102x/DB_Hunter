@@ -14,8 +14,6 @@ def delete_lines(filename, head):
     b = ''.join(a[head:])
     fout.write(b)
 
-
-
 path = "/doc/wxy/vivado_test"
 #path = "D:\Vivado_test"
 files = os.listdir(path) #得到文件夹下的所有文件名称，列表形式返回
