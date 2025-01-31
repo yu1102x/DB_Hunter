@@ -9,7 +9,6 @@ def read_text_file(file_path):
     with open(file_path, 'r') as file:
         lines = file.readlines()
     return lines
-
 # 检查文本行是否包含指定字符串
 def check_lines_for_strings(lines, line_numbers, strings_to_find):
     results = {}
