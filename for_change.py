@@ -1,6 +1,5 @@
 import os
 import change_testbench
-
 # 读取文件夹里所有文件
 # path = "/doc/wxy/vivado_test"
 path = "D:\Vivado_test"
