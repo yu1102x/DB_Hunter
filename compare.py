@@ -4,7 +4,6 @@ import random
 import time
 from func_timeout import func_set_timeout
 import func_timeout
-
 #读取文件夹里所有文件
 #path = "/doc/xzh/work_2/resamplecours/" #文件夹目录
 path = "/doc/wxy/vivado_test"
