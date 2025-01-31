@@ -1,7 +1,6 @@
 import os
 import change_testbench
 
-
 # for循环所在的一行进行括号匹配,并输出括号里的内容
 def extract_contents_within_brackets(input_string):
     stack = []  # 用于模拟栈的列表
