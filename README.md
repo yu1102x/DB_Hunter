@@ -1,4 +1,4 @@
-# DB_Hunter
+<img width="1920" height="911" alt="image" src="https://github.com/user-attachments/assets/e8102728-f941-4dc6-bb0c-2ec923338a00" /># DB_Hunter
 
 ## DB_Hunter: Interactive-guided Differential Testing for FPGA Simulation Debugger 
 
@@ -95,3 +95,5 @@ The 'DB_Hunter_Find_Bugs' folder contains the compressed package of all bug-rela
 
 ---
 **Thanks to the Xilinx developers for their technical support, they helped us a lot in finding and confirming the errors. I would like to express my gratitude to them again.**
+
+Note: The relevant research findings of DB-Hunter have been uploaded to the arXiv platform. This publication on the platform is solely intended for academic exchange and knowledge sharing in subsequent scientific research.
